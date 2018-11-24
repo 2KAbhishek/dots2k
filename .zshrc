@@ -13,6 +13,19 @@ powerline-daemon -q
 # Theme
 ZSH_THEME="powerlevel9k"
 
+# Plugins
+plugins=(
+  colored-man-pages
+  extract
+  fancy-ctrl-z
+  fast-syntax-highlighting
+  git
+  #vi-mode
+  z
+  zsh-autosuggestions
+)
+
+
 #POWERLEVEL9k
 POWERLEVEL9K_MODE='nerdfont-complete'
 
@@ -20,7 +33,7 @@ POWERLEVEL9K_MODE='nerdfont-complete'
 POWERLEVEL9K_PROMPT_ON_NEWLINE=true
 POWERLEVEL9K_RPROMPT_ON_NEWLINE=true
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon root_indicator context docker_machine dir vcs time)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status command_execution_time background_jobs ram load battery vi_mode)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status command_execution_time background_jobs ram load battery)
 POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX="%F{014}╭%F{cyan}"
 POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX="%F{014}\u2570%F{cyan}\uf109 %F{001}\uF156%F{001}\ue602%f "
 
@@ -74,18 +87,6 @@ POWERLEVEL9K_VI_MODE_NORMAL_BACKGROUND='red'
 POWERLEVEL9K_VI_MODE_NORMAL_FOREGROUND='black'
 
 ##TODO - zsh internet signal,audacious/pulseaudio now playing
-
-# Plugins
-plugins=(
-  colored-man-pages
-  extract
-  fancy-ctrl-z
-  fast-syntax-highlighting
-  git
-  vi-mode
-  z
-  zsh-autosuggestions
-)
 
 source $ZSH/oh-my-zsh.sh
 
