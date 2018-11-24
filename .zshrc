@@ -1,6 +1,6 @@
 # Path to oh-my-zsh installation.
   export ZSH="/home/abhishek/.oh-my-zsh"
-
+  export TERM="xterm-256color"
 #General
  DISABLE_AUTO_TITLE="false"
  ENABLE_CORRECTION="true"
@@ -18,6 +18,7 @@ POWERLEVEL9K_MODE='nerdfont-complete'
 
 #Prompt
 POWERLEVEL9K_PROMPT_ON_NEWLINE=true
+POWERLEVEL9K_RPROMPT_ON_NEWLINE=true
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon root_indicator context docker_machine dir vcs time)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status command_execution_time background_jobs ram load battery vi_mode)
 POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX="%F{014}╭%F{cyan}"
@@ -90,7 +91,6 @@ source $ZSH/oh-my-zsh.sh
 
 # Environment
 EDITOR=vim 
-
 
 # Aliases
  alias la="ls -AFb --group-directories-first --sort=extension"
