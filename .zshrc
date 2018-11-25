@@ -95,7 +95,6 @@ EDITOR=vim
 
 # Aliases
  alias la="ls -AFb --group-directories-first --sort=extension"
- alias lsc="colorls -A --gs --sd"
  alias paci="sudo pacman -S"
  alias pacr="sudo pacman -R"
  alias pacu="sudo pacman -Syu"
