@@ -100,3 +100,5 @@ EDITOR=vim
  alias pacu="sudo pacman -Syu"
  alias pp="prettyping --nolegend"
 
+# Commands
+ tmux new -s Main
