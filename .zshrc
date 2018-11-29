@@ -101,7 +101,7 @@ source $ZSH/oh-my-zsh.sh
 EDITOR=vim 
 
 # Aliases
- alias la="ls -AFb --group-directories-first --sort=extension"
+ alias la="ls -AXFb --group-directories-first --sort=extension"
  alias paci="sudo pacman -S"
  alias pacr="sudo pacman -R"
  alias pacu="sudo pacman -Syu"
