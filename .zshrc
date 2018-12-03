@@ -108,3 +108,4 @@ EDITOR=vim
  alias pp="prettyping --nolegend"
 
 # Commands
+# export PATH=$PATH:/home/abhishek/.gem/ruby/2.5.0/bin
