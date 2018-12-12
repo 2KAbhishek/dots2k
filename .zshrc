@@ -109,3 +109,10 @@ EDITOR=vim
 
 # Commands
 # export PATH=$PATH:/home/abhishek/.gem/ruby/2.5.0/bin
+
+
+#Functions
+function lc () {
+    cd $1;
+    la $2
+}
