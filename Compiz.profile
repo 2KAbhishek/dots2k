@@ -163,7 +163,12 @@ s0_background_color = #383c4aff
 s0_min_brightness = 50
 
 [wall]
+s0_left_key = <Control><Super>Left
+s0_right_key = <Control><Super>Right
+s0_up_key = <Control><Super>Up
+s0_down_key = <Control><Super>Down
 s0_next_key = <Super>Tab
+s0_prev_key = <Super>grave
 s0_left_window_key = <Shift><Super>Left
 s0_right_window_key = <Shift><Super>Right
 s0_up_window_key = <Shift><Super>Up
@@ -192,15 +197,10 @@ s0_window_opacity = 0.100000
 s0_window_part_size = 0
 
 [grid]
-s0_put_center_key = <Control><Super>KP_5
-s0_put_left_key = <Control><Super>KP_4
-s0_put_right_key = <Control><Super>KP_6
-s0_put_top_key = <Control><Super>KP_8
-s0_put_bottom_key = <Control><Super>KP_2
-s0_put_topleft_key = <Control><Super>KP_7
-s0_put_topright_key = <Control><Super>KP_9
-s0_put_bottomleft_key = <Control><Super>KP_1
-s0_put_bottomright_key = <Control><Super>KP_3
+s0_put_maximize_key = <Control><Alt>Up
+s0_put_restore_key = <Control><Alt>Down
+s0_left_maximize = <Control><Alt>Left
+s0_right_maximize = <Control><Alt>Right
 s0_top_edge_action = 8
 s0_top_right_corner_action = 9
 s0_bottom_left_corner_action = 1
