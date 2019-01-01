@@ -67,14 +67,14 @@ s0_initiate_key = <Shift>Tab
 s0_initiate_all_key = Disabled
 
 [workspacenames]
-s0_names = Main;Web;Workspace;Terminal;
-s0_text_placement = 1
+s0_names = Main;Work;Shell;Work;
+s0_text_placement = 2
 
 [vpswitch]
-s0_switch_to_1_key = <Shift><Super>exclam
-s0_switch_to_2_key = <Shift><Super>at
-s0_switch_to_3_key = <Shift><Super>numbersign
-s0_switch_to_4_key = <Shift><Super>dollar
+s0_switch_to_1_key = <Control><Super>1
+s0_switch_to_2_key = <Control><Super>2
+s0_switch_to_3_key = <Control><Super>3
+s0_switch_to_4_key = <Control><Super>4
 s0_left_button = <LeftEdge>Button1
 s0_right_button = <RightEdge>Button1
 s0_up_button = <TopEdge>Button1
@@ -108,16 +108,14 @@ s0_saturation_increase_key = <Control><Super>period
 s0_saturation_decrease_key = <Control><Super>comma
 
 [core]
-s0_active_plugins = core;composite;opengl;compiztoolbox;decor;extrawm;grid;imgjpeg;imgpng;mousepoll;move;neg;obs;place;regex;resize;resizeinfo;scale;session;snap;staticswitcher;text;thumbnail;titleinfo;vpswitch;wall;workarounds;workspacenames;commands;dbus;expo;scaleaddon;
+s0_active_plugins = core;composite;opengl;compiztoolbox;decor;extrawm;grid;imgjpeg;imgpng;mousepoll;move;neg;obs;place;regex;resize;resizeinfo;scale;session;snap;staticswitcher;text;thumbnail;titleinfo;vpswitch;wall;wallpaper;workarounds;workspacenames;commands;dbus;expo;scaleaddon;
 s0_outputs = 1366x768+0+0;
 s0_click_to_focus = false
 s0_focus_prevention_level = 1
 s0_minimize_window_key = <Alt>F3
 s0_maximize_window_key = <Alt>F5
 s0_unmaximize_window_key = <Alt>F6
-s0_unmaximize_or_minimize_window_key = <Alt><Super>F3
-s0_maximize_window_horizontally_key = <Alt><Super>F6
-s0_maximize_window_vertically_key = <Alt><Super>F5
+s0_unmaximize_or_minimize_window_key = Disabled
 s0_show_desktop_key = <Super>d
 s0_toggle_window_maximized_key = <Control><Alt>5
 s0_toggle_window_shaded_key = <Control><Super>h
@@ -209,11 +207,9 @@ s0_bottom_right_corner_action = 3
 s0_use_desktop_average_color = false
 
 [wallpaper]
-s0_bg_image = /run/media/abhishek/Data/Pictures/Wallpapers/Aurora.jpg;/usr/share/backgrounds/manjarowall17_01.jpg;
-s0_bg_image_pos = 0;0;0;0;0;0;0;0;0;0;0;0;0;0;
-s0_bg_fill_type = 0;0;0;0;0;0;0;0;0;0;0;0;0;0;
-s0_bg_color1 = #00000000;#000000ff;#000000ff;#000000ff;#000000ff;#000000ff;#000000ff;#000000ff;#000000ff;#000000ff;#000000ff;#000000ff;#000000ff;#000000ff;
-s0_bg_color2 = #00000000;#000000ff;#000000ff;#000000ff;#000000ff;#000000ff;#000000ff;#000000ff;#000000ff;#000000ff;#000000ff;#000000ff;#000000ff;#000000ff;
-s0_cycle_timeout = 30.000000
-s0_fade_duration = 3.000000
+s0_bg_image = /home/abhishek/Pictures/Pictures/Wallpapers/Baloon.jpg;/home/abhishek/Pictures/Pictures/Wallpapers/Dark Purple.jpg;/home/abhishek/Pictures/Pictures/Wallpapers/Vibrant/circular.jpg;/home/abhishek/Pictures/Pictures/Wallpapers/Vibrant/purple.jpg;
+s0_bg_image_pos = 0;0;0;0;
+s0_bg_fill_type = 0;0;0;0;
+s0_bg_color1 = #000000ff;#000000ff;#000000ff;#000000ff;
+s0_bg_color2 = #000000ff;#000000ff;#000000ff;#000000ff;
 
