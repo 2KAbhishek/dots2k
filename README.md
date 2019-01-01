@@ -1,6 +1,7 @@
 # Dotfiles
 
 My personal config files for everyone to use.
+Sadly this repo gets frequent commits. 😌😉
 
 ## Compiz
 
@@ -31,5 +32,3 @@ Requirements:
 * [Powerlevel9k](https://github.com/bhilburn/powerlevel9k)
 
 ".zshrc" goes into your home directory, use copy paste or symlink for updates.
-
-**Sadly this repo gets frequent commits. 😌😉**
