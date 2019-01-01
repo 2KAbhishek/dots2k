@@ -67,7 +67,7 @@ s0_initiate_key = <Shift>Tab
 s0_initiate_all_key = Disabled
 
 [workspacenames]
-s0_names = Main;Work;Shell;Work;
+s0_names = Main;Web;Shell;Work;
 s0_text_placement = 2
 
 [vpswitch]
