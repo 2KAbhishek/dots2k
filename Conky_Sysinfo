@@ -1,0 +1,44 @@
+use_xft yes
+xftfont 123:size=8
+xftalpha 0.1
+update_interval 1
+total_run_times 0
+
+own_window_class Conky
+own_window yes
+own_window_type dock
+own_window_transparent yes
+own_window_hints undecorated,below, sticky,skip_taskbar,skip_pager
+own_window_colour 000000
+own_window_argb_visual yes
+own_window_argb_value 0
+
+double_buffer yes
+#minimum_size 250 5
+#maximum_width 500
+draw_shades no
+draw_outline no
+draw_borders no
+draw_graph_borders no
+default_color white
+default_shade_color blue
+default_outline_color blue
+alignment bottom_left
+gap_x 0
+gap_y 50
+no_buffers yes
+uppercase no
+cpu_avg_samples 2
+net_avg_samples 1
+override_utf8_locale yes
+use_spacer yes
+
+
+minimum_size 0 0
+TEXT
+${voffset 10}${color EAEAEA}${font GE Inspira:pixelsize=120}${time %I:%M}${font GE Inspira:pixelsize=20}${time %p}${font}${voffset -84}${offset 10}${color 5294E2}${font GE Inspira:pixelsize=42}${time %d} ${voffset -15}${color EAEAEA}${font GE Inspira:pixelsize=22}${time  %B} ${time %Y}${font}${voffset 24}${font GE Inspira:pixelsize=58}${offset -200}${time %A}${font}
+${voffset 1}${offset 12}${font Ubuntu:pixelsize=12}${color 5294E2}Root ${offset 9}$color${fs_free /} / ${fs_size /}${offset 15}${color 5294E2}RAM ${offset 9}$color$mem / $memmax${offset 20}${color 5294E2}CPU ${offset 9}$color${cpu cpu0}% ${cpu cpu1}% ${cpu cpu2}% ${cpu cpu3}%
+${voffset 1}${offset 12}${font Ubuntu:pixelsize=12}${color 5294E2}Data ${offset 9}$color${fs_free /run/media/abhishek/Data/} / ${fs_size /run/media/abhishek/Data/}${offset 21}${color 5294E2}Swap ${offset 9}$color$swap / $swapmax ${offset 36}${font Ubuntu:pixelsize=20}abhishek${font Ubuntu:pixelsize=20}${color 5294E2}@TM-P259L
+
+
+
