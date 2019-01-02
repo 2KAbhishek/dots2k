@@ -9,7 +9,12 @@ Import  "Compiz.profile" from preferences inside CompizConfig Settings Manager.
 
 ## Conky
 
-"Conky_Sysinfo" goes into ~/.conky/ and start conky with "conky -c ~/.conky/Conky_Sysinfo".
+"Conky_Sysinfo" goes into ~/.conky/ and start with this.
+
+'''bash
+conky -c ~/.conky/Conky_Sysinfo
+'''
+
 You can also use Conky Manager.
 
 ## Tmux
