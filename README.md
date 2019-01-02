@@ -11,9 +11,9 @@ Import  "Compiz.profile" from preferences inside CompizConfig Settings Manager.
 
 "Conky_Sysinfo" goes into ~/.conky/ and start with this.
 
-'''bash
+```bash
 conky -c ~/.conky/Conky_Sysinfo
-'''
+```
 
 You can also use Conky Manager.
 
