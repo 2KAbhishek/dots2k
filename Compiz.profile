@@ -206,10 +206,3 @@ s0_bottom_edge_action = 2
 s0_bottom_right_corner_action = 3
 s0_use_desktop_average_color = false
 
-[wallpaper]
-s0_bg_image = /home/abhishek/Pictures/Pictures/Wallpapers/Baloon.jpg;/home/abhishek/Pictures/Pictures/Wallpapers/Dark Purple.jpg;/home/abhishek/Pictures/Pictures/Wallpapers/Vibrant/circular.jpg;/home/abhishek/Pictures/Pictures/Wallpapers/Vibrant/purple.jpg;
-s0_bg_image_pos = 0;0;0;0;
-s0_bg_fill_type = 0;0;0;0;
-s0_bg_color1 = #000000ff;#000000ff;#000000ff;#000000ff;
-s0_bg_color2 = #000000ff;#000000ff;#000000ff;#000000ff;
-
