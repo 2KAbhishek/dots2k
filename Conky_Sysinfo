@@ -24,8 +24,8 @@ default_color white
 default_shade_color blue
 default_outline_color blue
 alignment bottom_left
-gap_x 0
-gap_y 50
+gap_x 20
+gap_y 60
 no_buffers yes
 uppercase no
 cpu_avg_samples 2
@@ -36,9 +36,9 @@ use_spacer yes
 
 minimum_size 0 0
 TEXT
-${voffset 15}${color EAEAEA}${font GE Inspira:pixelsize=120}${time %I:%M}${font GE Inspira:pixelsize=20}${time %p}${font}${voffset -80}${offset 115}${font GE Inspira:pixelsize=42}${time %d} ${voffset -20}${color EAEAEA}${font GE Inspira:pixelsize=22}${time %b}${font}${voffset 24}${font GE Inspira:pixelsize=58}${offset -200}${time %A}${font}
-${voffset 1}${offset 12}${font Ubuntu:pixelsize=12}${color 5294E2}Root ${offset 9}$color${fs_free /} / ${fs_size /}${offset 15}${color 5294E2}RAM ${offset 9}$color$mem / $memmax${offset 14}${color 5294E2}CPU ${offset 9}$color${cpu cpu0}% ${cpu cpu1}% ${cpu cpu2}% ${cpu cpu3}%
-${voffset 1}${offset 12}${font Ubuntu:pixelsize=12}${color 5294E2}Data ${offset 9}$color${fs_free /run/media/abhishek/Data/} / ${fs_size /run/media/abhishek/Data/}${offset 21}${color 5294E2}Swap ${offset 9}$color$swap / $swapmax ${offset 35}${font Ubuntu:pixelsize=20}abhishek${font Ubuntu:pixelsize=20}${color 5294E2}@TM-P259L
+${voffset 15}${color EAEAEA}${font GE Inspira:pixelsize=128}${time %I:%M}${font GE Inspira:pixelsize=24}${time %p}${font}${voffset -80}${offset 100}${font GE Inspira:pixelsize=48}${time %d} ${color EAEAEA}${font GE Inspira:pixelsize=24}${time %b}${font}${font GE Inspira:pixelsize=64}${offset -200}${time %A}${font}
+${voffset -1}${offset 12}${font Ubuntu:pixelsize=13}${color 5294E2}Root ${offset 9}$color${fs_free /} / ${fs_size /}${offset 15}${color 5294E2}RAM ${offset 9}$color$mem / $memmax${offset 15}${color 5294E2}CPU ${offset 9}$color${cpu cpu0}% ${cpu cpu1}% ${cpu cpu2}% ${cpu cpu3}%
+${voffset 1}${offset 12}${font Ubuntu:pixelsize=13}${color 5294E2}Data ${offset 9}$color${fs_free /run/media/abhishek/Data/} / ${fs_size /run/media/abhishek/Data/}${offset 21}${color 5294E2}Swap ${offset 9}$color$swap / $swapmax ${offset 35}${font Ubuntu:pixelsize=24}abhishek${font Ubuntu:pixelsize=20}${color 5294E2}@TM-P259L
 
 
 
