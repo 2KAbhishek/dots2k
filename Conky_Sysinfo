@@ -36,8 +36,9 @@ use_spacer yes
 
 minimum_size 0 0
 TEXT
-${voffset 15}${color EAEAEA}${font GE Inspira:pixelsize=128}${time %I:%M}${font GE Inspira:pixelsize=24}${time %p}${font}${voffset -80}${offset 100}${font GE Inspira:pixelsize=48}${time %d} ${color EAEAEA}${font GE Inspira:pixelsize=24}${time %b}${font}${font GE Inspira:pixelsize=64}${offset -200}${time %A}${font}
-${voffset -1}${offset 12}${font Ubuntu:pixelsize=13}${color 5294E2}Root ${offset 9}$color${fs_free /} / ${fs_size /}${offset 15}${color 5294E2}RAM ${offset 9}$color$mem / $memmax${offset 15}${color 5294E2}CPU ${offset 9}$color${cpu cpu0}-${cpu cpu1}-${cpu cpu2}-${cpu cpu3}%
+${color EAEAEA}${font GE Inspira:pixelsize=128}${time %I:%M}${font GE Inspira:pixelsize=24}${color 5294E2}${time %p}${font}${voffset -80}${offset 100}${font GE Inspira:pixelsize=48}${color EAEAEA}${time %d} ${font GE Inspira:pixelsize=24}${color 5294E2}${time %b}${font}${font GE Inspira:pixelsize=64}${offset -200}${color EAEAEA}${time %A}${font}
+
+${offset 12}${font Ubuntu:pixelsize=13}${color 5294E2}Root ${offset 9}$color${fs_free /} / ${fs_size /}${offset 15}${color 5294E2}RAM ${offset 9}$color$mem / $memmax${offset 15}${color 5294E2}CPU ${offset 9}$color${cpu cpu0}-${cpu cpu1}-${cpu cpu2}-${cpu cpu3}%
 ${voffset 1}${offset 12}${font Ubuntu:pixelsize=13}${color 5294E2}Data ${offset 9}$color${fs_free /run/media/abhishek/Data/} / ${fs_size /run/media/abhishek/Data/}${offset 21}${color 5294E2}Swap ${offset 9}$color$swap / $swapmax ${offset 35}${font Ubuntu:pixelsize=24}abhishek${font Ubuntu:pixelsize=20}${color 5294E2}@TM-P259L
 
 
