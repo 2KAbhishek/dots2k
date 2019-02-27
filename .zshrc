@@ -7,11 +7,11 @@
  COMPLETION_WAITING_DOTS="true"
 
 # Powerline
-powerline-daemon -q
+#powerline-daemon -q
 #. /usr/lib/python3.7/site-packages/powerline/bindings/zsh/powerline.zsh
 
 # Theme
-ZSH_THEME="powerlevel9k"
+ZSH_THEME="powerlevel9k/powerlevel9k"
 
 # Plugins
 plugins=(
