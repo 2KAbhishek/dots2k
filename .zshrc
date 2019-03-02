@@ -13,21 +13,11 @@
 # Theme
 ZSH_THEME="powerlevel9k/powerlevel9k"
 
-# Plugins
-plugins=(
-  colored-man-pages
-  extract
-  fancy-ctrl-z
-  fast-syntax-highlighting
-  git
-  #vi-mode
-  z
-  zsh-autosuggestions
-)
-
-
 #POWERLEVEL9k
 POWERLEVEL9K_MODE='nerdfont-complete'
+
+# Plugins
+plugins=(colored-man-pages extract fancy-ctrl-z fast-syntax-highlighting git tmux z zsh-autosuggestions)
 
 #Prompt
 POWERLEVEL9K_PROMPT_ON_NEWLINE=true
@@ -50,7 +40,6 @@ POWERLEVEL9K_STATUS_VERBOSE=true
 POWERLEVEL9K_VI_COMMAND_MODE_STRING="Normal \ue62b"
 POWERLEVEL9K_VI_INSERT_MODE_STRING="Insert \ue52b"
 POWERLEVEL9K_TIME_FORMAT="%D{%a,%l:%M %p}"
-
 
 #Colour
 POWERLEVEL9K_COLOR_SCHEME='dark'
@@ -106,10 +95,10 @@ EDITOR=vim
  alias pacr="sudo pacman -R"
  alias pacu="sudo pacman -Syu"
  alias pp="prettyping --nolegend"
+ alias tmux="tmux -u"
 
 # Commands
-# export PATH=$PATH:/home/abhishek/.gem/ruby/2.5.0/bin
-
+# export PATH=$PATH:/home/abhishek/.gem/ruby/2.6.0/bin
 
 #Functions
 function lc () {
