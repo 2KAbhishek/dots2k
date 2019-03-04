@@ -1,38 +1,37 @@
 # Path to oh-my-zsh installation.
   export ZSH="/home/abhishek/.oh-my-zsh"
   export TERM="xterm-256color"
-#General
+
+# General
  DISABLE_AUTO_TITLE="false"
  ENABLE_CORRECTION="true"
  COMPLETION_WAITING_DOTS="true"
 
-# Powerline
-#powerline-daemon -q
-#. /usr/lib/python3.7/site-packages/powerline/bindings/zsh/powerline.zsh
+# Plugins
+plugins=(colored-man-pages extract fancy-ctrl-z fast-syntax-highlighting git tmux z zsh-autosuggestions)
+
 
 # Theme
 ZSH_THEME="powerlevel9k/powerlevel9k"
 
-#POWERLEVEL9k
+# Powerlevel9k
 POWERLEVEL9K_MODE='nerdfont-complete'
 
-# Plugins
-plugins=(colored-man-pages extract fancy-ctrl-z fast-syntax-highlighting git tmux z zsh-autosuggestions)
-
-#Prompt
+# Prompt
 POWERLEVEL9K_PROMPT_ON_NEWLINE=true
 POWERLEVEL9K_RPROMPT_ON_NEWLINE=true
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon root_indicator context docker_machine dir vcs time)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status command_execution_time background_jobs ram load battery)
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon root_indicator context dir vcs docker_machine virtualenv time)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status command_execution_time background_jobs ram battery)
 POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX="%F{014}╭%F{cyan}"
 POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX="%F{014}\u2570%F{cyan}\uf109 %F{001}\uF156%F{001}\ue602%f "
 
-#Segment
+# Segment
+DEFAULT_USER="abhishek"
+POWERLEVEL9K_CONTEXT_TEMPLATE="\uf489 %n@`hostname -f`"
 POWERLEVEL9K_BATTERY_LOW_THRESHOLD='30'
 POWERLEVEL9K_BATTERY_VERBOSE=false
 POWERLEVEL9K_COMMAND_EXECUTION_TIME_PRECISION=3
 POWERLEVEL9K_COMMAND_EXECUTION_TIME_THRESHOLD=0
-POWERLEVEL9K_CONTEXT_TEMPLATE="\uf489 %n@`hostname -f`"
 POWERLEVEL9K_DIR_SHOW_WRITABLE=true
 POWERLEVEL9K_BACKGROUND_JOBS_VERBOSE_ALWAYS=true
 POWERLEVEL9K_SHORTEN_DIR_LENGTH=2
@@ -40,6 +39,8 @@ POWERLEVEL9K_STATUS_VERBOSE=true
 POWERLEVEL9K_VI_COMMAND_MODE_STRING="Normal \ue62b"
 POWERLEVEL9K_VI_INSERT_MODE_STRING="Insert \ue52b"
 POWERLEVEL9K_TIME_FORMAT="%D{%a,%l:%M %p}"
+POWERLEVEL9K_PYTHON_ICON="\ue235"
+VIRTUAL_ENV_DISABLE_PROMPT=1
 
 #Colour
 POWERLEVEL9K_COLOR_SCHEME='dark'
@@ -82,7 +83,7 @@ POWERLEVEL9K_VI_MODE_INSERT_FOREGROUND='black'
 POWERLEVEL9K_VI_MODE_NORMAL_BACKGROUND='red'
 POWERLEVEL9K_VI_MODE_NORMAL_FOREGROUND='black'
 
-##TODO - zsh internet signal,audacious/pulseaudio now playing
+# TODO - zsh internet signal, now playing
 
 source $ZSH/oh-my-zsh.sh
 
