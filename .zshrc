@@ -96,6 +96,7 @@ EDITOR=vim
  alias cp="cp -iv"
  alias rm="rm -Iv"
  alias tmux="tmux -u"
+ alias tmuxm="tmux new-session \; split-window -h \; split-window -v \; attach"
 
  alias df="grc df"
  alias gcc="grc gcc"
