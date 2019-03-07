@@ -3,6 +3,8 @@
 My personal config files for everyone to use.
 Sadly this repo gets frequent commits. 😌😉
 
+[Terminal](https://i.imgur.com/bsHwUz4.png)
+
 ## Compiz
 
 Import  "Compiz.profile" from preferences inside CompizConfig Settings Manager.
