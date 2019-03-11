@@ -21,6 +21,7 @@ Plugin 'Valloric/YouCompleteMe'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'w0rp/ale'
+Plugin 'Xuyuanp/nerdtree-git-plugin'
 
 " Color Schemes
 colorscheme slate
@@ -28,6 +29,12 @@ colorscheme slate
 " Plugin Config
 let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/.ycm_extra_conf.py'
 let g:airline_theme='dark'
+let NERDTreeMinimalUI = 1
+let NERDTreeDirArrows = 1
+
+" Keybindings
+nnoremap <Leader>e :NERDTreeToggle<Enter>
+nnoremap <silent> <Leader>v :NERDTreeFind<CR>
 
 " Vundle Ends
 call vundle#end()          
