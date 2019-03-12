@@ -12,7 +12,9 @@ MAGIC_ENTER_GIT_COMMAND='git status'
 MAGIC_ENTER_OTHER_COMMAND='la'
 
 # Plugins
-plugins=(colored-man-pages 
+plugins=(alias-tips
+        colored-man-pages
+        command-not-found
         dirhistory
         emoji
         extract
@@ -149,6 +151,8 @@ EDITOR=vim
 export PATH=$PATH:/home/abhishek/.gem/ruby/2.6.0/bin
 export GREP_COLOR="1;32"
 GITHUB_USER=2kabhishek
+export ZSH_PLUGINS_ALIAS_TIPS_TEXT="Alias: "
+
 #Functions
 function lc () {
     cd $1;
