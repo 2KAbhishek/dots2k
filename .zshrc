@@ -150,7 +150,6 @@ EDITOR=vim
 # Commands
 export PATH=$PATH:/home/abhishek/.gem/ruby/2.6.0/bin
 export GREP_COLOR="1;32"
-GITHUB_USER=2kabhishek
 export ZSH_PLUGINS_ALIAS_TIPS_TEXT="Alias: "
 
 #Functions
