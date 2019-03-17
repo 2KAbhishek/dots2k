@@ -147,6 +147,7 @@ EDITOR=vim
  alias systo="sudo systemctl stop"
  alias syss="systemctl status"
 
+ alias cat="bat"
 # Commands
 export PATH=$PATH:/home/abhishek/.gem/ruby/2.6.0/bin
 export GREP_COLOR="1;32"
