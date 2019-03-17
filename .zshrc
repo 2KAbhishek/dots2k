@@ -1,5 +1,5 @@
 # Path to oh-my-zsh installation.
-  export ZSH="~/.oh-my-zsh"
+  export ZSH="/home/abhishek/.oh-my-zsh"
   export TERM="xterm-256color"
 
 # General
