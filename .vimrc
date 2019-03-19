@@ -46,7 +46,8 @@ syntax on
 set showmatch      " Show matching brackets.
 set ignorecase     " Do case insensitive matching
 set incsearch      " Show partial matches for a search phrase
-set nopaste       
+set nopaste
+set number
 set relativenumber  
 set undolevels=1000
 set hls            " Highlight Search
