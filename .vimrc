@@ -45,11 +45,11 @@ filetype plugin indent on
 syntax on
 set showmatch      " Show matching brackets.
 set ignorecase     " Do case insensitive matching
-set incsearch      " show partial matches for a search phrase
-set nopaste
-set number           
+set incsearch      " Show partial matches for a search phrase
+set nopaste       
+set relativenumber  
 set undolevels=1000
-set hls            "Highlight Search
+set hls            " Highlight Search
 
 " Settings to replace tab. Use :retab for replacing tab in existing files.
 set tabstop=4
