@@ -42,8 +42,8 @@ POWERLEVEL9K_PROMPT_ON_NEWLINE=true
 POWERLEVEL9K_RPROMPT_ON_NEWLINE=true
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon root_indicator context dir vcs docker_machine virtualenv time)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status history_joined command_execution_time vi_mode background_jobs ram battery)
-POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX="%F{014}╭%F{cyan}"
-POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX="%F{014}\u2570%F{cyan}\uf109 %F{001}\uF156%F{001}\ue602%f "
+POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX="%F{014}╭"
+POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX="%F{014}\u2570%K{black}%F{red} \uf109 \uf156>%f%F{black}%k\ue0b0%f "
 
 # Segment
 DEFAULT_USER="abhishek"
