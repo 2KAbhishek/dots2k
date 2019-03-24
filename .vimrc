@@ -1,4 +1,5 @@
 set nocompatible
+set encoding=utf-8
 filetype off
 
 " Vundle Stuff
