@@ -5,37 +5,33 @@ Sadly this repo gets frequent commits. 😌😉
 
 ![Terminal](https://i.imgur.com/bsHwUz4.png)
 
-## Compiz
+## Usage
 
-Import  "Compiz.profile" from preferences inside CompizConfig Settings Manager.
+Run "setup.py" for seting up, other specific steps given below.
 
-## Conky
-
-"Conky_Sysinfo" goes into ~/.conky/ and start with this.
-
-```bash
-conky -c ~/.conky/Conky_Sysinfo
-```
-
-You can also use Conky Manager.
-
-## Tmux
-
-".tmux.conf" goes into your home directory, use copy paste or symlink for updates.
-
-## Vim
+### Vim
 
 Requirements:
 
 * [Vundle](https://github.com/VundleVim/Vundle.vim)
 
-".vimrc" goes into your home directory, use copy paste or symlink for updates.
-
-## Zsh
+### Zsh
 
 Requirements:
 
 * [Oh My Zsh](https://github.com/robbyrussell/oh-my-zsh)
 * [Powerlevel9k](https://github.com/bhilburn/powerlevel9k)
 
-".zshrc" goes into your home directory, use copy paste or symlink for updates.
+### Compiz
+
+Import  "Compiz.profile" from preferences inside CompizConfig Settings Manager.
+
+### Conky
+
+"Conky_Sysinfo" goes into ~/.conky/, start conky with this command.
+
+```bash
+conky -c ~/.conky/Conky_Sysinfo
+```
+
+You can also use Conky Manager.
