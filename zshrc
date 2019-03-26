@@ -107,8 +107,6 @@ POWERLEVEL9K_VI_MODE_INSERT_FOREGROUND="black"
 POWERLEVEL9K_VI_MODE_NORMAL_BACKGROUND="000"
 POWERLEVEL9K_VI_MODE_NORMAL_FOREGROUND="white"
 
-# TODO - zsh internet signal, now playing
-
 source $ZSH/oh-my-zsh.sh
 
 # Environment
