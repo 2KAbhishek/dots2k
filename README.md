@@ -7,7 +7,7 @@ Sadly this repo gets frequent commits. 😌😉
 
 ## Usage
 
-Run "setup.py" for seting up, other specific steps given below.
+Run `setup.py` for seting up, other specific steps given below.
 
 ### Vim
 
@@ -24,11 +24,11 @@ Requirements:
 
 ### Compiz
 
-Import  "Compiz.profile" from preferences inside CompizConfig Settings Manager.
+Import  `Compiz.profile` from preferences inside CompizConfig Settings Manager.
 
 ### Conky
 
-"Conky_Sysinfo" goes into ~/.conky/, start conky with this command.
+`Conky_Sysinfo` goes into ~/.conky/, start conky with this command.
 
 ```bash
 conky -c ~/.conky/Conky_Sysinfo
