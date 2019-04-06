@@ -8,7 +8,7 @@
  COMPLETION_WAITING_DOTS="true"
 
 # Magic Enter
-MAGIC_ENTER_GIT_COMMAND="git status"
+MAGIC_ENTER_GIT_COMMAND="git status -v"
 MAGIC_ENTER_OTHER_COMMAND="lsd -aFl --tree --depth 2 --group-dirs"
 
 # Plugins
