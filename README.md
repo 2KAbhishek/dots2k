@@ -7,7 +7,12 @@ Sadly this repo gets frequent commits. 😌😉
 
 ## Usage
 
-Run `setup.py` for seting up, other specific steps given below.
+Run `setup.sh` for seting up, other specific steps given below.
+You can run `setup.sh` with `-i` or `--install` flags to install requirements.
+
+```bash
+sh setup.sh
+```
 
 ### Vim
 
