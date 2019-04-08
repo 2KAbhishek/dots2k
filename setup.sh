@@ -12,9 +12,9 @@ mv -iv ~/.tmux.conf ~/.tmux.conf.old
 mv -iv ~/.gitconfig ~/.gitconfig.old
 
 echo "Adding symlinks..."
-ln -s $CWD/zshrc ~/.zshrc
-ln -s $CWD/vimrc ~/.vimrc
-ln -s $CWD/tmux.conf ~/.tmux.conf
-ln -s $CWD/gitconfig ~/.gitconfig
+ln -s $CWD/.zshrc ~/.zshrc
+ln -s $CWD/.vimrc ~/.vimrc
+ln -s $CWD/.tmux.conf ~/.tmux.conf
+ln -s $CWD/.gitconfig ~/.gitconfig
 
 echo "Done."
