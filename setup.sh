@@ -7,12 +7,13 @@ arg=$1
 echo "Setting up Dotfiles..."
 
 if [[ "$arg" == "-i" || "$arg" == "--install" ]]; then
-	
+
     echo "Select an option:"
     echo "1 for Oh-My-Zsh"
     echo "2 for Powerlevel9K"
     echo "3 for Vundle"
-	echo "0 to Exit"
+    echo "4 for Custom zsh plugins"
+    echo "0 to Exit"
 
     read option
 
@@ -28,6 +29,14 @@ if [[ "$arg" == "-i" || "$arg" == "--install" ]]; then
 
     "3")echo "Installing Vundle..."
         git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+        ;;
+
+    "4")echo "Installing Custom zsh plugins ..."
+        cd ~/.oh-my-zsh/custom/plugins
+        git clone https://github.com/zsh-users/zsh-autosuggestions
+        git clone https://github.com/zdharma/fast-syntax-highlighting.git
+        git clone https://github.com/djui/alias-tips.git
+        cd $CWD
         ;;
 
     "0")echo "Bye"
