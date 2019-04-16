@@ -162,3 +162,9 @@ function lc () {
     cd $1;
     la $2
 }
+
+function tmux-clean() {
+    tmux list-sessions | grep -E -v '\(attached\)$' | while IFS='\n' read line; do
+    tmux kill-session -t "${line%%:*}"
+    done
+}
