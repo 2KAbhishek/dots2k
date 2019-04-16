@@ -25,6 +25,7 @@ Plugin 'w0rp/ale'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'godlygeek/tabular'
 Plugin 'gabrielelana/vim-markdown'
+Plugin 'wakatime/vim-wakatime'
 
 " Color Schemes
 colorscheme slate
