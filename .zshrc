@@ -8,8 +8,8 @@
  COMPLETION_WAITING_DOTS="true"
 
 # Magic Enter
-MAGIC_ENTER_GIT_COMMAND="git status -v"
-MAGIC_ENTER_OTHER_COMMAND="lsd -aFl --tree --depth 2 --group-dirs"
+MAGIC_ENTER_GIT_COMMAND="git status -v && exa -alh -s=extension -T -L=2 --git --group-directories-first && echo _"
+MAGIC_ENTER_OTHER_COMMAND="la"
 
 # Plugins
 plugins=(alias-tips
