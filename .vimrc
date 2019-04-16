@@ -23,6 +23,8 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'w0rp/ale'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
+Plugin 'godlygeek/tabular'
+Plugin 'gabrielelana/vim-markdown'
 
 " Color Schemes
 colorscheme slate
