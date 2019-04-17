@@ -39,6 +39,7 @@ let NERDTreeDirArrows = 1
 " Keybindings
 nnoremap <Leader>e :NERDTreeToggle<Enter>
 nnoremap <silent> <Leader>v :NERDTreeFind<CR>
+let g:user_emmet_leader_key=','
 
 " Vundle Ends
 call vundle#end()          
