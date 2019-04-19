@@ -35,11 +35,12 @@ let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/.ycm_extra_conf.p
 let g:airline_theme='dark'
 let NERDTreeMinimalUI = 1
 let NERDTreeDirArrows = 1
+let g:user_emmet_leader_key=','
 
 " Keybindings
 nnoremap <Leader>e :NERDTreeToggle<Enter>
 nnoremap <silent> <Leader>v :NERDTreeFind<CR>
-let g:user_emmet_leader_key=','
+inoremap jj <Esc> 
 
 " Vundle Ends
 call vundle#end()          
