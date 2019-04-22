@@ -58,9 +58,9 @@ mv -iv ~/.tmux.conf ~/.tmux.conf.old
 mv -iv ~/.gitconfig ~/.gitconfig.old
 
 echo "\u001b[36;1mAdding symlinks..."
-ln -s $CWD/.zshrc ~/.zshrc
-ln -s $CWD/.vimrc ~/.vimrc
-ln -s $CWD/.tmux.conf ~/.tmux.conf
-ln -s $CWD/.gitconfig ~/.gitconfig
+ln -sv $CWD/.zshrc ~/.zshrc
+ln -sv $CWD/.vimrc ~/.vimrc
+ln -sv $CWD/.tmux.conf ~/.tmux.conf
+ln -sv $CWD/.gitconfig ~/.gitconfig
 
 echo "\u001b[32;1mDone."
