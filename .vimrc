@@ -27,9 +27,6 @@ Plugin 'godlygeek/tabular'
 Plugin 'gabrielelana/vim-markdown'
 Plugin 'wakatime/vim-wakatime'
 
-" Color Schemes
-colorscheme slate
-
 " Plugin Config
 let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/.ycm_extra_conf.py'
 let g:airline_theme='dark'
@@ -46,6 +43,8 @@ inoremap jj <Esc>
 call vundle#end()          
 filetype plugin indent on
 
+" Color Schemes
+set termguicolors
 
 " Other general vim options:
 syntax on
