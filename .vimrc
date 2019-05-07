@@ -36,10 +36,13 @@ filetype plugin indent on
 
 " Plugin Config
 let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/.ycm_extra_conf.py'
-let g:airline_theme='onedark'
+let g:airline_theme='murmur'
 let NERDTreeMinimalUI = 1
 let NERDTreeDirArrows = 1
 let g:user_emmet_leader_key=','
+let g:airline#extensions#tabline#enabled = 1
+let g:airline_left_sep = "\uE0B0"
+let g:airline_right_sep = "\uE0B2"
 
 " Keybindings
 nnoremap <Leader>e :NERDTreeToggle<Enter>
