@@ -152,6 +152,7 @@ alias syse="sudo systemctl enable"
 alias sysd="sudo systemctl disable"
 alias systa="sudo systemctl start"
 alias systo="sudo systemctl stop"
+alias sysr="sudo systemctl restart"
 alias syss="systemctl status"
 
 # Commands
