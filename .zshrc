@@ -8,8 +8,8 @@ ENABLE_CORRECTION="true"
 COMPLETION_WAITING_DOTS="true"
 
 # Magic Enter
-MAGIC_ENTER_GIT_COMMAND="git status -v && exa -alh -s=extension -T -L=2 --git --group-directories-first && echo"
-MAGIC_ENTER_OTHER_COMMAND="la && echo"
+MAGIC_ENTER_GIT_COMMAND="git status -v && exa -ahlT -L=1  -s=extension --git --group-directories-first && echo"
+MAGIC_ENTER_OTHER_COMMAND="lsd -a --group-dirs first --classify && echo"
 
 # Plugins
 plugins=(alias-tips
@@ -112,7 +112,9 @@ source $ZSH/oh-my-zsh.sh
 EDITOR=vim 
 
 # Aliases
-alias la="ls -AXFb --group-directories-first --sort=extension"
+alias la="ls -AXb --group-directories-first --sort=extension"
+alias lsda="lsd -a --group-dirs first --classify"
+alias exag="exa -ahlT -L=1  -s=extension --git --group-directories-first"
 alias mv="mv -iv"
 alias cp="cp -iv"
 alias rm="rm -Iv"
