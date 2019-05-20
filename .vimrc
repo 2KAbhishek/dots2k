@@ -2,6 +2,15 @@ set nocompatible
 set encoding=utf-8
 filetype off
 
+syntax on          " Turn on syntax highlighting
+set showmatch      " Show matching brackets.
+set ignorecase     " Do case insensitive matching
+set incsearch      " Show partial matches for a search phrase
+set number         " Show numbers
+set relativenumber " Show relative numbers
+set undolevels=999 " Lots of these 
+set hls            " Highlight Search
+
 " Vundle Stuff
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -59,17 +68,6 @@ let g:indentLine_char = ''
 let g:indentLine_first_char =  ''
 let g:indentLine_showFirstIndentLevel = 1
 let g:indentLine_setColors = 1
-
-" Other general vim options:
-syntax on
-set showmatch      " Show matching brackets.
-set ignorecase     " Do case insensitive matching
-set incsearch      " Show partial matches for a search phrase
-set nopaste
-set number
-set relativenumber  
-set undolevels=1000
-set hls            " Highlight Search
 
 " Settings to replace tab. Use :retab for replacing tab in existing files.
 set tabstop=4
