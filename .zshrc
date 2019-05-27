@@ -124,7 +124,7 @@ alias lsda="lsd -a --group-dirs first --classify"
 alias exag="exa -ahlT -L=1  -s=extension --git --group-directories-first"
 alias mv="mv -iv"
 alias cp="cp -iv"
-alias rm="rm -Iv"
+alias rm="rm -iv"
 alias ln="ln -sv"
 alias q="exit"
 
