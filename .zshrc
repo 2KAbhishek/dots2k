@@ -8,8 +8,8 @@ ENABLE_CORRECTION="true"
 COMPLETION_WAITING_DOTS="true"
 
 # Magic Enter
-MAGIC_ENTER_GIT_COMMAND="git status -v && exag"
-MAGIC_ENTER_OTHER_COMMAND="lsda"
+MAGIC_ENTER_GIT_COMMAND="git status -v && exag && echo"
+MAGIC_ENTER_OTHER_COMMAND="lsda && echo"
 
 # Plugins
 plugins=(alias-tips
