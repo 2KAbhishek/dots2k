@@ -172,8 +172,14 @@ export ZSH_PLUGINS_ALIAS_TIPS_TEXT="Alias: "
 
 #Functions
 function lc () {
-    cd $1;
+    cd $1 &&
     la $2
+}
+
+mkcd ()
+{
+    mkdir -p -- "$1" &&
+    cd -P -- "$1"
 }
 
 function tmux-clean() {
