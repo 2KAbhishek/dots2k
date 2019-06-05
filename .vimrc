@@ -14,6 +14,7 @@ set tabstop=4      " Tab size
 set shiftwidth=4   " Indentation size
 set softtabstop=4  " Tabs/Spaces interop
 set expandtab      " Expands tab to spaces
+set nomodeline     " Disable as a security precaution
 
 " Vundle Init
 set rtp+=~/.vim/bundle/Vundle.vim
