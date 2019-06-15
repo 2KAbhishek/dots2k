@@ -75,8 +75,9 @@ let NERDTreeMinimalUI = 1
 let NERDTreeDirArrows = 1
 
 " IndentLine
-let g:indentLine_char = ''
-let g:indentLine_first_char =  ''
+"let g:indentLine_char = ''
+let g:indentLine_char ='|'
+let g:indentLine_first_char = '>'
 let g:indentLine_showFirstIndentLevel = 1
 let g:indentLine_setColors = 1
 
