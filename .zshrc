@@ -13,9 +13,7 @@ MAGIC_ENTER_OTHER_COMMAND="lsda && echo -e '\n'"
 
 # Plugins
 plugins=(alias-tips
-        command-not-found
         dirhistory
-        emoji
         extract
         fancy-ctrl-z
         fzf
@@ -27,7 +25,8 @@ plugins=(alias-tips
         tmux
         web-search
         z
-        zsh-autosuggestions)
+        zsh-autosuggestions
+        zsh-navigation-tools)
 
 
 # Theme
@@ -40,7 +39,7 @@ POWERLEVEL9K_MODE="nerdfont-complete"
 POWERLEVEL9K_PROMPT_ON_NEWLINE=true
 POWERLEVEL9K_RPROMPT_ON_NEWLINE=true
 POWERLEVEL9K_PROMPT_ADD_NEWLINE=true
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon context dir vcs docker_machine virtualenv time)
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon context dir vcs virtualenv time)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status history command_execution_time vi_mode background_jobs ram battery)
 POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX="%F{014}╭"
 POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX="%F{014}\u2570%K{black}%F{blue} \uf109 \uf156>%f%F{black}%k\ue0b0%f "
