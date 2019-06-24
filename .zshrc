@@ -126,7 +126,8 @@ alias cp="cp -iv"
 alias rm="rm -iv"
 alias ln="ln -sv"
 alias q="exit"
-
+alias fdir='find . -type d -name'
+alias ffil='find . -type f -name'
 alias cat="bat"
 
 alias tmux="tmux -u"
