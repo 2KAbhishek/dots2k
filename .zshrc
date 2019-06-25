@@ -119,7 +119,7 @@ EDITOR=vim
 
 # Aliases
 alias la="ls -AXb --group-directories-first --sort=extension"
-alias lsda="lsd -a --group-dirs first --classify"
+alias lsda="lsd -A --group-dirs first --classify"
 alias exag="exa -ahlT -L=1  -s=extension --git --group-directories-first"
 alias mv="mv -iv"
 alias cp="cp -iv"
