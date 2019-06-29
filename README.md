@@ -40,3 +40,9 @@ conky -c ~/.conky/Conky_Sysinfo
 ```
 
 You can also use Conky Manager.
+
+### Long Term Branches
+
+There are also two other branches:
+`termux` - Has specific tweaks for Termux and small screen usage.
+`lite` - Has no powerline glyphs, ideal for ssh.
