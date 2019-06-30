@@ -16,6 +16,10 @@ set softtabstop=4  " Tabs/Spaces interop
 set expandtab      " Expands tab to spaces
 set nomodeline     " Disable as a security precaution
 
+" Highlight non whitespace characters
+set listchars=tab:>~,nbsp:_,trail:.
+set list
+
 " Vundle Init
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
