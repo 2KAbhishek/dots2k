@@ -55,6 +55,12 @@ filetype plugin indent on
 " Keybindings
 inoremap jj <Esc> 
 
+" Drag Visual selections
+vnoremap K xkP`[V`]
+vnoremap U xp`[V`]
+vnoremap L >gv
+vnoremap H <gv
+
 " YouCompleteMe
 let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/.ycm_extra_conf.py'
 
