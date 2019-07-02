@@ -148,6 +148,7 @@ alias pp="prettyping --nolegend"
 alias diff="diff --color=auto"
 alias grep="grep --color=auto"
 alias ncdu="ncdu --color=dark"
+alias ytdl="youtube-dl"
 
 alias paci="sudo pacman -S"
 alias pacr="sudo pacman -R"
