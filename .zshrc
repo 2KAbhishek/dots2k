@@ -168,6 +168,7 @@ alias systo="sudo systemctl stop"
 alias sysr="sudo systemctl restart"
 alias syss="systemctl status"
 
+alias jupn="jupyter notebook"
 # Commands
 export PATH=$HOME/.gem/ruby/2.6.0/bin:$PATH
 export PATH=$HOME/.node_modules/bin:$PATH
