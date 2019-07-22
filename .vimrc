@@ -36,14 +36,12 @@ Plugin 'terryma/vim-multiple-cursors'
 Plugin 'tpope/vim-eunuch'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-fugitive'
-Plugin 'Valloric/YouCompleteMe'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'w0rp/ale'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'godlygeek/tabular'
 Plugin 'gabrielelana/vim-markdown'
-Plugin 'wakatime/vim-wakatime'
 Plugin 'Yggdroot/indentLine'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'joshdick/onedark.vim'
@@ -60,9 +58,6 @@ vnoremap K xkP`[V`]
 vnoremap U xp`[V`]
 vnoremap L >gv
 vnoremap H <gv
-
-" YouCompleteMe
-let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/.ycm_extra_conf.py'
 
 " Airline
 let g:airline_theme='onedark'
