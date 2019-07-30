@@ -30,7 +30,7 @@ plugins=(alias-tips
 
 
 # Theme
-ZSH_THEME="powerlevel9k/powerlevel9k"
+ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # Powerlevel9k
 POWERLEVEL9K_MODE="nerdfont-complete"

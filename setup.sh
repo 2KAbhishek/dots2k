@@ -10,7 +10,7 @@ if [[ "$arg" == "-i" || "$arg" == "--install" ]]; then
 
     echo -e "\u001b[37;1m\u001b[4mSelect an option:\u001b[0m"
     echo -e "  \u001b[34;1m1) for Oh-My-Zsh\u001b[0m"
-    echo -e "  \u001b[34;1m2) for Powerlevel9K\u001b[0m"
+    echo -e "  \u001b[34;1m2) for Powerlevel10K\u001b[0m"
     echo -e "  \u001b[34;1m3) for Vundle\u001b[0m"
     echo -e "  \u001b[34;1m4) for Custom zsh plugins\u001b[0m"
     echo -e "  \u001b[31;1m0) to Exit\u001b[0m"
@@ -23,8 +23,8 @@ if [[ "$arg" == "-i" || "$arg" == "--install" ]]; then
         sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
         ;;
 
-    "2")echo -e "\u001b[7mInstalling Powerlevel9K...\u001b[0m"
-        git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k
+    "2")echo -e "\u001b[7mInstalling Powerlevel10K...\u001b[0m"
+        git clone https://github.com/romkatv/powerlevel10k.git ~/.oh-my-zsh/custom/themes/powerlevel10k
         ;;
 
     "3")echo -e "\u001b[7mInstalling Vundle...\u001b[0m"

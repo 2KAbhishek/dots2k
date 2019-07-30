@@ -25,7 +25,7 @@ Requirements:
 Requirements:
 
 * [Oh My Zsh](https://github.com/robbyrussell/oh-my-zsh)
-* [Powerlevel9k](https://github.com/bhilburn/powerlevel9k)
+* [Powerlevel10k](https://github.com/romkatv/powerlevel10k)
 
 ### Compiz
 
