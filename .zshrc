@@ -4,7 +4,7 @@ export TERM="xterm-256color"
 
 # General
 DISABLE_AUTO_TITLE="false"
-ENABLE_CORRECTION="true"
+ENABLE_CORRECTION="false"
 COMPLETION_WAITING_DOTS="true"
 
 # Magic Enter
