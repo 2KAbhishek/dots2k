@@ -51,16 +51,26 @@ if [[ "$arg" == "-i" || "$arg" == "--install" ]]; then
     exit 0
 fi
 
-echo -e "\u001b[33;1mBacking up old files...\u001b[0m"
+echo -e "\u001b[33;1mBacking up existing files...\u001b[0m"
 mv -iv ~/.zshrc ~/.zshrc.old
 mv -iv ~/.vimrc ~/.vimrc.old
 mv -iv ~/.tmux.conf ~/.tmux.conf.old
 mv -iv ~/.gitconfig ~/.gitconfig.old
+mv -iv ~/.dmenurc ~/.dmenurc.old
+mv -iv ~/.Xresources ~/.Xresources.old
+mv -iv ~/.config/i3/config ~/.config/i3/config.old
+mv -iv ~/.config/i3status/config ~/.config/i3status/config.old
+mv -iv ~/.config/ranger ~/.config/ranger.old
 
 echo -e "\u001b[36;1mAdding symlinks...\u001b[0m"
 ln -sfnv $CWD/.zshrc ~/.zshrc
 ln -sfnv $CWD/.vimrc ~/.vimrc
 ln -sfnv $CWD/.tmux.conf ~/.tmux.conf
 ln -sfnv $CWD/.gitconfig ~/.gitconfig
+ln -sfnv $CWD/.dmenurc ~/.dmenurc
+ln -sfnv $CWD/.Xresources ~/.Xresources
+ln -sfnv $CWD/.config/i3/config ~/.config/i3/config
+ln -sfnv $CWD/.config/i3status/config ~/.config/i3status/config
+ln -sfnv $CWD/.config/ranger ~/.config/ranger
 
 echo -e "\u001b[32;1mDone.\u001b[0m"
