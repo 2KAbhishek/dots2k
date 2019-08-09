@@ -16,18 +16,18 @@ sh dot.sh -i # For installing dependencies
 
 ### Included Configurations
 
-* compiz   : `~/.config/compiz.profile`
-* conky    : `~/.config/conky_sysinfo`
-* dmenu    : `~/.dmenurc`
-* git      : `~/.gitconfig`
-* i3       : `~/.config/i3/config`
+* compiz : `~/.config/compiz.profile`
+* conky : `~/.config/conky_sysinfo`
+* dmenu : `~/.dmenurc`
+* git : `~/.gitconfig`
+* i3 : `~/.config/i3/config`
 * i3status : `~/.config/i3status/config`
 * libinbut : `~/.config/libinput-gestures.conf`
-* ranger   : `~/.config/ranger/`
-* tmux     : `~/.tmux.conf`
-* vim      : `~/.vimrc`
-* xrdb     : `~/.Xresources`
-* zsh      : `~/.zshrc`
+* ranger : `~/.config/ranger/`
+* tmux : `~/.tmux.conf`
+* vim : `~/.vimrc`
+* xrdb : `~/.Xresources`
+* zsh : `~/.zshrc`
 
 > This repo also contains a few scripts in the `Scripts` directory.
 

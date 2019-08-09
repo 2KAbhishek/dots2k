@@ -119,7 +119,9 @@ EDITOR=vim
 
 # Aliases
 alias cat="bat"
+alias ccp="clipcopy"
 alias cp="cp -iv"
+alias cpa="clippaste"
 alias df="grc df"
 alias diff="diff --color=auto"
 alias exag="exa -ahlT -L=1  -s=extension --git --group-directories-first"
