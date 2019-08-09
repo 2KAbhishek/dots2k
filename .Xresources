@@ -6,7 +6,7 @@ Xft.autohint: false
 Xft.hintstyle: hintslight
 Xft.lcdfilter: lcddefault
 
-XTerm*background: #232C3B
+XTerm*background: #161B25
 XTerm*foreground: #D8D8D8
 XTerm*pointerColor: #1ABB9B
 XTerm*faceName: Fixed
@@ -14,7 +14,7 @@ XTerm*faceSize: 11
 XTerm*reverseVideo: on
 XTerm*selectToClipboard: true
 
-*background: #222D31
+*background: #161B25
 *foreground: #D8D8D8
 *fading: 8
 *fadeColor: black
