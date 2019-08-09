@@ -223,7 +223,7 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 
 # Set shut down, restart and locking features
 bindsym $mod+0 mode "$mode_system"
-set $mode_system (l)ock, (e)xit, switch_(u)ser, (s)uspend, (h)ibernate, (r)eboot, (Shift+s)hutdown
+set $mode_system (L)ock | (E)xit | Switch_(U)ser | (S)uspend | (H)ibernate | (R)eboot | (Shift+S)hutdown
 mode "$mode_system" {
     bindsym l exec --no-startup-id i3exit lock, mode "default"
     bindsym s exec --no-startup-id i3exit suspend, mode "default"
@@ -240,7 +240,7 @@ mode "$mode_system" {
 
 # Resize window (you can also use the mouse for that)
 bindsym $mod+r mode "resize"
-mode "resize" {
+mode "Resize" {
         # These bindings trigger as soon as you enter the resize mode
         bindsym j resize shrink width 5 px or 5 ppt
         bindsym k resize grow height 5 px or 5 ppt
@@ -319,7 +319,7 @@ bar {
         focused_workspace  #FFFFFF #2391E3 #FFFFFF
         active_workspace   #515A61 #222D31 #FDF6E3
         inactive_workspace #515A61 #222D31 #FDF6E3
-        binding_mode       #515A61 #222D31 #FDF6E3
+        binding_mode       #34A2F4 #2391E3 #FFFFFF
         urgent_workspace   #515A61 #D42E58 #FFFFFF
     }
 }
@@ -349,7 +349,7 @@ smart_gaps on
 smart_borders on
 
 # Gap Mode
-set $mode_gaps Gaps: (o) outer, (i) inner
+set $mode_gaps Gaps: (O) Outer, (I) Inner
 set $mode_gaps_outer Outer Gaps: +|-|0 (local), Shift + +|-|0 (global)
 set $mode_gaps_inner Inner Gaps: +|-|0 (local), Shift + +|-|0 (global)
 bindsym $mod+Shift+g mode "$mode_gaps"
