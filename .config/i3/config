@@ -54,8 +54,8 @@ bindsym $mod+Ctrl+m exec konsole -e 'alsamixer'
 # Start Applications
 bindsym $mod+Ctrl+b exec konsole -e 'bmenu'
 bindsym $mod+F2 exec chromium
-bindsym $mod+F3 exec ranger
-bindsym $mod+F4 exec vim
+bindsym $mod+F3 exec konsole -e ranger
+bindsym $mod+F4 exec konsole -e vim
 bindsym $mod+Shift+F2 exec links
 bindsym $mod+Shift+F3 exec pcmanfm
 bindsym $mod+Shift+F4 exec code
