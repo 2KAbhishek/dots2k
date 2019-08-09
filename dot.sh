@@ -1,7 +1,6 @@
 #!/bin/bash
 
 #Setup script for Dotfiles
-CWD=$(pwd)
 arg=$1
 
 echo -e "\u001b[32;1mSetting up Dotfiles...\u001b[0m"
@@ -58,19 +57,21 @@ mv -iv ~/.tmux.conf ~/.tmux.conf.old
 mv -iv ~/.gitconfig ~/.gitconfig.old
 mv -iv ~/.dmenurc ~/.dmenurc.old
 mv -iv ~/.Xresources ~/.Xresources.old
-mv -iv ~/.config/i3/config ~/.config/i3/config.old
-mv -iv ~/.config/i3status/config ~/.config/i3status/config.old
+mv -iv ~/.config/i3 ~/.config/i3.old
+mv -iv ~/.config/i3status ~/.config/i3status.old
 mv -iv ~/.config/ranger ~/.config/ranger.old
+mv -iv ~/.config/libinput-gestures.conf ~/.config/libinput-gestures.conf.old
 
 echo -e "\u001b[36;1mAdding symlinks...\u001b[0m"
-ln -sfnv $CWD/.zshrc ~/.zshrc
-ln -sfnv $CWD/.vimrc ~/.vimrc
-ln -sfnv $CWD/.tmux.conf ~/.tmux.conf
-ln -sfnv $CWD/.gitconfig ~/.gitconfig
-ln -sfnv $CWD/.dmenurc ~/.dmenurc
-ln -sfnv $CWD/.Xresources ~/.Xresources
-ln -sfnv $CWD/.config/i3/config ~/.config/i3/config
-ln -sfnv $CWD/.config/i3status/config ~/.config/i3status/config
-ln -sfnv $CWD/.config/ranger ~/.config/ranger
+ln -sfnv $PWD/.zshrc ~/.zshrc
+ln -sfnv $PWD/.vimrc ~/.vimrc
+ln -sfnv $PWD/.tmux.conf ~/.tmux.conf
+ln -sfnv $PWD/.gitconfig ~/.gitconfig
+ln -sfnv $PWD/.dmenurc ~/.dmenurc
+ln -sfnv $PWD/.Xresources ~/.Xresources
+ln -sfnv $PWD/.config/i3 ~/.config/i3
+ln -sfnv $PWD/.config/i3status ~/.config/i3status
+ln -sfnv $PWD/.config/ranger ~/.config/ranger
+ln -sfnv $PWD/.config/libinput-gestures.conf ~/.config/libinput-gestures.conf
 
-echo -e "\u001b[32;1mDone.\u001b[0m"
+echo -e "\u001b[32;1mDone. Remove backups with 'rm ~/.*.old && rm ~/.config/*.old'\u001b[0m"
