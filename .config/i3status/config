@@ -1,5 +1,5 @@
 general {
-        colors = true
+        colors = false
         interval = 5
         color_good = "#2391E3"
         color_bad = "#E0D758"
@@ -58,8 +58,8 @@ battery all {
 
 memory {
         format = "  %available "
-        threshold_degraded = "0.5G"
-        format_degraded = " <%available "
+        threshold_degraded = "256M"
+        format_degraded = "  %available!! "
 }
 
 tztime local {
