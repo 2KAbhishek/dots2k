@@ -73,5 +73,5 @@ ln -sfnv $PWD/.tmux.conf ~/.tmux.conf
 ln -sfnv $PWD/.vimrc ~/.vimrc
 ln -sfnv $PWD/.zshrc ~/.zshrc
 
-echo -e "\u001b[36;1m Remove backups with 'rm ~/.*.old && rm ~/.config/*.old'. \u001b[0m"
+echo -e "\u001b[36;1m Remove backups with 'rm -ir ~/.*.old && rm -ir ~/.config/*.old'. \u001b[0m"
 echo -e "\u001b[32;1m Completed. \u001b[0m"
