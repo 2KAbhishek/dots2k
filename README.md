@@ -33,7 +33,6 @@ sh dot.sh -i # For installing dependencies
 
 ### Long Term Branches
 
-There are also two other branches:
+There is one other branch:
 
-* `lite` - Has no powerline glyphs, ideal for ssh.
 * `termux` - Has specific tweaks for Termux and small screen usage.
