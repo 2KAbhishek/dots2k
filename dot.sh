@@ -23,13 +23,13 @@ if [[ "$arg" == "-i" || "$arg" == "--install" ]]; then
         ;;
 
     "2")echo -e "\u001b[7mInstalling Powerlevel10K...\u001b[0m"
-        git clone https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k
+        git clone https://github.com/romkatv/powerlevel10k.git ~/.oh-my-zsh/custom/themes/powerlevel10k
         ;;
 
     "3")echo -e "\u001b[7m Installing Custom zsh plugins... \u001b[0m"
-        git clone https://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
-        git clone https://github.com/zdharma/fast-syntax-highlighting.git $ZSH_CUSTOM/plugins/fast-syntax-highlighting
-        git clone https://github.com/djui/alias-tips.git $ZSH_CUSTOM/plugins/alias-tips
+        git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
+        git clone https://github.com/zdharma/fast-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/fast-syntax-highlighting
+        git clone https://github.com/djui/alias-tips.git ~/.oh-my-zsh/custom/plugins/alias-tips
         ;;
 
     "4")echo -e "\u001b[7m Installing Vundle... \u001b[0m"
