@@ -2,10 +2,15 @@
 export ZSH="$HOME/.oh-my-zsh"
 export TERM="xterm-256color"
 
+# Options
+setopt hist_ignore_dups
+setopt hist_expire_dups_first
+
 # General
 DISABLE_AUTO_TITLE="false"
 ENABLE_CORRECTION="false"
 COMPLETION_WAITING_DOTS="true"
+SAVEHIST=99999
 
 # Magic Enter
 MAGIC_ENTER_GIT_COMMAND="git status -v && exag && echo -e '\n'"
