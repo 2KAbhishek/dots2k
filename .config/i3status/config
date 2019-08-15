@@ -6,13 +6,13 @@ general {
         color_degraded = "#D42E58"
 }
 
-order += "ethernet _first_"
 order += "cpu_usage"
 order += "memory"
-order += "disk /"
 order += "load"
+order += "disk /"
 order += "tztime local"
 order += "battery all"
+order += "ethernet _first_"
 # order += "ipv6"
 # order += "disk /home"
 # order += "wireless _first_"
