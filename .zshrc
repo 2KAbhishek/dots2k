@@ -24,7 +24,6 @@ plugins=(alias-tips
         fzf
         fast-syntax-highlighting
         git
-        github
         globalias
         magic-enter
         tmux
