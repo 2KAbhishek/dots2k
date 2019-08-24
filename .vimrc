@@ -42,9 +42,13 @@ Plugin 'gabrielelana/vim-markdown'
 Plugin 'Yggdroot/indentLine'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'joshdick/onedark.vim'
+Plugin 'sheerun/vim-polyglot'
+Plugin 'Shougo/deoplete.nvim'
+Plugin 'roxma/nvim-yarp'
+Plugin 'roxma/vim-hug-neovim-rpc'
 
 " Vundle Ends
-call vundle#end()          
+call vundle#end()
 filetype plugin indent on
 
 " Keybindings
