@@ -1,7 +1,6 @@
-set nocompatible
-set encoding=utf-8
-filetype off
-
+set nocompatible   " Disable vi compatibilty
+set encoding=utf-8 " Use UTF-8
+filetype off       " Disable filetype
 syntax on          " Turn on syntax highlighting
 set showmatch      " Show matching brackets
 set ignorecase     " Do case insensitive matching
