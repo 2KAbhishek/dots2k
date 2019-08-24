@@ -52,7 +52,10 @@ call vundle#end()
 filetype plugin indent on
 
 " Keybindings
-inoremap jj <Esc> 
+inoremap jj <Esc>
+let mapleader = ','
+let g:user_emmet_leader_key=','
+map <Leader>e : NERDTreeToggle<CR>
 
 " Drag Visual selections
 vnoremap K xkP`[V`]
