@@ -80,6 +80,12 @@ let g:onedark_color_overrides = {
 let g:onedark_terminal_italics = 1
 colorscheme onedark
 
+" IndentLine
+let g:indentLine_char =''
+let g:indentLine_first_char = ''
+let g:indentLine_showFirstIndentLevel = 1
+let g:indentLine_setColors = 1
+
 " NERDTree
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
