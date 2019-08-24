@@ -14,10 +14,8 @@ set shiftwidth=4   " Indentation size
 set softtabstop=4  " Tabs/Spaces interop
 set expandtab      " Expands tab to spaces
 set nomodeline     " Disable as a security precaution
-
-" Highlight non whitespace characters
-set listchars=tab:>~,nbsp:_,trail:.
-set list
+set mouse=a        " Enable mouse mode
+set termguicolors  " Enable true colors
 
 " Vundle Init
 set rtp+=~/.vim/bundle/Vundle.vim
