@@ -86,18 +86,16 @@ let g:indentLine_first_char = ''
 let g:indentLine_showFirstIndentLevel = 1
 let g:indentLine_setColors = 1
 
+" Highlight non whitespace characters
+set listchars=tab:,nbsp:_,trail:
+set list
+
 " NERDTree
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 let NERDTreeMinimalUI = 1
 let NERDTreeDirArrows = 1
 
-" IndentLine
-"let g:indentLine_char = ''
-let g:indentLine_char ='|'
-let g:indentLine_first_char = '▷'
-let g:indentLine_showFirstIndentLevel = 1
-let g:indentLine_setColors = 1
 
 " Have Vim jump to the last position when reopening a file
 if has("autocmd")
