@@ -96,6 +96,11 @@ autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 let NERDTreeMinimalUI = 1
 let NERDTreeDirArrows = 1
 
+" Deoplete
+let g:deoplete#enable_at_startup = 1
+inoremap <silent><expr><tab> pumvisible() ? "\<c-n>":"\<tab>"
+inoremap <silent><expr><s-tab> pumvisible() ? "\<c-p>":"\<s-tab>
+autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
 
 " Have Vim jump to the last position when reopening a file
 if has("autocmd")
