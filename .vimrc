@@ -69,12 +69,15 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline_left_sep = "\uE0B0"
 let g:airline_right_sep = "\uE0B2"
 
-" Emmet
-let g:user_emmet_leader_key=','
+" Always use terminal background
+autocmd ColorScheme * highlight! Normal ctermbg=NONE guibg=NONE
 
-" Color Schemes
-set termguicolors
-autocmd ColorScheme * highlight! Normal ctermbg=NONE guibg=NONE " Always use terminal background
+" One Dark
+let g:onedark_color_overrides = {
+\ "comment_grey": {"gui": "#69747C","cterm": "245", "cterm16": "8"},
+\ "gutter_fg_grey": { "gui": "#69747C", "cterm": "245", "cterm16": "8"}
+\}
+let g:onedark_terminal_italics = 1
 colorscheme onedark
 
 " NERDTree
