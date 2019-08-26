@@ -16,6 +16,7 @@ set expandtab      " Expands tab to spaces
 set nomodeline     " Disable as a security precaution
 set mouse=a        " Enable mouse mode
 set termguicolors  " Enable true colors
+set wildmenu       " Enable wildmenu
 
 " Vundle Init
 set rtp+=~/.vim/bundle/Vundle.vim
