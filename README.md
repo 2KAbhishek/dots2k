@@ -2,7 +2,7 @@
 
 My personal config files for everyone to use. Sadly this repo gets frequent commits. 😌😉
 
-![Terminal](https://i.imgur.com/bsHwUz4.png)
+![Terminal](https://i.imgur.com/XOJlQXU.png)
 
 ## Setup
 
@@ -16,23 +16,24 @@ sh dot.sh -i # For installing dependencies
 
 ### Included Configurations
 
-* compiz : `~/.config/compiz.profile`
-* conky : `~/.config/conky_sysinfo`
-* dmenu : `~/.dmenurc`
-* git : `~/.gitconfig`
-* i3 : `~/.config/i3/config`
-* i3status : `~/.config/i3status/config`
-* libinbut : `~/.config/libinput-gestures.conf`
-* ranger : `~/.config/ranger/`
-* tmux : `~/.tmux.conf`
-* vim : `~/.vimrc`
-* xrdb : `~/.Xresources`
-* zsh : `~/.zshrc`
+* compiz : [~/.config/compiz.profile](https://github.com/2KAbhishek/Dotfiles/blob/master/.config/compiz.profile)
+* conky : [~/.config/conky_sysinfo](https://github.com/2KAbhishek/Dotfiles/blob/master/.config/conky_sysinfo)
+* dmenu : [~/.dmenurc](https://github.com/2KAbhishek/Dotfiles/blob/master/.dmenurc)
+* git : [~/.gitconfig](https://github.com/2KAbhishek/Dotfiles/blob/master/.gitconfig)
+* i3 : [~/.config/i3/config](https://github.com/2KAbhishek/Dotfiles/blob/master/.config/i3/config)
+* i3status : [~/.config/i3status/config](https://github.com/2KAbhishek/Dotfiles/blob/master/)
+* Konsole : [~/.local/share/konsole/](https://github.com/2KAbhishek/Dotfiles/blob/master/.local/share/konsole)
+* libinbut : [~/.config/libinput-gestures.conf](https://github.com/2KAbhishek/Dotfiles/blob/master/.config/libinput-gestures.conf)
+* ranger : [~/.config/ranger/](https://github.com/2KAbhishek/Dotfiles/blob/master/.config/ranger/)
+* tmux : [~/.tmux.conf](https://github.com/2KAbhishek/Dotfiles/blob/master/.tmux.conf)
+* vim : [~/.vimrc](https://github.com/2KAbhishek/Dotfiles/blob/master/.vimrc)
+* xrdb : [~/.Xresources](https://github.com/2KAbhishek/Dotfiles/blob/master/.Xresources)
+* zsh : [~/.zshrc](https://github.com/2KAbhishek/Dotfiles/blob/master/.zshrc)
 
-> This repo also contains a few scripts in the `Scripts` directory.
+> This repo also contains a few scripts in the [Scripts](https://github.com/2KAbhishek/Dotfiles/blob/master/Scripts) directory.
 
 ### Long Term Branches
 
 There is one other branch:
 
-* `termux` - Has specific tweaks for Termux and small screen usage.
+* [termux](https://github.com/2KAbhishek/Dotfiles/blob/termux/) - Has specific tweaks for Termux and small screen usage.
