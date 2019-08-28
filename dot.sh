@@ -57,6 +57,7 @@ mv -iv ~/.config/libinput-gestures.conf ~/.config/libinput-gestures.conf.old
 mv -iv ~/.config/ranger ~/.config/ranger.old
 mv -iv ~/.dmenurc ~/.dmenurc.old
 mv -iv ~/.gitconfig ~/.gitconfig.old
+mv -iv ~/.local/share/konsole ~/.local/share/konsole.old
 mv -iv ~/.tmux.conf ~/.tmux.conf.old
 mv -iv ~/.vimrc ~/.vimrc.old
 mv -iv ~/.zshrc ~/.zshrc.old
@@ -66,9 +67,10 @@ ln -sfnv $PWD/.Xresources ~/.Xresources
 ln -sfnv $PWD/.config/i3 ~/.config/i3
 ln -sfnv $PWD/.config/i3status ~/.config/i3status
 ln -sfnv $PWD/.config/libinput-gestures.conf ~/.config/libinput-gestures.conf
-ln -sfnv $PWD/.config/ranger ~/.config/ranger
+ln -sfnv $PWD/.config/ranger/ ~/.config/ranger
 ln -sfnv $PWD/.dmenurc ~/.dmenurc
 ln -sfnv $PWD/.gitconfig ~/.gitconfig
+ln -sfnv $PWD/.local/share/konsole/ ~/.local/share/konsole
 ln -sfnv $PWD/.tmux.conf ~/.tmux.conf
 ln -sfnv $PWD/.vimrc ~/.vimrc
 ln -sfnv $PWD/.zshrc ~/.zshrc
