@@ -36,4 +36,4 @@ sh dot.sh -i # For installing dependencies
 
 There is one other branch:
 
-* [termux](https://github.com/2KAbhishek/Dotfiles/blob/termux/) - Has specific tweaks for Termux and small screen usage.
+* [termux](https://github.com/2KAbhishek/Dotfiles/tree/termux) - Has specific tweaks for Termux and small screen usage.
