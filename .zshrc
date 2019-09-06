@@ -46,7 +46,7 @@ POWERLEVEL9K_PROMPT_ADD_NEWLINE=true
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon context dir vcs virtualenv time)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status history command_execution_time vi_mode background_jobs ram battery)
 POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX="%F{014}╭"
-POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX="%F{014}\u2570%K{black}%F{blue} \uf109 \uf156>%f%F{black}%k\ue0b0%f "
+POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX="%F{014}\u2570%K{black}%F{blue} \uf135 >%f%F{black}%k\ue0b0%f "
 
 # Segment
 DEFAULT_USER="abhishek"
