@@ -41,7 +41,6 @@ case $option in
     mv -iv ~/.config/ranger ~/.config/ranger.old
     mv -iv ~/.dmenurc ~/.dmenurc.old
     mv -iv ~/.gitconfig ~/.gitconfig.old
-    mv -iv ~/.local/share/konsole ~/.local/share/konsole.old
     mv -iv ~/.tmux.conf ~/.tmux.conf.old
     mv -iv ~/.vimrc ~/.vimrc.old
     mv -iv ~/.zshrc ~/.zshrc.old
@@ -54,7 +53,7 @@ case $option in
     ln -sfnv "$PWD/.config/ranger/" ~/.config/ranger
     ln -sfnv "$PWD/.dmenurc" ~/.dmenurc
     ln -sfnv "$PWD/.gitconfig" ~/.gitconfig
-    ln -sfnv "$PWD/.local/share/konsole/" ~/.local/share/konsole
+    cp -ivr "$PWD/.local/share/konsole/" ~/.local/share/
     ln -sfnv "$PWD/.tmux.conf" ~/.tmux.conf
     ln -sfnv "$PWD/.vimrc" ~/.vimrc
     ln -sfnv "$PWD/.zshrc" ~/.zshrc
