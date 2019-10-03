@@ -1,24 +1,26 @@
 #!/bin/bash
 
 #Setup script for Dotfiles
-echo -e "\u001b[32;1mSetting up Dotfiles...\u001b[0m"
+echo -e "\u001b[32;1m Setting up Dotfiles...\u001b[0m"
 
-echo -e "\u001b[37;1m\u001b[4mSelect an option:\u001b[0m"
-echo -e "  \u001b[34;1m 1) Install Oh-My-Zsh \u001b[0m"
-echo -e "  \u001b[34;1m 2) Install zsh plugins. \u001b[0m"
-echo -e "  \u001b[34;1m 3) Install vim plugins \u001b[0m"
-echo -e "  \u001b[34;1m 4) Setup symlinks \u001b[0m"
-echo -e "  \u001b[31;1m 0) Exit \u001b[0m"
+echo -e " \u001b[37;1m\u001b[4mSelect an option:\u001b[0m"
+echo -e "  \u001b[34;1m (1) Install oh-my-zsh \u001b[0m"
+echo -e "  \u001b[34;1m (2) Install zsh plugins \u001b[0m"
+echo -e "  \u001b[34;1m (3) Install vim plugins \u001b[0m"
+echo -e "  \u001b[34;1m (4) Setup symlinks \u001b[0m"
+echo -e "  \u001b[31;1m (0) Exit \u001b[0m"
+
+echo -en "\u001b[32;1m ==> \u001b[0m"
 
 read -r option
 
 case $option in
 
-"1")echo -e "\u001b[7mInstalling Oh-My-Zsh...\u001b[0m"
+"1")echo -e "\u001b[7m Installing oh-my-zsh...\u001b[0m"
     sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
     ;;
 
-"2")echo -e "\u001b[7mInstalling zsh plugins...\u001b[0m"
+"2")echo -e "\u001b[7m Installing zsh plugins...\u001b[0m"
     git clone https://github.com/romkatv/powerlevel10k.git ~/.oh-my-zsh/custom/themes/powerlevel10k
     git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
     git clone https://github.com/zdharma/fast-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/fast-syntax-highlighting
@@ -30,7 +32,8 @@ case $option in
     vim +PluginUpdate +qall
     ;;
 
-"4")echo -e "\u001b[33;1m Backing up existing files... \u001b[0m"
+"4")echo -e "\u001b[7m Setting up symlinks... \u001b[0m"
+    echo -e "\u001b[33;1m Backing up existing files... \u001b[0m"
     mv -iv ~/.Xresources ~/.Xresources.old
     mv -iv ~/.config/i3 ~/.config/i3.old
     mv -iv ~/.config/i3status ~/.config/i3status.old
@@ -59,11 +62,11 @@ case $option in
     echo -e "\u001b[36;1m Remove backups with 'rm -ir ~/.*.old && rm -ir ~/.config/*.old'. \u001b[0m"
     ;;
 
-"0")echo -e "\u001b[4m\u001b[44m Bye \u001b[0m"
+"0")echo -e "\u001b[32;1m Bye! \u001b[0m"
     exit 0
     ;;
 
-*)echo -e "\u001b[31;1m Invalid option entered. \u001b[0m"
+*)echo -e "\u001b[31;1m Invalid option entered! \u001b[0m"
     exit 1
     ;;
 esac
