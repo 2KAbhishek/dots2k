@@ -6,23 +6,39 @@ My personal config files for everyone to use. Sadly this repo gets frequent comm
 
 ## Setup
 
-Run `dot.sh` for seting up, other specific steps given below.
-You can run `dot.sh` with `-i` or `--install` flags to install requirements.
+Run `dotfiles` for seting up, it shows a menu from where you can install required components.
 
 ```bash
-sh dot.sh # For setting up symlinks
-sh dot.sh -i # For installing dependencies
+./dotfiles # May have to run multiple times.
 ```
+
+### Requirements
+
+For installation `git` `curl` & `zsh` are must, other tools are mentioned below.
+
+Powerline patched fonts are required for glyphs. I'll recommend [Nerd Fonts](https://www.nerdfonts.com/).
 
 ### Included Configurations
 
+This repo contains configurations for following tools alog with their default configuration location,
+most of the symlinks are set up by default but for tools like  `conky` and `compiz` you have to follow additional steps mentioned below. Check respective tools documentation for more info.
+
 * compiz : [~/.config/compiz.profile](https://github.com/2KAbhishek/Dotfiles/blob/master/.config/compiz.profile)
+
+> Import the compiz profile using `ccsm`.
+
 * conky : [~/.config/conky_sysinfo](https://github.com/2KAbhishek/Dotfiles/blob/master/.config/conky_sysinfo)
+
+> Run conky with `conky -c ~/.config/conky_sysinfo`.
+
 * dmenu : [~/.dmenurc](https://github.com/2KAbhishek/Dotfiles/blob/master/.dmenurc)
 * git : [~/.gitconfig](https://github.com/2KAbhishek/Dotfiles/blob/master/.gitconfig)
 * i3 : [~/.config/i3/config](https://github.com/2KAbhishek/Dotfiles/blob/master/.config/i3/config)
 * i3status : [~/.config/i3status/config](https://github.com/2KAbhishek/Dotfiles/blob/master/)
 * konsole : [~/.local/share/konsole/](https://github.com/2KAbhishek/Dotfiles/blob/master/.local/share/konsole)
+
+> Open Konsole, Goto Settings -> Manage Profiles -> Check `Konsole` and click on Set as Default.
+
 * libinbut : [~/.config/libinput-gestures.conf](https://github.com/2KAbhishek/Dotfiles/blob/master/.config/libinput-gestures.conf)
 * ranger : [~/.config/ranger/](https://github.com/2KAbhishek/Dotfiles/blob/master/.config/ranger/)
 * tmux : [~/.tmux.conf](https://github.com/2KAbhishek/Dotfiles/blob/master/.tmux.conf)
