@@ -119,7 +119,8 @@ POWERLEVEL9K_VI_MODE_NORMAL_FOREGROUND="white"
 source $ZSH/oh-my-zsh.sh
 
 # Environment
-EDITOR=vim 
+export EDITOR=vim 
+export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -g ""'
 
 # Aliases
 alias cat="bat"
