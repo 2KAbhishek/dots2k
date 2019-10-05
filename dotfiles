@@ -7,7 +7,8 @@ echo -e " \u001b[37;1m\u001b[4mSelect an option:\u001b[0m"
 echo -e "  \u001b[34;1m (1) Install oh-my-zsh \u001b[0m"
 echo -e "  \u001b[34;1m (2) Install zsh plugins \u001b[0m"
 echo -e "  \u001b[34;1m (3) Install vim plugins \u001b[0m"
-echo -e "  \u001b[34;1m (4) Setup symlinks \u001b[0m"
+echo -e "  \u001b[34;1m (4) Install tmux plugins \u001b[0m"
+echo -e "  \u001b[34;1m (5) Setup symlinks \u001b[0m"
 echo -e "  \u001b[31;1m (0) Exit \u001b[0m"
 
 echo -en "\u001b[32;1m ==> \u001b[0m"
@@ -32,7 +33,15 @@ case $option in
     vim +PluginUpdate +qall
     ;;
 
-"4")echo -e "\u001b[7m Setting up symlinks... \u001b[0m"
+"4")echo -e "\u001b[7m Installing tmux plugins... \u001b[0m"
+    git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+    tmux start-server
+    tmux new-session -d
+    ~/.tmux/plugins/tpm/scripts/install_plugins.sh
+    tmux kill-server
+    ;;
+
+"5")echo -e "\u001b[7m Setting up symlinks... \u001b[0m"
     echo -e "\u001b[33;1m Backing up existing files... \u001b[0m"
     mv -iv ~/.Xresources ~/.Xresources.old
     mv -iv ~/.config/i3 ~/.config/i3.old
