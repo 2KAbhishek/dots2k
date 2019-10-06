@@ -1,14 +1,13 @@
 set nocompatible   " Disable vi compatibilty
 set encoding=utf-8 " Use UTF-8
-filetype off       " Disable filetype
-syntax on          " Turn on syntax highlighting
+syntax enable      " Turn on syntax highlighting
 set showmatch      " Show matching brackets
 set ignorecase     " Do case insensitive matching
 set incsearch      " Show partial matches for a search phrase
 set number         " Show numbers
 set relativenumber " Show relative numbers
 set undolevels=999 " Lots of these 
-set hls            " Highlight Search
+set hlsearch       " Highlight Search
 set tabstop=4      " Tab size
 set shiftwidth=4   " Indentation size
 set softtabstop=4  " Tabs/Spaces interop
@@ -18,6 +17,30 @@ set mouse=a        " Enable mouse mode
 set termguicolors  " Enable true colors
 set wildmenu       " Enable wildmenu
 set conceallevel=0 " Disable concealing
+set splitbelow     " Natural splits
+set splitright
+set autoindent     " Enable autoindent
+set complete-=i    " Better completion
+set smarttab       " Better tabs
+set ttimeout       " Set timeout
+set ttimeoutlen=100
+set synmaxcol=500  " Syntax limit
+set laststatus=2   " Always show status line
+set ruler          " Show cursor position
+set scrolloff=3    " Scroll offset
+set sidescrolloff=5
+set autoread       " Reload files on change
+set tabpagemax=50  " More tabs
+set history=1000   " More history
+set viminfo^=!     " Better viminfo
+set backspace=indent,eol,start " Delete everything
+set formatoptions+=j " Delete comment character when joining commented lines
+set listchars=tab:,nbsp:_,trail:,extends:>,precedes:<
+set list           " Highlight non whitespace characters
+set nrformats-=octal " 007 != 010
+set sessionoptions-=options
+set viewoptions-=option
+
 
 " Vundle Init
 set rtp+=~/.vim/bundle/Vundle.vim
