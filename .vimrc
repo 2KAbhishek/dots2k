@@ -17,6 +17,7 @@ set nomodeline     " Disable as a security precaution
 set mouse=a        " Enable mouse mode
 set termguicolors  " Enable true colors
 set wildmenu       " Enable wildmenu
+set conceallevel=0 " Disable concealing
 
 " Vundle Init
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -39,7 +40,6 @@ Plugin 'vim-airline/vim-airline-themes'
 Plugin 'w0rp/ale'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'godlygeek/tabular'
-Plugin 'gabrielelana/vim-markdown'
 Plugin 'Yggdroot/indentLine'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'joshdick/onedark.vim'
@@ -92,6 +92,7 @@ let g:indentLine_char =''
 let g:indentLine_first_char = ''
 let g:indentLine_showFirstIndentLevel = 1
 let g:indentLine_setColors = 1
+autocmd FileType markdown let g:indentLine_enabled=0
 
 " Highlight non whitespace characters
 set listchars=tab:,nbsp:_,trail:
