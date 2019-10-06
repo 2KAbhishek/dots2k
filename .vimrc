@@ -47,6 +47,7 @@ Plugin 'sheerun/vim-polyglot'
 Plugin 'Shougo/deoplete.nvim'
 Plugin 'roxma/nvim-yarp'
 Plugin 'roxma/vim-hug-neovim-rpc'
+Plugin 'easymotion/vim-easymotion'
 
 " Vundle Ends
 call vundle#end()
