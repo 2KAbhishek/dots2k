@@ -58,6 +58,10 @@ let mapleader = ','
 let g:user_emmet_leader_key=','
 map <Leader>e : NERDTreeToggle<CR>
 
+" Copy Paste from X11 Clipboard
+vmap <Leader>yy :!xclip -f -sel clip<CR>
+map <Leader>pp mz:-1r !xclip -o -sel clip<CR>`z
+
 " Drag Visual selections
 vnoremap K xkP`[V`]
 vnoremap U xp`[V`]
