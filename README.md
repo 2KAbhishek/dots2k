@@ -20,8 +20,9 @@ Powerline patched fonts are required for glyphs. I'll recommend [Nerd Fonts](htt
 
 ### Included Configurations
 
-This repo contains configurations for following tools alog with their default configuration location,
-most of the symlinks are set up by default but for tools like  `conky` and `compiz` you have to follow additional steps mentioned below. Check respective tools documentation for more info.
+This repo contains configurations for following tools.
+Most of their symlinks are set up by default but for tools like  `conky` and `compiz` you have to follow additional steps mentioned below.
+Check respective tools documentation for more info.
 
 * compiz : [~/.config/compiz.profile](https://github.com/2KAbhishek/Dotfiles/blob/master/.config/compiz.profile)
 
