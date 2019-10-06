@@ -111,6 +111,16 @@ inoremap <silent><expr><tab> pumvisible() ? "\<c-n>":"\<tab>"
 inoremap <silent><expr><s-tab> pumvisible() ? "\<c-p>":"\<s-tab>
 autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
 
+" Easymotion
+let g:EasyMotion_smartcase = 1
+
+map <Leader>l <Plug>(easymotion-lineforward)
+map <Leader>j <Plug>(easymotion-j)
+map <Leader>k <Plug>(easymotion-k)
+map <Leader>h <Plug>(easymotion-linebackward)
+
+let g:EasyMotion_startofline = 0
+
 " Have Vim jump to the last position when reopening a file
 if has("autocmd")
     au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\""
