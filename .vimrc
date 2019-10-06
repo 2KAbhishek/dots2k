@@ -76,25 +76,25 @@ call vundle#begin()
 
 " Plugins
 Plugin 'VundleVim/Vundle.vim'
-Plugin 'airblade/vim-gitgutter'
 Plugin 'junegunn/fzf'
 Plugin 'junegunn/fzf.vim'
 Plugin 'mattn/emmet-vim'
 Plugin 'scrooloose/nerdtree'
-Plugin 'terryma/vim-multiple-cursors'
+Plugin 'Xuyuanp/nerdtree-git-plugin'
+Plugin 'airblade/vim-gitgutter'
 Plugin 'tpope/vim-eunuch'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-commentary'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
-Plugin 'w0rp/ale'
-Plugin 'Xuyuanp/nerdtree-git-plugin'
+Plugin 'joshdick/onedark.vim'
+Plugin 'terryma/vim-multiple-cursors'
 Plugin 'godlygeek/tabular'
 Plugin 'Yggdroot/indentLine'
 Plugin 'jiangmiao/auto-pairs'
-Plugin 'joshdick/onedark.vim'
 Plugin 'sheerun/vim-polyglot'
+Plugin 'w0rp/ale'
 Plugin 'Shougo/deoplete.nvim'
 Plugin 'roxma/nvim-yarp'
 Plugin 'roxma/vim-hug-neovim-rpc'
@@ -113,33 +113,6 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline_left_sep = "\uE0B0"
 let g:airline_right_sep = "\uE0B2"
 
-" Emmet
-let g:user_emmet_leader_key=','
-
-" One Dark
-let g:onedark_color_overrides = {
-\ "comment_grey": {"gui": "#69747C","cterm": "245", "cterm16": "8"},
-\ "gutter_fg_grey": { "gui": "#69747C", "cterm": "245", "cterm16": "8"}
-\}
-if !exists('$TMUX')
-    let g:onedark_terminal_italics = 1
-endif
-colorscheme onedark
-
-" IndentLine
-let g:indentLine_char =''
-let g:indentLine_first_char = ''
-let g:indentLine_showFirstIndentLevel = 1
-let g:indentLine_setColors = 1
-autocmd FileType markdown let g:indentLine_enabled=0
-
-" NERDTree
-map <Leader>e : NERDTreeToggle<CR>
-autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
-let NERDTreeMinimalUI = 1
-let NERDTreeDirArrows = 1
-
 " Deoplete
 let g:deoplete#enable_at_startup = 1
 inoremap <silent><expr><tab> pumvisible() ? "\<c-n>":"\<tab>"
@@ -155,15 +128,6 @@ map <Leader>k <Plug>(easymotion-k)
 map <Leader>h <Plug>(easymotion-linebackward)
 
 let g:EasyMotion_startofline = 0
-
-" Incsearch
-let g:incsearch#auto_nohlsearch = 1
-map n  <Plug>(incsearch-nohl-n)
-map N  <Plug>(incsearch-nohl-N)
-map *  <Plug>(incsearch-nohl-*)
-map #  <Plug>(incsearch-nohl-#)
-map g* <Plug>(incsearch-nohl-g*)
-map g# <Plug>(incsearch-nohl-g#)
 
 " Easymotion Incsearch
 function! s:incsearch_config(...) abort
@@ -191,5 +155,41 @@ function! s:config_easyfuzzymotion(...) abort
   \ }), get(a:, 1, {}))
 endfunction
 
-noremap <silent><expr> <Space>/ incsearch#go(<SID>config_easyfuzzymotion())
+noremap <silent><expr> <Leader>/ incsearch#go(<SID>config_easyfuzzymotion())
+
+" Emmet
+let g:user_emmet_leader_key=','
+
+" Incsearch
+let g:incsearch#auto_nohlsearch = 1
+map n  <Plug>(incsearch-nohl-n)
+map N  <Plug>(incsearch-nohl-N)
+map *  <Plug>(incsearch-nohl-*)
+map #  <Plug>(incsearch-nohl-#)
+map g* <Plug>(incsearch-nohl-g*)
+map g# <Plug>(incsearch-nohl-g#)
+
+" IndentLine
+let g:indentLine_char =''
+let g:indentLine_first_char = ''
+let g:indentLine_showFirstIndentLevel = 1
+let g:indentLine_setColors = 1
+autocmd FileType markdown let g:indentLine_enabled=0
+
+" NERDTree
+map <Leader>e : NERDTreeToggle<CR>
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+let NERDTreeMinimalUI = 1
+let NERDTreeDirArrows = 1
+
+" One Dark
+let g:onedark_color_overrides = {
+\ "comment_grey": {"gui": "#69747C","cterm": "245", "cterm16": "8"},
+\ "gutter_fg_grey": { "gui": "#69747C", "cterm": "245", "cterm16": "8"}
+\}
+if !exists('$TMUX')
+    let g:onedark_terminal_italics = 1
+endif
+colorscheme onedark
 
