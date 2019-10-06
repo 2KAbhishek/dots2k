@@ -48,6 +48,7 @@ Plugin 'Shougo/deoplete.nvim'
 Plugin 'roxma/nvim-yarp'
 Plugin 'roxma/vim-hug-neovim-rpc'
 Plugin 'easymotion/vim-easymotion'
+Plugin 'haya14busa/incsearch.vim'
 
 " Vundle Ends
 call vundle#end()
