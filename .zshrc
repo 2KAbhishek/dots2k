@@ -13,7 +13,7 @@ COMPLETION_WAITING_DOTS="true"
 SAVEHIST=99999
 
 # Magic Enter
-MAGIC_ENTER_GIT_COMMAND="git status -v && exag && echo -e '\n'"
+MAGIC_ENTER_GIT_COMMAND="git status -v && echo -e '\n'"
 MAGIC_ENTER_OTHER_COMMAND="lsda && echo -e '\n'"
 
 # Plugins
@@ -159,6 +159,7 @@ alias pp="prettyping --nolegend"
 alias ps="grc ps"
 alias q="exit"
 alias rm="rm -irv"
+alias send='kdeconnect-cli -d $(kdeconnect-cli -a --id-only) --share $PWD/$(fzf)'
 alias sysd="sudo systemctl disable"
 alias syse="sudo systemctl enable"
 alias sysr="sudo systemctl restart"
