@@ -6,7 +6,7 @@ UseFontLineChararacters=true
 
 [Cursor Options]
 CursorShape=0
-CustomCursorColor=82,148,226
+CustomCursorColor=22,136,240
 UseCustomCursorColor=true
 
 [General]
