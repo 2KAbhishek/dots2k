@@ -159,7 +159,9 @@ alias pp="prettyping --nolegend"
 alias ps="grc ps"
 alias q="exit"
 alias rm="rm -irv"
-alias send="kdeconnect-cli -d "$(kdeconnect-cli -a --id-only)" --share"
+if hash kdeconnect-cli 2>/dev/null; then
+    alias send="kdeconnect-cli -d "$(kdeconnect-cli -a --id-only)" --share"
+fi
 alias sysd="sudo systemctl disable"
 alias syse="sudo systemctl enable"
 alias sysr="sudo systemctl restart"
