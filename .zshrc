@@ -119,10 +119,6 @@ POWERLEVEL9K_VI_MODE_NORMAL_FOREGROUND="white"
 
 source $ZSH/oh-my-zsh.sh
 
-# Environment
-export EDITOR=vim 
-export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -g ""'
-
 # Aliases
 alias cat="bat"
 alias ccp="clipcopy"
@@ -178,11 +174,15 @@ alias triu="trizen -Syu --noedit"
 alias wdiff="grc wdiff"
 alias ytdl="youtube-dl"
 
+
 # Commands
-export PATH=$HOME/.gem/ruby/2.6.0/bin:$PATH
-export PATH=$HOME/.node_modules/bin:$PATH
+export EDITOR=vim 
+export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -g ""'
 export GREP_COLOR="1;32"
 export ZSH_PLUGINS_ALIAS_TIPS_TEXT="Alias: "
+export PATH=$HOME/.gem/ruby/2.6.0/bin:$PATH
+export PATH=$HOME/.node_modules/bin:$PATH
+export PATH=$HOME/Applications/bin:$PATH
 
 #Functions
 function lc () {
