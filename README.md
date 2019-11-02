@@ -6,11 +6,7 @@ My personal config files for everyone to use. Sadly this repo gets frequent comm
 
 ## Setup
 
-Run `dotfiles` for setting up, it shows a menu from where you can install required components.
-
-```bash
-./dotfiles # May have to run multiple times.
-```
+Run `./setup` for setting up, it shows a menu from where you can install required components.
 
 ### Requirements
 
