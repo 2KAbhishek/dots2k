@@ -50,8 +50,3 @@ Check respective tools documentation for more info.
 
 > This repo also contains a few scripts in the [Scripts](https://github.com/2KAbhishek/Dotfiles/blob/master/Scripts) directory.
 
-### Long Term Branches
-
-There is one other branch:
-
-* [termux](https://github.com/2KAbhishek/Dotfiles/tree/termux) - Has specific tweaks for Termux and small screen usage.
