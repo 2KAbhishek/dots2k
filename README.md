@@ -34,6 +34,7 @@ Check respective tools documentation for more info.
 
 * dmenu : [~/.dmenurc](https://github.com/2KAbhishek/Dotfiles/blob/master/.dmenurc)
 * git : [~/.gitconfig](https://github.com/2KAbhishek/Dotfiles/blob/master/.gitconfig)
+* htop : [~/.config/htop/](https://github.com/2KAbhishek/Dotfiles/blob/master/.config/htop/)
 * i3 : [~/.config/i3/config](https://github.com/2KAbhishek/Dotfiles/blob/master/.config/i3/config)
 * i3status : [~/.config/i3status/config](https://github.com/2KAbhishek/Dotfiles/blob/master/)
 * konsole : [~/.local/share/konsole/](https://github.com/2KAbhishek/Dotfiles/blob/master/.local/share/konsole)
