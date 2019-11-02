@@ -13,7 +13,7 @@ COMPLETION_WAITING_DOTS="true"
 SAVEHIST=99999
 
 # Magic Enter
-MAGIC_ENTER_GIT_COMMAND="git status -v && echo -e '\n'"
+MAGIC_ENTER_GIT_COMMAND="git status -v && exag && echo -e '\n'"
 MAGIC_ENTER_OTHER_COMMAND="lsda && echo -e '\n'"
 
 # Plugins
@@ -122,7 +122,7 @@ source $ZSH/oh-my-zsh.sh
 # Aliases
 alias cat="bat"
 alias ccp="clipcopy"
-alias cp="cp -iv"
+alias cp="cp -irv"
 alias cpa="clippaste"
 alias diff="diff --color=auto"
 alias exag="exa -ahlT -L=1  -s=extension --git --group-directories-first"
@@ -158,9 +158,11 @@ alias tmuxm="tmux new-session \; split-window -h \; split-window -v \; attach"
 alias trii="trizen -S --noedit"
 alias tris="trizen -Ss --noedit"
 alias triu="trizen -Syu --noedit"
+alias vimrc="vim ~/.vimrc"
 alias yayi="yay -S"
 alias yayu="yay -Syu"
 alias ytdl="youtube-dl"
+alias zshrc="vim ~/.zshrc"
 
 if hash grc 2>/dev/null; then
     alias df="grc df"
