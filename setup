@@ -42,18 +42,25 @@ case $option in
     ;;
 
 "5")echo -e "\u001b[7m Setting up symlinks... \u001b[0m"
-    echo -e "\u001b[33;1m Backing up existing files... \u001b[0m"
-    mv -iv ~/.Xresources ~/.Xresources.old
-    mv -iv ~/.config/htop ~/.config/htop.old
-    mv -iv ~/.config/i3 ~/.config/i3.old
-    mv -iv ~/.config/i3status ~/.config/i3status.old
-    mv -iv ~/.config/libinput-gestures.conf ~/.config/libinput-gestures.conf.old
-    mv -iv ~/.config/ranger ~/.config/ranger.old
-    mv -iv ~/.dmenurc ~/.dmenurc.old
-    mv -iv ~/.gitconfig ~/.gitconfig.old
-    mv -iv ~/.tmux.conf ~/.tmux.conf.old
-    mv -iv ~/.vimrc ~/.vimrc.old
-    mv -iv ~/.zshrc ~/.zshrc.old
+    echo -e "\u001b[33;1m Backup existing files? (y/n) \u001b[0m"
+    read -r backupOption
+    if [[ $backupOption == "y" ]]; then
+        echo -e "\u001b[33;1m Backing up existing files... \u001b[0m"
+        mv -iv ~/.Xresources ~/.Xresources.old
+        mv -iv ~/.config/htop ~/.config/htop.old
+        mv -iv ~/.config/i3 ~/.config/i3.old
+        mv -iv ~/.config/i3status ~/.config/i3status.old
+        mv -iv ~/.config/libinput-gestures.conf ~/.config/libinput-gestures.conf.old
+        mv -iv ~/.config/ranger ~/.config/ranger.old
+        mv -iv ~/.dmenurc ~/.dmenurc.old
+        mv -iv ~/.gitconfig ~/.gitconfig.old
+        mv -iv ~/.tmux.conf ~/.tmux.conf.old
+        mv -iv ~/.vimrc ~/.vimrc.old
+        mv -iv ~/.zshrc ~/.zshrc.old
+        echo -e "\u001b[36;1m Remove backups with 'rm -ir ~/.*.old && rm -ir ~/.config/*.old'. \u001b[0m"
+    else
+        echo -e "\u001b[36;1m Skipping backups. \u001b[0m"
+    fi
 
     echo -e "\u001b[36;1m Adding symlinks...\u001b[0m"
     ln -sfnv "$PWD/.Xresources" ~/.Xresources
@@ -68,8 +75,6 @@ case $option in
     ln -sfnv "$PWD/.tmux.conf" ~/.tmux.conf
     ln -sfnv "$PWD/.vimrc" ~/.vimrc
     ln -sfnv "$PWD/.zshrc" ~/.zshrc
-
-    echo -e "\u001b[36;1m Remove backups with 'rm -ir ~/.*.old && rm -ir ~/.config/*.old'. \u001b[0m"
     ;;
 
 "0")echo -e "\u001b[32;1m Bye! \u001b[0m"
