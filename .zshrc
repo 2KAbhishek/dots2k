@@ -178,9 +178,9 @@ if hash grc 2>/dev/null; then
     alias wdiff="grc wdiff"
 fi
 
-if hash kdeconnect-cli 2>/dev/null; then
-    alias send="kdeconnect-cli -d "$(kdeconnect-cli -a --id-only)" --share"
-fi
+# if hash kdeconnect-cli 2>/dev/null; then
+#     alias send="kdeconnect-cli -d "$(kdeconnect-cli -a --id-only)" --share"
+# fi
 
 # Commands
 export EDITOR=vim 
