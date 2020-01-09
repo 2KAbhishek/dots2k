@@ -51,6 +51,7 @@ case $option in
         mv -iv ~/.config/i3 ~/.config/i3.old
         mv -iv ~/.config/i3status ~/.config/i3status.old
         mv -iv ~/.config/libinput-gestures.conf ~/.config/libinput-gestures.conf.old
+        mv -iv ~/.config/nvim ~/.config/nvim.old
         mv -iv ~/.config/ranger ~/.config/ranger.old
         mv -iv ~/.dmenurc ~/.dmenurc.old
         mv -iv ~/.gitconfig ~/.gitconfig.old
@@ -68,6 +69,7 @@ case $option in
     ln -sfnv "$PWD/.config/i3" ~/.config/i3
     ln -sfnv "$PWD/.config/i3status" ~/.config/i3status
     ln -sfnv "$PWD/.config/libinput-gestures.conf" ~/.config/libinput-gestures.conf
+    ln -sfnv "$PWD/.config/nvim" ~/.config/nvim
     ln -sfnv "$PWD/.config/ranger/" ~/.config/ranger
     ln -sfnv "$PWD/.dmenurc" ~/.dmenurc
     ln -sfnv "$PWD/.gitconfig" ~/.gitconfig
