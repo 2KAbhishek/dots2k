@@ -47,6 +47,7 @@ Check respective tools documentation for more info.
 > Open Konsole, Goto Settings -> Manage Profiles -> Check `Konsole` and click on Set as Default.
 
 * libinbut : [~/.config/libinput-gestures.conf](https://github.com/2KAbhishek/Dotfiles/blob/master/.config/libinput-gestures.conf)
+* neovim : [~/.config/nvim/](https://github.com/2KAbhishek/Dotfiles/blob/master/.config/nvim/)
 * ranger : [~/.config/ranger/](https://github.com/2KAbhishek/Dotfiles/blob/master/.config/ranger/)
 * tmux : [~/.tmux.conf](https://github.com/2KAbhishek/Dotfiles/blob/master/.tmux.conf)
 * vim : [~/.vimrc](https://github.com/2KAbhishek/Dotfiles/blob/master/.vimrc)
