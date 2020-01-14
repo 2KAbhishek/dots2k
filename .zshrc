@@ -18,20 +18,19 @@ MAGIC_ENTER_OTHER_COMMAND="lsda && echo -e '\n'"
 
 # Plugins
 plugins=(alias-tips
-        dirhistory
-        extract
-        fancy-ctrl-z
-        fzf
-        fast-syntax-highlighting
-        git
-        globalias
-        magic-enter
-        tmux
-        web-search
-        z
-        zsh-autosuggestions
-        zsh-navigation-tools)
-
+    dirhistory
+    extract
+    fancy-ctrl-z
+    fzf
+    fast-syntax-highlighting
+    git
+    globalias
+    magic-enter
+    tmux
+    web-search
+    z
+    zsh-autosuggestions
+    zsh-navigation-tools)
 
 # Theme
 ZSH_THEME="powerlevel10k/powerlevel10k"
@@ -183,7 +182,7 @@ fi
 # fi
 
 # Commands
-export EDITOR=vim 
+export EDITOR=vim
 export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -g ""'
 export GREP_COLOR="1;32"
 export ZSH_PLUGINS_ALIAS_TIPS_TEXT="Alias: "
@@ -192,35 +191,34 @@ export PATH=$HOME/.node_modules/bin:$PATH
 export PATH=$HOME/Applications/bin:$PATH
 
 #Functions
-function lc () {
-    cd $1 &&
-    la $2
+function lc() {
+    cd "$1" && la "$2"
 }
 
-mkcd ()
-{
-    mkdir -p -- "$1" &&
-    cd -P -- "$1"
+mcd() {
+    mkdir -p -- "$1" && cd -P -- "$1"
 }
 
 function tmux-clean() {
     tmux list-sessions | grep -E -v '\(attached\)$' | while IFS='\n' read line; do
-    tmux kill-session -t "${line%%:*}"
+        tmux kill-session -t "${line%%:*}"
     done
+}
+xin() {
+    (cd "${1}" && shift && ${@})
 }
 
 function man() {
-     env \
-         LESS_TERMCAP_mb=$(printf "\e[1;31m") \
-         LESS_TERMCAP_md=$(printf "\e[1;36m") \
-         LESS_TERMCAP_me=$(printf "\e[0m") \
-         LESS_TERMCAP_se=$(printf "\e[0m") \
-         LESS_TERMCAP_so=$(printf "\e[1;44;33m") \
-         LESS_TERMCAP_ue=$(printf "\e[0m") \
-         LESS_TERMCAP_us=$(printf "\e[1;32m") \
-         PAGER="${commands[less]:-$PAGER}" \
-         _NROFF_U=1 \
-         PATH="$HOME/bin:$PATH" \
-             man "$@"
+    env \
+        LESS_TERMCAP_mb=$(printf "\e[1;31m") \
+        LESS_TERMCAP_md=$(printf "\e[1;36m") \
+        LESS_TERMCAP_me=$(printf "\e[0m") \
+        LESS_TERMCAP_se=$(printf "\e[0m") \
+        LESS_TERMCAP_so=$(printf "\e[1;44;33m") \
+        LESS_TERMCAP_ue=$(printf "\e[0m") \
+        LESS_TERMCAP_us=$(printf "\e[1;32m") \
+        PAGER="${commands[less]:-$PAGER}" \
+        _NROFF_U=1 \
+        PATH="$HOME/bin:$PATH" \
+        man "$@"
 }
-
