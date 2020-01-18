@@ -119,6 +119,7 @@ POWERLEVEL9K_VI_MODE_NORMAL_FOREGROUND="white"
 source $ZSH/oh-my-zsh.sh
 
 # Aliases
+alias asc="asciinema"
 alias cat="bat"
 alias ccp="clipcopy"
 alias cp="cp -irv"
