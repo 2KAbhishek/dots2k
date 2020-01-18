@@ -48,6 +48,7 @@ Check respective tools documentation for more info.
 
 * libinbut : [~/.config/libinput-gestures.conf](https://github.com/2KAbhishek/Dotfiles/blob/master/.config/libinput-gestures.conf)
 * neovim : [~/.config/nvim/](https://github.com/2KAbhishek/Dotfiles/blob/master/.config/nvim/)
+* python : [~/.pystartup](https://github.com/2KAbhishek/Dotfiles/blob/master/.pystartup)
 * ranger : [~/.config/ranger/](https://github.com/2KAbhishek/Dotfiles/blob/master/.config/ranger/)
 * tmux : [~/.tmux.conf](https://github.com/2KAbhishek/Dotfiles/blob/master/.tmux.conf)
 * vim : [~/.vimrc](https://github.com/2KAbhishek/Dotfiles/blob/master/.vimrc)
