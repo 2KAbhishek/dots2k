@@ -118,6 +118,10 @@ POWERLEVEL9K_VI_MODE_NORMAL_FOREGROUND="white"
 
 source $ZSH/oh-my-zsh.sh
 
+# Key Bindings
+bindkey "^F" forward-word
+bindkey "^B" backward-word
+
 # Aliases
 alias asc="asciinema"
 alias cat="bat"
