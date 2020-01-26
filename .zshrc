@@ -123,6 +123,7 @@ bindkey "^F" forward-word
 bindkey "^B" backward-word
 
 # Aliases
+alias 7zc="7z a -mx=9"
 alias asc="asciinema"
 alias cat="bat"
 alias ccp="clipcopy"
