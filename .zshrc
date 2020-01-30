@@ -196,6 +196,10 @@ export PATH=$HOME/.gem/ruby/2.6.0/bin:$PATH
 export PATH=$HOME/.node_modules/bin:$PATH
 export PATH=$HOME/Applications/bin:$PATH
 
+if [ -f "/home/abhishek/.config/broot/launcher/bash/br" ]; then
+    source /home/abhishek/.config/broot/launcher/bash/br
+fi
+
 #Functions
 function lc() {
     cd "$1" && la "$2"
@@ -228,3 +232,4 @@ function man() {
         PATH="$HOME/bin:$PATH" \
         man "$@"
 }
+
