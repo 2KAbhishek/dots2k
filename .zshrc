@@ -169,7 +169,7 @@ alias yayu="yay -Syu"
 alias ytdl="youtube-dl"
 alias zshrc="vim ~/.zshrc"
 
-if hash grc 2>/dev/null; then
+if [ -f "/usr/bin/grc" ]; then
     alias df="grc df"
     alias gcc="grc gcc"
     alias iwconfig="grc iwconfig"
