@@ -207,7 +207,7 @@ function lc() {
     cd "$1" && la "$2"
 }
 
-mcd() {
+function mcd() {
     mkdir -p -- "$1" && cd -P -- "$1"
 }
 
@@ -216,7 +216,8 @@ function tmux-clean() {
         tmux kill-session -t "${line%%:*}"
     done
 }
-xin() {
+
+function xin() {
     (cd "${1}" && shift && ${@})
 }
 
@@ -235,3 +236,6 @@ function man() {
         man "$@"
 }
 
+function mlc () {
+    find $1 -name \*.md -exec markdown-link-check -p {} \;
+}
