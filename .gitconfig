@@ -10,3 +10,5 @@
 	editor = vim
 [color]
 	ui = true
+[protocol]
+	version = 2
