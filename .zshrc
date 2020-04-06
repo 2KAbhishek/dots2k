@@ -21,6 +21,7 @@ plugins=(alias-tips
     dirhistory
     extract
     fancy-ctrl-z
+    fasd
     fzf
     fast-syntax-highlighting
     git
@@ -201,6 +202,8 @@ export PATH=$HOME/Applications/bin:$PATH
 if [ -f "/home/abhishek/.config/broot/launcher/bash/br" ]; then
     source /home/abhishek/.config/broot/launcher/bash/br
 fi
+
+eval "$(fasd --init auto)"
 
 #Functions
 function lc() {
