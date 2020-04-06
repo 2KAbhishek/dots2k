@@ -43,6 +43,7 @@ set viewoptions-=option
 
 " Always use terminal background
 autocmd ColorScheme * highlight! Normal ctermbg=NONE guibg=NONE
+autocmd ColorScheme * highlight! Terminal ctermbg=NONE guibg=NONE
 
 " Load matchit.vim, but only if the user hasn't installed a newer version.
 if !exists('g:loaded_matchit') && findfile('plugin/matchit.vim', &rtp) ==# ''
