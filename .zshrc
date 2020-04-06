@@ -203,7 +203,7 @@ if [ -f "/home/abhishek/.config/broot/launcher/bash/br" ]; then
     source /home/abhishek/.config/broot/launcher/bash/br
 fi
 
-eval "$(fasd --init auto)"
+eval "$(fasd --init posix-alias zsh-hook zsh-ccomp-install zsh-wcomp-install zsh-ccomp zsh-wcomp)"
 
 #Functions
 function lc() {
