@@ -103,6 +103,7 @@ Plugin 'easymotion/vim-easymotion'
 Plugin 'haya14busa/incsearch.vim'
 Plugin 'haya14busa/incsearch-fuzzy.vim'
 Plugin 'haya14busa/incsearch-easymotion.vim'
+Plugin 'ryanoasis/vim-devicons'
 
 " Vundle Ends
 call vundle#end()
