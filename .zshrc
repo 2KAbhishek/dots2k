@@ -167,11 +167,12 @@ alias tmuxm="tmux new-session \; split-window -h \; split-window -v \; attach"
 alias trii="trizen -S --noedit"
 alias tris="trizen -Ss --noedit"
 alias triu="trizen -Syu --noedit"
-alias vimrc="vim ~/.vimrc"
+alias vim="nvim"
+alias vimrc="$EDITOR ~/.vimrc"
 alias yayi="yay -S"
 alias yayu="yay -Syu"
 alias ytdl="youtube-dl"
-alias zshrc="vim ~/.zshrc"
+alias zshrc="$EDITOR ~/.zshrc"
 
 if [ -f "/usr/bin/grc" ]; then
     alias df="grc df"
@@ -192,7 +193,7 @@ fi
 # fi
 
 # Commands
-export EDITOR=vim
+export EDITOR=nvim
 export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -g ""'
 export GREP_COLOR="1;32"
 export ZSH_PLUGINS_ALIAS_TIPS_TEXT="Alias: "
