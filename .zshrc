@@ -136,7 +136,7 @@ alias diff="diff --color=auto"
 alias exag="exa -ahlT -L=1  -s=extension --git --group-directories-first"
 alias fdir='find . -type d -name'
 alias ffil='find . -type f -name'
-alias gtop='cd $(git rev-parse --show-toplevel)'
+alias gtop='cd "$(git rev-parse --show-toplevel)"'
 alias grep="grep --color=auto"
 alias jupn="jupyter notebook"
 alias la="ls -AXb --group-directories-first --sort=extension"
