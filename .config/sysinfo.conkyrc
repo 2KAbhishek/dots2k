@@ -38,7 +38,7 @@ conky.config = {
 };
 
 conky.text = [[
-${color1}${font GE Inspira:pixelsize=128}${time %I:%M}${font GE Inspira:pixelsize=24}${color2}${time %p}${font}${voffset -80}${offset 100}${font GE Inspira:pixelsize=48}${color1}${time %d} ${font GE Inspira:pixelsize=24}${color2}${time %b}${font}${font GE Inspira:pixelsize=64}${offset -200}${color1}${time %A}${font}
+${color1}${font GE Inspira:pixelsize=128}${time %I:%M}${font GE Inspira:pixelsize=24}${color2}${time %p}${font}${voffset -80}${offset 80}${font GE Inspira:pixelsize=48}${color1}${time %d} ${font GE Inspira:pixelsize=24}${color2}${time %b}${font}${font GE Inspira:pixelsize=64}${offset -200}${color1}${time %A}${font}
 
 ${offset 12}${font Ubuntu:pixelsize=13}${color2}Root ${offset 9}$color${fs_free /} / ${fs_size /}${offset 15}${color2}RAM ${offset 9}$color$mem / $memmax${offset 15}${color2}CPU ${offset 9}$color${cpu cpu0}-${cpu cpu1}-${cpu cpu2}-${cpu cpu3}%
 ${voffset 1}${offset 12}${font Ubuntu:pixelsize=13}${color2}Data ${offset 9}$color${fs_free /run/media/abhishek/Storage/} / ${fs_size /run/media/abhishek/Storage/}${offset 21}${color2}Swap ${offset 9}$color$swap / $swapmax ${offset 35}${font Ubuntu:pixelsize=24}abhishek${font Ubuntu:pixelsize=20}${color2}@TM-P259L
