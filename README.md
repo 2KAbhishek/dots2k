@@ -33,9 +33,9 @@ Check respective tools documentation for more info.
 
 > Import the compiz profile using `ccsm`.
 
-* conky : [~/.config/conky_sysinfo](https://github.com/2KAbhishek/Dotfiles/blob/master/.config/conky_sysinfo)
+* conky : [~/.config/sysinfo.conkyrc](https://github.com/2KAbhishek/Dotfiles/blob/master/.config/sysinfo.conkyrc)
 
-> Run conky with `conky -c ~/.config/conky_sysinfo`.
+> Run conky with `conky -dc ~/.config/sysinfo.conkyrc`.
 
 * broot : [~/.config/broot/](https://github.com/2KAbhishek/Dotfiles/blob/master/.config/broot/)
 * cmus : [~/.config/cmus/](https://github.com/2KAbhishek/Dotfiles/blob/master/.config/cmus/)
