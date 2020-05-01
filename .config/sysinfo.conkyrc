@@ -1,45 +1,48 @@
-use_xft yes
-xftfont 123:size=8
-xftalpha 0.1
-update_interval 1
-total_run_times 0
+conky.config = {
+    use_xft = true,
+    font = '123:size=8',
+    xftalpha = 0.1,
+    update_interval = 1,
+    total_run_times = 0,
 
-own_window_class Conky
-own_window yes
-own_window_type dock
-own_window_transparent yes
-own_window_hints undecorated,below, sticky,skip_taskbar,skip_pager
-own_window_colour 000000
-own_window_argb_visual yes
-own_window_argb_value 0
+    own_window_class = 'Conky',
+    own_window = true,
+    own_window_type = 'dock',
+    own_window_transparent = true,
+    own_window_hints = 'undecorated,below, sticky,skip_taskbar,skip_pager',
+    own_window_colour = '#000000',
+    own_window_argb_visual = true,
+    own_window_argb_value = 0,
 
-double_buffer yes
-#minimum_size 250 5
-#maximum_width 500
-draw_shades no
-draw_outline no
-draw_borders no
-draw_graph_borders no
-default_color white
-default_shade_color blue
-default_outline_color blue
-alignment bottom_left
-gap_x 20
-gap_y 60
-no_buffers yes
-uppercase no
-cpu_avg_samples 2
-net_avg_samples 1
-override_utf8_locale yes
-use_spacer yes
+    double_buffer = true,
+    draw_shades = false,
+    draw_outline = false,
+    draw_borders = false,
+    draw_graph_borders = false,
+    default_color = 'white',
+    default_shade_color = 'blue',
+    default_outline_color = 'blue',
+    alignment = 'bottom_left',
+    gap_x = 20,
+    gap_y = 60,
+    no_buffers = true,
+    uppercase = false,
+    cpu_avg_samples = 2,
+    net_avg_samples = 1,
+    override_utf8_locale = true,
+    use_spacer = 'left',
+    color1 = 'EAEAEA',
+    color2 = '5294E2',
+
+    minimum_width = 0, minimum_height = 0,
+};
+
+conky.text = [[
+${color1}${font GE Inspira:pixelsize=128}${time %I:%M}${font GE Inspira:pixelsize=24}${color2}${time %p}${font}${voffset -80}${offset 100}${font GE Inspira:pixelsize=48}${color1}${time %d} ${font GE Inspira:pixelsize=24}${color2}${time %b}${font}${font GE Inspira:pixelsize=64}${offset -200}${color1}${time %A}${font}
+
+${offset 12}${font Ubuntu:pixelsize=13}${color2}Root ${offset 9}$color${fs_free /} / ${fs_size /}${offset 15}${color2}RAM ${offset 9}$color$mem / $memmax${offset 15}${color2}CPU ${offset 9}$color${cpu cpu0}-${cpu cpu1}-${cpu cpu2}-${cpu cpu3}%
+${voffset 1}${offset 12}${font Ubuntu:pixelsize=13}${color2}Data ${offset 9}$color${fs_free /run/media/abhishek/Storage/} / ${fs_size /run/media/abhishek/Storage/}${offset 21}${color2}Swap ${offset 9}$color$swap / $swapmax ${offset 35}${font Ubuntu:pixelsize=24}abhishek${font Ubuntu:pixelsize=20}${color2}@TM-P259L
 
 
-minimum_size 0 0
-TEXT
-${color EAEAEA}${font GE Inspira:pixelsize=128}${time %I:%M}${font GE Inspira:pixelsize=24}${color 5294E2}${time %p}${font}${voffset -80}${offset 100}${font GE Inspira:pixelsize=48}${color EAEAEA}${time %d} ${font GE Inspira:pixelsize=24}${color 5294E2}${time %b}${font}${font GE Inspira:pixelsize=64}${offset -200}${color EAEAEA}${time %A}${font}
-
-${offset 12}${font Ubuntu:pixelsize=13}${color 5294E2}Root ${offset 9}$color${fs_free /} / ${fs_size /}${offset 15}${color 5294E2}RAM ${offset 9}$color$mem / $memmax${offset 15}${color 5294E2}CPU ${offset 9}$color${cpu cpu0}-${cpu cpu1}-${cpu cpu2}-${cpu cpu3}%
-${voffset 1}${offset 12}${font Ubuntu:pixelsize=13}${color 5294E2}Data ${offset 9}$color${fs_free /run/media/abhishek/Data/} / ${fs_size /run/media/abhishek/Data/}${offset 21}${color 5294E2}Swap ${offset 9}$color$swap / $swapmax ${offset 35}${font Ubuntu:pixelsize=24}abhishek${font Ubuntu:pixelsize=20}${color 5294E2}@TM-P259L
-
-
+]];
 
