@@ -35,7 +35,7 @@ Check respective tools documentation for more info.
 
 * conky : [~/.config/sysinfo.conkyrc](https://github.com/2KAbhishek/Dotfiles/blob/master/.config/sysinfo.conkyrc)
 
-> Run conky with `conky -dc ~/.config/sysinfo.conkyrc`.
+> Run conky with `conky -dqc ~/.config/sysinfo.conkyrc`.
 
 * broot : [~/.config/broot/](https://github.com/2KAbhishek/Dotfiles/blob/master/.config/broot/)
 * cmus : [~/.config/cmus/](https://github.com/2KAbhishek/Dotfiles/blob/master/.config/cmus/)
