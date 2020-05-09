@@ -22,7 +22,6 @@ plugins=(alias-tips
     extract
     fancy-ctrl-z
     fasd
-    fzf
     fast-syntax-highlighting
     git
     globalias
@@ -30,7 +29,9 @@ plugins=(alias-tips
     tmux
     web-search
     z
-    zsh-autosuggestions)
+    zsh-autosuggestions
+    zsh-navigation-tools
+    fzf) # fzf at last for '^R' binding
 
 # Theme
 ZSH_THEME="powerlevel10k/powerlevel10k"
