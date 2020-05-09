@@ -30,8 +30,7 @@ plugins=(alias-tips
     tmux
     web-search
     z
-    zsh-autosuggestions
-    zsh-navigation-tools)
+    zsh-autosuggestions)
 
 # Theme
 ZSH_THEME="powerlevel10k/powerlevel10k"
