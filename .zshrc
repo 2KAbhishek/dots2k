@@ -18,7 +18,7 @@ MAGIC_ENTER_OTHER_COMMAND="lsda && echo -e '\n'"
 
 # Plugins
 plugins=(alias-tips
-    dirhistory 
+    dirhistory
     extract
     fancy-ctrl-z
     fasd
@@ -123,6 +123,59 @@ source $ZSH/oh-my-zsh.sh
 bindkey "^F" forward-word
 bindkey "^B" backward-word
 
+# Commands
+export EDITOR=nvim
+export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -g ""'
+export GREP_COLOR="1;32"
+export ZSH_PLUGINS_ALIAS_TIPS_TEXT="Alias: "
+export PATH=$HOME/.gem/ruby/2.6.0/bin:$PATH
+export PATH=$HOME/.node_modules/bin:$PATH
+export PATH=$HOME/Applications/bin:$PATH
+
+if [ -f "/home/abhishek/.config/broot/launcher/bash/br" ]; then
+    source /home/abhishek/.config/broot/launcher/bash/br
+fi
+
+eval "$(fasd --init posix-alias zsh-hook zsh-ccomp-install zsh-wcomp-install zsh-ccomp zsh-wcomp)"
+
+#Functions
+function lc() {
+    cd "$1" && la "$2"
+}
+
+function mcd() {
+    mkdir -p -- "$1" && cd -P -- "$1"
+}
+
+function tmux-clean() {
+    tmux list-sessions | grep -E -v '\(attached\)$' | while IFS='\n' read line; do
+        tmux kill-session -t "${line%%:*}"
+    done
+}
+
+function xin() {
+    (cd "${1}" && shift && ${@})
+}
+
+function man() {
+    env \
+        LESS_TERMCAP_mb=$(printf "\e[1;31m") \
+        LESS_TERMCAP_md=$(printf "\e[1;36m") \
+        LESS_TERMCAP_me=$(printf "\e[0m") \
+        LESS_TERMCAP_se=$(printf "\e[0m") \
+        LESS_TERMCAP_so=$(printf "\e[1;44;33m") \
+        LESS_TERMCAP_ue=$(printf "\e[0m") \
+        LESS_TERMCAP_us=$(printf "\e[1;32m") \
+        PAGER="${commands[less]:-$PAGER}" \
+        _NROFF_U=1 \
+        PATH="$HOME/bin:$PATH" \
+        man "$@"
+}
+
+function mlc () {
+    find $1 -name \*.md -exec markdown-link-check -p {} \;
+}
+
 # Aliases
 alias 7zc="7z a -mx=9"
 alias acp="advcp -gv"
@@ -192,55 +245,3 @@ fi
 #     alias send="kdeconnect-cli -d "$(kdeconnect-cli -a --id-only)" --share"
 # fi
 
-# Commands
-export EDITOR=nvim
-export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -g ""'
-export GREP_COLOR="1;32"
-export ZSH_PLUGINS_ALIAS_TIPS_TEXT="Alias: "
-export PATH=$HOME/.gem/ruby/2.6.0/bin:$PATH
-export PATH=$HOME/.node_modules/bin:$PATH
-export PATH=$HOME/Applications/bin:$PATH
-
-if [ -f "/home/abhishek/.config/broot/launcher/bash/br" ]; then
-    source /home/abhishek/.config/broot/launcher/bash/br
-fi
-
-eval "$(fasd --init posix-alias zsh-hook zsh-ccomp-install zsh-wcomp-install zsh-ccomp zsh-wcomp)"
-
-#Functions
-function lc() {
-    cd "$1" && la "$2"
-}
-
-function mcd() {
-    mkdir -p -- "$1" && cd -P -- "$1"
-}
-
-function tmux-clean() {
-    tmux list-sessions | grep -E -v '\(attached\)$' | while IFS='\n' read line; do
-        tmux kill-session -t "${line%%:*}"
-    done
-}
-
-function xin() {
-    (cd "${1}" && shift && ${@})
-}
-
-function man() {
-    env \
-        LESS_TERMCAP_mb=$(printf "\e[1;31m") \
-        LESS_TERMCAP_md=$(printf "\e[1;36m") \
-        LESS_TERMCAP_me=$(printf "\e[0m") \
-        LESS_TERMCAP_se=$(printf "\e[0m") \
-        LESS_TERMCAP_so=$(printf "\e[1;44;33m") \
-        LESS_TERMCAP_ue=$(printf "\e[0m") \
-        LESS_TERMCAP_us=$(printf "\e[1;32m") \
-        PAGER="${commands[less]:-$PAGER}" \
-        _NROFF_U=1 \
-        PATH="$HOME/bin:$PATH" \
-        man "$@"
-}
-
-function mlc () {
-    find $1 -name \*.md -exec markdown-link-check -p {} \;
-}
