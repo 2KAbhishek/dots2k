@@ -219,6 +219,7 @@ alias pacu="sudo pacman -Syu"
 alias pp="prettyping --nolegend"
 alias q="exit"
 alias rm="rm -irv"
+alias reload="source ~/.zshrc"
 alias shad="ssh-add ~/.ssh/id_rsa"
 alias shag='eval "$(ssh-agent -s)"'
 alias sysd="sudo systemctl disable"
