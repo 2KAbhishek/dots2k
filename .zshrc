@@ -255,7 +255,8 @@ if [ -f "/usr/bin/grc" ]; then
     alias wdiff="grc wdiff"
 fi
 
-if [ -f "/usr/bin/kdeconnect-cli" ]; then
-    alias send="kdeconnect-cli -d "$(kdeconnect-cli -a --id-only)" --share"
-fi
+# Causes Issues
+# if [ -f "/usr/bin/kdeconnect-cli" ]; then
+#     alias send="kdeconnect-cli -d "$(kdeconnect-cli -a --id-only)" --share"
+# fi
 
