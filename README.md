@@ -1,21 +1,27 @@
+<div align="center">
+
 # Dotfiles
 
-![Size](https://img.shields.io/github/repo-size/2kabhishek/Dotfiles?style=plastic&color=green&label=Size)
-![Updated](https://img.shields.io/github/last-commit/2kabhishek/Dotfiles?style=plastic&color=red&label=Updated)
-![License](https://img.shields.io/github/license/2kabhishek/Dotfiles?style=plastic&color=lightgrey&label=License)
-![Stars](https://img.shields.io/github/stars/2kabhishek/Dotfiles?style=plastic&color=ffd500&label=Stars)
-![Forks](https://img.shields.io/github/forks/2kabhishek/Dotfiles?style=plastic&color=brightgreen&label=Forks)
-![Watchers](https://img.shields.io/github/watchers/2kabhishek/Dotfiles?style=plastic&color=orange&label=Watchers)
-![Contributors](https://img.shields.io/github/contributors/2kabhishek/Dotfiles?style=plastic&color=ff69b4&label=Contributors)
-![Followers](https://img.shields.io/github/followers/2kabhishek?style=plastic&color=blue&label=Followers)
+![Size](https://img.shields.io/github/repo-size/2kabhishek/Dotfiles?style=plastic&color=0f0&label=Size)
+![Updated](https://img.shields.io/github/last-commit/2kabhishek/Dotfiles?style=plastic&color=f00&label=Updated)
+![Stars](https://img.shields.io/github/stars/2kabhishek/Dotfiles?style=plastic&color=ffc801&label=Stars)
+![Forks](https://img.shields.io/github/forks/2kabhishek/Dotfiles?style=plastic&color=003cff&label=Forks)
+![Watchers](https://img.shields.io/github/watchers/2kabhishek/Dotfiles?style=plastic&color=ff5500&label=Watchers)
+![Contributors](https://img.shields.io/github/contributors/2kabhishek/Dotfiles?style=plastic&color=f0f&label=Contributors)
+![License](https://img.shields.io/github/license/2kabhishek/Dotfiles?style=plastic&color=555&label=License)
 
-My personal config files for everyone to use. Sadly this repo gets frequent commits. 😌😉
-
+My personal configs, carefully and passionately crafted for setting up an optimal CLI dev experience.
 ![Terminal](https://i.imgur.com/XOJlQXU.png)
+
+</div>
 
 ## Setup
 
-Run `./setup` for setting up, it shows a menu from where you can install required components.
+```bash
+git clone https://github.com/2kabhishek/BareMinimum
+cd BareMinimum
+./setup # It shows a menu from where you can install required components
+```
 
 ### Requirements
 
@@ -59,4 +65,6 @@ Check respective tools documentation for more info.
 * zsh : [~/.zshrc](https://github.com/2KAbhishek/Dotfiles/blob/master/.zshrc)
 
 > This repo also contains a few scripts in the [Scripts](https://github.com/2KAbhishek/Dotfiles/blob/master/Scripts) directory.
+
+Please consider hitting the ⭐ star button if this repo was useful to you, any contributions and suggestions are welcome.
 
