@@ -7,9 +7,9 @@
 ![Watchers](https://img.shields.io/github/watchers/2kabhishek/Dotfiles?style=plastic&color=ff5500&label=Watchers)
 ![Contributors](https://img.shields.io/github/contributors/2kabhishek/Dotfiles?style=plastic&color=f0f&label=Contributors)
 ![License](https://img.shields.io/github/license/2kabhishek/Dotfiles?style=plastic&color=555&label=License)
+![Terminal](https://i.imgur.com/XOJlQXU.png)
 
 My personal configs, carefully and passionately crafted for setting up an optimal CLI dev experience.
-![Terminal](https://i.imgur.com/XOJlQXU.png)
 
 
 ## Setup
