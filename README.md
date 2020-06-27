@@ -1,5 +1,3 @@
-<div align="center">
-
 # Dotfiles
 
 ![Size](https://img.shields.io/github/repo-size/2kabhishek/Dotfiles?style=plastic&color=0f0&label=Size)
@@ -13,7 +11,6 @@
 My personal configs, carefully and passionately crafted for setting up an optimal CLI dev experience.
 ![Terminal](https://i.imgur.com/XOJlQXU.png)
 
-</div>
 
 ## Setup
 
@@ -66,5 +63,4 @@ Check respective tools documentation for more info.
 
 > This repo also contains a few scripts in the [Scripts](https://github.com/2KAbhishek/Dotfiles/blob/master/Scripts) directory.
 
-Please consider hitting the ⭐ star button if this repo was useful to you, any contributions and suggestions are welcome.
 
