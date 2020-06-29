@@ -12,7 +12,6 @@
 
 My personal configs, carefully and passionately crafted for setting up an optimal CLI dev experience.
 
-
 ## Setup
 
 ```bash
@@ -30,38 +29,38 @@ Powerline patched fonts are required for glyphs. I'll recommend [Nerd Fonts](htt
 ### Included Configurations
 
 This repo contains configurations for following tools.
-Most of their symlinks are set up by default but for tools like  `conky` and `compiz` you have to follow additional steps mentioned below.
+
+Most of their symlinks are set up by default but for tools like `conky` and `compiz` you have to follow additional steps mentioned below.
+
 Check respective tools documentation for more info.
 
-* compiz : [~/.config/compiz.profile](https://github.com/2KAbhishek/Dotfiles/blob/master/.config/compiz.profile)
+- compiz : [~/.config/compiz.profile](https://github.com/2KAbhishek/Dotfiles/blob/master/.config/compiz.profile)
 
 > Import the compiz profile using `ccsm`.
 
-* conky : [~/.config/sysinfo.conkyrc](https://github.com/2KAbhishek/Dotfiles/blob/master/.config/sysinfo.conkyrc)
+- conky : [~/.config/sysinfo.conkyrc](https://github.com/2KAbhishek/Dotfiles/blob/master/.config/sysinfo.conkyrc)
 
 > Run conky with `conky -dqc ~/.config/sysinfo.conkyrc`.
 
-* broot : [~/.config/broot/](https://github.com/2KAbhishek/Dotfiles/blob/master/.config/broot/)
-* cmus : [~/.config/cmus/](https://github.com/2KAbhishek/Dotfiles/blob/master/.config/cmus/)
-* dmenu : [~/.dmenurc](https://github.com/2KAbhishek/Dotfiles/blob/master/.dmenurc)
-* fontconfig : [~/.config/fontconfig/fonts.conf/](https://github.com/2KAbhishek/Dotfiles/blob/master/.config/fontconfig/fonts.conf/)
-* git : [~/.gitconfig](https://github.com/2KAbhishek/Dotfiles/blob/master/.gitconfig)
-* htop : [~/.config/htop/](https://github.com/2KAbhishek/Dotfiles/blob/master/.config/htop/)
-* i3 : [~/.config/i3/config](https://github.com/2KAbhishek/Dotfiles/blob/master/.config/i3/config)
-* i3status : [~/.config/i3status/config](https://github.com/2KAbhishek/Dotfiles/blob/master/.config/i3status/config)
-* konsole : [~/.local/share/konsole/](https://github.com/2KAbhishek/Dotfiles/blob/master/.local/share/konsole)
+- broot : [~/.config/broot/](https://github.com/2KAbhishek/Dotfiles/blob/master/.config/broot/)
+- cmus : [~/.config/cmus/](https://github.com/2KAbhishek/Dotfiles/blob/master/.config/cmus/)
+- dmenu : [~/.dmenurc](https://github.com/2KAbhishek/Dotfiles/blob/master/.dmenurc)
+- fontconfig : [~/.config/fontconfig/fonts.conf/](https://github.com/2KAbhishek/Dotfiles/blob/master/.config/fontconfig/fonts.conf/)
+- git : [~/.gitconfig](https://github.com/2KAbhishek/Dotfiles/blob/master/.gitconfig)
+- htop : [~/.config/htop/](https://github.com/2KAbhishek/Dotfiles/blob/master/.config/htop/)
+- i3 : [~/.config/i3/config](https://github.com/2KAbhishek/Dotfiles/blob/master/.config/i3/config)
+- i3status : [~/.config/i3status/config](https://github.com/2KAbhishek/Dotfiles/blob/master/.config/i3status/config)
+- konsole : [~/.local/share/konsole/](https://github.com/2KAbhishek/Dotfiles/blob/master/.local/share/konsole)
 
 > Open Konsole, Goto Settings -> Manage Profiles -> Check `Konsole` and click on Set as Default.
 
-* libinbut : [~/.config/libinput-gestures.conf](https://github.com/2KAbhishek/Dotfiles/blob/master/.config/libinput-gestures.conf)
-* neovim : [~/.config/nvim/](https://github.com/2KAbhishek/Dotfiles/blob/master/.config/nvim/)
-* python : [~/.pystartup](https://github.com/2KAbhishek/Dotfiles/blob/master/.pystartup)
-* ranger : [~/.config/ranger/](https://github.com/2KAbhishek/Dotfiles/blob/master/.config/ranger/)
-* tmux : [~/.tmux.conf](https://github.com/2KAbhishek/Dotfiles/blob/master/.tmux.conf)
-* vim : [~/.vimrc](https://github.com/2KAbhishek/Dotfiles/blob/master/.vimrc)
-* xrdb : [~/.Xresources](https://github.com/2KAbhishek/Dotfiles/blob/master/.Xresources)
-* zsh : [~/.zshrc](https://github.com/2KAbhishek/Dotfiles/blob/master/.zshrc)
+- libinbut : [~/.config/libinput-gestures.conf](https://github.com/2KAbhishek/Dotfiles/blob/master/.config/libinput-gestures.conf)
+- neovim : [~/.config/nvim/](https://github.com/2KAbhishek/Dotfiles/blob/master/.config/nvim/)
+- python : [~/.pystartup](https://github.com/2KAbhishek/Dotfiles/blob/master/.pystartup)
+- ranger : [~/.config/ranger/](https://github.com/2KAbhishek/Dotfiles/blob/master/.config/ranger/)
+- tmux : [~/.tmux.conf](https://github.com/2KAbhishek/Dotfiles/blob/master/.tmux.conf)
+- vim : [~/.vimrc](https://github.com/2KAbhishek/Dotfiles/blob/master/.vimrc)
+- xrdb : [~/.Xresources](https://github.com/2KAbhishek/Dotfiles/blob/master/.Xresources)
+- zsh : [~/.zshrc](https://github.com/2KAbhishek/Dotfiles/blob/master/.zshrc)
 
 > This repo also contains a few scripts in the [Scripts](https://github.com/2KAbhishek/Dotfiles/blob/master/Scripts) directory.
-
-
