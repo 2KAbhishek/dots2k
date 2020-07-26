@@ -13,6 +13,6 @@ case $1 in
     echo "-p for pager\n -c for colorized output"
     ;;
 *)
-    curl cheat.sh/$topic
+    curl cheat.sh/$1
     ;;
 esac
