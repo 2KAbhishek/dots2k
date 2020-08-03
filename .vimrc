@@ -6,7 +6,7 @@ set ignorecase     " Do case insensitive matching
 set incsearch      " Show partial matches for a search phrase
 set number         " Show numbers
 set relativenumber " Show relative numbers
-set undolevels=999 " Lots of these 
+set undolevels=999 " Lots of these
 set hlsearch       " Highlight Search
 set tabstop=4      " Tab size
 set shiftwidth=4   " Indentation size
@@ -53,6 +53,11 @@ endif
 " Have Vim jump to the last position when reopening a file
 if has("autocmd")
     au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\""
+endif
+
+" Remove trailing whitespace on write
+if has("autocmd")
+    autocmd BufWritePre * %s/\s\+$//e
 endif
 
 " Keybindings
