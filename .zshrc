@@ -242,6 +242,8 @@ alias yayu="yay -Syu"
 alias ytdl="youtube-dl"
 alias zshrc="$EDITOR ~/.zshrc"
 
+alias -s md=vim
+
 if [ -f "/usr/bin/grc" ]; then
     alias df="grc df"
     alias gcc="grc gcc"
