@@ -243,6 +243,7 @@ alias ytdl="youtube-dl"
 alias zshrc="$EDITOR ~/.zshrc"
 
 alias -s md=vim
+alias -s html=vim
 
 alias -g wcc="| wc -m"
 alias -g wcl="| wc -l"
