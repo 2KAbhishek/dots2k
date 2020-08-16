@@ -47,6 +47,7 @@ case $option in
     if [[ $backupOption == "y" ]]; then
         echo -e "\u001b[33;1m Backing up existing files... \u001b[0m"
         mv -iv ~/.Xresources ~/.Xresources.old
+        mv -iv ~/.config/bat/config ~/.config/bat/config.old
         mv -iv ~/.config/broot/conf.toml ~/.config/broot/conf.toml.old
         mv -iv ~/.config/cmus/darkwind.theme ~/.config/cmus/darkwind.theme.old
         mv -iv ~/.config/fontconfig/fonts.conf ~/.config/fontconfig/fonts.conf.old
@@ -70,6 +71,7 @@ case $option in
 
     echo -e "\u001b[36;1m Adding symlinks...\u001b[0m"
     ln -sfnv "$PWD/.Xresources" ~/.Xresources
+    ln -sfnv "$PWD/.config/bat/config" ~/.config/bat/
     ln -sfnv "$PWD/.config/broot/conf.toml" ~/.config/broot/
     ln -sfnv "$PWD/.config/cmus/darkwind.theme" ~/.config/cmus/darkwind.theme
     ln -sfnv "$PWD/.config/fontconfig/fonts.conf" ~/.config/fontconfig/fonts.conf
