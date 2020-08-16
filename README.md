@@ -42,6 +42,7 @@ Check respective tools documentation for more info.
 
 > Run conky with `conky -dqc ~/.config/sysinfo.conkyrc`.
 
+- bat : [~/.config/bat/](https://github.com/2KAbhishek/Dotfiles/blob/master/.config/bat/)
 - broot : [~/.config/broot/](https://github.com/2KAbhishek/Dotfiles/blob/master/.config/broot/)
 - cmus : [~/.config/cmus/](https://github.com/2KAbhishek/Dotfiles/blob/master/.config/cmus/)
 - dmenu : [~/.dmenurc](https://github.com/2KAbhishek/Dotfiles/blob/master/.dmenurc)
