@@ -269,3 +269,6 @@ fi
 #     alias send="kdeconnect-cli -d "$(kdeconnect-cli -a --id-only)" --share"
 # fi
 
+# Local configurations
+test -f ~/.shrc.local && source ~/.shrc.local
+
