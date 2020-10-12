@@ -26,6 +26,7 @@ plugins=(alias-tips
     git
     globalias
     magic-enter
+    ssh-agent
     tmux
     web-search
     z
