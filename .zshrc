@@ -36,7 +36,8 @@ plugins=(alias-tips
     fzf) # fzf at last for '^R' binding
 
 # Modules
-autoload -U compinit && compinit
+autoload -U zmv
+autoload -U compinit && compinit #Keep at last
 
 # Theme
 ZSH_THEME="powerlevel10k/powerlevel10k"
