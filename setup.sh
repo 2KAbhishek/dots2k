@@ -9,6 +9,7 @@ echo -e "  \u001b[34;1m (2) Install zsh plugins \u001b[0m"
 echo -e "  \u001b[34;1m (3) Install vim plugins \u001b[0m"
 echo -e "  \u001b[34;1m (4) Install tmux plugins \u001b[0m"
 echo -e "  \u001b[34;1m (5) Setup symlinks \u001b[0m"
+echo -e "  \u001b[34;1m (6) Distro specific tweaks \u001b[0m"
 echo -e "  \u001b[31;1m (0) Exit \u001b[0m"
 
 echo -en "\u001b[32;1m ==> \u001b[0m"
@@ -90,6 +91,10 @@ case $option in
     ln -sfnv "$PWD/.tmux.conf" ~/
     ln -sfnv "$PWD/.vimrc" ~/
     ln -sfnv "$PWD/.zshrc" ~/
+    ;;
+
+"6")echo -e "\u001b[7m Distro specific tweaks... \u001b[0m"
+    bash $PWD/scripts/local_distro.sh
     ;;
 
 "0")echo -e "\u001b[32;1m Bye! \u001b[0m"
