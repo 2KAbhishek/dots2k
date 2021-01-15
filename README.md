@@ -64,4 +64,5 @@ Check respective tools documentation for more info.
 - xrdb : [~/.Xresources](https://github.com/2KAbhishek/Dotfiles/blob/master/.Xresources)
 - zsh : [~/.zshrc](https://github.com/2KAbhishek/Dotfiles/blob/master/.zshrc)
 
-> This repo also contains a few scripts in the [Scripts](https://github.com/2KAbhishek/Dotfiles/blob/master/Scripts) directory.
+> This repo also contains a few scripts in the [scripts](https://github.com/2KAbhishek/Dotfiles/blob/master/scripts) directory.
+
