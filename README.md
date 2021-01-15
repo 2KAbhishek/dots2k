@@ -17,7 +17,7 @@ My personal configs, carefully and passionately crafted for setting up an optima
 ```bash
 git clone https://github.com/2kabhishek/Dotfiles
 cd Dotfiles
-./setup # It shows a menu from where you can install required components
+./setup.sh # It shows a menu from where you can install required components
 ```
 
 ### Requirements
