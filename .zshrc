@@ -13,8 +13,8 @@ COMPLETION_WAITING_DOTS="true"
 SAVEHIST=99999
 
 # Magic Enter
-MAGIC_ENTER_GIT_COMMAND="git status -v && echo -e '\n'"
-MAGIC_ENTER_OTHER_COMMAND="lsda && echo -e '\n'"
+MAGIC_ENTER_GIT_COMMAND="git status -v"
+MAGIC_ENTER_OTHER_COMMAND="lsda"
 
 # Plugins
 plugins=(alias-tips
