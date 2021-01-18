@@ -119,16 +119,38 @@ POWERLEVEL9K_STATUS_ERROR_FOREGROUND="black"
 POWERLEVEL9K_STATUS_OK_BACKGROUND="green"
 POWERLEVEL9K_STATUS_OK_FOREGROUND="black"
 POWERLEVEL9K_TIME_BACKGROUND="darkcyan"
+
 POWERLEVEL9K_VI_MODE_INSERT_BACKGROUND="blue"
 POWERLEVEL9K_VI_MODE_INSERT_FOREGROUND="black"
 POWERLEVEL9K_VI_MODE_NORMAL_BACKGROUND="black"
-POWERLEVEL9K_VI_MODE_NORMAL_FOREGROUND="white"
+POWERLEVEL9K_VI_MODE_NORMAL_FOREGROUND="blue"
 
 source $ZSH/oh-my-zsh.sh
 
 # Key Bindings
 bindkey "^F" forward-word
 bindkey "^B" backward-word
+# switch to command mode with ctrl j
+bindkey '^j' vi-cmd-mode
+# Make Vi mode transitions faster (KEYTIMEOUT is in hundredths of a second)
+export KEYTIMEOUT=1
+# incremental search in insert mode
+bindkey "^F" history-incremental-search-forward
+bindkey "^R" history-incremental-search-backward
+# beginning search with arrow keys and j/k
+bindkey "^[OA" up-line-or-beginning-search
+bindkey "^[OB" down-line-or-beginning-search
+bindkey -M vicmd "k" up-line-or-beginning-search
+bindkey -M vicmd "j" down-line-or-beginning-search
+# beginning search in insert mode, redundant with the up/down arrows
+bindkey "^P" history-search-backward
+bindkey "^N" history-search-forward
+# incremental search in vi command mode
+bindkey -M vicmd '?' history-incremental-search-backward
+bindkey -M vicmd '/' history-incremental-search-forward
+# navigate matches in incremental search
+bindkey -M viins '^R' history-incremental-pattern-search-backward
+bindkey -M viins '^F' history-incremental-pattern-search-forward
 
 # Commands
 export EDITOR=nvim
