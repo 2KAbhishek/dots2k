@@ -61,6 +61,7 @@ case $option in
         mv -iv ~/.config/ranger ~/.config/ranger.old
         mv -iv ~/.config/sysinfo.conkyrc ~/.config/sysinfo.conkyrc.old
         mv -iv ~/.dmenurc ~/.dmenurc.old
+        mv -iv ~/.dircolors ~/.dircolors.old
         mv -iv ~/.gitconfig ~/.gitconfig.old
         mv -iv ~/.pystartup ~/.pystartup.old
         mv -iv ~/.tmux.conf ~/.tmux.conf.old
@@ -86,6 +87,7 @@ case $option in
     ln -sfnv "$PWD/.config/sysinfo.conkyrc" ~/.config/
     cp -iuvr "$PWD/.local/share/konsole/" ~/.local/share/
     ln -sfnv "$PWD/.dmenurc" ~/
+    ln -sfnv "$PWD/.dircolors" ~/
     ln -sfnv "$PWD/.gitconfig" ~/
     ln -sfnv "$PWD/.pystartup" ~/
     ln -sfnv "$PWD/.tmux.conf" ~/
