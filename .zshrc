@@ -168,6 +168,8 @@ export PATH=$HOME/.gem/ruby/2.6.0/bin:$PATH
 export PATH=$HOME/.gem/ruby/2.7.0/bin:$PATH
 export PATH=$HOME/.node_modules/bin:$PATH
 
+eval "$(dircolors ~/.dircolors)";
+
 test -f ~/usr/share/nvm/init-nvm.sh && source ~/usr/share/nvm/init-nvm.sh
 
 if [ -f "/home/abhishek/.config/broot/launcher/bash/br" ]; then
