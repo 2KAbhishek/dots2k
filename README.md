@@ -20,9 +20,13 @@ cd Dotfiles
 ./setup.sh # It shows a menu from where you can install required components
 ```
 
-### Requirements
+## Requirements
 
 For installation `git` `curl` & `zsh` are must, other tools are mentioned below.
+
+### Packages
+
+- xdotool, libinput
 
 Powerline patched fonts are required for glyphs. I'll recommend [Nerd Fonts](https://www.nerdfonts.com/).
 
@@ -66,4 +70,3 @@ Check respective tools documentation for more info.
 - zsh : [~/.zshrc](https://github.com/2KAbhishek/Dotfiles/blob/master/.zshrc)
 
 > This repo also contains a few scripts in the [scripts](https://github.com/2KAbhishek/Dotfiles/blob/master/scripts) directory.
-
