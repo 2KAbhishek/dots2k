@@ -40,6 +40,7 @@ set list           " Highlight non whitespace characters
 set nrformats-=octal " 007 != 010
 set sessionoptions-=options
 set viewoptions-=option
+set cursorline     " Highlight current line
 
 " Always use terminal background
 autocmd ColorScheme * highlight! Normal ctermbg=NONE guibg=NONE
