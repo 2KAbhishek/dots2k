@@ -30,9 +30,10 @@ case $option in
     git clone https://github.com/djui/alias-tips.git ~/.oh-my-zsh/custom/plugins/alias-tips
     ;;
 
-"3")echo -e "\u001b[7m Installing vim plugins... \u001b[0m"
-    git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-    vim +PluginUpdate +qall
+"3")echo -e "\u001b[7m Installing vim Plug... \u001b[0m"
+    curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+    echo -e "\u001b[7m Installing vim plugins... \u001b[0m"
+    vim +PlugUpdate +qall
     ;;
 
 "4")echo -e "\u001b[7m Installing tmux plugins... \u001b[0m"
