@@ -13,6 +13,6 @@
 [protocol]
     version = 2
 [pull]
-	rebase = false
+    rebase = false
 [init]
-	defaultBranch = main
+    defaultBranch = main
