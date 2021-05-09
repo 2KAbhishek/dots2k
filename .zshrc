@@ -310,5 +310,7 @@ fi
 # fi
 
 # Local configurations
-test -f ~/.shrc.local && source ~/.shrc.local
+[ -f ~/.shrc.local ] && source ~/.shrc.local
 
+# For fzf keybindings
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
