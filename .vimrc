@@ -7,7 +7,7 @@ set incsearch      " Show partial matches for a search phrase
 set number         " Show numbers
 set relativenumber " Show relative numbers
 set undolevels=999 " Lots of these
-set hlsearch       " Highlight Search
+set nohlsearch     " clear highlights after search
 set tabstop=4      " Tab size
 set shiftwidth=4   " Indentation size
 set softtabstop=4  " Tabs/Spaces interop
@@ -27,7 +27,7 @@ set ttimeoutlen=100
 set synmaxcol=500  " Syntax limit
 set laststatus=2   " Always show status line
 set ruler          " Show cursor position
-set scrolloff=3    " Scroll offset
+set scrolloff=8    " Scroll offset
 set sidescrolloff=5
 set autoread       " Reload files on change
 set tabpagemax=50  " More tabs
@@ -41,6 +41,8 @@ set nrformats-=octal " 007 != 010
 set sessionoptions-=options
 set viewoptions-=option
 set cursorline     " Highlight current line
+set exrc           " Use vimrc from local dir
+set hidden         " Enable switching with modified buffers
 
 " Always use terminal background
 autocmd ColorScheme * highlight! Normal ctermbg=NONE guibg=NONE
