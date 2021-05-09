@@ -1,18 +1,34 @@
 [user]
     email = keshri.abhishek63@gmail.com
     name = Abhishek Keshri
+
 [credential]
     helper = cache --timeout 3600
+
 [core]
     editor = nvim
     pager = delta --dark --theme='OneHalfDark' --highlight-removed
+
 [interactive]
     diffFilter = delta --dark --color-only --theme='OneHalfDark' --highlight-removed
+
+[delta]
+    features = side-by-side line-numbers decorations
+    whitespace-error-style = 22 reverse
+
+[delta "decorations"]
+    commit-decoration-style = bold yellow box ul
+    file-style = bold yellow ul
+    file-decoration-style = none
+
 [color]
     ui = true
+
 [protocol]
     version = 2
+
 [pull]
     rebase = false
+
 [init]
     defaultBranch = main
