@@ -28,7 +28,6 @@ plugins=(alias-tips
     magic-enter
     ssh-agent
     tmux
-    vi-mode
     web-search
     z
     zsh-autosuggestions
@@ -51,7 +50,7 @@ POWERLEVEL9K_PROMPT_ON_NEWLINE=true
 POWERLEVEL9K_RPROMPT_ON_NEWLINE=true
 POWERLEVEL9K_PROMPT_ADD_NEWLINE=true
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon context dir vcs virtualenv time)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status command_execution_time_joined background_jobs ram_joined battery vi_mode)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status command_execution_time_joined background_jobs ram_joined battery)
 POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX="%F{014}╭"
 POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX="%F{014}╰%K{black}%F{blue}  %f%F{black}%k%f"
 
