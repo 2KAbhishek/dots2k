@@ -14,7 +14,7 @@ set softtabstop=4  " Tabs/Spaces interop
 set expandtab      " Expands tab to spaces
 set nomodeline     " Disable as a security precaution
 set mouse=a        " Enable mouse mode
-set termguicolors  " Enable true colors
+" set termguicolors  " Enable true colors (tmux fix)
 set wildmenu       " Enable wildmenu
 set conceallevel=0 " Disable concealing
 set splitbelow     " Natural splits
