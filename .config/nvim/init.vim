@@ -74,7 +74,7 @@ vnoremap L >gv
 vnoremap H <gv
 
 " Plugins
-call plug#begin('~/.vim/plugged')
+call plug#begin('~/.config/.nvim/plugged')
 
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'mattn/emmet-vim'
