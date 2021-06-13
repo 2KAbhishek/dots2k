@@ -242,6 +242,7 @@ alias gcm="git checkout main"
 alias gcma="git commit --amend -m"
 alias gdh="git diff HEAD"
 alias gmv="git mv"
+alias gsv="git status -v"
 alias gtop='cd "$(git rev-parse --show-toplevel)"'
 alias grep="grep --color=auto"
 alias jupn="jupyter notebook"
