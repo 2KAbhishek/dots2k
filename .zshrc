@@ -171,8 +171,7 @@ export GOBIN=$GOPATH/bin
 export PATH=$HOME/Applications/bin:$PATH
 export PATH=$GOBIN:$PATH
 export PATH=$HOME/.cargo/bin:$PATH
-export PATH=$HOME/.gem/ruby/2.6.0/bin:$PATH
-export PATH=$HOME/.gem/ruby/2.7.0/bin:$PATH
+export PATH=$HOME/.local/share/gem/ruby/3.0.0/bin:$PATH
 export PATH=$HOME/.node_modules/bin:$PATH
 
 eval "$(dircolors ~/.dircolors)";
