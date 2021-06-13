@@ -13,7 +13,7 @@ COMPLETION_WAITING_DOTS="true"
 SAVEHIST=99999
 
 # Magic Enter
-MAGIC_ENTER_GIT_COMMAND="git status && git diff HEAD"
+MAGIC_ENTER_GIT_COMMAND="git status -s && git diff HEAD"
 MAGIC_ENTER_OTHER_COMMAND="lsda"
 
 # Plugins
