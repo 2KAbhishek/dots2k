@@ -237,7 +237,7 @@ alias ccp="clipcopy"
 alias cp="cp -irv"
 alias cpa="clippaste"
 alias diff="diff --color=auto"
-alias e="nvim $(fzf)"
+alias e='nvim $(fzf)'
 alias exag="exa -ahlT -L=1  -s=extension --git --group-directories-first"
 alias fdir="find . -type d -name"
 alias ffil="find . -type f -name"
