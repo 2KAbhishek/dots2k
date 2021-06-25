@@ -34,22 +34,6 @@ Powerline patched fonts are required for glyphs. I'll recommend [Nerd Fonts](htt
 
 This repo contains configurations for following tools.
 
-Most of their symlinks are set up by default but for tools like `conky` and `compiz` you have to follow additional steps mentioned below.
-
-Check respective tools documentation for more info.
-
-- compiz : [~/.config/compiz.profile](https://github.com/2KAbhishek/Dotfiles/blob/main/.config/compiz.profile)
-
-> Import the compiz profile using `ccsm`.
-
-- conky : [~/.config/sysinfo.conkyrc](https://github.com/2KAbhishek/Dotfiles/blob/main/.config/sysinfo.conkyrc)
-
-> Run conky with `conky -dqc ~/.config/sysinfo.conkyrc`.
-
-- konsole : [~/.local/share/konsole/](https://github.com/2KAbhishek/Dotfiles/blob/main/.local/share/konsole)
-
-> Open Konsole, Goto Settings -> Manage Profiles -> Check `Konsole` and click on Set as Default.
-
 - bash : [~/.bashrc](https://github.com/2KAbhishek/Dotfiles/blob/main/.bashrc)
 - bat : [~/.config/bat/](https://github.com/2KAbhishek/Dotfiles/blob/main/.config/bat/)
 - broot : [~/.config/broot/](https://github.com/2KAbhishek/Dotfiles/blob/main/.config/broot/)
@@ -70,4 +54,18 @@ Check respective tools documentation for more info.
 - xrdb : [~/.Xresources](https://github.com/2KAbhishek/Dotfiles/blob/main/.Xresources)
 - zsh : [~/.zshrc](https://github.com/2KAbhishek/Dotfiles/blob/main/.zshrc)
 
-> This repo also contains a few scripts in the [scripts](https://github.com/2KAbhishek/Dotfiles/blob/main/scripts) directory.
+Some configs require some more steps in order to use. Check respective tools documentation for more info.
+
+- compiz : [~/.config/compiz.profile](https://github.com/2KAbhishek/Dotfiles/blob/main/.config/compiz.profile)
+
+> Import the compiz profile using `ccsm`.
+
+- conky : [~/.config/sysinfo.conkyrc](https://github.com/2KAbhishek/Dotfiles/blob/main/.config/sysinfo.conkyrc)
+
+> Run conky with `conky -dqc ~/.config/sysinfo.conkyrc`.
+
+- konsole : [~/.local/share/konsole/](https://github.com/2KAbhishek/Dotfiles/blob/main/.local/share/konsole)
+
+> Open Konsole, Goto Settings -> Manage Profiles -> Check `Konsole` and click on Set as Default.
+
+This repo also contains a few scripts in the [scripts](https://github.com/2KAbhishek/Dotfiles/blob/main/scripts) directory.
