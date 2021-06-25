@@ -55,140 +55,17 @@ source $ZSH/oh-my-zsh.sh
 # Key Bindings
 
 # Reload config
-bindkey -s '^H' ' . ~/.zshrc^M ^M'
+bindkey -s '^H' ' source ~/.zshrc^M ^M'
 
 # Move forward and backward in command
 bindkey "^F" forward-word
 bindkey "^B" backward-word
 
 # Commands
-export EDITOR=nvim
-export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -g ""'
-export GREP_COLOR="1;32"
-export ZSH_PLUGINS_ALIAS_TIPS_TEXT="Alias: "
-export ZSH_TMUX_AUTOSTART='false'
-export ZSH_TMUX_AUTOSTART_ONCE='false'
-export ZSH_TMUX_AUTOCONNECT='false'
-
-export GOPATH=$HOME/.go
-export GOBIN=$GOPATH/bin
-
-export PATH=$HOME/Applications/bin:$PATH
-export PATH=$GOBIN:$PATH
-export PATH=$HOME/.cargo/bin:$PATH
-export PATH=$HOME/.local/share/gem/ruby/3.0.0/bin:$PATH
-export PATH=$HOME/.npm/bin:$PATH
-
-eval "$(dircolors ~/.dircolors)";
-
-test -f ~/usr/share/nvm/init-nvm.sh && source ~/usr/share/nvm/init-nvm.sh
-
-if [ -f "/home/abhishek/.config/broot/launcher/bash/br" ]; then
-    source /home/abhishek/.config/broot/launcher/bash/br
-fi
-
 eval "$(fasd --init posix-alias zsh-hook zsh-ccomp-install zsh-wcomp-install zsh-ccomp zsh-wcomp)"
 
-#Functions
-function lc() {
-    cd "$1" && la "$2"
-}
-
-function mcd() {
-    mkdir -p -- "$1" && cd -P -- "$1"
-}
-
-function tmux-clean() {
-    tmux list-sessions | grep -E -v '\(attached\)$' | while IFS='\n' read line; do
-        tmux kill-session -t "${line%%:*}"
-    done
-}
-
-function xin() {
-    (cd "${1}" && shift && ${@})
-}
-
-function man() {
-    env \
-        LESS_TERMCAP_mb=$(printf "\e[1;31m") \
-        LESS_TERMCAP_md=$(printf "\e[1;36m") \
-        LESS_TERMCAP_me=$(printf "\e[0m") \
-        LESS_TERMCAP_se=$(printf "\e[0m") \
-        LESS_TERMCAP_so=$(printf "\e[1;44;33m") \
-        LESS_TERMCAP_ue=$(printf "\e[0m") \
-        LESS_TERMCAP_us=$(printf "\e[1;32m") \
-        PAGER="${commands[less]:-$PAGER}" \
-        _NROFF_U=1 \
-        PATH="$HOME/bin:$PATH" \
-        man "$@"
-}
-
-function mlc () {
-    find $1 -name \*.md -exec markdown-link-check -p {} \;
-}
-
 # Aliases
-alias 7zc="7z a -mx=9"
-alias acp="advcp -gv"
-alias amv="advmv -gv"
-alias apti="sudo apt install"
-alias apts="apt search"
-alias aptr="sudo apt remove"
-alias aptq="apt show"
-alias aptu="sudo apt update && sudo apt upgrade"
-alias asc="asciinema"
-alias cat="bat"
-alias ccp="clipcopy"
-alias cp="cp -irv"
-alias cpa="clippaste"
-alias diff="diff --color=auto"
-alias e='nvim $(fzf)'
-alias exag="exa -ahlT -L=1  -s=extension --git --group-directories-first"
-alias fdir="find . -type d -name"
-alias ffil="find . -type f -name"
-alias gcm="git checkout main"
-alias gcma="git commit --amend -m"
-alias gdh="git diff HEAD"
-alias gmv="git mv"
-alias gsv="git status -v"
-alias gtop='cd "$(git rev-parse --show-toplevel)"'
-alias grep="grep --color=auto"
-alias jupn="jupyter notebook"
-alias la="ls -AXb --group-directories-first --sort=extension"
-alias ln="ln -sv"
-alias lsda="lsd -A --group-dirs first --classify"
-alias lsdo="lsd -A --group-dirs first --classify --recursive --depth=2"
-alias mv="mv -iv"
-alias ncdu="ncdu --color=dark -x"
-alias open="xdg-open"
-alias paci="sudo pacman -S"
-alias pacq="pacman -Qi"
-alias pacr="sudo pacman -R"
-alias pacs="pacman -Ss"
-alias pacu="sudo pacman -Syu"
-alias pp="prettyping --nolegend"
-alias q="exit"
-alias reload='. ~/.zshrc'
-alias rm="rm -irv"
-alias rmf="rm -rf"
-alias shad="ssh-add ~/.ssh/id_rsa"
-alias shag='eval "$(ssh-agent -s)"'
-alias sysd="sudo systemctl disable"
-alias syse="sudo systemctl enable"
-alias sysr="sudo systemctl restart"
-alias syss="systemctl status"
-alias systa="sudo systemctl start"
-alias systo="sudo systemctl stop"
-alias tmux="tmux -u"
-alias tmuxm="tmux new-session \; split-window -h \; split-window -v \; attach"
-alias trii="trizen -S --noedit"
-alias tris="trizen -Ss --noedit"
-alias triu="trizen -Syu --noedit"
-alias yayi="yay -S"
-alias yayu="yay -Syu"
-alias ytdl="youtube-dl"
-alias vimrc="$EDITOR ~/.config/nvim/init.vim"
-alias zshrc="$EDITOR ~/.zshrc"
+alias reload='source ~/.zshrc'
 
 alias -s md=vim
 alias -s html=vim
