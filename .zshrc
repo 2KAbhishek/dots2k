@@ -75,27 +75,20 @@ alias -g wcc="| wc -m"
 alias -g wcl="| wc -l"
 alias -g wcw="| wc -w"
 
-if [ -f "/usr/bin/grc" ]; then
-    alias df="grc df"
-    alias gcc="grc gcc"
-    alias iwconfig="grc iwconfig"
-    alias last="grc last"
-    alias make="grc make"
-    alias mount="grc mount"
-    alias mtr="grc mtr"
-    alias ping="grc ping"
-    alias ps="grc ps"
-    alias traceroute="grc traceroute"
-    alias wdiff="grc wdiff"
-fi
+# For fzf keybindings
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-# Causes Issues
-# if [ -f "/usr/bin/kdeconnect-cli" ]; then
-#     alias send="kdeconnect-cli -d "$(kdeconnect-cli -a --id-only)" --share"
-# fi
+# Common environment variables
+[ -f ~/.config/shell/envars.sh ] && source ~/.config/shell/envars.sh
+
+# Common commands
+[ -f ~/.config/shell/commands.sh ] && source ~/.config/shell/commands.sh
+
+# Common functions
+[ -f ~/.config/shell/functions.sh ] && source ~/.config/shell/functions.sh
+
+# Common aliases
+[ -f ~/.config/shell/aliases.sh ] && source ~/.config/shell/aliases.sh
 
 # Local configurations
 [ -f ~/.shrc.local ] && source ~/.shrc.local
-
-# For fzf keybindings
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
