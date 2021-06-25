@@ -49,7 +49,6 @@ case $option in
     read -r backupOption
     if [[ $backupOption == "y" ]]; then
         echo -e "\u001b[33;1m Backing up existing files... \u001b[0m"
-        mv -iv ~/.Xresources ~/.Xresources.old
         mv -iv ~/.config/bat/config ~/.config/bat/config.old
         mv -iv ~/.config/broot/conf.toml ~/.config/broot/conf.toml.old
         mv -iv ~/.config/cmus/darkwind.theme ~/.config/cmus/darkwind.theme.old
@@ -60,13 +59,18 @@ case $option in
         mv -iv ~/.config/libinput-gestures.conf ~/.config/libinput-gestures.conf.old
         mv -iv ~/.config/nvim ~/.config/nvim.old
         mv -iv ~/.config/ranger ~/.config/ranger.old
+        mv -iv ~/.config/shell ~/.config/shell.old
         mv -iv ~/.config/sysinfo.conkyrc ~/.config/sysinfo.conkyrc.old
-        mv -iv ~/.dmenurc ~/.dmenurc.old
+        mv -iv ~/.bashrc ~/.bashrc.old
         mv -iv ~/.dircolors ~/.dircolors.old
+        mv -iv ~/.dmenurc ~/.dmenurc.old
         mv -iv ~/.gitconfig ~/.gitconfig.old
+        mv -iv ~/.npmrc ~/.npmrc.old
+        mv -iv ~/.prettierrc ~/.prettierrc.old
         mv -iv ~/.pystartup ~/.pystartup.old
         mv -iv ~/.tmux.conf ~/.tmux.conf.old
         mv -iv ~/.vimrc ~/.vimrc.old
+        mv -iv ~/.Xresources ~/.Xresources.old
         mv -iv ~/.zshrc ~/.zshrc.old
         echo -e "\u001b[36;1m Remove backups with 'rm -ir ~/.*.old && rm -ir ~/.config/*.old'. \u001b[0m"
     else
@@ -74,7 +78,7 @@ case $option in
     fi
 
     echo -e "\u001b[36;1m Adding symlinks...\u001b[0m"
-    ln -sfnv "$PWD/.Xresources" ~/
+    cp -iuvr "$PWD/.local/share/konsole/" ~/.local/share/
     ln -sfnv "$PWD/.config/bat/" ~/.config/
     ln -sfnv "$PWD/.config/broot/" ~/.config/
     ln -sfnv "$PWD/.config/cmus/" ~/.config/
@@ -85,14 +89,18 @@ case $option in
     ln -sfnv "$PWD/.config/libinput-gestures.conf" ~/.config/
     ln -sfnv "$PWD/.config/nvim" ~/.config/
     ln -sfnv "$PWD/.config/ranger/" ~/.config/
+    ln -sfnv "$PWD/.config/shell" ~/.config/
     ln -sfnv "$PWD/.config/sysinfo.conkyrc" ~/.config/
-    cp -iuvr "$PWD/.local/share/konsole/" ~/.local/share/
-    ln -sfnv "$PWD/.dmenurc" ~/
+    ln -sfnv "$PWD/.bashrc" ~/
     ln -sfnv "$PWD/.dircolors" ~/
+    ln -sfnv "$PWD/.dmenurc" ~/
     ln -sfnv "$PWD/.gitconfig" ~/
+    ln -sfnv "$PWD/.npmrc" ~/
+    ln -sfnv "$PWD/.prettierrc" ~/
     ln -sfnv "$PWD/.pystartup" ~/
     ln -sfnv "$PWD/.tmux.conf" ~/
     ln -sfnv "$PWD/.vimrc" ~/
+    ln -sfnv "$PWD/.Xresources" ~/
     ln -sfnv "$PWD/.zshrc" ~/
     ;;
 
