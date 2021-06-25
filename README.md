@@ -54,7 +54,7 @@ This repo contains configurations for following tools.
 - xrdb : [~/.Xresources](https://github.com/2KAbhishek/Dotfiles/blob/main/.Xresources)
 - zsh : [~/.zshrc](https://github.com/2KAbhishek/Dotfiles/blob/main/.zshrc)
 
-Some configs require some more steps in order to use. Check respective tools documentation for more info.
+Some configs require special steps in order to use. Check respective tools documentation for more info.
 
 - compiz : [~/.config/compiz.profile](https://github.com/2KAbhishek/Dotfiles/blob/main/.config/compiz.profile)
 
