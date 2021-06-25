@@ -38,35 +38,36 @@ Most of their symlinks are set up by default but for tools like `conky` and `com
 
 Check respective tools documentation for more info.
 
-- compiz : [~/.config/compiz.profile](https://github.com/2KAbhishek/Dotfiles/blob/master/.config/compiz.profile)
+- compiz : [~/.config/compiz.profile](https://github.com/2KAbhishek/Dotfiles/blob/main/.config/compiz.profile)
 
 > Import the compiz profile using `ccsm`.
 
-- conky : [~/.config/sysinfo.conkyrc](https://github.com/2KAbhishek/Dotfiles/blob/master/.config/sysinfo.conkyrc)
+- conky : [~/.config/sysinfo.conkyrc](https://github.com/2KAbhishek/Dotfiles/blob/main/.config/sysinfo.conkyrc)
 
 > Run conky with `conky -dqc ~/.config/sysinfo.conkyrc`.
 
-- bat : [~/.config/bat/](https://github.com/2KAbhishek/Dotfiles/blob/master/.config/bat/)
-- broot : [~/.config/broot/](https://github.com/2KAbhishek/Dotfiles/blob/master/.config/broot/)
-- cmus : [~/.config/cmus/](https://github.com/2KAbhishek/Dotfiles/blob/master/.config/cmus/)
-- dmenu : [~/.dmenurc](https://github.com/2KAbhishek/Dotfiles/blob/master/.dmenurc)
-- dircolors : [~/.dircolors](https://github.com/2KAbhishek/Dotfiles/blob/master/.dircolors)
-- fontconfig : [~/.config/fontconfig/fonts.conf/](https://github.com/2KAbhishek/Dotfiles/blob/master/.config/fontconfig/fonts.conf/)
-- git : [~/.gitconfig](https://github.com/2KAbhishek/Dotfiles/blob/master/.gitconfig)
-- htop : [~/.config/htop/](https://github.com/2KAbhishek/Dotfiles/blob/master/.config/htop/)
-- i3 : [~/.config/i3/config](https://github.com/2KAbhishek/Dotfiles/blob/master/.config/i3/config)
-- i3status : [~/.config/i3status/config](https://github.com/2KAbhishek/Dotfiles/blob/master/.config/i3status/config)
-- konsole : [~/.local/share/konsole/](https://github.com/2KAbhishek/Dotfiles/blob/master/.local/share/konsole)
+- konsole : [~/.local/share/konsole/](https://github.com/2KAbhishek/Dotfiles/blob/main/.local/share/konsole)
 
 > Open Konsole, Goto Settings -> Manage Profiles -> Check `Konsole` and click on Set as Default.
 
-- libinbut : [~/.config/libinput-gestures.conf](https://github.com/2KAbhishek/Dotfiles/blob/master/.config/libinput-gestures.conf)
-- neovim : [~/.config/nvim/](https://github.com/2KAbhishek/Dotfiles/blob/master/.config/nvim/)
-- python : [~/.pystartup](https://github.com/2KAbhishek/Dotfiles/blob/master/.pystartup)
-- ranger : [~/.config/ranger/](https://github.com/2KAbhishek/Dotfiles/blob/master/.config/ranger/)
-- tmux : [~/.tmux.conf](https://github.com/2KAbhishek/Dotfiles/blob/master/.tmux.conf)
-- vim : [~/.vimrc](https://github.com/2KAbhishek/Dotfiles/blob/master/.vimrc)
-- xrdb : [~/.Xresources](https://github.com/2KAbhishek/Dotfiles/blob/master/.Xresources)
-- zsh : [~/.zshrc](https://github.com/2KAbhishek/Dotfiles/blob/master/.zshrc)
+- bash : [~/.bashrc](https://github.com/2KAbhishek/Dotfiles/blob/main/.bashrc)
+- bat : [~/.config/bat/](https://github.com/2KAbhishek/Dotfiles/blob/main/.config/bat/)
+- broot : [~/.config/broot/](https://github.com/2KAbhishek/Dotfiles/blob/main/.config/broot/)
+- cmus : [~/.config/cmus/](https://github.com/2KAbhishek/Dotfiles/blob/main/.config/cmus/)
+- dmenu : [~/.dmenurc](https://github.com/2KAbhishek/Dotfiles/blob/main/.dmenurc)
+- dircolors : [~/.dircolors](https://github.com/2KAbhishek/Dotfiles/blob/main/.dircolors)
+- fontconfig : [~/.config/fontconfig/fonts.conf/](https://github.com/2KAbhishek/Dotfiles/blob/main/.config/fontconfig/fonts.conf/)
+- git : [~/.gitconfig](https://github.com/2KAbhishek/Dotfiles/blob/main/.gitconfig)
+- htop : [~/.config/htop/](https://github.com/2KAbhishek/Dotfiles/blob/main/.config/htop/)
+- i3 : [~/.config/i3/config](https://github.com/2KAbhishek/Dotfiles/blob/main/.config/i3/config)
+- i3status : [~/.config/i3status/config](https://github.com/2KAbhishek/Dotfiles/blob/main/.config/i3status/config)
+- libinbut : [~/.config/libinput-gestures.conf](https://github.com/2KAbhishek/Dotfiles/blob/main/.config/libinput-gestures.conf)
+- neovim : [~/.config/nvim/](https://github.com/2KAbhishek/Dotfiles/blob/main/.config/nvim/)
+- python : [~/.pystartup](https://github.com/2KAbhishek/Dotfiles/blob/main/.pystartup)
+- ranger : [~/.config/ranger/](https://github.com/2KAbhishek/Dotfiles/blob/main/.config/ranger/)
+- tmux : [~/.tmux.conf](https://github.com/2KAbhishek/Dotfiles/blob/main/.tmux.conf)
+- vim : [~/.vimrc](https://github.com/2KAbhishek/Dotfiles/blob/main/.vimrc)
+- xrdb : [~/.Xresources](https://github.com/2KAbhishek/Dotfiles/blob/main/.Xresources)
+- zsh : [~/.zshrc](https://github.com/2KAbhishek/Dotfiles/blob/main/.zshrc)
 
-> This repo also contains a few scripts in the [scripts](https://github.com/2KAbhishek/Dotfiles/blob/master/scripts) directory.
+> This repo also contains a few scripts in the [scripts](https://github.com/2KAbhishek/Dotfiles/blob/main/scripts) directory.
