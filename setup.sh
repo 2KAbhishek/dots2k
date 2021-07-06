@@ -30,10 +30,15 @@ case $option in
     git clone https://github.com/djui/alias-tips.git ~/.oh-my-zsh/custom/plugins/alias-tips
     ;;
 
-"3")echo -e "\u001b[7m Installing vim Plug... \u001b[0m"
-    curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-    echo -e "\u001b[7m Installing vim plugins... \u001b[0m"
+"3")echo -e "\u001b[7m Installing Plug... \u001b[0m"
+    curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+    curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
+       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
+    echo -e "\u001b[7m Installing plugins for vim and nvim... \u001b[0m"
     vim +PlugUpdate +qall
+    nvim -c 'PlugUpdate | PlugClean | quitall'
     ;;
 
 "4")echo -e "\u001b[7m Installing tmux plugins... \u001b[0m"
