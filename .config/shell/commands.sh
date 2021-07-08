@@ -1,9 +1,12 @@
 #!/bin/bash
 # Commands
+
+# ls dircolors
 eval "$(dircolors ~/.dircolors)";
 
-test -f ~/usr/share/nvm/init-nvm.sh && source ~/usr/share/nvm/init-nvm.sh
+# Node Version Manager
+[ -f /usr/share/nvm/init-nvm.sh ] && source /usr/share/nvm/init-nvm.sh
 
-if [ -f "/home/abhishek/.config/broot/launcher/bash/br" ]; then
-    source /home/abhishek/.config/broot/launcher/bash/br
-fi
+# broot file explorer
+[ -f ~/.config/broot/launcher/bash/br ] && source ~/.config/broot/launcher/bash/br
+
