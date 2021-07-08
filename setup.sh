@@ -18,11 +18,13 @@ read -r option
 
 case $option in
 
-"1")echo -e "\u001b[7m Installing oh-my-zsh...\u001b[0m"
+"1")
+    echo -e "\u001b[7m Installing oh-my-zsh...\u001b[0m"
     sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
     ;;
 
-"2")echo -e "\u001b[7m Installing zsh plugins...\u001b[0m"
+"2")
+    echo -e "\u001b[7m Installing zsh plugins...\u001b[0m"
     git clone https://github.com/romkatv/powerlevel10k.git ~/.oh-my-zsh/custom/themes/powerlevel10k
     git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
     git clone https://github.com/zsh-users/zsh-completions ~/.oh-my-zsh/custom/plugins/zsh-completions
@@ -30,18 +32,20 @@ case $option in
     git clone https://github.com/djui/alias-tips.git ~/.oh-my-zsh/custom/plugins/alias-tips
     ;;
 
-"3")echo -e "\u001b[7m Installing Plug... \u001b[0m"
+"3")
+    echo -e "\u001b[7m Installing Plug... \u001b[0m"
     curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
         https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
     curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
-       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
     echo -e "\u001b[7m Installing plugins for vim and nvim... \u001b[0m"
     vim +PlugUpdate +qall
     nvim -c 'PlugUpdate | PlugClean | quitall'
     ;;
 
-"4")echo -e "\u001b[7m Installing tmux plugins... \u001b[0m"
+"4")
+    echo -e "\u001b[7m Installing tmux plugins... \u001b[0m"
     git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
     tmux start-server
     tmux new-session -d
@@ -49,7 +53,8 @@ case $option in
     tmux kill-server
     ;;
 
-"5")echo -e "\u001b[7m Setting up symlinks... \u001b[0m"
+"5")
+    echo -e "\u001b[7m Setting up symlinks... \u001b[0m"
     echo -e "\u001b[33;1m Backup existing files? (y/n) \u001b[0m"
     read -r backupOption
     if [[ $backupOption == "y" ]]; then
@@ -109,15 +114,18 @@ case $option in
     ln -sfnv "$PWD/.zshrc" ~/
     ;;
 
-"6")echo -e "\u001b[7m Distro specific tweaks... \u001b[0m"
+"6")
+    echo -e "\u001b[7m Distro specific tweaks... \u001b[0m"
     bash $PWD/scripts/local_distro.sh
     ;;
 
-"0")echo -e "\u001b[32;1m Bye! \u001b[0m"
+"0")
+    echo -e "\u001b[32;1m Bye! \u001b[0m"
     exit 0
     ;;
 
-*)echo -e "\u001b[31;1m Invalid option entered! \u001b[0m"
+*)
+    echo -e "\u001b[31;1m Invalid option entered! \u001b[0m"
     exit 1
     ;;
 esac
