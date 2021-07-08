@@ -1,0 +1,8 @@
+BUNDLE_GEM__TEST: "minitest"
+BUNDLE_GEM__CI: "github"
+BUNDLE_GEM__MIT: "false"
+BUNDLE_GEM__COC: "false"
+BUNDLE_GEM__CHANGELOG: "true"
+BUNDLE_GEM__RUBOCOP: "true"
+BUNDLE_PATH: "~/.local/share/bundle"
+
