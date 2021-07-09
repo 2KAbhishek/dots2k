@@ -16,7 +16,7 @@
     features = side-by-side line-numbers decorations
     whitespace-error-style = 22 reverse
 
-[delta "decorations"]
+[delta "mantis-shrimp"]
     dark = true
     hyperlinks = true
     keep-plus-minus-markers = true
