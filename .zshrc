@@ -24,6 +24,7 @@ plugins=(alias-tips
     fasd
     fast-syntax-highlighting
     git
+    git-flow-completion
     globalias
     magic-enter
     ssh-agent
