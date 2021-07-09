@@ -13,8 +13,7 @@
     diffFilter = delta --color-only --highlight-removed
 
 [delta]
-    features = side-by-side line-numbers decorations
-    whitespace-error-style = 22 reverse
+    features = mantis-shrimp
 
 [delta "mantis-shrimp"]
     dark = true
