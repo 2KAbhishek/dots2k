@@ -74,8 +74,8 @@ if [ -f "/usr/bin/grc" ]; then
     alias wdiff="grc wdiff"
 fi
 
-alias vimrc="$EDITOR ~/.vimrc"
-alias nvimrc="$EDITOR ~/.config/nvim/init.vim"
+alias vimrc="vim ~/.vimrc"
+alias nvimrc="nvim ~/.config/nvim/init.vim"
 alias zshrc="$EDITOR ~/.zshrc"
 alias bashrc="$EDITOR ~/.bashrc"
 alias alia="$EDITOR ~/.config/shell/aliases.sh"
