@@ -7,6 +7,7 @@ export ZSH_PLUGINS_ALIAS_TIPS_TEXT="Alias: "
 export ZSH_TMUX_AUTOSTART='false'
 export ZSH_TMUX_AUTOSTART_ONCE='false'
 export ZSH_TMUX_AUTOCONNECT='false'
+export DISABLE_AUTO_TITLE='true'
 
 export GOPATH=$HOME/.go
 export GOBIN=$GOPATH/bin
@@ -16,3 +17,13 @@ export PATH=$GOBIN:$PATH
 export PATH=$HOME/.cargo/bin:$PATH
 export PATH=$HOME/.local/share/gem/ruby/3.0.0/bin:$PATH
 export PATH=$HOME/.npm/bin:$PATH
+
+# ls dircolors
+eval "$(dircolors ~/.dircolors)";
+
+# Node Version Manager
+[ -f /usr/share/nvm/init-nvm.sh ] && source /usr/share/nvm/init-nvm.sh
+
+# broot file explorer
+[ -f ~/.config/broot/launcher/bash/br ] && source ~/.config/broot/launcher/bash/br
+
