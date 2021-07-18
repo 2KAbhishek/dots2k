@@ -44,9 +44,6 @@ alias reload="source ~/.bashrc"
 # Common environment variables
 [ -f ~/.config/shell/envars.sh ] && source ~/.config/shell/envars.sh
 
-# Common commands
-[ -f ~/.config/shell/commands.sh ] && source ~/.config/shell/commands.sh
-
 # Common functions
 [ -f ~/.config/shell/functions.sh ] && source ~/.config/shell/functions.sh
 
