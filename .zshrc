@@ -17,12 +17,15 @@ MAGIC_ENTER_GIT_COMMAND="git status -s && git diff HEAD"
 MAGIC_ENTER_OTHER_COMMAND="lsda"
 
 # Plugins
-plugins=(alias-tips
+plugins=(adb
+    alias-tips
+    catimg
     dirhistory
     extract
     fancy-ctrl-z
     fasd
     fast-syntax-highlighting
+    gh
     git
     git-flow-completion
     globalias
