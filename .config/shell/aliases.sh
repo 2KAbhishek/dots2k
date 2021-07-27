@@ -43,6 +43,7 @@ alias pp="prettyping --nolegend"
 alias q="exit"
 alias rm="rm -irv"
 alias rmf="rm -rf"
+alias serv="python -m http.server 1234"
 alias shad="ssh-add ~/.ssh/id_rsa"
 alias shag='eval "$(ssh-agent -s)"'
 alias sysd="sudo systemctl disable"
