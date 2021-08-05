@@ -27,6 +27,7 @@ plugins=(adb
     fast-syntax-highlighting
     gh
     git
+    git-extra-commands
     git-flow-completion
     globalias
     magic-enter
