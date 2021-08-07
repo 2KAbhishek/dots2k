@@ -18,6 +18,9 @@ export PATH=$HOME/.cargo/bin:$PATH
 export PATH=$HOME/.local/share/gem/ruby/3.0.0/bin:$PATH
 export PATH=$HOME/.npm/bin:$PATH
 
+export CHROME_EXECUTABLE=/usr/bin/google-chrome-stable
+export JAVA_HOME=/usr/lib/jvm/java-11-openjdk/
+
 # ls dircolors
 eval "$(dircolors ~/.dircolors)";
 
