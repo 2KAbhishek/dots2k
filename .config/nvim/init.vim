@@ -106,7 +106,6 @@ Plug 'kabouzeid/nvim-lspinstall'
 Plug 'hrsh7th/nvim-compe'
 Plug 'christoomey/vim-tmux-navigator'
 
-
 call plug#end()
 filetype plugin indent on
 
