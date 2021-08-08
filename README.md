@@ -28,7 +28,7 @@
 <figure>
   <img src= "https://raw.githubusercontent.com/2KAbhishek/Dotfiles/main/images/screenshot.jpg" alt="Dotfiles Demo" style="width:100%">
   <br/>
-  <figcaption>Terminal Screenshot</figcaption>
+  <figcaption>Terminal screenshot</figcaption>
 </figure>
 
 </div>
