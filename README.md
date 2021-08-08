@@ -87,15 +87,15 @@ Some configs require special steps in order to use. Check respective tools docum
 
 - compiz : [~/.config/compiz.profile](https://github.com/2KAbhishek/Dotfiles/blob/main/.config/compiz.profile)
 
-> Import the compiz profile using `ccsm`.
+  Import the compiz profile using `ccsm`.
 
 - conky : [~/.config/sysinfo.conkyrc](https://github.com/2KAbhishek/Dotfiles/blob/main/.config/sysinfo.conkyrc)
 
-> Run conky with `conky -dqc ~/.config/sysinfo.conkyrc`.
+  Run conky with `conky -dqc ~/.config/sysinfo.conkyrc`.
 
 - konsole : [~/.local/share/konsole/](https://github.com/2KAbhishek/Dotfiles/blob/main/.local/share/konsole)
 
-> Open Konsole, Goto Settings -> Manage Profiles -> Check `Konsole` and click on Set as Default.
+  Open Konsole, Goto Settings -> Manage Profiles -> Check `Konsole` and click on Set as Default.
 
 This repo also contains a few scripts in the [scripts](https://github.com/2KAbhishek/Dotfiles/blob/main/scripts) directory.
 
