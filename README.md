@@ -1,16 +1,45 @@
-# Dotfiles
+<div align = "center">
 
-![Size](https://img.shields.io/github/repo-size/2kabhishek/Dotfiles?style=plastic&color=0f0&label=Size)
-![Updated](https://img.shields.io/github/last-commit/2kabhishek/Dotfiles?style=plastic&color=f00&label=Updated)
-![Stars](https://img.shields.io/github/stars/2kabhishek/Dotfiles?style=plastic&color=ffc801&label=Stars)
-![Forks](https://img.shields.io/github/forks/2kabhishek/Dotfiles?style=plastic&color=003cff&label=Forks)
-![Watchers](https://img.shields.io/github/watchers/2kabhishek/Dotfiles?style=plastic&color=ff5500&label=Watchers)
-![Contributors](https://img.shields.io/github/contributors/2kabhishek/Dotfiles?style=plastic&color=f0f&label=Contributors)
-![License](https://img.shields.io/github/license/2kabhishek/Dotfiles?style=plastic&color=555&label=License)
+<h1><a href="https://2kabhishek.github.io/Dotfiles">Dotfiles</a></h1>
 
-![Terminal](https://i.imgur.com/XOJlQXU.png)
+<a href="https://github.com/2KAbhishek/Dotfiles/blob/main/LICENSE">
+<img alt="License" src="https://img.shields.io/github/license/2kabhishek/Dotfiles?style=plastic&color=white&label=License"> </a>
+
+<a href="https://github.com/2KAbhishek/Dotfiles/pulse">
+<img alt="Updated" src="https://img.shields.io/github/last-commit/2kabhishek/Dotfiles?style=plastic&color=e30724&label=Updated"> </a>
+
+<a href="https://github.com/2KAbhishek/Dotfiles/stargazers">
+<img alt="Stars" src="https://img.shields.io/github/stars/2kabhishek/Dotfiles?style=plastic&color=00d451&label=Stars"></a>
+
+<a href="https://github.com/2KAbhishek/Dotfiles/network/members">
+<img alt="Forks" src="https://img.shields.io/github/forks/2kabhishek/Dotfiles?style=plastic&color=1688f0&label=Forks"> </a>
+
+<a href="https://github.com/2KAbhishek/Dotfiles/watchers">
+<img alt="Watchers" src="https://img.shields.io/github/watchers/2kabhishek/Dotfiles?style=plastic&color=ff5500&label=Watchers"> </a>
+
+<a href="https://github.com/2KAbhishek/Dotfiles/graphs/contributors">
+<img alt="Contributors" src="https://img.shields.io/github/contributors/2kabhishek/Dotfiles?style=plastic&color=f0f&label=Contributors"> </a>
+
+<a href="https://github.com/2KAbhishek?tab=followers">
+<img alt="Followers" src="https://img.shields.io/github/followers/2kabhishek?color=222&style=plastic&label=Followers"> </a>
+
+<h3>Passionately crafted configs for CLI lovers 🐧❤️</h3>
+
+<figure>
+  <img src= "https://raw.githubusercontent.com/2KAbhishek/Dotfiles/main/images/screenshot.jpg" alt="Dotfiles Demo" style="width:100%">
+  <br/>
+  <figcaption>Terminal Screenshot</figcaption>
+</figure>
+
+</div>
+
+## What is this
 
 My personal configs, carefully and passionately crafted for setting up an optimal CLI dev experience.
+
+## Inspiration
+
+Hours and nights spent on the terminal, willingness to improve.
 
 ## Setup
 
@@ -69,3 +98,32 @@ Some configs require special steps in order to use. Check respective tools docum
 > Open Konsole, Goto Settings -> Manage Profiles -> Check `Konsole` and click on Set as Default.
 
 This repo also contains a few scripts in the [scripts](https://github.com/2KAbhishek/Dotfiles/blob/main/scripts) directory.
+
+## How it was built
+
+Dotfiles was built using the internet and sleepless nights.
+
+## Challenges faced
+
+Just getting over the initial learning curve on the command line, failing and trying again :)
+
+## What I learned
+
+While building Dotfiles I have learned to love the command line and it's efficiency, have discovered countless tools and techniques which will serve me for the rest of my days.
+
+## What's next
+
+Planning to add more tools, better management, always updating.
+
+Hit the ⭐ button if you found this useful.
+
+## More Info
+
+Find more cool configs and setups at [GitHub does dotfiles](https://dotfiles.github.io/)
+
+<div align="center">
+  
+<a href="https://github.com/2KAbhishek/Dotfiles">Source</a> |
+<a href="https://2kabhishek.github.io/Dotfiles">Website</a>
+
+</div>
