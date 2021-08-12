@@ -25,6 +25,7 @@ alias gmv="git mv"
 alias gsv="git status -v"
 alias gtop='cd "$(git rev-parse --show-toplevel)"'
 alias grep="grep --color=auto"
+alias icat="kitty +kitten icat"
 alias java8="export JAVA_HOME=/usr/lib/jvm/java-8-openjdk/jre"
 alias java11="export JAVA_HOME=/usr/lib/jvm/java-11-openjdk/"
 alias jupn="jupyter notebook"
@@ -86,6 +87,7 @@ alias bashrc="$EDITOR ~/.bashrc"
 alias alia="$EDITOR ~/.config/shell/aliases.sh"
 alias enva="$EDITOR ~/.config/shell/envars.sh"
 alias func="$EDITOR ~/.config/shell/functions.sh"
+alias meow="$EDITOR ~/.config/kitty/kitty.conf"
 alias p2k="$EDITOR ~/.config/shell/powerlevel2k.zsh"
 
 # Causes Issues
