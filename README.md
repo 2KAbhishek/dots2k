@@ -44,7 +44,7 @@ Hours and nights spent on the terminal, willingness to improve.
 ## Setup
 
 ```bash
-git clone https://github.com/2kabhishek/Dotfiles
+git clone https://github.com/2kabhishek/Dotfiles
 cd Dotfiles
 ./setup.sh # It shows a menu from where you can install required components
 ```
@@ -55,9 +55,16 @@ For installation `git` `curl` & `zsh` are must, other tools are mentioned below.
 
 ### Packages
 
-- xdotool, libinput
+This list is not complete, package names may vary depending upon your system and your requirements.
 
-Powerline patched fonts are required for glyphs. I'll recommend [Nerd Fonts](https://www.nerdfonts.com/).
+```bash
+# Required
+git, zsh, neovim, kitty, tmux, git-delta, bat, fd, fzf, fasd, ag(silver_surfer), curl, powerline
+# Optional
+ranger, cmus, xdotool, libinput, htop, python, vim, broot, bash, i3, i3status, dmenu conky, konsole
+```
+
+Powerline patched fonts are required for glyphs. I'll recommend [Nerd Fonts](https://www.nerdfonts.com/). I'm using FiraCode.
 
 ### Included Configurations
 
@@ -74,6 +81,7 @@ This repo contains configurations for following tools.
 - htop : [~/.config/htop/](https://github.com/2KAbhishek/Dotfiles/blob/main/.config/htop/)
 - i3 : [~/.config/i3/config](https://github.com/2KAbhishek/Dotfiles/blob/main/.config/i3/config)
 - i3status : [~/.config/i3status/config](https://github.com/2KAbhishek/Dotfiles/blob/main/.config/i3status/config)
+- kitty : [~/.config/kitty/kitty.conf](https://github.com/2KAbhishek/Dotfiles/blob/main/.config/kitty/kitty.conf)
 - libinbut : [~/.config/libinput-gestures.conf](https://github.com/2KAbhishek/Dotfiles/blob/main/.config/libinput-gestures.conf)
 - neovim : [~/.config/nvim/](https://github.com/2KAbhishek/Dotfiles/blob/main/.config/nvim/)
 - python : [~/.pystartup](https://github.com/2KAbhishek/Dotfiles/blob/main/.pystartup)
@@ -122,7 +130,7 @@ Hit the ⭐ button if you found this useful.
 Find more cool configs and setups at [GitHub does dotfiles](https://dotfiles.github.io/)
 
 <div align="center">
-  
+
 <a href="https://github.com/2KAbhishek/Dotfiles">Source</a> |
 <a href="https://2kabhishek.github.io/Dotfiles">Website</a>
 
