@@ -198,7 +198,11 @@ colorscheme onedark
 " Always use terminal background
 highlight Normal guibg=none
 
-" LSP
+" Telescope
+nnoremap <leader>ff <cmd>:Telescope find_files find_command=rg,--ignore,--hidden,--files prompt_prefix=🔍<cr>
+nnoremap <leader>fg <cmd>Telescope live_grep<cr>
+nnoremap <leader>fb <cmd>Telescope buffers<cr>
+nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 
 " LSP config (the mappings used in the default file don't quite work right)
 nnoremap <silent> gd <cmd>lua vim.lsp.buf.definition()<CR>
@@ -217,3 +221,6 @@ autocmd BufWritePre *.py lua vim.lsp.buf.formatting_sync(nil, 100)
 
 luafile ~/.config/nvim/luacfg/compe.lua
 luafile ~/.config/nvim/luacfg/lspinstall.lua
+luafile ~/.config/nvim/luacfg/telescope.lua
+luafile ~/.config/nvim/luacfg/which-key.lua
+
