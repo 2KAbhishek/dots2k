@@ -18,6 +18,7 @@ alias e='nvim $(fzf)'
 alias exag="exa -ahlT -L=1  -s=extension --git --group-directories-first"
 alias fdir="find . -type d -name"
 alias ffil="find . -type f -name"
+alias gc="git commit -m"
 alias gcm="git checkout main"
 alias gcma="git commit --amend -m"
 alias gdh="git diff HEAD"
