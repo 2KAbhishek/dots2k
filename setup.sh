@@ -75,6 +75,7 @@ case $option in
         mv -iv ~/.config/ranger ~/.config/ranger.old
         mv -iv ~/.config/shell ~/.config/shell.old
         mv -iv ~/.config/sysinfo.conkyrc ~/.config/sysinfo.conkyrc.old
+        mv -iv ~/.config/xplr ~/.config/xplr.old
         mv -iv ~/.bashrc ~/.bashrc.old
         mv -iv ~/.dircolors ~/.dircolors.old
         mv -iv ~/.dmenurc ~/.dmenurc.old
@@ -106,6 +107,7 @@ case $option in
     ln -sfnv "$PWD/.config/ranger/" ~/.config/
     ln -sfnv "$PWD/.config/shell" ~/.config/
     ln -sfnv "$PWD/.config/sysinfo.conkyrc" ~/.config/
+    ln -sfnv "$PWD/.config/xplr/" ~/.config/
     cp -iuvr "$PWD/.local/share/konsole/" ~/.local/share/
     ln -sfnv "$PWD/.bashrc" ~/
     ln -sfnv "$PWD/.dircolors" ~/
