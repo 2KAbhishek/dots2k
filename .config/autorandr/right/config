@@ -1,0 +1,21 @@
+output HDMI-1
+off
+output DP-2
+off
+output HDMI-2
+off
+output DP-1
+off
+output DP-3
+crtc 0
+gamma 1.25:1.0:0.833
+mode 2560x1440
+pos 0x0
+primary
+rate 59.95
+output eDP-1
+crtc 1
+gamma 1.25:1.0:0.833
+mode 1920x1080
+pos 2560x98
+rate 47.98
