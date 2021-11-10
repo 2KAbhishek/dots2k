@@ -61,6 +61,7 @@ case $option in
     read -r backupOption
     if [[ $backupOption == "y" ]]; then
         echo -e "\u001b[33;1m Backing up existing files... \u001b[0m"
+        mv -iv ~/.config/autorandr ~/.config/autorandr.old
         mv -iv ~/.config/bat/config ~/.config/bat/config.old
         mv -iv ~/.config/broot/conf.toml ~/.config/broot/conf.toml.old
         mv -iv ~/.config/cmus/darkwind.theme ~/.config/cmus/darkwind.theme.old
@@ -91,7 +92,7 @@ case $option in
     fi
 
     echo -e "\u001b[36;1m Adding symlinks...\u001b[0m"
-    cp -iuvr "$PWD/.local/share/konsole/" ~/.local/share/
+    ln -sfnv "$PWD/.config/autorandr/" ~/.config/
     ln -sfnv "$PWD/.config/bat/" ~/.config/
     ln -sfnv "$PWD/.config/broot/" ~/.config/
     ln -sfnv "$PWD/.config/cmus/" ~/.config/
@@ -105,6 +106,7 @@ case $option in
     ln -sfnv "$PWD/.config/ranger/" ~/.config/
     ln -sfnv "$PWD/.config/shell" ~/.config/
     ln -sfnv "$PWD/.config/sysinfo.conkyrc" ~/.config/
+    cp -iuvr "$PWD/.local/share/konsole/" ~/.local/share/
     ln -sfnv "$PWD/.bashrc" ~/
     ln -sfnv "$PWD/.dircolors" ~/
     ln -sfnv "$PWD/.dmenurc" ~/
