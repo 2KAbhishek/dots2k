@@ -61,7 +61,7 @@ This list is not complete, package names may vary depending upon your system and
 # Required
 git, zsh, neovim, kitty, tmux, git-delta, bat, fd, fzf, fasd, ag(silver_surfer), curl, powerline, xclip, lsd
 # Optional
-ranger, cmus, xdotool, libinput, htop, python, vim, broot, bash, i3, i3status, dmenu, ncdu, grc, exa, conky, konsole
+ranger, cmus, xdotool, libinput, htop, python, vim, broot, bash, i3, i3status, dmenu, ncdu, grc, exa, conky, konsole, autorandr, xplr
 ```
 
 Powerline patched fonts are required for glyphs. I'll recommend [Nerd Fonts](https://www.nerdfonts.com/). I'm using FiraCode.
@@ -70,6 +70,7 @@ Powerline patched fonts are required for glyphs. I'll recommend [Nerd Fonts](htt
 
 This repo contains configurations for following tools.
 
+- autorandr : [~/.config/autorandr/](https://github.com/2KAbhishek/Dotfiles/blob/main/.config/autorandr/)
 - bash : [~/.bashrc](https://github.com/2KAbhishek/Dotfiles/blob/main/.bashrc)
 - bat : [~/.config/bat/](https://github.com/2KAbhishek/Dotfiles/blob/main/.config/bat/)
 - broot : [~/.config/broot/](https://github.com/2KAbhishek/Dotfiles/blob/main/.config/broot/)
@@ -88,6 +89,7 @@ This repo contains configurations for following tools.
 - ranger : [~/.config/ranger/](https://github.com/2KAbhishek/Dotfiles/blob/main/.config/ranger/)
 - tmux : [~/.tmux.conf](https://github.com/2KAbhishek/Dotfiles/blob/main/.tmux.conf)
 - vim : [~/.vimrc](https://github.com/2KAbhishek/Dotfiles/blob/main/.vimrc)
+- xplr : [~/.config/xplr/](https://github.com/2KAbhishek/Dotfiles/blob/main/.config/xplr/)
 - xrdb : [~/.Xresources](https://github.com/2KAbhishek/Dotfiles/blob/main/.Xresources)
 - zsh : [~/.zshrc](https://github.com/2KAbhishek/Dotfiles/blob/main/.zshrc)
 
