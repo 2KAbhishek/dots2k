@@ -81,6 +81,7 @@ case $option in
         mv -iv ~/.dmenurc ~/.dmenurc.old
         mv -iv ~/.gitconfig ~/.gitconfig.old
         mv -iv ~/.npmrc ~/.npmrc.old
+        mv -iv ~/.p10k.zsh ~/.p10k.zsh.old
         mv -iv ~/.prettierrc ~/.prettierrc.old
         mv -iv ~/.pystartup ~/.pystartup.old
         mv -iv ~/.tmux.conf ~/.tmux.conf.old
@@ -114,6 +115,7 @@ case $option in
     ln -sfnv "$PWD/.dmenurc" ~/
     ln -sfnv "$PWD/.gitconfig" ~/
     ln -sfnv "$PWD/.npmrc" ~/
+    ln -sfnv "$PWD/.p10k.zsh" ~/
     ln -sfnv "$PWD/.prettierrc" ~/
     ln -sfnv "$PWD/.pystartup" ~/
     ln -sfnv "$PWD/.tmux.conf" ~/
