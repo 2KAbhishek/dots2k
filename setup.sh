@@ -126,7 +126,7 @@ case $option in
 
 "6")
     echo -e "\u001b[7m Distro specific tweaks... \u001b[0m"
-    bash $PWD/scripts/local_distro.sh
+    bash "$PWD"/scripts/local_distro.sh
     ;;
 
 "0")

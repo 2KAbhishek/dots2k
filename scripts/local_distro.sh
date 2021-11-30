@@ -1,11 +1,11 @@
-#!/env/ bash
+#!/bin/bash
 
 distro=$(\grep --color=auto ^ID= /etc/os-release |cut -f 2 -d =)
 color=""
 
 case $distro in
     "manjaro")
-        color="041"
+        color="044"
         ;;
     "ubuntu")
         color="202"
@@ -19,7 +19,7 @@ case $distro in
         echo "alias cat=batcat" >> ~/.shrc.local
         ;;
     "kali")
-        color="000"
+        color="white"
         ;;
     *)
         color="darkcyan"
@@ -27,5 +27,7 @@ case $distro in
 esac
 
 # sed -i '/searchtext/c\linetochangeitwith' file
-echo "POWERLEVEL9K_OS_ICON_FOREGROUND='$color'" >> ~/.shrc.local
+echo "POWERLEVEL9K_OS_ICON_BACKGROUND='$color'" >> ~/.shrc.local
+echo "POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX='%F{238}╰%K{$color}%F{black}  %f%F{$color}%k%f'" >> ~/.shrc.local
+
 
