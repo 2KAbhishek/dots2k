@@ -1,3 +1,10 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 # Path to oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 # export TERM="xterm-256color"
@@ -31,7 +38,6 @@ plugins=(adb
     git-flow-completion
     globalias
     magic-enter
-    ssh-agent
     tmux
     web-search
     z
@@ -46,10 +52,6 @@ autoload -U compinit && compinit #Keep at last
 
 # Theme
 ZSH_THEME="powerlevel10k/powerlevel10k"
-
-if [[ $ZSH_THEME == "powerlevel10k/powerlevel10k" ]]; then
-    [ -f ~/.config/shell/powerlevel2k.zsh ] && source ~/.config/shell/powerlevel2k.zsh
-fi
 
 if [[ $TERM == "linux" ]]; then
     ZSH_THEME="ys"
@@ -92,5 +94,13 @@ alias -g wcw="| wc -w"
 # Common aliases
 [ -f ~/.config/shell/aliases.sh ] && source ~/.config/shell/aliases.sh
 
+# powerlevel2k
+[ -f ~/.p10k.zsh ] && source ~/.p10k.zsh
+
+if [[ $ZSH_THEME == "powerlevel10k/powerlevel10k" ]]; then
+    [ -f ~/.config/shell/powerlevel2k.zsh ] && source ~/.config/shell/powerlevel2k.zsh
+fi
+
 # Local configurations
 [ -f ~/.shrc.local ] && source ~/.shrc.local
+
