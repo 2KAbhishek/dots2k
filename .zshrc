@@ -28,6 +28,8 @@ plugins=(adb
     alias-tips
     catimg
     dirhistory
+    docker
+    docker-compose
     extract
     fancy-ctrl-z
     fasd
@@ -49,6 +51,9 @@ plugins=(adb
 # Modules
 autoload -U zmv
 autoload -U compinit && compinit #Keep at last
+
+zstyle ':completion:*:*:docker:*' option-stacking yes
+zstyle ':completion:*:*:docker-*:*' option-stacking yes
 
 # Theme
 ZSH_THEME="powerlevel10k/powerlevel10k"
