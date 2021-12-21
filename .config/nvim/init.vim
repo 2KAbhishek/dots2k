@@ -103,13 +103,15 @@ Plug 'haya14busa/incsearch-easymotion.vim'
 Plug 'ryanoasis/vim-devicons'
 Plug 'kyazdani42/nvim-web-devicons'
 Plug 'neovim/nvim-lspconfig'
-Plug 'kabouzeid/nvim-lspinstall'
+Plug 'williamboman/nvim-lsp-installer'
 Plug 'hrsh7th/nvim-compe'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'folke/which-key.nvim'
+Plug 'github/copilot.vim'
+" Plug 'subnut/nvim-ghost.nvim', {'do': ':call nvim_ghost#installer#install()'}
 
 
 call plug#end()
@@ -220,7 +222,6 @@ autocmd BufWritePre *.jsx lua vim.lsp.buf.formatting_sync(nil, 100)
 autocmd BufWritePre *.py lua vim.lsp.buf.formatting_sync(nil, 100)
 
 luafile ~/.config/nvim/luacfg/compe.lua
-luafile ~/.config/nvim/luacfg/lspinstall.lua
 luafile ~/.config/nvim/luacfg/telescope.lua
 luafile ~/.config/nvim/luacfg/which-key.lua
 
