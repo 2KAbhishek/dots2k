@@ -4,23 +4,36 @@ output DP-2
 off
 output HDMI-2
 off
-output DP-3
-crtc 0
-gamma 1.25:1.0:0.833
-mode 2560x1440
-pos 1080x0
-primary
-rate 59.95
 output DP-1
 crtc 2
-gamma 1.25:1.0:0.833
 mode 1920x1080
-pos 0x98
+pos 0x0
 rate 60.00
 rotate right
+x-prop-audio auto
+x-prop-broadcast_rgb Automatic
+x-prop-colorspace Default
+x-prop-max_bpc 12
+x-prop-non_desktop 0
+output DP-3
+crtc 0
+mode 2560x1440
+pos 1080x240
+primary
+rate 59.95
+x-prop-audio auto
+x-prop-broadcast_rgb Automatic
+x-prop-colorspace Default
+x-prop-max_bpc 12
+x-prop-non_desktop 0
 output eDP-1
 crtc 1
-gamma 1.25:1.0:0.833
+gamma 1.099:1.0:0.909
 mode 1920x1080
-pos 3640x98
-rate 47.98
+pos 3640x338
+rate 59.98
+x-prop-broadcast_rgb Automatic
+x-prop-colorspace Default
+x-prop-max_bpc 12
+x-prop-non_desktop 0
+x-prop-scaling_mode Full aspect
