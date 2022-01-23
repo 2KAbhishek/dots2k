@@ -104,9 +104,6 @@ Plug 'Yggdroot/indentLine'
 Plug 'jiangmiao/auto-pairs'
 Plug 'sheerun/vim-polyglot'
 Plug 'w0rp/ale'
-Plug 'Shougo/deoplete.nvim'
-Plug 'roxma/nvim-yarp'
-Plug 'roxma/vim-hug-neovim-rpc'
 Plug 'easymotion/vim-easymotion'
 Plug 'haya14busa/incsearch.vim'
 Plug 'haya14busa/incsearch-fuzzy.vim'
@@ -114,15 +111,6 @@ Plug 'haya14busa/incsearch-easymotion.vim'
 Plug 'ryanoasis/vim-devicons'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'pandysong/ghost-text.vim'
-
-
-
-if has('win32') || has('win64')
-  Plug 'tbodt/deoplete-tabnine', { 'do': 'powershell.exe .\install.ps1' }
-else
-  Plug 'tbodt/deoplete-tabnine', { 'do': './install.sh' }
-endif
-
 
 call plug#end()
 filetype plugin indent on
@@ -132,12 +120,6 @@ let g:airline_theme='onedark'
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_left_sep = "\uE0B0"
 let g:airline_right_sep = "\uE0B2"
-
-" Deoplete
-let g:deoplete#enable_at_startup = 1
-inoremap <silent><expr><tab> pumvisible() ? "\<c-n>":"\<tab>"
-inoremap <silent><expr><s-tab> pumvisible() ? "\<c-p>":"\<s-tab>
-autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
 
 " Easymotion
 let g:EasyMotion_smartcase = 1
@@ -212,10 +194,4 @@ if !exists('$TMUX')
     let g:onedark_terminal_italics = 1
 endif
 colorscheme onedark
-
-" Tabnine
-call deoplete#custom#var('tabnine', {
-\ 'line_limit': 500,
-\ 'max_num_results': 15,
-\ })
 
