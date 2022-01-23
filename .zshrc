@@ -22,6 +22,7 @@ SAVEHIST=99999
 # Magic Enter
 MAGIC_ENTER_GIT_COMMAND="git status -s && git diff HEAD"
 MAGIC_ENTER_OTHER_COMMAND="lsda"
+ZSH_PYENV_QUIET=true
 ZSH_COLORIZE_TOOL="chroma"
 ZSH_COLORIZE_STYLE="dracula"
 ZSH_COLORIZE_CHROMA_FORMATTER="terminal16m"
@@ -31,6 +32,7 @@ plugins=(adb
     alias-tips
     catimg
     colorize
+    direnv
     dirhistory
     docker
     docker-compose
@@ -43,6 +45,9 @@ plugins=(adb
     git-extra-commands
     globalias
     magic-enter
+    nvm
+    pyenv
+    rvm
     tmux
     web-search
     z
