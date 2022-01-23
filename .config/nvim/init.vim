@@ -122,7 +122,20 @@ Plug 'tpope/vim-unimpaired'
 
 
 call plug#end()
-filetype plugin indent on
+" filetype plugin indent on
+
+
+" General
+nmap <leader>Q :qa!<CR>
+nmap <leader>q :bw<CR>
+nmap <leader>w :w<CR>
+nmap <leader>W :wq<CR>
+nmap <leader>r :source ~/.config/nvim/init.vim <CR>
+
+
+" FZF
+nnoremap <C-p> :GFiles<Cr>
+nnoremap <C-g> :Ag<Cr>
 
 " Airline
 let g:airline_theme='onedark'
