@@ -1,7 +1,8 @@
 #!/bin/bash
 # Environment variables
 export EDITOR=nvim
-export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -g ""'
+export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
+export FZF_COMPLETION_TRIGGER=','
 export GREP_COLOR="1;32"
 export ZSH_PLUGINS_ALIAS_TIPS_TEXT="Alias: "
 export ZSH_TMUX_AUTOSTART='false'
