@@ -221,7 +221,10 @@ autocmd BufWritePre *.js lua vim.lsp.buf.formatting_sync(nil, 100)
 autocmd BufWritePre *.jsx lua vim.lsp.buf.formatting_sync(nil, 100)
 autocmd BufWritePre *.py lua vim.lsp.buf.formatting_sync(nil, 100)
 
-luafile ~/.config/nvim/luacfg/compe.lua
 luafile ~/.config/nvim/luacfg/telescope.lua
 luafile ~/.config/nvim/luacfg/which-key.lua
+luafile ~/.config/nvim/luacfg/lspconfig.lua
+luafile ~/.config/nvim/luacfg/lsp-installer.lua
+luafile ~/.config/nvim/luacfg/compe.lua
+
 
