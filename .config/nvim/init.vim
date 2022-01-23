@@ -113,6 +113,11 @@ Plug 'nvim-telescope/telescope.nvim'
 Plug 'folke/which-key.nvim'
 Plug 'github/copilot.vim'
 Plug 'segeljakt/vim-silicon'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+Plug 'tpope/vim-endwise'
+Plug 'sbdchd/neoformat'
+Plug 'tpope/vim-unimpaired'
 " Plug 'subnut/nvim-ghost.nvim', {'do': ':call nvim_ghost#installer#install()'}
 
 
