@@ -119,7 +119,6 @@ if [[ $ZSH_THEME == "powerlevel10k/powerlevel10k" ]]; then
 fi
 
 # zsh only configs
-eval "$(dircolors ~/.dircolors)";
 eval "$(pyenv virtualenv-init -)"
 
 function color_picker() {
