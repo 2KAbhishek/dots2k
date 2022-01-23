@@ -87,3 +87,15 @@ function ex ()
     echo "'$1' is not a valid file"
   fi
 }
+
+_fzf_comprun() {
+  local command=$1
+  shift
+
+  case "$command" in
+    cd)           fzf "$@" --preview 'exa -TFl --group-directories-first --icons --git -L 2 --no-user {}' ;;
+    nvim)         fzf --preview 'bat --color=always --style=numbers --line-range=:500 {}' ;;
+    vim)          fzf --preview 'bat --color=always --style=numbers --line-range=:500 {}' ;;
+    *)            fzf "$@" ;;
+  esac
+}
