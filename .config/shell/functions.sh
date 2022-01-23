@@ -28,6 +28,11 @@ function color() {
     done
 }
 
+function color_picker() {
+  for code ({000..255}) print -P -- "$code: %F{$code}This is how your text would look like%f"
+}
+
+
 function lc() {
     cd "$1" && la "$2"
 }
