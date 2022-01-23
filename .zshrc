@@ -26,6 +26,7 @@ ZSH_PYENV_QUIET=true
 ZSH_COLORIZE_TOOL="chroma"
 ZSH_COLORIZE_STYLE="dracula"
 ZSH_COLORIZE_CHROMA_FORMATTER="terminal16m"
+TIMER_THRESHOLD=1
 
 # Plugins
 plugins=(adb
@@ -48,6 +49,7 @@ plugins=(adb
     nvm
     pyenv
     rvm
+    timer
     tmux
     web-search
     z
