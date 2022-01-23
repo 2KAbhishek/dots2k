@@ -88,7 +88,7 @@ Plug 'tpope/vim-rails'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'joshdick/onedark.vim'
-Plug 'terryma/vim-multiple-cursors'
+Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 Plug 'godlygeek/tabular'
 Plug 'Yggdroot/indentLine'
 Plug 'jiangmiao/auto-pairs'
