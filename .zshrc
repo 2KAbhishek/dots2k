@@ -19,7 +19,7 @@ ENABLE_CORRECTION="false"
 COMPLETION_WAITING_DOTS="true"
 SAVEHIST=99999
 
-# Magic Enter
+# Plugin options
 MAGIC_ENTER_GIT_COMMAND="git status -s && git diff HEAD"
 MAGIC_ENTER_OTHER_COMMAND="lsda"
 ZSH_PYENV_QUIET=true
@@ -41,6 +41,7 @@ plugins=(adb
     fancy-ctrl-z
     fasd
     fast-syntax-highlighting
+    fzf-tab
     gh
     git
     git-extra-commands
