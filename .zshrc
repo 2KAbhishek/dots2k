@@ -49,6 +49,7 @@ plugins=(adb
     nvm
     pyenv
     rvm
+    thefuck
     timer
     tmux
     web-search
