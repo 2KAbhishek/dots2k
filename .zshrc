@@ -116,6 +116,14 @@ if [[ $ZSH_THEME == "powerlevel10k/powerlevel10k" ]]; then
     [ -f ~/.config/shell/powerlevel2k.zsh ] && source ~/.config/shell/powerlevel2k.zsh
 fi
 
+# zsh only configs
+eval "$(dircolors ~/.dircolors)";
+eval "$(pyenv virtualenv-init -)"
+
+function color_picker() {
+    for code ({000..255}) print -P -- "$code: %F{$code}This is how your text would look like%f"
+}
+
 # Local configurations
 [ -f ~/.shrc.local ] && source ~/.shrc.local
 
