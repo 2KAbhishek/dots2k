@@ -37,7 +37,6 @@ plugins=(adb
     gh
     git
     git-extra-commands
-    git-flow-completion
     globalias
     magic-enter
     tmux
