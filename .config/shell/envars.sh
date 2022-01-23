@@ -17,11 +17,13 @@ export PATH=$GOBIN:$PATH
 export PATH=$HOME/.cargo/bin:$PATH
 export PATH=$HOME/.gem/ruby/3.0.0/bin:$PATH
 export PATH=$HOME/.npm/bin:$PATH
+export PATH="$HOME/.pyenv/bin:$PATH"
+eval "$(pyenv init --path)"
 
 export CHROME_EXECUTABLE=/usr/bin/google-chrome-stable
 
 eval "$(dircolors ~/.dircolors)";
-eval $(thefuck --alias)
+eval "$(thefuck --alias)"
 
 # Node Version Manager
 [ -f /usr/share/nvm/init-nvm.sh ] && source /usr/share/nvm/init-nvm.sh
@@ -33,7 +35,4 @@ eval $(thefuck --alias)
 [ -f /home/linuxbrew/.linuxbrew/bin/brew ] && eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 [ -f "${HOMEBREW_PREFIX}/etc/bash_completion.d/brew" ] && source "${HOMEBREW_PREFIX}/etc/bash_completion.d/brew"
 
-export PATH="$HOME/.pyenv/bin:$PATH"
-eval "$(pyenv init --path)"
-eval "$(pyenv virtualenv-init -)"
 
