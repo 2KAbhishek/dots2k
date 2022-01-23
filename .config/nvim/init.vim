@@ -184,9 +184,13 @@ let g:indentLine_setColors = 1
 let g:indentLine_concealcursor = ""
 
 " NERDTree
-map <Leader>e : NERDTreeToggle<CR>
+" map \ :NERDTreeToggle<CR>
+" autocmd VimEnter * NERDTree | wincmd p
+nmap <Leader>e : NERDTreeToggle<CR>
+nmap <Leader>E : NERDTreeFind<CR>
 autocmd StdinReadPre * let s:std_in=1
 let NERDTreeMinimalUI = 1
+let NERDTreeShowHidden = 1
 let NERDTreeDirArrows = 1
 
 " One Dark
