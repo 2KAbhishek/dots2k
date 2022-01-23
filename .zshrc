@@ -22,11 +22,15 @@ SAVEHIST=99999
 # Magic Enter
 MAGIC_ENTER_GIT_COMMAND="git status -s && git diff HEAD"
 MAGIC_ENTER_OTHER_COMMAND="lsda"
+ZSH_COLORIZE_TOOL="chroma"
+ZSH_COLORIZE_STYLE="dracula"
+ZSH_COLORIZE_CHROMA_FORMATTER="terminal16m"
 
 # Plugins
 plugins=(adb
     alias-tips
     catimg
+    colorize
     dirhistory
     docker
     docker-compose
