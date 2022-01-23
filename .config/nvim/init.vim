@@ -112,6 +112,7 @@ Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'folke/which-key.nvim'
 Plug 'github/copilot.vim'
+Plug 'segeljakt/vim-silicon'
 " Plug 'subnut/nvim-ghost.nvim', {'do': ':call nvim_ghost#installer#install()'}
 
 
@@ -197,6 +198,25 @@ if !exists('$TMUX')
     let g:onedark_terminal_italics = 1
 endif
 colorscheme onedark
+
+" Silicon
+let g:silicon = {
+      \   'theme':              'OneHalfDark',
+      \   'font':               'FiraCode Nerd Font Mono',
+      \   'background':         '#AAAAFF',
+      \   'shadow-color':       '#555555',
+      \   'line-pad':                   2,
+      \   'pad-horiz':                 80,
+      \   'pad-vert':                 100,
+      \   'shadow-blur-radius':         0,
+      \   'shadow-offset-x':            0,
+      \   'shadow-offset-y':            0,
+      \   'line-number':           v:true,
+      \   'round-corner':          v:true,
+      \   'window-controls':       v:false,
+      \ }
+
+let g:silicon['output'] = '~/Pictures/Screenshots/silicon-{time:%Y-%m-%d-%H%M%S}.png'
 
 " Always use terminal background
 highlight Normal guibg=none
