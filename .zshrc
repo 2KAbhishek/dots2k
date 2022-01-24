@@ -144,5 +144,5 @@ function color_picker() {
 [ -f ~/.config/shell/aliases.sh ] && source ~/.config/shell/aliases.sh
 
 # Local configurations
-[ -f ~/.shrc.local ] && source ~/.shrc.local
+[ -f ~/.local.sh ] && source ~/.local.sh
 
