@@ -38,6 +38,7 @@ alias jupn="jupyter notebook"
 alias la="ls -AXb --group-directories-first --sort=extension"
 alias ldir="ls -d */"
 alias ln="ln -sv"
+alias ls='ls --color=auto'
 alias lsda="lsd -A --group-dirs first --classify"
 alias lsdo="lsd -A --group-dirs first --classify --recursive --depth=2"
 alias me="README.md"
