@@ -98,17 +98,18 @@ fi
 
 source $ZSH/oh-my-zsh.sh
 
-# Key Bindings
+# powerlevel2k
+[ -f ~/.p10k.zsh ] && source ~/.p10k.zsh
 
-# Reload config
+if [[ $ZSH_THEME == "powerlevel10k/powerlevel10k" ]]; then
+    [ -f ~/.config/shell/powerlevel2k.zsh ] && source ~/.config/shell/powerlevel2k.zsh
+fi
+
+# Key Bindings
 bindkey -s '^H' ' source ~/.zshrc^M ^M'
 
-# Move forward and backward in command
 bindkey "^F" forward-word
 bindkey "^B" backward-word
-
-# Commands
-eval "$(fasd --init posix-alias zsh-hook zsh-ccomp-install zsh-wcomp-install zsh-ccomp zsh-wcomp)"
 
 # Aliases
 alias reload='source ~/.zshrc'
@@ -121,6 +122,15 @@ alias -g wcc="| wc -m"
 alias -g wcl="| wc -l"
 alias -g wcw="| wc -w"
 
+# Commands
+eval "$(fasd --init posix-alias zsh-hook zsh-ccomp-install zsh-wcomp-install zsh-ccomp zsh-wcomp)"
+eval "$(pyenv virtualenv-init -)"
+
+# Functions
+function color_picker() {
+    for code ({000..255}) print -P -- "$code: %F{$code}This is how your text would look like%f"
+}
+
 # For fzf keybindings
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
@@ -132,20 +142,6 @@ alias -g wcw="| wc -w"
 
 # Common aliases
 [ -f ~/.config/shell/aliases.sh ] && source ~/.config/shell/aliases.sh
-
-# powerlevel2k
-[ -f ~/.p10k.zsh ] && source ~/.p10k.zsh
-
-if [[ $ZSH_THEME == "powerlevel10k/powerlevel10k" ]]; then
-    [ -f ~/.config/shell/powerlevel2k.zsh ] && source ~/.config/shell/powerlevel2k.zsh
-fi
-
-# zsh only configs
-eval "$(pyenv virtualenv-init -)"
-
-function color_picker() {
-    for code ({000..255}) print -P -- "$code: %F{$code}This is how your text would look like%f"
-}
 
 # Local configurations
 [ -f ~/.shrc.local ] && source ~/.shrc.local
