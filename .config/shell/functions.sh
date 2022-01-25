@@ -88,6 +88,16 @@ function ex ()
   fi
 }
 
+lg() {
+    export LAZYGIT_NEW_DIR_FILE=~/.config/lazygit/.tmp
+    lazygit "$@"
+
+    if [ -f $LAZYGIT_NEW_DIR_FILE ]; then
+            cd "$(cat $LAZYGIT_NEW_DIR_FILE)"
+            rm -f $LAZYGIT_NEW_DIR_FILE > /dev/null
+    fi
+}
+
 _fzf_comprun() {
   local command=$1
   shift
