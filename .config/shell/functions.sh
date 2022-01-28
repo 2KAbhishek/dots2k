@@ -109,3 +109,9 @@ _fzf_comprun() {
     *)            fzf "$@" ;;
   esac
 }
+
+faz(){
+  local line
+  line=`ag --nocolor "$1" | fzf` \
+    && $EDITOR $(cut -d':' -f1 <<< "$line") +$(cut -d':' -f2 <<< "$line")
+}
