@@ -65,7 +65,7 @@ inoremap <C-U> <C-G>u<C-U>
 
 " Copy Paste from X11 Clipboard
 vmap <Leader>yy :!xclip -f -sel clip<CR>
-map <Leader>pp mz:-1r !xclip -o -sel clip<CR>`z
+" map <Leader>pp mz:-1r !xclip -o -sel clip<CR>`z
 
 " Drag Visual selections
 vnoremap K xkP`[V`]
@@ -134,8 +134,8 @@ nmap <leader>r :source ~/.config/nvim/init.vim <CR>
 
 
 " FZF
-nnoremap <C-p> :GFiles<Cr>
-nnoremap <C-g> :Ag<Cr>
+nnoremap <leader>p :Files<Cr>
+nnoremap <leader>g :Ag<Cr>
 
 " Airline
 let g:airline_theme='onedark'
@@ -270,5 +270,4 @@ luafile ~/.config/nvim/luacfg/which-key.lua
 luafile ~/.config/nvim/luacfg/lspconfig.lua
 luafile ~/.config/nvim/luacfg/lsp-installer.lua
 luafile ~/.config/nvim/luacfg/compe.lua
-
 
