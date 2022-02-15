@@ -41,6 +41,7 @@ set nrformats-=octal " 007 != 010
 set sessionoptions-=options
 set viewoptions-=option
 set cursorline     " Highlight current line
+set hidden         " Needed for toggleterm
 
 " Load matchit.vim, but only if the user hasn't installed a newer version.
 if !exists('g:loaded_matchit') && findfile('plugin/matchit.vim', &rtp) ==# ''
@@ -118,6 +119,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'tpope/vim-endwise'
 Plug 'sbdchd/neoformat'
 Plug 'tpope/vim-unimpaired'
+Plug 'akinsho/toggleterm.nvim'
 " Plug 'subnut/nvim-ghost.nvim', {'do': ':call nvim_ghost#installer#install()'}
 
 
@@ -270,4 +272,5 @@ luafile ~/.config/nvim/luacfg/which-key.lua
 luafile ~/.config/nvim/luacfg/lspconfig.lua
 luafile ~/.config/nvim/luacfg/lsp-installer.lua
 luafile ~/.config/nvim/luacfg/compe.lua
+luafile ~/.config/nvim/luacfg/toggleterm.lua
 
