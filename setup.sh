@@ -33,6 +33,7 @@ case $option in
     git clone https://github.com/unixorn/git-extra-commands.git ~/.oh-my-zsh/custom/plugins/git-extra-commands
     git clone https://github.com/Aloxaf/fzf-tab.git ~/.oh-my-zsh/custom/plugins/fzf-tab
     git clone https://github.com/hlissner/zsh-autopair ~/.oh-my-zsh/custom/plugins/zsh-autopair
+    git clone https://github.com/marzocchi/zsh-notify ~/.oh-my-zsh/custom/plugins/notify
     ;;
 
 "3")

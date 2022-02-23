@@ -38,6 +38,7 @@ plugins=(adb
     git-extra-commands
     globalias
     magic-enter
+    notify
     nvm
     pyenv
     rvm
