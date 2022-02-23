@@ -46,6 +46,7 @@ plugins=(adb
     tmux
     web-search
     z
+    zsh-autopair
     zsh-autosuggestions
     zsh-completions
     zsh-navigation-tools
