@@ -26,6 +26,7 @@ alias files="fzf --preview 'bat --color=always --style=numbers --line-range=:500
 alias gc="git commit -m"
 alias gcm="git checkout main"
 alias gcma="git commit --amend -m"
+alias gcmn="git commit --amend --no-edit"
 alias gdh="git diff HEAD"
 alias gmv="git mv"
 alias gsv="git status -v"
