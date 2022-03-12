@@ -28,10 +28,12 @@ function color() {
     done
 }
 
+# cd into dir and list contents
 function lc() {
     cd "$1" && la "$2"
 }
 
+# Make directory and cd into it
 function mcd() {
     mkdir -p -- "$1" && cd -P -- "$1"
 }
@@ -42,6 +44,7 @@ function tmux-clean() {
     done
 }
 
+# Execute command in directory
 function xin() {
     (cd "${1}" && shift && ${@})
 }
@@ -61,6 +64,7 @@ function man() {
         man "$@"
 }
 
+# markdown link check
 function mlc () {
     find $1 -name \*.md -exec markdown-link-check -p {} \;
 }
@@ -98,6 +102,7 @@ lg() {
     fi
 }
 
+# Runs when tab is pressed after ,
 _fzf_comprun() {
   local command=$1
   shift
@@ -110,6 +115,7 @@ _fzf_comprun() {
   esac
 }
 
+# Only show files which have $1 present in contents
 faz(){
   local line
   line=`ag --nocolor "$1" | fzf` \
