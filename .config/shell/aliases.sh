@@ -20,6 +20,7 @@ alias cpa="clippaste"
 alias diff="diff --color=auto"
 alias e='nvim $(files)'
 alias exag="exa -ahlT -L=1  -s=extension --git --group-directories-first"
+alias fd="fd -H"
 alias fdir="find . -type d -name"
 alias ffil="find . -type f -name"
 alias files="fzf --preview 'bat --color=always --style=numbers --line-range=:500 {}'"
