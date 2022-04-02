@@ -5,11 +5,12 @@ echo -e "\u001b[32;1m Setting up Dotfiles...\u001b[0m"
 
 echo -e " \u001b[37;1m\u001b[4mSelect an option:\u001b[0m"
 echo -e "  \u001b[34;1m (1) Install oh-my-zsh \u001b[0m"
-echo -e "  \u001b[34;1m (2) Setup symlinks \u001b[0m"
-echo -e "  \u001b[34;1m (3) Install zsh plugins \u001b[0m"
-echo -e "  \u001b[34;1m (4) Install vim plugins \u001b[0m"
-echo -e "  \u001b[34;1m (5) Install tmux plugins \u001b[0m"
-echo -e "  \u001b[34;1m (6) Distro specific tweaks \u001b[0m"
+echo -e "  \u001b[34;1m (2) Backup current config \u001b[0m"
+echo -e "  \u001b[34;1m (3) Setup symlinks \u001b[0m"
+echo -e "  \u001b[34;1m (4) Install zsh plugins \u001b[0m"
+echo -e "  \u001b[34;1m (5) Install vim plugins \u001b[0m"
+echo -e "  \u001b[34;1m (6) Install tmux plugins \u001b[0m"
+echo -e "  \u001b[34;1m (7) Distro specific tweaks \u001b[0m"
 echo -e "  \u001b[31;1m (0) Exit \u001b[0m"
 
 echo -en "\u001b[32;1m ==> \u001b[0m"
@@ -21,47 +22,43 @@ case $option in
 "1")
     echo -e "\u001b[7m Installing oh-my-zsh...\u001b[0m"
     sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+    sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
     ;;
 
 "2")
-    echo -e "\u001b[7m Setting up symlinks... \u001b[0m"
-    echo -e "\u001b[33;1m Backup existing files? (y/n) \u001b[0m"
-    read -r backupOption
-    if [[ $backupOption == "y" ]]; then
-        echo -e "\u001b[33;1m Backing up existing files... \u001b[0m"
-        mv -iv ~/.config/autorandr ~/.config/autorandr.old
-        mv -iv ~/.config/bat/config ~/.config/bat/config.old
-        mv -iv ~/.config/broot/conf.toml ~/.config/broot/conf.toml.old
-        mv -iv ~/.config/cmus/darkwind.theme ~/.config/cmus/darkwind.theme.old
-        mv -iv ~/.config/fontconfig/fonts.conf ~/.config/fontconfig/fonts.conf.old
-        mv -iv ~/.config/htop ~/.config/htop.old
-        mv -iv ~/.config/i3 ~/.config/i3.old
-        mv -iv ~/.config/i3status ~/.config/i3status.old
-        mv -iv ~/.config/kitty ~/.config/kitty.old
-        mv -iv ~/.config/libinput-gestures.conf ~/.config/libinput-gestures.conf.old
-        mv -iv ~/.config/nvim ~/.config/nvim.old
-        mv -iv ~/.config/ranger ~/.config/ranger.old
-        mv -iv ~/.config/shell ~/.config/shell.old
-        mv -iv ~/.config/sysinfo.conkyrc ~/.config/sysinfo.conkyrc.old
-        mv -iv ~/.config/xplr ~/.config/xplr.old
-        mv -iv ~/.bashrc ~/.bashrc.old
-        mv -iv ~/.dircolors ~/.dircolors.old
-        mv -iv ~/.dmenurc ~/.dmenurc.old
-        mv -iv ~/.gitconfig ~/.gitconfig.old
-        mv -iv ~/.npmrc ~/.npmrc.old
-        mv -iv ~/.p10k.zsh ~/.p10k.zsh.old
-        mv -iv ~/.prettierrc ~/.prettierrc.old
-        mv -iv ~/.pystartup ~/.pystartup.old
-        mv -iv ~/.tmux.conf ~/.tmux.conf.old
-        mv -iv ~/.vimrc ~/.vimrc.old
-        mv -iv ~/.Xresources ~/.Xresources.old
-        mv -iv ~/.zshrc ~/.zshrc.old
-        echo -e "\u001b[36;1m Remove backups with 'rm -ir ~/.*.old && rm -ir ~/.config/*.old'. \u001b[0m"
-    else
-        echo -e "\u001b[36;1m Skipping backups. \u001b[0m"
-    fi
+    echo -e "\u001b[33;1m Backing up existing files... \u001b[0m"
+    mv -iv ~/.config/autorandr ~/.config/autorandr.old
+    mv -iv ~/.config/bat/config ~/.config/bat/config.old
+    mv -iv ~/.config/broot/conf.toml ~/.config/broot/conf.toml.old
+    mv -iv ~/.config/cmus/darkwind.theme ~/.config/cmus/darkwind.theme.old
+    mv -iv ~/.config/fontconfig/fonts.conf ~/.config/fontconfig/fonts.conf.old
+    mv -iv ~/.config/htop ~/.config/htop.old
+    mv -iv ~/.config/i3 ~/.config/i3.old
+    mv -iv ~/.config/i3status ~/.config/i3status.old
+    mv -iv ~/.config/kitty ~/.config/kitty.old
+    mv -iv ~/.config/libinput-gestures.conf ~/.config/libinput-gestures.conf.old
+    mv -iv ~/.config/nvim ~/.config/nvim.old
+    mv -iv ~/.config/ranger ~/.config/ranger.old
+    mv -iv ~/.config/shell ~/.config/shell.old
+    mv -iv ~/.config/sysinfo.conkyrc ~/.config/sysinfo.conkyrc.old
+    mv -iv ~/.config/xplr ~/.config/xplr.old
+    mv -iv ~/.bashrc ~/.bashrc.old
+    mv -iv ~/.dircolors ~/.dircolors.old
+    mv -iv ~/.dmenurc ~/.dmenurc.old
+    mv -iv ~/.gitconfig ~/.gitconfig.old
+    mv -iv ~/.npmrc ~/.npmrc.old
+    mv -iv ~/.p10k.zsh ~/.p10k.zsh.old
+    mv -iv ~/.prettierrc ~/.prettierrc.old
+    mv -iv ~/.pystartup ~/.pystartup.old
+    mv -iv ~/.tmux.conf ~/.tmux.conf.old
+    mv -iv ~/.vimrc ~/.vimrc.old
+    mv -iv ~/.Xresources ~/.Xresources.old
+    mv -iv ~/.zshrc ~/.zshrc.old
+    echo -e "\u001b[36;1m Remove backups with 'rm -ir ~/.*.old && rm -ir ~/.config/*.old'. \u001b[0m"
+    ;;
 
-    echo -e "\u001b[36;1m Adding symlinks...\u001b[0m"
+"3")
+    echo -e "\u001b[7m Setting up symlinks... \u001b[0m"
     ln -sfnv "$PWD/.config/autorandr/" ~/.config/
     ln -sfnv "$PWD/.config/bat/" ~/.config/
     ln -sfnv "$PWD/.config/broot/" ~/.config/
@@ -92,7 +89,7 @@ case $option in
     ln -sfnv "$PWD/.zshrc" ~/
     ;;
 
-"3")
+"4")
     echo -e "\u001b[7m Installing zsh plugins...\u001b[0m"
     git clone https://github.com/romkatv/powerlevel10k.git ~/.oh-my-zsh/custom/themes/powerlevel10k
     git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
@@ -105,7 +102,7 @@ case $option in
     git clone https://github.com/MichaelAquilina/zsh-auto-notify.git ~/.oh-my-zsh/custom/plugins/auto-notify
     ;;
 
-"4")
+"5")
     echo -e "\u001b[7m Installing Plug... \u001b[0m"
     curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
         https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
@@ -117,7 +114,7 @@ case $option in
     nvim -c 'PlugUpdate | PlugClean | quitall'
     ;;
 
-"5")
+"6")
     echo -e "\u001b[7m Installing tmux plugins... \u001b[0m"
     git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
     tmux start-server
@@ -126,7 +123,7 @@ case $option in
     tmux kill-server
     ;;
 
-"6")
+"7")
     echo -e "\u001b[7m Distro specific tweaks... \u001b[0m"
     bash "$PWD"/scripts/local_distro.sh
     ;;
