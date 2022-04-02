@@ -5,10 +5,10 @@ echo -e "\u001b[32;1m Setting up Dotfiles...\u001b[0m"
 
 echo -e " \u001b[37;1m\u001b[4mSelect an option:\u001b[0m"
 echo -e "  \u001b[34;1m (1) Install oh-my-zsh \u001b[0m"
-echo -e "  \u001b[34;1m (2) Install zsh plugins \u001b[0m"
-echo -e "  \u001b[34;1m (3) Install vim plugins \u001b[0m"
-echo -e "  \u001b[34;1m (4) Install tmux plugins \u001b[0m"
-echo -e "  \u001b[34;1m (5) Setup symlinks \u001b[0m"
+echo -e "  \u001b[34;1m (2) Setup symlinks \u001b[0m"
+echo -e "  \u001b[34;1m (3) Install zsh plugins \u001b[0m"
+echo -e "  \u001b[34;1m (4) Install vim plugins \u001b[0m"
+echo -e "  \u001b[34;1m (5) Install tmux plugins \u001b[0m"
 echo -e "  \u001b[34;1m (6) Distro specific tweaks \u001b[0m"
 echo -e "  \u001b[31;1m (0) Exit \u001b[0m"
 
@@ -24,40 +24,6 @@ case $option in
     ;;
 
 "2")
-    echo -e "\u001b[7m Installing zsh plugins...\u001b[0m"
-    git clone https://github.com/romkatv/powerlevel10k.git ~/.oh-my-zsh/custom/themes/powerlevel10k
-    git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
-    git clone https://github.com/zsh-users/zsh-completions ~/.oh-my-zsh/custom/plugins/zsh-completions
-    git clone https://github.com/zdharma/fast-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/fast-syntax-highlighting
-    git clone https://github.com/djui/alias-tips.git ~/.oh-my-zsh/custom/plugins/alias-tips
-    git clone https://github.com/unixorn/git-extra-commands.git ~/.oh-my-zsh/custom/plugins/git-extra-commands
-    git clone https://github.com/Aloxaf/fzf-tab.git ~/.oh-my-zsh/custom/plugins/fzf-tab
-    git clone https://github.com/hlissner/zsh-autopair ~/.oh-my-zsh/custom/plugins/zsh-autopair
-    git clone https://github.com/MichaelAquilina/zsh-auto-notify.git ~/.oh-my-zsh/custom/plugins/auto-notify
-    ;;
-
-"3")
-    echo -e "\u001b[7m Installing Plug... \u001b[0m"
-    curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
-        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-    curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
-        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-
-    echo -e "\u001b[7m Installing plugins for vim and nvim... \u001b[0m"
-    vim +PlugUpdate +qall
-    nvim -c 'PlugUpdate | PlugClean | quitall'
-    ;;
-
-"4")
-    echo -e "\u001b[7m Installing tmux plugins... \u001b[0m"
-    git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
-    tmux start-server
-    tmux new-session -d
-    ~/.tmux/plugins/tpm/scripts/install_plugins.sh
-    tmux kill-server
-    ;;
-
-"5")
     echo -e "\u001b[7m Setting up symlinks... \u001b[0m"
     echo -e "\u001b[33;1m Backup existing files? (y/n) \u001b[0m"
     read -r backupOption
@@ -124,6 +90,40 @@ case $option in
     ln -sfnv "$PWD/.vimrc" ~/
     ln -sfnv "$PWD/.Xresources" ~/
     ln -sfnv "$PWD/.zshrc" ~/
+    ;;
+
+"3")
+    echo -e "\u001b[7m Installing zsh plugins...\u001b[0m"
+    git clone https://github.com/romkatv/powerlevel10k.git ~/.oh-my-zsh/custom/themes/powerlevel10k
+    git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
+    git clone https://github.com/zsh-users/zsh-completions ~/.oh-my-zsh/custom/plugins/zsh-completions
+    git clone https://github.com/zdharma/fast-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/fast-syntax-highlighting
+    git clone https://github.com/djui/alias-tips.git ~/.oh-my-zsh/custom/plugins/alias-tips
+    git clone https://github.com/unixorn/git-extra-commands.git ~/.oh-my-zsh/custom/plugins/git-extra-commands
+    git clone https://github.com/Aloxaf/fzf-tab.git ~/.oh-my-zsh/custom/plugins/fzf-tab
+    git clone https://github.com/hlissner/zsh-autopair ~/.oh-my-zsh/custom/plugins/zsh-autopair
+    git clone https://github.com/MichaelAquilina/zsh-auto-notify.git ~/.oh-my-zsh/custom/plugins/auto-notify
+    ;;
+
+"4")
+    echo -e "\u001b[7m Installing Plug... \u001b[0m"
+    curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+    curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
+        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
+    echo -e "\u001b[7m Installing plugins for vim and nvim... \u001b[0m"
+    vim +PlugUpdate +qall
+    nvim -c 'PlugUpdate | PlugClean | quitall'
+    ;;
+
+"5")
+    echo -e "\u001b[7m Installing tmux plugins... \u001b[0m"
+    git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+    tmux start-server
+    tmux new-session -d
+    ~/.tmux/plugins/tpm/scripts/install_plugins.sh
+    tmux kill-server
     ;;
 
 "6")
