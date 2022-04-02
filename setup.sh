@@ -1,6 +1,12 @@
 #!/bin/bash
 
 # Setup script for Dotfiles
+function install_packages {
+    echo -e "\u001b[7m Installing required packages... \u001b[0m"
+    sudo pacman -S curl git zsh python vim neovim tmux bat fzf fasd fd \
+        lsd gh git-delta lazygit openssh ranger the_silver_searcher
+}
+
 function install_oh_my_zsh {
     echo -e "\u001b[7m Installing oh-my-zsh...\u001b[0m"
     sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
