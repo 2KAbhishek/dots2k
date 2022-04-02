@@ -36,7 +36,7 @@
 [delta "mantis-shrimp-lite"]
     #author: https://github.com/2kabhishek
     dark = true
-    side-by-side = true
+    side-by-side = false
     navigate = true
     keep-plus-minus-markers = true
     file-added-label = [+]
