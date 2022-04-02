@@ -46,7 +46,12 @@ Hours and nights spent on the terminal, willingness to improve.
 ```bash
 git clone https://github.com/2kabhishek/Dotfiles
 cd Dotfiles
-./setup.sh # It shows a menu from where you can install required components
+
+# Menu based interactive setup
+./setup.sh
+
+# Setup everythin unattended
+./setup.sh -a
 ```
 
 ## Requirements
