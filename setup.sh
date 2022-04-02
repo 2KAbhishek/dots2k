@@ -15,17 +15,12 @@ echo -e "  \u001b[31;1m (0) Exit \u001b[0m"
 
 echo -en "\u001b[32;1m ==> \u001b[0m"
 
-read -r option
-
-case $option in
-
-"1")
+function install_oh_my_zsh {
     echo -e "\u001b[7m Installing oh-my-zsh...\u001b[0m"
-    sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
     sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
-    ;;
+}
 
-"2")
+function backup_configs {
     echo -e "\u001b[33;1m Backing up existing files... \u001b[0m"
     mv -iv ~/.config/autorandr ~/.config/autorandr.old
     mv -iv ~/.config/bat/config ~/.config/bat/config.old
@@ -55,9 +50,9 @@ case $option in
     mv -iv ~/.Xresources ~/.Xresources.old
     mv -iv ~/.zshrc ~/.zshrc.old
     echo -e "\u001b[36;1m Remove backups with 'rm -ir ~/.*.old && rm -ir ~/.config/*.old'. \u001b[0m"
-    ;;
+}
 
-"3")
+function setup_symlinks {
     echo -e "\u001b[7m Setting up symlinks... \u001b[0m"
     ln -sfnv "$PWD/.config/autorandr/" ~/.config/
     ln -sfnv "$PWD/.config/bat/" ~/.config/
@@ -87,9 +82,9 @@ case $option in
     ln -sfnv "$PWD/.vimrc" ~/
     ln -sfnv "$PWD/.Xresources" ~/
     ln -sfnv "$PWD/.zshrc" ~/
-    ;;
+}
 
-"4")
+function install_zsh_plugins {
     echo -e "\u001b[7m Installing zsh plugins...\u001b[0m"
     git clone https://github.com/romkatv/powerlevel10k.git ~/.oh-my-zsh/custom/themes/powerlevel10k
     git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
@@ -100,10 +95,10 @@ case $option in
     git clone https://github.com/Aloxaf/fzf-tab.git ~/.oh-my-zsh/custom/plugins/fzf-tab
     git clone https://github.com/hlissner/zsh-autopair ~/.oh-my-zsh/custom/plugins/zsh-autopair
     git clone https://github.com/MichaelAquilina/zsh-auto-notify.git ~/.oh-my-zsh/custom/plugins/auto-notify
-    ;;
+}
 
-"5")
-    echo -e "\u001b[7m Installing Plug... \u001b[0m"
+function install_vim_plugins {
+    echo -e "\u001b[7m Installing plugin manager \u001b[0m"
     curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
         https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
     curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
@@ -112,20 +107,52 @@ case $option in
     echo -e "\u001b[7m Installing plugins for vim and nvim... \u001b[0m"
     vim +PlugUpdate +qall
     nvim -c 'PlugUpdate | PlugClean | quitall'
-    ;;
+}
 
-"6")
+function install_tmux_plugins {
     echo -e "\u001b[7m Installing tmux plugins... \u001b[0m"
     git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
     tmux start-server
     tmux new-session -d
     ~/.tmux/plugins/tpm/scripts/install_plugins.sh
     tmux kill-server
+}
+
+function distro_tweaks {
+    echo -e "\u001b[7m Distro specific tweaks... \u001b[0m"
+    bash "$PWD"/scripts/local_distro.sh
+}
+
+read -r option
+
+case $option in
+
+"1")
+    install_oh_my_zsh
+    ;;
+
+"2")
+    backup_configs
+    ;;
+
+"3")
+    setup_symlinks
+    ;;
+
+"4")
+    install_zsh_plugins
+    ;;
+
+"5")
+    install_vim_plugins
+    ;;
+
+"6")
+    install_tmux_plugins
     ;;
 
 "7")
-    echo -e "\u001b[7m Distro specific tweaks... \u001b[0m"
-    bash "$PWD"/scripts/local_distro.sh
+    distro_tweaks
     ;;
 
 "0")
