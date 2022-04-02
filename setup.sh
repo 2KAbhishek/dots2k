@@ -123,6 +123,16 @@ function distro_tweaks {
     bash "$PWD"/scripts/local_distro.sh
 }
 
+function setup_dotfiles {
+    install_oh_my_zsh
+    backup_configs
+    setup_symlinks
+    install_zsh_plugins
+    install_vim_plugins
+    install_tmux_plugins
+    distro_tweaks
+}
+
 read -r option
 
 case $option in
