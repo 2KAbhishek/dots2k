@@ -75,6 +75,7 @@ Powerline patched fonts are required for glyphs. I'll recommend [Nerd Fonts](htt
 
 This repo contains configurations for following tools.
 
+- asdf : [~/.asdfrc](https://github.com/2KAbhishek/Dotfiles/blob/main/.asdfrc)
 - autorandr : [~/.config/autorandr/](https://github.com/2KAbhishek/Dotfiles/blob/main/.config/autorandr/)
 - bash : [~/.bashrc](https://github.com/2KAbhishek/Dotfiles/blob/main/.bashrc)
 - bat : [~/.config/bat/](https://github.com/2KAbhishek/Dotfiles/blob/main/.config/bat/)
