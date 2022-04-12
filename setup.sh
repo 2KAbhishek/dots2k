@@ -30,6 +30,7 @@ function backup_configs {
     mv -iv ~/.config/shell ~/.config/shell.old
     mv -iv ~/.config/sysinfo.conkyrc ~/.config/sysinfo.conkyrc.old
     mv -iv ~/.config/xplr ~/.config/xplr.old
+    mv -iv ~/.asdfrc ~/.asdfrc.old
     mv -iv ~/.bashrc ~/.bashrc.old
     mv -iv ~/.dircolors ~/.dircolors.old
     mv -iv ~/.dmenurc ~/.dmenurc.old
@@ -64,6 +65,7 @@ function setup_symlinks {
     ln -sfnv "$PWD/.config/sysinfo.conkyrc" ~/.config/
     ln -sfnv "$PWD/.config/xplr/" ~/.config/
     cp -iuvr "$PWD/.local/share/konsole/" ~/.local/share/
+    ln -sfnv "$PWD/.asdfrc" ~/
     ln -sfnv "$PWD/.bashrc" ~/
     ln -sfnv "$PWD/.dircolors" ~/
     ln -sfnv "$PWD/.dmenurc" ~/
