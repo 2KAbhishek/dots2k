@@ -1,6 +1,12 @@
 #!/bin/bash
 
 # Setup script for Dotfiles
+function install_packages {
+    echo -e "\u001b[7m Installing required packages... \u001b[0m"
+    sudo pacman -S curl git zsh python vim neovim tmux bat fzf fasd fd \
+        lsd gh git-delta lazygit openssh ranger the_silver_searcher
+}
+
 function install_oh_my_zsh {
     echo -e "\u001b[7m Installing oh-my-zsh...\u001b[0m"
     sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
@@ -113,6 +119,7 @@ function distro_tweaks {
 
 function setup_dotfiles {
     echo -e "\u001b[7m Setting up Dotfiles... \u001b[0m"
+    install_packages
     install_oh_my_zsh
     backup_configs
     setup_symlinks
@@ -132,6 +139,7 @@ fi
 echo -e "\u001b[32;1m Setting up Dotfiles...\u001b[0m"
 
 echo -e " \u001b[37;1m\u001b[4mSelect an option:\u001b[0m"
+echo -e "  \u001b[34;1m (0) Install packages \u001b[0m"
 echo -e "  \u001b[34;1m (1) Install oh-my-zsh \u001b[0m"
 echo -e "  \u001b[34;1m (2) Backup current config \u001b[0m"
 echo -e "  \u001b[34;1m (3) Setup symlinks \u001b[0m"
@@ -139,13 +147,17 @@ echo -e "  \u001b[34;1m (4) Install zsh plugins \u001b[0m"
 echo -e "  \u001b[34;1m (5) Install vim plugins \u001b[0m"
 echo -e "  \u001b[34;1m (6) Install tmux plugins \u001b[0m"
 echo -e "  \u001b[34;1m (7) Distro specific tweaks \u001b[0m"
-echo -e "  \u001b[31;1m (0) Exit \u001b[0m"
+echo -e "  \u001b[31;1m (*) Anything else to exit \u001b[0m"
 
 echo -en "\u001b[32;1m ==> \u001b[0m"
 
 read -r option
 
 case $option in
+
+"0")
+    install_packages
+    ;;
 
 "1")
     install_oh_my_zsh
@@ -175,14 +187,9 @@ case $option in
     distro_tweaks
     ;;
 
-"0")
-    echo -e "\u001b[32;1m Bye! \u001b[0m"
-    exit 0
-    ;;
-
 *)
-    echo -e "\u001b[31;1m Invalid option entered! \u001b[0m"
-    exit 1
+    echo -e "\u001b[31;1m Invalid option entered, Bye! \u001b[0m"
+    exit 0
     ;;
 esac
 

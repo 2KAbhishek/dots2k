@@ -134,6 +134,8 @@ Hit the ⭐ button if you found this useful.
 
 ## More Info
 
+Want this CLI experience on your Android too? have a look at [Oh-My-Termux](https://github.com/2kabhishek/Oh-My-Termux)
+
 Find more cool configs and setups at [GitHub does dotfiles](https://dotfiles.github.io/)
 
 <div align="center">
