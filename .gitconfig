@@ -8,6 +8,7 @@
 [core]
     editor = nvim
     pager = delta --dark --highlight-removed
+	excludesFile = ~/.gitignore
 
 [interactive]
     diffFilter = delta --color-only --highlight-removed
