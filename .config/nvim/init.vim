@@ -77,6 +77,7 @@ vnoremap H <gv
 " Plugins
 call plug#begin('~/.local/share/nvim/plugged')
 
+" appearance
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'joshdick/onedark.vim'
@@ -105,11 +106,22 @@ Plug 'haya14busa/incsearch-easymotion.vim'
 Plug 'ryanoasis/vim-devicons'
 Plug 'kyazdani42/nvim-web-devicons'
 
+" lsp
 Plug 'neovim/nvim-lspconfig'
 Plug 'williamboman/nvim-lsp-installer'
-Plug 'hrsh7th/nvim-compe'
 
+" cmp
+Plug 'hrsh7th/cmp-nvim-lsp'
+Plug 'hrsh7th/cmp-buffer'
+Plug 'hrsh7th/cmp-path'
+Plug 'hrsh7th/cmp-cmdline'
+Plug 'hrsh7th/nvim-cmp'
+
+" vsnip
 Plug 'hrsh7th/vim-vsnip'
+Plug 'hrsh7th/cmp-vsnip'
+Plug 'hrsh7th/vim-vsnip'
+
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'nvim-lua/plenary.nvim'
@@ -274,6 +286,6 @@ luafile ~/.config/nvim/luacfg/treesitter.lua
 luafile ~/.config/nvim/luacfg/which-key.lua
 luafile ~/.config/nvim/luacfg/lspconfig.lua
 luafile ~/.config/nvim/luacfg/lsp-installer.lua
-luafile ~/.config/nvim/luacfg/compe.lua
+luafile ~/.config/nvim/luacfg/cmp.lua
 luafile ~/.config/nvim/luacfg/toggleterm.lua
 
