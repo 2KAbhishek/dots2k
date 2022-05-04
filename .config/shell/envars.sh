@@ -21,6 +21,8 @@ export PATH=$HOME/.npm/bin:$PATH
 
 export CHROME_EXECUTABLE=/usr/bin/google-chrome-stable
 
+export GPG_TTY=$(tty)
+
 eval "$(dircolors ~/.dircolors)";
 eval "$(thefuck --alias)"
 
