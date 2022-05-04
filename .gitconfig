@@ -1,6 +1,7 @@
 [user]
     email = iam2kabhishek@gmail.com
     name = Abhishek Keshri
+	signingkey = 87ABE188E6B98D1C
 
 [credential]
     helper = cache --timeout 3600
