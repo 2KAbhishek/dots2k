@@ -101,6 +101,8 @@ This repo contains configurations for following tools.
 
 Some configs require special steps in order to use. Check respective tools documentation for more info.
 
+- git: I am using GPG signing by default for verifying commits, check [this](https://docs.github.com/en/authentication/managing-commit-signature-verification/adding-a-new-gpg-key-to-your-github-account) for details on setting up GPG.
+
 - compiz : [~/.config/compiz.profile](https://github.com/2KAbhishek/Dotfiles/blob/main/.config/compiz.profile)
 
   Import the compiz profile using `ccsm`.
