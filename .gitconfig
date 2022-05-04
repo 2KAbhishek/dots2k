@@ -38,3 +38,5 @@
 [delta]
     features = mantis-shrimp
 
+[commit]
+	gpgSign = true
