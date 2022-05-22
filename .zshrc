@@ -21,8 +21,9 @@ SAVEHIST=99999
 
 # Plugins
 plugins=(adb
-    asdf
     alias-tips
+    asdf
+    auto-notify
     catimg
     colorize
     direnv
@@ -39,7 +40,6 @@ plugins=(adb
     git-extra-commands
     globalias
     magic-enter
-    auto-notify
     thefuck
     timer
     tmux
