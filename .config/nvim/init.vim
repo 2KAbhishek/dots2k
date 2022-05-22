@@ -101,7 +101,7 @@ Plug 'hrsh7th/nvim-cmp'
 " snippets
 Plug 'L3MON4D3/LuaSnip'
 Plug 'rafamadriz/friendly-snippets'
- Plug 'saadparwaiz1/cmp_luasnip'
+Plug 'saadparwaiz1/cmp_luasnip'
 
 Plug 'mattn/emmet-vim'
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
@@ -143,7 +143,6 @@ Plug 'akinsho/toggleterm.nvim'
 
 call plug#end()
 " filetype plugin indent on
-
 
 " General
 nmap <leader>Q :qa!<CR>
