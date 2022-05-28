@@ -1,6 +1,0 @@
-require "lspconfig"
-require "cmp"
-require "telescope"
-require "toggleterm"
--- require "treesitter"
-require "which-key"
