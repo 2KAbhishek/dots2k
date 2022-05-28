@@ -155,6 +155,7 @@ nmap <leader>W :wq<CR>
 nmap <leader>r :source ~/.config/nvim/init.vim <CR>
 nmap <leader>z :setlocal spell!<CR>
 nmap <leader>G :Git<CR>
+nmap <leader>t :ToggleTerm<CR>
 
 " FZF
 nnoremap <leader>p :Files<Cr>
