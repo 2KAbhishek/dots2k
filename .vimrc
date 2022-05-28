@@ -42,6 +42,8 @@ set viewoptions-=option
 set cursorline     " Highlight current line
 set exrc           " Use vimrc from local dir
 set hidden         " Enable switching with modified buffers
+set undofile       " Enable persistent undos across file open and closeasa
+setlocal spell spelllang=en "Set spell check language to en
 
 " tmux true color fix
 if (has("termguicolors"))
@@ -72,6 +74,15 @@ inoremap jj <Esc>
 let mapleader = ','
 inoremap <C-W> <C-G>u<C-W>
 inoremap <C-U> <C-G>u<C-U>
+nmap <leader>Q :qa!<CR>
+nmap <leader>q :bw<CR>
+nmap <leader>w :w<CR>
+nmap <leader>W :wq<CR>
+nmap <leader>r :source ~/.vimrc<CR>
+nmap <leader>z :setlocal spell!<CR>
+nmap <leader>G :Git<CR>
+nmap <leader>t :term<CR>
+
 
 " Copy Paste from X11 Clipboard
 vmap <Leader>yy :!xclip -f -sel clip<CR>
