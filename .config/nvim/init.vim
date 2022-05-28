@@ -43,6 +43,7 @@ set viewoptions-=option
 set cursorline     " Highlight current line
 set hidden         " Needed for toggleterm
 set undofile       " Enable persistent undo
+setlocal spell spelllang=en " Set spellcheck language to en
 
 " Load matchit.vim, but only if the user hasn't installed a newer version.
 if !exists('g:loaded_matchit') && findfile('plugin/matchit.vim', &rtp) ==# ''
@@ -58,22 +59,6 @@ endif
 if has("autocmd")
     autocmd BufWritePre * %s/\s\+$//e
 endif
-
-" Keybindings
-inoremap jj <Esc>
-let mapleader = ','
-inoremap <C-W> <C-G>u<C-W>
-inoremap <C-U> <C-G>u<C-U>
-
-" Copy Paste from X11 Clipboard
-vmap <Leader>yy :!xclip -f -sel clip<CR>
-" map <Leader>pp mz:-1r !xclip -o -sel clip<CR>`z
-
-" Drag Visual selections
-vnoremap K xkP`[V`]
-vnoremap U xp`[V`]
-vnoremap L >gv
-vnoremap H <gv
 
 " Plugins
 call plug#begin('~/.local/share/nvim/plugged')
@@ -145,13 +130,29 @@ Plug 'akinsho/toggleterm.nvim'
 call plug#end()
 " filetype plugin indent on
 
+" Keybindings
+inoremap jj <Esc>
+let mapleader = ','
+inoremap <C-W> <C-G>u<C-W>
+inoremap <C-U> <C-G>u<C-U>
+
+" Copy Paste from X11 Clipboard
+vmap <Leader>yy :!xclip -f -sel clip<CR>
+" map <Leader>pp mz:-1r !xclip -o -sel clip<CR>`z
+
+" Drag Visual selections
+vnoremap K xkP`[V`]
+vnoremap U xp`[V`]
+vnoremap L >gv
+vnoremap H <gv
+
 " General
 nmap <leader>Q :qa!<CR>
 nmap <leader>q :bw<CR>
 nmap <leader>w :w<CR>
 nmap <leader>W :wq<CR>
 nmap <leader>r :source ~/.config/nvim/init.vim <CR>
-
+nmap <leader>Z :setlocal spell!<CR>
 
 " FZF
 nnoremap <leader>p :Files<Cr>
