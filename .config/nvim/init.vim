@@ -44,6 +44,7 @@ set cursorline     " Highlight current line
 set hidden         " Needed for toggleterm
 set undofile       " Enable persistent undo
 setlocal spell spelllang=en " Set spellcheck language to en
+setlocal spell! " Disable spell checks by default
 
 " Load matchit.vim, but only if the user hasn't installed a newer version.
 if !exists('g:loaded_matchit') && findfile('plugin/matchit.vim', &rtp) ==# ''
@@ -152,7 +153,8 @@ nmap <leader>q :bw<CR>
 nmap <leader>w :w<CR>
 nmap <leader>W :wq<CR>
 nmap <leader>r :source ~/.config/nvim/init.vim <CR>
-nmap <leader>Z :setlocal spell!<CR>
+nmap <leader>z :setlocal spell!<CR>
+nmap <leader>G :Git<CR>
 
 " FZF
 nnoremap <leader>p :Files<Cr>
