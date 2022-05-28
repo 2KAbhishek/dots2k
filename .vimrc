@@ -44,6 +44,7 @@ set exrc           " Use vimrc from local dir
 set hidden         " Enable switching with modified buffers
 set undofile       " Enable persistent undos across file open and closeasa
 setlocal spell spelllang=en "Set spell check language to en
+setlocal spell! " Disable spellchecking by default
 
 " tmux true color fix
 if (has("termguicolors"))
