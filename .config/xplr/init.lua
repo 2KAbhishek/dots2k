@@ -1,4 +1,4 @@
-version = "0.17.0"
+version = "0.19.0"
 -- Show hidden files
 xplr.config.general.show_hidden = true
 
