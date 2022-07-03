@@ -53,7 +53,7 @@ function setup_symlinks {
     ln -sfnv "$PWD/.config/broot/" ~/.config/
     ln -sfnv "$PWD/.config/cmus/" ~/.config/
     ln -sfnv "$PWD/.config/delta/" ~/.config/
-    ln -sfnv "$PWD/.config/fontconfig/" ~/.config/
+    ln -sfnv "$PWD/.config/fontconfig/fonts.conf" ~/.config/fontconfig/
     ln -sfnv "$PWD/.config/htop/" ~/.config/
     ln -sfnv "$PWD/.config/i3" ~/.config/
     ln -sfnv "$PWD/.config/i3status" ~/.config/
