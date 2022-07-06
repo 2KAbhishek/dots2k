@@ -31,9 +31,9 @@ plugins=(adb
     docker
     docker-compose
     extract
+    F-Sy-H
     fancy-ctrl-z
     fasd
-    fast-syntax-highlighting
     fzf-tab
     gh
     git
