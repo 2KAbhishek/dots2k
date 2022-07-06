@@ -114,8 +114,8 @@ bindkey "^B" backward-word
 # Aliases
 alias reload='source ~/.zshrc'
 
-alias -s md=vim
-alias -s html=vim
+alias -s md=nvim
+alias -s html=nvim
 
 alias -g G="| grep "
 alias -g wcc="| wc -m"
