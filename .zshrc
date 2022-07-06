@@ -20,7 +20,8 @@ COMPLETION_WAITING_DOTS="false"
 SAVEHIST=99999
 
 # Plugins
-plugins=(adb
+plugins=(zsh-autocomplete
+    adb
     alias-tips
     asdf
     auto-notify
