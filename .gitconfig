@@ -8,7 +8,7 @@
 
 [core]
     editor = nvim
-    pager = delta --dark --highlight-removed
+    pager = delta --dark
     excludesFile = ~/.gitignore
 
 [interactive]
