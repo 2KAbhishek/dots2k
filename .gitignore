@@ -3,3 +3,5 @@
 .config/ranger/plugins/__init__.py
 .config/ranger/plugins/__pycache__
 
+# lazygit state
+.config/lazygit/state.yml
