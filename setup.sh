@@ -59,6 +59,7 @@ function setup_symlinks {
     ln -sfnv "$PWD/.config/i3" ~/.config/
     ln -sfnv "$PWD/.config/i3status" ~/.config/
     ln -sfnv "$PWD/.config/kitty" ~/.config/
+    ln -sfnv "$PWD/.config/lazygit" ~/.config/
     ln -sfnv "$PWD/.config/libinput-gestures.conf" ~/.config/
     ln -sfnv "$PWD/.config/nvim" ~/.config/
     ln -sfnv "$PWD/.config/ranger/" ~/.config/
