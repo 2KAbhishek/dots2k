@@ -102,7 +102,7 @@ if [ -f "/usr/bin/grc" ]; then
 fi
 
 alias vimrc="vim ~/.vimrc"
-alias nvimrc="nvim ~/.config/nvim/init.vim"
+alias nvimrc="nvim ~/.config/nvim/init.lua"
 alias zshrc="$EDITOR ~/.zshrc"
 alias bashrc="$EDITOR ~/.bashrc"
 alias alia="$EDITOR ~/.config/shell/aliases.sh"
