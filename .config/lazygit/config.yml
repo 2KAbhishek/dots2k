@@ -1,7 +1,7 @@
 gui:
   authorColors:
     'Abhishek Keshri': '#1688f0'
-    '*': 'yellow'
+    '*': '#f000a0'
 # stuff relating to the UI
   scrollHeight: 2 # how many lines you scroll by
   scrollPastBottom: true # enable scrolling past the bottom
