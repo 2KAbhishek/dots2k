@@ -3,7 +3,8 @@
 # Setup script for Dotfiles
 function install_packages {
     echo -e "\u001b[7m Installing required packages... \u001b[0m"
-    sudo pacman -S curl git zsh python vim neovim tmux bat fzf fasd fd \
+    sudo pacman -S \
+        curl git zsh python vim neovim tmux bat fzf fasd fd unzip \
         lsd github-cli git-delta lazygit openssh ranger the_silver_searcher \
         thefuck xclip broot ncdu ranger cmus htop broot xplr ripgrep powerline
 }
@@ -105,7 +106,7 @@ function install_vim_plugins {
 
     echo -e "\u001b[7m Installing plugins for vim and nvim... \u001b[0m"
     vim +PlugUpdate +qall
-    nvim -c 'PlugUpdate | PlugClean | quitall'
+    nvim -c Packersync
 }
 
 function install_tmux_plugins {
@@ -144,14 +145,15 @@ fi
 echo -e "\u001b[32;1m Setting up Dotfiles...\u001b[0m"
 
 echo -e " \u001b[37;1m\u001b[4mSelect an option:\u001b[0m"
-echo -e "  \u001b[34;1m (0) Install packages \u001b[0m"
-echo -e "  \u001b[34;1m (1) Install oh-my-zsh \u001b[0m"
-echo -e "  \u001b[34;1m (2) Backup current config \u001b[0m"
-echo -e "  \u001b[34;1m (3) Setup symlinks \u001b[0m"
-echo -e "  \u001b[34;1m (4) Install zsh plugins \u001b[0m"
-echo -e "  \u001b[34;1m (5) Install vim plugins \u001b[0m"
-echo -e "  \u001b[34;1m (6) Install tmux plugins \u001b[0m"
-echo -e "  \u001b[34;1m (7) Distro specific tweaks \u001b[0m"
+echo -e "  \u001b[34;1m (0) Setup everything \u001b[0m"
+echo -e "  \u001b[34;1m (1) Install packages \u001b[0m"
+echo -e "  \u001b[34;1m (2) Install oh-my-zsh \u001b[0m"
+echo -e "  \u001b[34;1m (3) Backup current config \u001b[0m"
+echo -e "  \u001b[34;1m (4) Setup symlinks \u001b[0m"
+echo -e "  \u001b[34;1m (5) Install zsh plugins \u001b[0m"
+echo -e "  \u001b[34;1m (6) Install vim plugins \u001b[0m"
+echo -e "  \u001b[34;1m (7) Install tmux plugins \u001b[0m"
+echo -e "  \u001b[34;1m (8) Distro specific tweaks \u001b[0m"
 echo -e "  \u001b[31;1m (*) Anything else to exit \u001b[0m"
 
 echo -en "\u001b[32;1m ==> \u001b[0m"
@@ -161,34 +163,38 @@ read -r option
 case $option in
 
 "0")
-    install_packages
+    setup_dotfiles
     ;;
 
 "1")
-    install_oh_my_zsh
+    install_packages
     ;;
 
 "2")
-    backup_configs
+    install_oh_my_zsh
     ;;
 
 "3")
-    setup_symlinks
+    backup_configs
     ;;
 
 "4")
-    install_zsh_plugins
+    setup_symlinks
     ;;
 
 "5")
-    install_vim_plugins
+    install_zsh_plugins
     ;;
 
 "6")
-    install_tmux_plugins
+    install_vim_plugins
     ;;
 
 "7")
+    install_tmux_plugins
+    ;;
+
+"8")
     distro_tweaks
     ;;
 
