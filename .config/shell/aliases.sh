@@ -28,6 +28,7 @@ alias gbrr="git for-each-ref --count=30 --sort=-committerdate refs/heads/ --form
 alias gc="git commit -m"
 alias gcm="git checkout main"
 alias gcma="git commit --amend -m"
+alias gcman="git commit --amend --no-edit"
 alias gcmn="git add . && git commit --amend --no-edit"
 alias gdh="git diff HEAD"
 alias ghrc="gh repo clone"
