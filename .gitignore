@@ -5,3 +5,4 @@
 
 # lazygit state
 .config/lazygit/state.yml
+.config/lazygit/.tmp
