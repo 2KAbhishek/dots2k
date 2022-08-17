@@ -57,7 +57,7 @@ For installation `git` `curl` & `zsh` are must, other tools are mentioned below.
 
 ### Packages
 
-This list is not complete, package names may vary depending upon your system and your requirements.
+This list is incomplete, package names may vary depending upon your system and your requirements.
 
 ```bash
 # Required
@@ -126,7 +126,7 @@ Just getting over the initial learning curve on the command line, failing and tr
 
 ## What I learned
 
-While building Dotfiles I have learned to love the command line and it's efficiency, have discovered countless tools and techniques which will serve me for the rest of my days.
+While building Dotfiles I have learned to love the command line, and it's efficiency, have discovered countless tools and techniques, which will serve me for the rest of my days.
 
 ## What's next
 
@@ -138,8 +138,10 @@ Hit the ⭐ button if you found this useful.
 
 Want the CLI experience on your Android too? Have a look at [Oh-My-Termux](https://github.com/2kabhishek/Oh-My-Termux)
 
-Looking for my neovim configs? See [nvim](https://github.com/2kabhishek/nvim)
-Looking for my tmux configs? See [tmux2k](https://github.com/2kabhishek/tmux2k)
+Looking for my `neovim` configs? See [nvim](https://github.com/2kabhishek/nvim)
+
+Looking for my `tmux` configs? See [tmux2k](https://github.com/2kabhishek/tmux2k)
+
 Find more cool configs and setups at [GitHub does dotfiles](https://dotfiles.github.io/)
 
 <div align="center">
