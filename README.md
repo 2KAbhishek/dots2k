@@ -63,7 +63,7 @@ This list is not complete, package names may vary depending upon your system and
 # Required
 git, zsh, neovim, tmux, git-delta, bat, fd, fzf, fasd, ag(silver_surfer), curl, powerline, lsd
 # Optional
-ranger, cmus, xdotool, libinput, htop, python, vim, broot, xclip, 
+ranger, cmus, xdotool, libinput, htop, python, vim, broot, xclip,
 bash, i3, i3status, dmenu, ncdu, grc, exa, conky, kitty, konsole, autorandr, xplr
 ```
 
@@ -136,8 +136,10 @@ Hit the ⭐ button if you found this useful.
 
 ## More Info
 
-Want this CLI experience on your Android too? have a look at [Oh-My-Termux](https://github.com/2kabhishek/Oh-My-Termux)
+Want the CLI experience on your Android too? Have a look at [Oh-My-Termux](https://github.com/2kabhishek/Oh-My-Termux)
 
+Looking for my neovim configs? See [nvim](https://github.com/2kabhishek/nvim)
+Looking for my tmux configs? See [tmux2k](https://github.com/2kabhishek/tmux2k)
 Find more cool configs and setups at [GitHub does dotfiles](https://dotfiles.github.io/)
 
 <div align="center">
