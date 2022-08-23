@@ -6,7 +6,8 @@ function install_packages {
     sudo pacman -S \
         curl git zsh python vim neovim tmux bat fzf fasd fd unzip \
         lsd github-cli git-delta lazygit openssh ranger the_silver_searcher \
-        thefuck xclip broot ncdu ranger cmus htop broot xplr ripgrep powerline
+        thefuck xclip broot ncdu ranger cmus htop broot xplr ripgrep powerline \
+        exa
 }
 
 function install_oh_my_zsh {
