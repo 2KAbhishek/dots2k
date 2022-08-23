@@ -122,6 +122,7 @@ alias -g G="| grep "
 alias -g wcc="| wc -m"
 alias -g wcl="| wc -l"
 alias -g wcw="| wc -w"
+alias -g Z="| fzf"
 
 # Commands
 eval "$(fasd --init posix-alias zsh-hook zsh-ccomp-install zsh-wcomp-install zsh-ccomp zsh-wcomp)"
