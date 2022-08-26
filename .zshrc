@@ -109,8 +109,7 @@ fi
 # Key Bindings
 bindkey -s '^H' ' source ~/.zshrc^M ^M'
 
-bindkey "^F" forward-word
-bindkey "^B" backward-word
+bindkey "^F" fzf-file-widget
 
 # Aliases
 alias reload='source ~/.zshrc'
