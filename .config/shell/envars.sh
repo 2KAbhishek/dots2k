@@ -51,6 +51,8 @@ eval "$(thefuck --alias)"
 
 # broot file explorer
 [ -f ~/.config/broot/launcher/bash/br ] && source ~/.config/broot/launcher/bash/br
+# Map CapsLock to Escape
+setxkbmap -option caps:swapescape
 
 # Homebrew
 # [ -f /home/linuxbrew/.linuxbrew/bin/brew ] && eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
