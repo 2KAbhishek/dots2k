@@ -3,7 +3,7 @@
 export EDITOR=nvim
 
 # Fzf
-export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
+export FZF_DEFAULT_COMMAND='fd --hidden --follow --exclude=.git --exclude=node_modules'
 export FZF_COMPLETION_TRIGGER=','
 export FZF_DEFAULT_OPTS="
 --layout=reverse
@@ -23,7 +23,7 @@ export FZF_DEFAULT_OPTS="
 --bind 'ctrl-e:execute(nvim-qt {+})'
 --bind 'ctrl-v:execute(code {+})'
 "
-# export FZF_CTRL_T_COMMAND='fd --type f --hidden --follow --exclude .git'
+export FZF_CTRL_T_COMMAND='fd -t f -HF -E=.git -E=node_modules'
 export FZF_TMUX_OPTS='-p 90%'
 
 export GREP_COLOR="1;32"
