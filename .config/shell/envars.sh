@@ -11,7 +11,7 @@ export FZF_DEFAULT_OPTS="
 --height=80%
 --multi
 --cycle
---prompt=' ' --pointer=' ' --marker=' '
+--prompt=' ' --pointer='>' --marker='✔'
 --color='hl:148,hl+:154,prompt:blue,pointer:032,marker:010,bg+:000,gutter:000'
 --margin=1
 --border=rounded
