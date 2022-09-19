@@ -1,3 +1,6 @@
 [submodule ".config/nvim"]
 	path = .config/nvim
 	url = git@github.com:2kabhishek/nvim2k
+[submodule ".config/awesome"]
+	path = .config/awesome
+	url = git@github.com/2kabhishek/awesome2k
