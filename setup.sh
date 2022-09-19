@@ -3,11 +3,21 @@
 # Setup script for Dotfiles
 function install_packages {
     echo -e "\u001b[7m Installing required packages... \u001b[0m"
-    sudo pacman -S \
-        curl git zsh python vim neovim tmux bat fzf fasd fd unzip \
-        lsd github-cli git-delta lazygit openssh ranger the_silver_searcher \
-        thefuck xclip broot ncdu ranger cmus htop broot xplr ripgrep powerline \
-        exa
+    if [ -f /etc/debian_version ]; then
+        sudo apt install \
+            curl git zsh vim neovim tmux bat fzf fasd \
+            exa gh ranger silversearcher-ag fd-find unzip \
+            thefuck xclip ncdu ranger cmus htop ripgrep powerline
+    elif [ -f /etc/arch-release ]; then
+        sudo pacman -S \
+            curl git zsh python vim neovim tmux bat fzf fasd fd unzip \
+            lsd github-cli git-delta lazygit openssh ranger the_silver_searcher \
+            thefuck xclip broot ncdu ranger cmus htop broot xplr ripgrep powerline \
+            exa
+    else
+        echo "Distro not detected, please install packages manually"
+        exit 1
+    fi
 }
 
 function install_oh_my_zsh {
