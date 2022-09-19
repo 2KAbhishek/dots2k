@@ -122,7 +122,6 @@ Plug 'haya14busa/incsearch-fuzzy.vim'
 Plug 'haya14busa/incsearch-easymotion.vim'
 Plug 'ryanoasis/vim-devicons'
 Plug 'christoomey/vim-tmux-navigator'
-Plug 'pandysong/ghost-text.vim'
 
 call plug#end()
 filetype plugin indent on
