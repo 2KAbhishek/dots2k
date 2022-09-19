@@ -20,8 +20,7 @@ COMPLETION_WAITING_DOTS="false"
 SAVEHIST=99999
 
 # Plugins
-plugins=(zsh-autocomplete
-    adb
+plugins=(adb
     alias-tips
     asdf
     auto-notify
@@ -51,6 +50,9 @@ plugins=(zsh-autocomplete
     zsh-completions
     zsh-navigation-tools
     fzf) # fzf at last for '^R' binding
+
+# Uninstalled
+# zsh-autocomplete
 
 # Modules
 autoload -U zmv
