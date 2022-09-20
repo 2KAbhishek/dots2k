@@ -51,7 +51,7 @@ plugins=(adb
     zsh-navigation-tools
     fzf) # fzf at last for '^R' binding
 
-# Uninstalled
+# Uninstalled, TODO doesn't work with fzf-tab
 # zsh-autocomplete
 
 # Modules
