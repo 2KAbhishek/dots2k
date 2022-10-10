@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Fetch submodules
+git submodule update --init
+
 # Setup script for Dotfiles
 function install_packages {
     echo -e "\u001b[7m Installing required packages... \u001b[0m"
@@ -28,6 +31,7 @@ function install_oh_my_zsh {
 function backup_configs {
     echo -e "\u001b[33;1m Backing up existing files... \u001b[0m"
     mv -iv ~/.config/autorandr ~/.config/autorandr.old
+    mv -iv ~/.config/awesome/ ~/.config/awesome.old
     mv -iv ~/.config/bat/config ~/.config/bat/config.old
     mv -iv ~/.config/broot/conf.toml ~/.config/broot/conf.toml.old
     mv -iv ~/.config/cmus/darkwind.theme ~/.config/cmus/darkwind.theme.old
@@ -62,6 +66,7 @@ function backup_configs {
 function setup_symlinks {
     echo -e "\u001b[7m Setting up symlinks... \u001b[0m"
     ln -sfnv "$PWD/.config/autorandr/" ~/.config/
+    ln -sfnv "$PWD/.config/awesome/" ~/.config/
     ln -sfnv "$PWD/.config/bat/" ~/.config/
     ln -sfnv "$PWD/.config/broot/" ~/.config/
     ln -sfnv "$PWD/.config/cmus/" ~/.config/
