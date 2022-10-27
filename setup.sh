@@ -44,6 +44,7 @@ function backup_configs {
     mv -iv ~/.config/libinput-gestures.conf ~/.config/libinput-gestures.conf.old
     mv -iv ~/.config/nvim ~/.config/nvim.old
     mv -iv ~/.config/ranger ~/.config/ranger.old
+    mv -iv ~/.config/rofi ~/.config/rofi.old
     mv -iv ~/.config/shell ~/.config/shell.old
     mv -iv ~/.config/sysinfo.conkyrc ~/.config/sysinfo.conkyrc.old
     mv -iv ~/.config/xplr ~/.config/xplr.old
@@ -80,6 +81,7 @@ function setup_symlinks {
     ln -sfnv "$PWD/.config/libinput-gestures.conf" ~/.config/
     ln -sfnv "$PWD/.config/nvim" ~/.config/
     ln -sfnv "$PWD/.config/ranger/" ~/.config/
+    ln -sfnv "$PWD/.config/rofi/" ~/.config/
     ln -sfnv "$PWD/.config/shell" ~/.config/
     ln -sfnv "$PWD/.config/sysinfo.conkyrc" ~/.config/
     ln -sfnv "$PWD/.config/xplr/" ~/.config/
