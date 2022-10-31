@@ -3,6 +3,9 @@
     name = Abhishek Keshri
     signingkey = 5FE4F23032EE62A5BED6101187ABE188E6B98D1C
 
+[commit]
+    gpgSign = true
+
 [credential]
     helper = cache --timeout 3600
 
@@ -40,6 +43,3 @@
 
 [delta]
     features = mantis-shrimp
-
-[commit]
-    gpgSign = true
