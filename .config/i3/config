@@ -1,5 +1,6 @@
 # Set mod key (Mod1=<Alt>, Mod4=<Super>)
 set $mod Mod4
+set $terminal kitty
 
 # set default desktop layout (default is tiling)
 # workspace_layout tabbed <stacking|tabbed>
@@ -24,7 +25,7 @@ font xft:Roboto 10
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec konsole
+bindsym $mod+Return exec $terminal
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -40,7 +41,7 @@ bindsym $mod+z exec --no-startup-id morc_menu
 ################################################################################################
 
 exec --no-startup-id volumeicon
-bindsym $mod+Ctrl+m exec konsole -e 'alsamixer'
+bindsym $mod+Ctrl+m exec $terminal -e 'alsamixer'
 #exec --no-startup-id pulseaudio
 #exec --no-startup-id pa-applet
 #bindsym $mod+Ctrl+m exec pavucontrol
@@ -52,14 +53,14 @@ bindsym $mod+Ctrl+m exec konsole -e 'alsamixer'
 # bindsym XF86MonBrightnessDown exec "xbacklight -dec 10; notify-send 'brightness down'"
 
 # Start Applications
-bindsym $mod+Ctrl+b exec konsole -e 'bmenu'
+bindsym $mod+Ctrl+b exec $terminal -e 'bmenu'
 bindsym $mod+F2 exec chromium
-bindsym $mod+F3 exec konsole -e ranger
-bindsym $mod+F4 exec konsole -e vim
+bindsym $mod+F3 exec $terminal -e ranger
+bindsym $mod+F4 exec $terminal -e vim
 bindsym $mod+Shift+F2 exec links
 bindsym $mod+Shift+F3 exec pcmanfm
 bindsym $mod+Shift+F4 exec code
-bindsym $mod+F5 exec konsole -e 'mocp'
+bindsym $mod+F5 exec $terminal -e 'mocp'
 bindsym $mod+t exec --no-startup-id pkill compton
 bindsym $mod+Ctrl+t exec --no-startup-id compton -b
 bindsym $mod+Shift+d --release exec "killall dunst; exec notify-send 'Restart dunst'"
