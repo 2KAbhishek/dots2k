@@ -28,7 +28,7 @@ floating_modifier $mod
 bindsym $mod+Return exec $terminal
 
 # kill focused window
-bindsym $mod+Shift+q kill
+bindsym $mod+q kill
 
 # start program launcher
 bindsym $mod+d exec --no-startup-id dmenu_recency
@@ -72,10 +72,10 @@ bindsym $mod+Ctrl+x --release exec --no-startup-id xkill
 # focus_follows_mouse no
 
 # change focus
-bindsym $mod+j focus left
-bindsym $mod+k focus down
-bindsym $mod+l focus up
-bindsym $mod+h focus right
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
+bindsym $mod+h focus left
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
@@ -103,7 +103,7 @@ bindsym $mod+Shift+b move container to workspace back_and_forth; workspace back_
 # split orientation
 bindsym $mod+g split h;exec notify-send 'Tile horizontally'
 bindsym $mod+v split v;exec notify-send 'Tile vertically'
-bindsym $mod+q split toggle
+bindsym $mod+Shift+q split toggle
 
 # toggle fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
