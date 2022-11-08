@@ -6,3 +6,7 @@
 # lazygit state
 .config/lazygit/state.yml
 .config/lazygit/.tmp
+
+# cmus
+.config/cmus/*
+!.config/cmus/darkwind.theme
