@@ -41,6 +41,7 @@ export PATH=$GOBIN:$PATH
 export PATH=$HOME/.cargo/bin:$PATH
 export PATH=$HOME/.local/share/gem/ruby/3.0.0/bin:$PATH
 export PATH=$HOME/.npm/bin:$PATH
+export PATH=$HOME/.config/composer/vendor:$PATH
 
 export CHROME_EXECUTABLE=/usr/bin/google-chrome-stable
 
@@ -53,6 +54,9 @@ eval "$(thefuck --alias)"
 [ -f ~/.config/broot/launcher/bash/br ] && source ~/.config/broot/launcher/bash/br
 # Map CapsLock to Escape
 setxkbmap -option caps:swapescape
+
+# Enable touch to click for trackpad
+xinput set-prop "$(xinput list --name-only | grep -i touch)" "libinput Tapping Enabled" 1
 
 # Homebrew
 # [ -f /home/linuxbrew/.linuxbrew/bin/brew ] && eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
