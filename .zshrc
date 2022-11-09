@@ -43,6 +43,7 @@ plugins=(adb
     thefuck
     timer
     tmux
+    vi-mode
     web-search
     z
     zsh-autopair
