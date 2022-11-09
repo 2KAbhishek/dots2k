@@ -12,6 +12,14 @@ export ZSH="$HOME/.oh-my-zsh"
 # Options
 setopt hist_ignore_dups
 setopt hist_expire_dups_first
+unsetopt beep
+setopt auto_cd
+setopt glob_dots
+setopt nomatch
+setopt menu_complete
+setopt extended_glob
+setopt interactive_comments
+setopt append_history
 
 # General
 DISABLE_AUTO_TITLE="false"
