@@ -64,21 +64,17 @@ plugins=(adb
 # zsh-autocomplete
 
 # Modules
+# Rename
 autoload -U zmv
-autoload -U compinit && compinit #Keep at last
-
+# Completion
+autoload -Uz compinit
+zstyle ':completion:*' menu select
+zmodload zsh/complist
+_comp_options+=(globdots)
+zle_highlight=('paste:none')
+# Docker
 zstyle ':completion:*:*:docker:*' option-stacking yes
 zstyle ':completion:*:*:docker-*:*' option-stacking yes
-
-# Plugin options
-MAGIC_ENTER_GIT_COMMAND="git status -s && git diff HEAD"
-MAGIC_ENTER_OTHER_COMMAND="lsda"
-ZSH_PYENV_QUIET=true
-ZSH_COLORIZE_TOOL="chroma"
-ZSH_COLORIZE_STYLE="dracula"
-ZSH_COLORIZE_CHROMA_FORMATTER="terminal16m"
-TIMER_THRESHOLD=1
-
 # fzf-tab previews
 zstyle ':fzf-tab:complete:cd:*' fzf-preview 'exa -TFl --group-directories-first --icons --git -L 2 --no-user $realpath'
 zstyle ':fzf-tab:complete:nvim:*' fzf-preview 'bat --color=always --style=numbers --line-range=:500 $realpath'
@@ -100,6 +96,24 @@ zstyle ':fzf-tab:complete:git-checkout:*' fzf-preview \
     "recent commit object name") git show --color=always $word | delta ;;
     *) git log --color=always $word ;;
     esac'
+compinit
+
+# Keys
+autoload -U up-line-or-beginning-search
+autoload -U down-line-or-beginning-search
+zle -N up-line-or-beginning-search
+zle -N down-line-or-beginning-search
+# Colors
+autoload -Uz colors && colors
+
+# Plugin options
+MAGIC_ENTER_GIT_COMMAND="git status -s && git diff HEAD"
+MAGIC_ENTER_OTHER_COMMAND="lsda"
+ZSH_PYENV_QUIET=true
+ZSH_COLORIZE_TOOL="chroma"
+ZSH_COLORIZE_STYLE="dracula"
+ZSH_COLORIZE_CHROMA_FORMATTER="terminal16m"
+TIMER_THRESHOLD=1
 
 # Theme
 ZSH_THEME="powerlevel10k/powerlevel10k"
@@ -108,19 +122,13 @@ if [[ $TERM == "linux" ]]; then
     ZSH_THEME="ys"
 fi
 
-source $ZSH/oh-my-zsh.sh
-
 # powerlevel2k
-[ -f ~/.p10k.zsh ] && source ~/.p10k.zsh
-
 if [[ $ZSH_THEME == "powerlevel10k/powerlevel10k" ]]; then
+    [ -f ~/.p10k.zsh ] && source ~/.p10k.zsh
     [ -f ~/.config/shell/powerlevel2k.zsh ] && source ~/.config/shell/powerlevel2k.zsh
 fi
 
-# Key Bindings
-bindkey -s '^H' ' source ~/.zshrc^M ^M'
-
-bindkey "^F" fzf-file-widget
+source $ZSH/oh-my-zsh.sh
 
 # Aliases
 alias reload='source ~/.zshrc'
@@ -133,6 +141,10 @@ alias -g wcc="| wc -m"
 alias -g wcl="| wc -l"
 alias -g wcw="| wc -w"
 alias -g Z="| fzf"
+
+# Key Bindings
+bindkey -s '^H' ' source ~/.zshrc^M ^M'
+bindkey "^F" fzf-file-widget
 
 # Commands
 eval "$(fasd --init posix-alias zsh-hook zsh-ccomp-install zsh-wcomp-install zsh-ccomp zsh-wcomp)"
