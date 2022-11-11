@@ -49,6 +49,7 @@ export GPG_TTY=$(tty)
 
 eval "$(dircolors ~/.dircolors)";
 eval "$(thefuck --alias)"
+eval "$(navi widget zsh)"
 
 # broot file explorer
 [ -f ~/.config/broot/launcher/bash/br ] && source ~/.config/broot/launcher/bash/br
