@@ -1,7 +1,7 @@
 [user]
     email = iam2kabhishek@gmail.com
     name = Abhishek Keshri
-    signingkey = 5FE4F23032EE62A5BED6101187ABE188E6B98D1C
+    signingkey = 62BD6AA2E913B3D3
 
 [commit]
     gpgSign = true
