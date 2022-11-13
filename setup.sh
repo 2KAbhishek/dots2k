@@ -8,12 +8,12 @@ function install_packages {
     echo -e "\u001b[7m Installing required packages... \u001b[0m"
     if [ -f /etc/debian_version ]; then
         sudo apt install \
-            curl git zsh vim neovim tmux bat fzf fasd \
+            kitty curl git zsh vim neovim tmux bat fzf fasd \
             exa gh ranger silversearcher-ag fd-find unzip \
             thefuck xclip ncdu ranger cmus htop ripgrep powerline
     elif [ -f /etc/arch-release ]; then
         sudo pacman -S \
-            curl git zsh python vim neovim tmux bat fzf fasd fd unzip \
+            kitty curl git zsh python vim neovim tmux bat fzf fasd fd unzip \
             lsd github-cli git-delta lazygit openssh ranger the_silver_searcher \
             thefuck xclip broot ncdu ranger cmus htop broot xplr ripgrep powerline \
             exa
@@ -124,7 +124,8 @@ function install_vim_plugins {
 
     echo -e "\u001b[7m Installing plugins for vim and nvim... \u001b[0m"
     vim +PlugUpdate +qall
-    nvim -c Packersync
+    nvim -c PackerCompile
+    nvim -c PackerSync
 }
 
 function install_tmux_plugins {
