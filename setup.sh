@@ -10,13 +10,14 @@ function install_packages {
         sudo apt install \
             kitty curl git zsh vim neovim tmux bat fzf fasd \
             exa gh ranger silversearcher-ag fd-find unzip \
-            thefuck xclip ncdu ranger cmus htop ripgrep powerline
+            thefuck xclip ncdu ranger cmus htop ripgrep powerline \
+            libnotify-bin
     elif [ -f /etc/arch-release ]; then
         sudo pacman -S \
             kitty curl git zsh python vim neovim tmux bat fzf fasd fd unzip \
             lsd github-cli git-delta lazygit openssh ranger the_silver_searcher \
             thefuck xclip broot ncdu ranger cmus htop broot xplr ripgrep powerline \
-            exa
+            exa libnotify
     else
         echo "Distro not detected, please install packages manually"
         exit 1
