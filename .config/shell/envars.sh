@@ -47,12 +47,14 @@ export CHROME_EXECUTABLE=/usr/bin/google-chrome-stable
 
 export GPG_TTY=$(tty)
 
-eval "$(dircolors ~/.dircolors)";
-eval "$(thefuck --alias)"
-eval "$(navi widget zsh)"
+# Executables
+if type thefuck >/dev/null 2>&1; then eval "$(dircolors ~/.dircolors)"; fi
+if type thefuck >/dev/null 2>&1; then eval "$(thefuck --alias)"; fi
+if type navi >/dev/null 2>&1; then eval "$(navi widget zsh)"; fi
 
 # broot file explorer
 [ -f ~/.config/broot/launcher/bash/br ] && source ~/.config/broot/launcher/bash/br
+
 # Map CapsLock to Escape
 setxkbmap -option caps:swapescape
 
@@ -64,4 +66,4 @@ xinput set-prop "$(xinput list --name-only | grep -i touch)" "libinput Tapping E
 # [ -f "${HOMEBREW_PREFIX}/etc/bash_completion.d/brew" ] && source "${HOMEBREW_PREFIX}/etc/bash_completion.d/brew"
 
 # asdf
-# [ -f /opt/asdf-vm/asdf.sh ] && source /opt/asdf-vm/asdf.sh
+[ -f /opt/asdf-vm/asdf.sh ] && source /opt/asdf-vm/asdf.sh
