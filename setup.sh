@@ -11,7 +11,8 @@ function install_packages {
             kitty curl git zsh vim neovim tmux bat fzf fasd \
             exa gh ranger silversearcher-ag fd-find unzip \
             thefuck xclip ncdu ranger cmus htop ripgrep powerline \
-            libnotify-bin autorandr
+            libnotify-bin autorandr;
+        sudo ln -sfnv /usr/bin/fdfind /usr/bin/fd
     elif [ -f /etc/arch-release ]; then
         sudo pacman -S \
             kitty curl git zsh python vim neovim tmux bat fzf fasd fd unzip \
