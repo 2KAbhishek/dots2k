@@ -12,13 +12,14 @@ function install_packages {
             exa gh ranger silversearcher-ag fd-find unzip \
             thefuck xclip ncdu ranger cmus htop ripgrep powerline \
             libnotify-bin autorandr;
-        sudo ln -sfnv /usr/bin/fdfind /usr/bin/fd
+        sudo ln -sfnv /usr/bin/fdfind /usr/bin/fd;
+        sudo ln -sfnv /usr/bin/batcat /usr/bin/bat;
     elif [ -f /etc/arch-release ]; then
         sudo pacman -S \
             kitty curl git zsh python vim neovim tmux bat fzf fasd fd unzip \
             lsd github-cli git-delta lazygit openssh ranger the_silver_searcher \
             thefuck xclip broot ncdu ranger cmus htop broot xplr ripgrep powerline \
-            exa libnotify autorandr
+            exa libnotify autorandr;
     else
         echo "Distro not detected, please install packages manually"
         exit 1
