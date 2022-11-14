@@ -1,6 +1,0 @@
-configuration {
- modi: "windowcd,drun,run,combi,emoji,filebrowser";
- font: "FiraCode Nerd Font 10";
- combi-modi: "windowcd,drun";
-}
-@theme "Arc-Dark"
