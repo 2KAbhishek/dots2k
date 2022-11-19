@@ -39,6 +39,7 @@ function backup_configs {
     mv -iv ~/.config/broot/conf.toml ~/.config/broot/conf.toml.old
     mv -iv ~/.config/cmus/darkwind.theme ~/.config/cmus/darkwind.theme.old
     mv -iv ~/.config/delta ~/.config/delta.old
+    mv -iv ~/.config/fish/ ~/.config/fish.old
     mv -iv ~/.config/fontconfig/ ~/.config/fontconfig.old
     mv -iv ~/.config/htop ~/.config/htop.old
     mv -iv ~/.config/i3 ~/.config/i3.old
@@ -75,6 +76,7 @@ function setup_symlinks {
     ln -sfnv "$PWD/.config/broot/" ~/.config/
     ln -sfnv "$PWD/.config/cmus/" ~/.config/
     ln -sfnv "$PWD/.config/delta/" ~/.config/
+    ln -sfnv "$PWD/.config/fish/" ~/.config/
     ln -sfnv "$PWD/.config/fontconfig/" ~/.config/
     ln -sfnv "$PWD/.config/htop/" ~/.config/
     ln -sfnv "$PWD/.config/i3" ~/.config/
