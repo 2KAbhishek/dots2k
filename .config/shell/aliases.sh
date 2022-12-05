@@ -19,7 +19,12 @@ alias cp="cp -irv"
 alias cpa="clippaste"
 alias diff="diff --color=auto"
 alias e='nvim $(files)'
+alias emd='emacs --daemon &'
+alias emc="emacsclient -c -a 'emacs'"
+alias emt='emacs --no-window-system'
 alias exag="exa -ahlT -L=1  -s=extension --git --group-directories-first"
+alias exdo='exercism download --exercise=hello-world --track=ruby'
+alias exsu='exercism submit'
 alias fd="fd -H"
 alias fdir="find . -type d -name"
 alias ffil="find . -type f -name"
