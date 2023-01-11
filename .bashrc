@@ -1,4 +1,4 @@
-# Title
+#!/bin/bash
 PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME%%.*}:${PWD/#$HOME/\~}\007"'
 
 if [[ ${EUID} == 0 ]] ; then
