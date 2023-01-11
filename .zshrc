@@ -137,7 +137,8 @@ alias reload='source ~/.zshrc'
 alias -s md=nvim
 alias -s html=nvim
 
-alias -g G="| grep "
+alias -g G="| grep"
+alias -g C="| clipcopy"
 alias -g wcc="| wc -m"
 alias -g wcl="| wc -l"
 alias -g wcw="| wc -w"
