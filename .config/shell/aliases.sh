@@ -1,5 +1,9 @@
 #!/bin/bash
 # Aliases
+alias ..="cd ../"
+alias ...="cd ../../"
+alias ....="cd ../../../"
+alias .....="cd ../../../../"
 alias 7zc="7z a -mx=9"
 alias acp="advcp -gv"
 alias amv="advmv -gv"
