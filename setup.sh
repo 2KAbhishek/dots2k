@@ -9,7 +9,7 @@ function install_packages {
     if [ -f /etc/debian_version ]; then
         sudo apt install \
             kitty curl git zsh vim neovim tmux bat fzf fasd \
-            exa gh ranger silversearcher-ag fd-find unzip \
+            exa gh silversearcher-ag fd-find unzip \
             thefuck xclip ncdu ranger cmus htop ripgrep powerline \
             libnotify-bin autorandr;
         sudo ln -sfnv /usr/bin/fdfind /usr/bin/fd;
