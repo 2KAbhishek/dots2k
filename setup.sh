@@ -129,8 +129,8 @@ function install_vim_plugins {
 
     echo -e "\u001b[7m Installing plugins for vim and nvim... \u001b[0m"
     vim +PlugUpdate +qall
-    nvim -c PackerCompile
-    nvim -c PackerSync
+    pip install neovim
+    nvim -c UpdateRemotePlugins
 }
 
 function install_tmux_plugins {
