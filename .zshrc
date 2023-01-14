@@ -31,7 +31,6 @@ SAVEHIST=99999
 plugins=(adb
     alias-tips
     asdf
-    auto-notify
     catimg
     colorize
     direnv
@@ -48,7 +47,6 @@ plugins=(adb
     git-extra-commands
     globalias
     magic-enter
-    thefuck
     timer
     tmux
     vi-mode
@@ -58,6 +56,8 @@ plugins=(adb
     zsh-autosuggestions
     zsh-completions
     zsh-navigation-tools
+    auto-notify
+    thefuck
     fzf) # fzf at last for '^R' binding
 
 # Uninstalled, TODO doesn't work with fzf-tab
