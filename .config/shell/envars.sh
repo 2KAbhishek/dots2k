@@ -48,7 +48,7 @@ export CHROME_EXECUTABLE=/usr/bin/google-chrome-stable
 export GPG_TTY=$(tty)
 
 # Executables
-if type thefuck >/dev/null 2>&1; then eval "$(dircolors ~/.dircolors)"; fi
+if type dircolors >/dev/null 2>&1; then eval "$(dircolors ~/.dircolors)"; fi
 if type thefuck >/dev/null 2>&1; then eval "$(thefuck --alias)"; fi
 if type navi >/dev/null 2>&1; then eval "$(navi widget zsh)"; fi
 
