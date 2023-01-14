@@ -1,6 +1,9 @@
 [submodule ".config/nvim"]
 	path = .config/nvim
 	url = git@github.com:2KAbhishek/nvim2k.git
+[submodule ".config/rofi"]
+	path = .config/rofi
+	url = git@github.com:2KAbhishek/rofi2k.git
 [submodule ".config/awesome"]
 	path = .config/awesome
 	url = git@github.com:2KAbhishek/awesome2k.git
