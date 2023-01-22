@@ -137,12 +137,12 @@ alias reload='source ~/.zshrc'
 alias -s md=nvim
 alias -s html=nvim
 
-alias -g G="| grep"
 alias -g C="| clipcopy"
-alias -g wcc="| wc -m"
-alias -g wcl="| wc -l"
-alias -g wcw="| wc -w"
+alias -g G="| grep"
+alias -g L="| wc -l"
 alias -g Z="| fzf"
+alias -g wcc="| wc -m"
+alias -g wcw="| wc -w"
 
 # Key Bindings
 bindkey -s '^H' ' source ~/.zshrc^M ^M'
