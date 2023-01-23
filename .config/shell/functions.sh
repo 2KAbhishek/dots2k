@@ -65,31 +65,30 @@ function man() {
 }
 
 # markdown link check
-function mlc () {
+function mlc() {
     find $1 -name \*.md -exec markdown-link-check -p {} \;
 }
 
 # ex - archive extractor
-function ex ()
-{
-  if [ -f $1 ] ; then
-    case $1 in
-      *.tar.bz2)   tar xjf $1   ;;
-      *.tar.gz)    tar xzf $1   ;;
-      *.bz2)       bunzip2 $1   ;;
-      *.rar)       unrar x $1   ;;
-      *.gz)        gunzip $1    ;;
-      *.tar)       tar xf $1    ;;
-      *.tbz2)      tar xjf $1   ;;
-      *.tgz)       tar xzf $1   ;;
-      *.zip)       unzip $1     ;;
-      *.Z)         uncompress $1;;
-      *.7z)        7z x $1      ;;
-      *)           echo "'$1' cannot be extracted via ex()" ;;
-    esac
-  else
-    echo "'$1' is not a valid file"
-  fi
+function ex() {
+    if [ -f $1 ]; then
+        case $1 in
+        *.tar.bz2) tar xjf $1 ;;
+        *.tar.gz) tar xzf $1 ;;
+        *.bz2) bunzip2 $1 ;;
+        *.rar) unrar x $1 ;;
+        *.gz) gunzip $1 ;;
+        *.tar) tar xf $1 ;;
+        *.tbz2) tar xjf $1 ;;
+        *.tgz) tar xzf $1 ;;
+        *.zip) unzip $1 ;;
+        *.Z) uncompress $1 ;;
+        *.7z) 7z x $1 ;;
+        *) echo "'$1' cannot be extracted via ex()" ;;
+        esac
+    else
+        echo "'$1' is not a valid file"
+    fi
 }
 
 lg() {
@@ -97,27 +96,39 @@ lg() {
     lazygit "$@"
 
     if [ -f $LAZYGIT_NEW_DIR_FILE ]; then
-            cd "$(cat $LAZYGIT_NEW_DIR_FILE)"
-            rm -f $LAZYGIT_NEW_DIR_FILE > /dev/null
+        cd "$(cat $LAZYGIT_NEW_DIR_FILE)"
+        rm -f $LAZYGIT_NEW_DIR_FILE >/dev/null
     fi
 }
 
 # Runs when tab is pressed after ,
 _fzf_comprun() {
-  local command=$1
-  shift
+    local command=$1
+    shift
 
-  case "$command" in
-    cd)           fzf "$@" --preview 'exa -TFl --group-directories-first --icons --git -L 2 --no-user {}' ;;
-    nvim)         fzf --preview 'bat --color=always --style=numbers --line-range=:500 {}' ;;
-    vim)          fzf --preview 'bat --color=always --style=numbers --line-range=:500 {}' ;;
-    *)            fzf "$@" ;;
-  esac
+    case "$command" in
+    cd) fzf "$@" --preview 'exa -TFl --group-directories-first --icons --git -L 2 --no-user {}' ;;
+    nvim) fzf --preview 'bat --color=always --style=numbers --line-range=:500 {}' ;;
+    vim) fzf --preview 'bat --color=always --style=numbers --line-range=:500 {}' ;;
+    *) fzf "$@" ;;
+    esac
 }
 
 # Only show files which have $1 present in contents
-faz(){
-  local line
-  line=`ag --nocolor "$1" | fzf` \
-    && $EDITOR $(cut -d':' -f1 <<< "$line") +$(cut -d':' -f2 <<< "$line")
+faz() {
+    local line
+    line=$(ag --nocolor "$1" | fzf) &&
+        $EDITOR $(cut -d':' -f1 <<<"$line") +$(cut -d':' -f2 <<<"$line")
+}
+
+fz() {
+    local line
+    line=$(rg "$1" | fzf) &&
+        $EDITOR $(cut -d':' -f1 <<<"$line") +$(cut -d':' -f2 <<<"$line")
+}
+
+todos() {
+    cd "$NOTES_ROOT" || return
+    $EDITOR "$(rg -le '- \[ \]' --sortr modified | fzf)"
+    cd - || return
 }
