@@ -132,3 +132,8 @@ todos() {
     $EDITOR "$(rg -le '- \[ \]' --sort created | fzf)"
     cd - || return
 }
+
+accent() {
+    sed -i "s/local accent.*/local accent = '$1'/" ~/.config/awesome/awesome2k.lua
+    echo 'awesome.restart()' | awesome-client
+}
