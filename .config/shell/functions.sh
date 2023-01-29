@@ -134,6 +134,17 @@ todos() {
 }
 
 accent() {
-    sed -i "s/local accent.*/local accent = '$1'/" ~/.config/awesome/awesome2k.lua
+    color="#1688f0"
+
+    if [[ $1 == '#'* ]]; then
+        color=$1
+    elif [ -z "$1" ]; then
+        color="#1688f0"
+    else
+        color="#$1"
+    fi
+
+    sed -i "s/local accent.*/local accent = '$color'/" ~/.config/awesome/awesome2k.lua
+    sed -i "s/selected.*/selected:       $color;/" ~/.config/rofi/themes/shared/colors.rasi
     echo 'awesome.restart()' | awesome-client
 }
