@@ -10,7 +10,7 @@ function install_packages {
         sudo pacman -S \
             curl git zsh python vim neovim tmux bat fzf fasd fd exa unzip \
             lsd github-cli git-delta lazygit openssh ranger the_silver_searcher \
-            thefuck xclip broot ncdu ranger htop broot xplr ripgrep powerline \
+            thefuck xclip broot ncdu htop broot xplr ripgrep powerline \
             kitty libnotify autorandr cmus;
     else
         sudo apt install \
@@ -53,7 +53,6 @@ function backup_configs {
     mv -iv ~/.dircolors ~/.dircolors.old
     mv -iv ~/.dmenurc ~/.dmenurc.old
     mv -iv ~/.gitconfig ~/.gitconfig.old
-    mv -iv ~/.npmrc ~/.npmrc.old
     mv -iv ~/.p10k.zsh ~/.p10k.zsh.old
     mv -iv ~/.prettierrc ~/.prettierrc.old
     mv -iv ~/.pystartup ~/.pystartup.old
@@ -92,7 +91,6 @@ function setup_symlinks {
     ln -sfnv "$PWD/.dircolors" ~/
     ln -sfnv "$PWD/.dmenurc" ~/
     ln -sfnv "$PWD/.gitconfig" ~/
-    ln -sfnv "$PWD/.npmrc" ~/
     ln -sfnv "$PWD/.p10k.zsh" ~/
     ln -sfnv "$PWD/.prettierrc" ~/
     ln -sfnv "$PWD/.pystartup" ~/
