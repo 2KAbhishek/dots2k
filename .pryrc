@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Configure editor
 Pry.config.editor = proc { |file, line| "nvim +#{line} #{file}" }
 
@@ -64,8 +66,8 @@ before_session_hook = Pry::Hooks.new.add_hook(:before_session, :add_dirs_to_load
   dirs_added = %w[spec test presenters lib]
                .map { |d| "#{current_dir}/#{d}" }
                .map do |path|
-    if File.exist?(path) && !$:.include?(path)
-      i $: << path
+    if File.exist?(path) && $LOAD_PATH.exclude?(path)
+      i $LOAD_PATH << path
       path
     end
   end.compact
