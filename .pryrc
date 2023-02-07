@@ -82,11 +82,6 @@ def a_hash
   { hello: 'world', free: 'of charge' }
 end
 
-def do_time(repetitions = 100, &)
-  require 'benchmark'
-  Benchmark.bm { |b| b.report { repetitions.times(&) } }
-end
-
 # help methods
 def more_help
   puts 'Helpful shortcuts:'
