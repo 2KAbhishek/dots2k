@@ -55,6 +55,7 @@ function backup_configs {
     mv -iv ~/.gitconfig ~/.gitconfig.old
     mv -iv ~/.p10k.zsh ~/.p10k.zsh.old
     mv -iv ~/.prettierrc ~/.prettierrc.old
+    mv -iv ~/.pryrc ~/.pryrc.old
     mv -iv ~/.pystartup ~/.pystartup.old
     mv -iv ~/.tmux.conf ~/.tmux.conf.old
     mv -iv ~/.vimrc ~/.vimrc.old
@@ -93,6 +94,7 @@ function setup_symlinks {
     ln -sfnv "$PWD/.gitconfig" ~/
     ln -sfnv "$PWD/.p10k.zsh" ~/
     ln -sfnv "$PWD/.prettierrc" ~/
+    ln -sfnv "$PWD/.pryrc" ~/
     ln -sfnv "$PWD/.pystartup" ~/
     ln -sfnv "$PWD/.tmux.conf" ~/
     ln -sfnv "$PWD/.vimrc" ~/
