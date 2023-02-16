@@ -46,12 +46,12 @@ begin
   AwesomePrint.pry!
 rescue LoadError => e
   begin
-    puts "no awesome_print :( #{e}"
+    puts "no awesome_print :( try gem install awesome_print #{e}"
     puts 'trying amazing_print'
     require 'amazing_print'
     AmazingPrint.pry!
   rescue LoadError => err2
-    puts "no awesome_print :( #{err2}"
+    puts "no amazing_print either :( #{err2}"
   end
 end
 
@@ -87,11 +87,11 @@ end
 # help methods
 def more_help
   puts 'Helpful shortcuts:'
-  puts 'e  : edit       Edit current console command'
-  puts 'hh : hist -T 20       Last 20 commands'
-  puts 'hg : hist -T 20 -G    Up to 20 commands matching expression'
-  puts 'hG : hist -G          Commands matching expression ever used'
-  puts 'hr : hist -r          hist -r <command number> to run a command'
+  puts 'e  : edit            Edit current console command'
+  puts 'hh : hist -T 20      Last 20 commands'
+  puts 'hg : hist -T 20 -G   Up to 20 commands matching expression'
+  puts 'hG : hist -G         Commands matching expression ever used'
+  puts 'hr : hist -r         hist -r <command number> to run a command'
   puts
   puts 'Samples variables'
   puts 'a_array  :  [1, 2, 3, 4, 5, 6]'
@@ -100,7 +100,7 @@ def more_help
   puts 'helper   : Access Rails helpers'
   puts 'app      : Access url_helpers'
   puts
-  puts 'require "rails_helper"                : Require rails_helper'
+  puts 'require "rails_helper"               : Require rails_helper'
   puts 'include FactoryBot::Syntax::Methods  : To include Factory Bot Syntax'
   puts
   puts 'or if you defined one...'
@@ -109,7 +109,7 @@ def more_help
   puts 'Sidekiq::Queue.new.clear              : To clear sidekiq'
   puts 'Sidekiq.redis { |r| puts r.flushall } : Another clear of sidekiq'
   puts
-  puts "Run `require 'factory_bot'; FactoryBot.find_definitions` for FactoryBot"
+  puts "Run `require 'factory_bot'`; FactoryBot.find_definitions` for FactoryBot"
   puts
   puts 'Installed debugging Shortcuts'
   puts 'w  :  whereami'
