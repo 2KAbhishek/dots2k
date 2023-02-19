@@ -59,12 +59,12 @@ if type navi >/dev/null 2>&1; then eval "$(navi widget zsh)"; fi
 # broot file explorer
 [ -f ~/.config/broot/launcher/bash/br ] && source ~/.config/broot/launcher/bash/br
 # Do not map keys on WSL
-if ! grep -qi microsoft /proc/version; then
-    # Map CapsLock to Escape
-    setxkbmap -option caps:swapescape
-    # Enable touch to click for trackpad
-    xinput set-prop "$(xinput list --name-only | grep -i touch)" "libinput Tapping Enabled" 1
-fi
+# if ! grep -qi microsoft /proc/version; then
+#     # Map CapsLock to Escape
+#     setxkbmap -option caps:swapescape
+#     # Enable touch to click for trackpad
+#     xinput set-prop "$(xinput list --name-only | grep -i touch)" "libinput Tapping Enabled" 1
+# fi
 
 # Homebrew
 # [ -f /home/linuxbrew/.linuxbrew/bin/brew ] && eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
