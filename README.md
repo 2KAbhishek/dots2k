@@ -51,7 +51,7 @@ cd Dotfiles
 ./setup.sh -a
 ```
 
-## Requirements
+I made a small [recording for setting this up on an Ubuntu system](https://www.youtube.com/watch?v=X8x-gUwucBU&list=PL52YFor3VtLegIRc3uDl9koGP-Fu_YGru)
 
 For installation `git` `curl` & `zsh` are must, other tools are mentioned below.
 
