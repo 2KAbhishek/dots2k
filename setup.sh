@@ -53,6 +53,7 @@ function backup_configs {
     mv -iv ~/.dircolors ~/.dircolors.old
     mv -iv ~/.dmenurc ~/.dmenurc.old
     mv -iv ~/.gitconfig ~/.gitconfig.old
+    mv -iv ~/.gitignore.global ~/.gitignore.global.old
     mv -iv ~/.p10k.zsh ~/.p10k.zsh.old
     mv -iv ~/.prettierrc ~/.prettierrc.old
     mv -iv ~/.pryrc ~/.pryrc.old
@@ -92,6 +93,7 @@ function setup_symlinks {
     ln -sfnv "$PWD/.dircolors" ~/
     ln -sfnv "$PWD/.dmenurc" ~/
     ln -sfnv "$PWD/.gitconfig" ~/
+    ln -sfnv "$PWD/.gitignore.global" ~/
     ln -sfnv "$PWD/.p10k.zsh" ~/
     ln -sfnv "$PWD/.prettierrc" ~/
     ln -sfnv "$PWD/.pryrc" ~/
