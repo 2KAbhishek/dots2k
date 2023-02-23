@@ -1,0 +1,5 @@
+# Mac Finder
+.DS_Store
+
+# asdf versions
+.tool-versions
