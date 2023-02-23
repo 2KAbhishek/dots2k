@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Fetch submodules
-git submodule update --init
+git submodule update --init --recursive
 
 # Setup script for Dotfiles
 function install_packages {
