@@ -117,7 +117,7 @@ _fzf_comprun() {
 # Only show files which have $1 present in contents
 faz() {
     local line
-    line=$(ag --nocolor "$1" | fzf) &&
+    line=$(rg "$1" | fzf) &&
         $EDITOR $(cut -d':' -f1 <<<"$line") +$(cut -d':' -f2 <<<"$line")
 }
 
