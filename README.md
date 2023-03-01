@@ -73,46 +73,46 @@ Powerline patched fonts are required for glyphs. I'll recommend [Nerd Fonts](htt
 
 This repo contains configurations for following tools.
 
-- asdf : [~/.asdfrc](https://github.com/2KAbhishek/Dotfiles/blob/main/.asdfrc)
-- autorandr : [~/.config/autorandr/](https://github.com/2KAbhishek/Dotfiles/blob/main/.config/autorandr/)
-- bash : [~/.bashrc](https://github.com/2KAbhishek/Dotfiles/blob/main/.bashrc)
-- bat : [~/.config/bat/](https://github.com/2KAbhishek/Dotfiles/blob/main/.config/bat/)
-- broot : [~/.config/broot/](https://github.com/2KAbhishek/Dotfiles/blob/main/.config/broot/)
-- compiz : [~/.config/compiz.profile](https://github.com/2KAbhishek/Dotfiles/blob/main/.config/compiz.profile)
-- conky : [~/.config/sysinfo.conkyrc](https://github.com/2KAbhishek/Dotfiles/blob/main/.config/sysinfo.conkyrc)
-- cmus : [~/.config/cmus/](https://github.com/2KAbhishek/Dotfiles/blob/main/.config/cmus/)
-- dmenu : [~/.dmenurc](https://github.com/2KAbhishek/Dotfiles/blob/main/.dmenurc)
-- dircolors : [~/.dircolors](https://github.com/2KAbhishek/Dotfiles/blob/main/.dircolors)
-- fontconfig : [~/.config/fontconfig/fonts.conf/](https://github.com/2KAbhishek/Dotfiles/blob/main/.config/fontconfig/fonts.conf/)
-- git : [~/.gitconfig](https://github.com/2KAbhishek/Dotfiles/blob/main/.gitconfig)
-- htop : [~/.config/htop/](https://github.com/2KAbhishek/Dotfiles/blob/main/.config/htop/)
-- i3 : [~/.config/i3/config](https://github.com/2KAbhishek/Dotfiles/blob/main/.config/i3/config)
-- i3status : [~/.config/i3status/config](https://github.com/2KAbhishek/Dotfiles/blob/main/.config/i3status/config)
-- kitty : [~/.config/kitty/kitty.conf](https://github.com/2KAbhishek/Dotfiles/blob/main/.config/kitty/kitty.conf)
-- konsole : [~/.local/share/konsole/](https://github.com/2KAbhishek/Dotfiles/blob/main/.local/share/konsole)
-- libinbut : [~/.config/libinput-gestures.conf](https://github.com/2KAbhishek/Dotfiles/blob/main/.config/libinput-gestures.conf)
-- neovim : [~/.config/nvim/](https://github.com/2KAbhishek/Dotfiles/blob/main/.config/nvim/)
-- python : [~/.pystartup](https://github.com/2KAbhishek/Dotfiles/blob/main/.pystartup)
-- ranger : [~/.config/ranger/](https://github.com/2KAbhishek/Dotfiles/blob/main/.config/ranger/)
-- tmux : [~/.tmux.conf](https://github.com/2KAbhishek/Dotfiles/blob/main/.tmux.conf)
-- vim : [~/.vimrc](https://github.com/2KAbhishek/Dotfiles/blob/main/.vimrc)
-- xplr : [~/.config/xplr/](https://github.com/2KAbhishek/Dotfiles/blob/main/.config/xplr/)
-- xrdb : [~/.Xresources](https://github.com/2KAbhishek/Dotfiles/blob/main/.Xresources)
-- zsh : [~/.zshrc](https://github.com/2KAbhishek/Dotfiles/blob/main/.zshrc)
+-   asdf : [~/.asdfrc](https://github.com/2KAbhishek/Dotfiles/blob/main/.asdfrc)
+-   autorandr : [~/.config/autorandr/](https://github.com/2KAbhishek/Dotfiles/blob/main/.config/autorandr/)
+-   bash : [~/.bashrc](https://github.com/2KAbhishek/Dotfiles/blob/main/.bashrc)
+-   bat : [~/.config/bat/](https://github.com/2KAbhishek/Dotfiles/blob/main/.config/bat/)
+-   broot : [~/.config/broot/](https://github.com/2KAbhishek/Dotfiles/blob/main/.config/broot/)
+-   compiz : [~/.config/compiz.profile](https://github.com/2KAbhishek/Dotfiles/blob/main/.config/compiz.profile)
+-   conky : [~/.config/sysinfo.conkyrc](https://github.com/2KAbhishek/Dotfiles/blob/main/.config/sysinfo.conkyrc)
+-   cmus : [~/.config/cmus/](https://github.com/2KAbhishek/Dotfiles/blob/main/.config/cmus/)
+-   dmenu : [~/.dmenurc](https://github.com/2KAbhishek/Dotfiles/blob/main/.dmenurc)
+-   dircolors : [~/.dircolors](https://github.com/2KAbhishek/Dotfiles/blob/main/.dircolors)
+-   fontconfig : [~/.config/fontconfig/fonts.conf/](https://github.com/2KAbhishek/Dotfiles/blob/main/.config/fontconfig/fonts.conf/)
+-   git : [~/.gitconfig](https://github.com/2KAbhishek/Dotfiles/blob/main/.gitconfig)
+-   htop : [~/.config/htop/](https://github.com/2KAbhishek/Dotfiles/blob/main/.config/htop/)
+-   i3 : [~/.config/i3/config](https://github.com/2KAbhishek/Dotfiles/blob/main/.config/i3/config)
+-   i3status : [~/.config/i3status/config](https://github.com/2KAbhishek/Dotfiles/blob/main/.config/i3status/config)
+-   kitty : [~/.config/kitty/kitty.conf](https://github.com/2KAbhishek/Dotfiles/blob/main/.config/kitty/kitty.conf)
+-   konsole : [~/.local/share/konsole/](https://github.com/2KAbhishek/Dotfiles/blob/main/.local/share/konsole)
+-   libinbut : [~/.config/libinput-gestures.conf](https://github.com/2KAbhishek/Dotfiles/blob/main/.config/libinput-gestures.conf)
+-   neovim : [~/.config/nvim/](https://github.com/2KAbhishek/Dotfiles/blob/main/.config/nvim/)
+-   python : [~/.pystartup](https://github.com/2KAbhishek/Dotfiles/blob/main/.pystartup)
+-   ranger : [~/.config/ranger/](https://github.com/2KAbhishek/Dotfiles/blob/main/.config/ranger/)
+-   tmux : [~/.tmux.conf](https://github.com/2KAbhishek/Dotfiles/blob/main/.tmux.conf)
+-   vim : [~/.vimrc](https://github.com/2KAbhishek/Dotfiles/blob/main/.vimrc)
+-   xplr : [~/.config/xplr/](https://github.com/2KAbhishek/Dotfiles/blob/main/.config/xplr/)
+-   xrdb : [~/.Xresources](https://github.com/2KAbhishek/Dotfiles/blob/main/.Xresources)
+-   zsh : [~/.zshrc](https://github.com/2KAbhishek/Dotfiles/blob/main/.zshrc)
 
 > Some configs require special steps in order to use. Check respective tools documentation for more info.
 
-- git:
-  I am using GPG signing by default for verifying commits, check [this](https://docs.github.com/en/authentication/managing-commit-signature-verification/adding-a-new-gpg-key-to-your-github-account) for details on setting up GPG or you can use `git config --global commit.gpgSign false` to disable it.
+-   git:
+    I am using GPG signing by default for verifying commits, check [this](https://docs.github.com/en/authentication/managing-commit-signature-verification/adding-a-new-gpg-key-to-your-github-account) for details on setting up GPG or you can use `git config --global commit.gpgSign false` to disable it.
 
-- compiz:
-  Import the compiz profile using `ccsm`.
+-   compiz:
+    Import the compiz profile using `ccsm`.
 
-- conky
-  Run conky with `conky -dqc ~/.config/sysinfo.conkyrc`.
+-   conky
+    Run conky with `conky -dqc ~/.config/sysinfo.conkyrc`.
 
-- konsole
-  Open Konsole, Goto Settings -> Manage Profiles -> Check `Konsole` and click on Set as Default.
+-   konsole
+    Open Konsole, Goto Settings -> Manage Profiles -> Check `Konsole` and click on Set as Default.
 
 This repo also contains a few scripts in the [scripts](https://github.com/2KAbhishek/Dotfiles/blob/main/scripts) directory.
 
