@@ -41,7 +41,7 @@ alias files="fzf --preview 'bat --color=always --style=numbers --line-range=:500
 alias g="git"
 alias ga="git add"
 alias gc="git commit -m"
-alias gl="git pull --rebase"
+alias gl="git pull --rebase --autostash"
 alias gp="git push"
 alias gss="git status -s"
 alias gbrr="git for-each-ref --count=30 --sort=-committerdate refs/heads/ --format='%(refname:short)'"
