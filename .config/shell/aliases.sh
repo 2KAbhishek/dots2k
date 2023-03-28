@@ -60,6 +60,7 @@ alias ghrs="gh release create"
 alias ghrt="gh repo edit --add-topic "
 alias ghrv="gh repo edit --visibility "
 alias gmv="git mv"
+alias gmx="git merge -X ours"
 alias gsv="git status -v"
 alias gtop='cd "$(git rev-parse --show-toplevel)"'
 alias grep="grep --color=auto"
