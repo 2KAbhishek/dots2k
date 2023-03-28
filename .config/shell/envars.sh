@@ -6,23 +6,18 @@ export EDITOR=nvim
 export FZF_DEFAULT_COMMAND='fd --hidden --follow --exclude=.git --exclude=node_modules'
 export FZF_COMPLETION_TRIGGER=','
 export FZF_DEFAULT_OPTS="
---layout=reverse
---info=inline
---height=80%
---multi
---cycle
+--layout=reverse --info=inline --height=80% --multi --cycle --margin=1 --border=rounded
+--preview '([[ -f {} ]] && (bat --style=numbers --color=always --line-range=:500 {} || cat {})) || ([[ -d {} ]] \
+&& (exa -TFl --group-directories-first --icons --git -L 2 --no-user {} | less)) || echo {} 2> /dev/null | head -200'
 --prompt=' ' --pointer='>' --marker='✔'
 --color='hl:148,hl+:154,prompt:blue,pointer:032,marker:010,bg+:000,gutter:000'
---margin=1
---border=rounded
 --preview-window=right:65%
---preview '([[ -f {} ]] && (bat --style=numbers --color=always --line-range=:500 {} || cat {})) || ([[ -d {} ]] && (exa -TFl --group-directories-first --icons --git -L 2 --no-user {} | less)) || echo {} 2> /dev/null | head -200'
 --bind '?:toggle-preview'
 --bind 'ctrl-a:select-all'
 --bind 'ctrl-y:execute-silent(echo {+} | clipcopy)'
 --bind 'ctrl-e:execute(nvim-qt {+})'
---bind 'ctrl-v:execute(code {+})'
-"
+--bind 'ctrl-v:execute(code {+})'"
+
 export FZF_CTRL_T_COMMAND='fd -t f -HF -E=.git -E=node_modules'
 export FZF_TMUX_OPTS='-p 90%'
 
@@ -57,15 +52,16 @@ if type dircolors >/dev/null 2>&1; then eval "$(dircolors ~/.dircolors)"; fi
 if type thefuck >/dev/null 2>&1; then eval "$(thefuck --alias)"; fi
 if type navi >/dev/null 2>&1; then eval "$(navi widget zsh)"; fi
 
+if type setxkbmap >/dev/null 2>&1; then
+    setxkbmap -option caps:swapescape
+fi
+# Enable touch to click for trackpad
+if type xinput >/dev/null 2>&1; then
+    xinput set-prop "$(xinput list --name-only | grep -i touch)" "libinput Tapping Enabled" 1
+fi
+
 # broot file explorer
 [ -f ~/.config/broot/launcher/bash/br ] && source ~/.config/broot/launcher/bash/br
-# Do not map keys on WSL
-# if ! grep -qi microsoft /proc/version; then
-#     # Map CapsLock to Escape
-#     setxkbmap -option caps:swapescape
-#     # Enable touch to click for trackpad
-#     xinput set-prop "$(xinput list --name-only | grep -i touch)" "libinput Tapping Enabled" 1
-# fi
 
 # Homebrew
 # [ -f /home/linuxbrew/.linuxbrew/bin/brew ] && eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
