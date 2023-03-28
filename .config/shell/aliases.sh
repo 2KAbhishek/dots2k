@@ -73,6 +73,7 @@ alias ldir="ls -d */"
 alias litu="sudo light -A 10"
 alias litd="sudo light -U 10"
 alias ln="ln -sfnv"
+alias loca="$EDITOR ~/.local.sh"
 alias logout="sudo pkill -u \$USER"
 alias ls='ls --color=auto'
 alias lsda="lsd -A --group-dirs first --classify"
