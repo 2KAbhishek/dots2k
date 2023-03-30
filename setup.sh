@@ -11,7 +11,7 @@ function install_packages {
             curl git zsh python vim neovim tmux bat fzf fasd fd exa unzip \
             lsd github-cli git-delta lazygit openssh ranger the_silver_searcher \
             thefuck xclip broot ncdu htop broot xplr ripgrep powerline \
-            kitty libnotify autorandr cmus;
+            kitty libnotify autorandr cmus ttf-firacode-nerd;
     else
         sudo apt install \
             curl git zsh vim neovim tmux bat fzf fasd python exa gh ripgrep htop \
@@ -124,8 +124,6 @@ function install_vim_plugins {
     echo -e "\u001b[7m Installing plugin manager \u001b[0m"
     curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
         https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-    git clone --depth 1 https://github.com/wbthomason/packer.nvim \
-        ~/.local/share/nvim/site/pack/packer/start/packer.nvim
 
     echo -e "\u001b[7m Installing plugins for vim and nvim... \u001b[0m"
     vim +PlugUpdate +qall
