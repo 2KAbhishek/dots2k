@@ -147,6 +147,8 @@ alias -g wcw="| wc -w"
 # Key Bindings
 bindkey -s '^H' ' source ~/.zshrc^M ^M'
 bindkey "^F" fzf-file-widget
+bindkey -s "^P" ' nvim $(fzf)^M ^M'
+bindkey -s "^G" ' lazygit^M ^M'
 
 # Commands
 eval "$(fasd --init posix-alias zsh-hook zsh-ccomp-install zsh-wcomp-install zsh-ccomp zsh-wcomp)"
