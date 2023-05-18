@@ -3,3 +3,6 @@
 
 # asdf versions
 .tool-versions
+
+# Worktrees
+.worktrees
