@@ -26,7 +26,7 @@ function install_debian {
 function install_mac {
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
     brew install asdf bat exa fasd fd fzf gh gotop lazygit lsd ncdu neofetch \
-        neovim pastel ripgrep skhd tmux wget yabai
+        neovim pastel ripgrep skhd tmux wget yabai firefox iterm2 maccy stats
 }
 
 function install_linux {
