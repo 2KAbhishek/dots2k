@@ -236,12 +236,12 @@ fi
 echo -e "\u001b[32;1m Setting up Dotfiles...\u001b[0m"
 
 echo -e " \u001b[37;1m\u001b[4mSelect an option:\u001b[0m"
-echo -e "  \u001b[34;1m (0) Setup everything \u001b[0m"
-echo -e "  \u001b[34;1m (1) Install packages \u001b[0m"
-echo -e "  \u001b[34;1m (2) Install extras \u001b[0m"
-echo -e "  \u001b[34;1m (3) Backup configs \u001b[0m"
-echo -e "  \u001b[34;1m (4) Setup symlinks \u001b[0m"
-echo -e "  \u001b[34;1m (5) Distro specific tweaks \u001b[0m"
+echo -e "  \u001b[34;1m (0) Setup Everything \u001b[0m"
+echo -e "  \u001b[34;1m (1) Install Packages \u001b[0m"
+echo -e "  \u001b[34;1m (2) Install Extras \u001b[0m"
+echo -e "  \u001b[34;1m (3) Backup Configs \u001b[0m"
+echo -e "  \u001b[34;1m (4) Setup Symlinks \u001b[0m"
+echo -e "  \u001b[34;1m (5) Distro Tweaks \u001b[0m"
 echo -e "  \u001b[31;1m (*) Anything else to exit \u001b[0m"
 
 echo -en "\u001b[32;1m ==> \u001b[0m"
