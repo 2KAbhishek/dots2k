@@ -1,2 +1,6 @@
 # asdf
 .tool-versions
+
+# MacOS
+.DS_Store
+
