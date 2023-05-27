@@ -88,7 +88,7 @@ function setup_symlinks {
     ln -sfnv "$PWD/.config/shell" ~/.config/
     ln -sfnv "$PWD/.config/sysinfo.conkyrc" ~/.config/
     ln -sfnv "$PWD/.config/xplr/" ~/.config/
-    cp -iuvr "$PWD/.local/share/konsole/" ~/.local/share/
+    cp -ivr "$PWD/.local/share/konsole/" ~/.local/share/
     ln -sfnv "$PWD/.asdfrc" ~/
     ln -sfnv "$PWD/.bashrc" ~/
     ln -sfnv "$PWD/.dircolors" ~/
