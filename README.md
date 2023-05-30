@@ -47,7 +47,7 @@ cd Dotfiles
 # Menu based interactive setup
 ./setup.sh
 
-# Setup everythin unattended
+# Setup everything unattended
 ./setup.sh -a
 ```
 
