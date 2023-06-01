@@ -153,7 +153,7 @@ function backup_configs {
     mv -iv ~/.prettierrc ~/.prettierrc.old
     mv -iv ~/.pryrc ~/.pryrc.old
     mv -iv ~/.pystartup ~/.pystartup.old
-    mv -iv ~/..stylua.toml ~/..stylua.toml.old
+    mv -iv ~/.stylua.toml ~/.stylua.toml.old
     mv -iv ~/.tmux.conf ~/.tmux.conf.old
     mv -iv ~/.vimrc ~/.vimrc.old
     mv -iv ~/.Xresources ~/.Xresources.old
@@ -194,7 +194,7 @@ function setup_symlinks {
     ln -sfnv "$PWD/.prettierrc" ~/
     ln -sfnv "$PWD/.pryrc" ~/
     ln -sfnv "$PWD/.pystartup" ~/
-    ln -sfnv "$PWD/..stylua.toml" ~/
+    ln -sfnv "$PWD/.stylua.toml" ~/
     ln -sfnv "$PWD/.tmux.conf" ~/
     ln -sfnv "$PWD/.vimrc" ~/
     ln -sfnv "$PWD/.Xresources" ~/
