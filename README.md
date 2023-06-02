@@ -128,13 +128,22 @@ Dotfiles serves as a core for some of my other useful dev environments targeted 
 
 Some of the configs are more self contained and have been included as submodules here
 
-- Universal Editor of choice neovim [nvim2k](https://github.com/2kabhishek/nvim2k)
-- Window manager for linux awesome wm [awesome2k](https://github.com/2kabhishek/awesome2k)
-- App launcher for linux rofi [rofi2k](https://github.com/2kabhishek/rofi2k)
+- [nvim2k](https://github.com/2kabhishek/nvim2k): Customize neovim for ultimate productivity and efficiency.
+- [awesome2k](https://github.com/2kabhishek/awesome2k): Take control of your Linux desktop with the awesome window manager.
+- [rofi2k](https://github.com/2kabhishek/rofi2k): Streamline your Linux workflow with the fast and efficient rofi app launcher.
 
-- Eye candy and power for all your shells [Posh2K](https://github.com/2KAbhishek/Posh2K/)
-- Pretty and functional theme for tmux [tmux2k](https://github.com/2kabhishek/tmux2k)
-- Add window manager like capabilities to tmux [tmux-tilit](https://github.com/2kabhishek/tmux-tilit)
+- [tmux2k](https://github.com/2kabhishek/tmux2k): Pretty and functional theme for tmux.
+- [tmux-tilit](https://github.com/2kabhishek/tmux-tilit): Add window manager-like capabilities to tmux.
+- [Posh2K](https://github.com/2KAbhishek/Posh2K/): Eye candy and power for your shells.
+
+- [committer](https://github.com/2kabhishek/committer): Commit and sync git repos quickly.
+- [mkrepo](https://github.com/2kabhishek/mkrepo): Easy and quick GitHub repos.
+- [nightblue](https://github.com/2kabhishek/nightblue): Theme of choice for Firefox.
+- [Nightbow](https://github.com/2kabhishek/nightbow): Pitch black theme for VS Code.
+- [refind-dark](https://github.com/2KAbhishek/refind-dark): Pretty boot screen for multi-boot users.
+
+- [starship2k](https://github.com/2KAbhishek/starship2k/): Fast and pretty shell with starship.
+- [BWnB](https://github.com/2KAbhishek/BWnB/): Slightly older theme for KDE and Windows 10
 
 ## How it was built
 
