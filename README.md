@@ -129,7 +129,7 @@ Dotfiles serves as a core for some of my other useful dev environments targeted 
 
 ### More Tools
 
-Some of the configs are more self contained and have been included as submodules here
+Some of the configs are more self contained and have been included as submodules/plugins here
 
 - [nvim2k](https://github.com/2kabhishek/nvim2k): Customize neovim for ultimate productivity and efficiency.
 - [awesome2k](https://github.com/2kabhishek/awesome2k): Control of your Linux system with the awesome window manager.
@@ -141,6 +141,9 @@ Some of the configs are more self contained and have been included as submodules
 
 - [committer](https://github.com/2kabhishek/committer): Commit and sync git repos quickly.
 - [mkrepo](https://github.com/2kabhishek/mkrepo): Easy and quick GitHub repos.
+
+### Non CLI Tools
+
 - [nightblue](https://github.com/2kabhishek/nightblue): Theme of choice for Firefox.
 - [Nightbow](https://github.com/2kabhishek/nightbow): Pitch black theme for VS Code.
 - [refind-dark](https://github.com/2KAbhishek/refind-dark): Pretty boot screen for multi-boot users.
