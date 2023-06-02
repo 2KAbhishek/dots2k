@@ -116,6 +116,26 @@ This repo contains configurations for following tools.
 
 This repo also contains a few scripts in the [scripts](https://github.com/2KAbhishek/Dotfiles/blob/main/scripts) directory.
 
+## The Dotfiles Universe
+
+Dotfiles serves as a core for some of my other useful dev environments targeted for specific platforms
+
+- [Macfiles](https://github.com/2kabhishek/Macfiles): Elevate your terminal game on macOS with Macfiles!
+- [Winfiles](https://github.com/2kabhishek/Winfiles): Say goodbye to bland command lines on Windows.
+- [Oh-My-Termux](https://github.com/2kabhishek/Oh-My-Termux): Supercharge your Android development on the go!
+
+### Included Configs
+
+Some of the configs are more self contained and have been included as submodules here
+
+- Universal Editor of choice neovim [nvim2k](https://github.com/2kabhishek/nvim2k)
+- Window manager for linux awesome wm [awesome2k](https://github.com/2kabhishek/awesome2k)
+- App launcher for linux rofi [rofi2k](https://github.com/2kabhishek/rofi2k)
+
+- Eye candy and power for all your shells [Posh2K](https://github.com/2KAbhishek/Posh2K/)
+- Pretty and functional theme for tmux [tmux2k](https://github.com/2kabhishek/tmux2k)
+- Add window manager like capabilities to tmux [tmux-tilit](https://github.com/2kabhishek/tmux-tilit)
+
 ## How it was built
 
 Dotfiles was built using the internet and sleepless nights.
@@ -135,12 +155,6 @@ Planning to add more tools, better management, always updating.
 Hit the ⭐ button if you found this useful.
 
 ## More Info
-
-Want the CLI experience on your Android too? Have a look at [Oh-My-Termux](https://github.com/2kabhishek/Oh-My-Termux)
-
-Looking for my `neovim` configs? See [nvim](https://github.com/2kabhishek/nvim)
-
-Looking for my `tmux` configs? See [tmux2k](https://github.com/2kabhishek/tmux2k)
 
 Find more cool configs and setups at [GitHub does dotfiles](https://dotfiles.github.io/)
 
