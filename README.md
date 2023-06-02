@@ -103,7 +103,7 @@ This repo contains configurations for following tools.
 -   xrdb : [~/.Xresources](https://github.com/2KAbhishek/Dotfiles/blob/main/.Xresources)
 -   zsh : [~/.zshrc](https://github.com/2KAbhishek/Dotfiles/blob/main/.zshrc)
 
-> Some configs require special steps in order to use. Check respective tools documentation for more info.
+Some configs require special steps in order to use. Check respective tools documentation for more info.
 
 -   git:
     I am using GPG signing by default for verifying commits, check [this](https://docs.github.com/en/authentication/managing-commit-signature-verification/adding-a-new-gpg-key-to-your-github-account) for details on setting up GPG or you can use `git config --global commit.gpgSign false` to disable it.
