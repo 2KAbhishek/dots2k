@@ -61,10 +61,13 @@ This list is incomplete, package names may vary depending upon your system and y
 
 ```bash
 # Required
-git, zsh, neovim, tmux, git-delta, bat, fd, fzf, fasd, ag(silver_surfer), curl, powerline, lsd
+git, zsh, neovim, tmux, git-delta, bat, fd, fzf, fasd,
+ag(silver_surfer), curl, powerline, lsd
+
 # Optional
 ranger, cmus, xdotool, libinput, htop, python, vim, broot, xclip,
-bash, i3, i3status, dmenu, ncdu, grc, exa, conky, kitty, konsole, autorandr, xplr
+bash, i3, i3status, dmenu, ncdu, grc, exa, conky, kitty,
+konsole, autorandr, xplr
 ```
 
 Powerline patched fonts are required for glyphs. I'll recommend [Nerd Fonts](https://www.nerdfonts.com/). I'm using FiraCode.
@@ -121,16 +124,16 @@ This repo also contains a few scripts in the [scripts](https://github.com/2KAbhi
 Dotfiles serves as a core for some of my other useful dev environments targeted for specific platforms
 
 - [Macfiles](https://github.com/2kabhishek/Macfiles): Elevate your terminal game on macOS with Macfiles!
-- [Winfiles](https://github.com/2kabhishek/Winfiles): Say goodbye to bland command lines on Windows.
+- [Winfiles](https://github.com/2kabhishek/Winfiles): Say goodbye to bland command lines on Windows!
 - [Oh-My-Termux](https://github.com/2kabhishek/Oh-My-Termux): Supercharge your Android development on the go!
 
-### Included Configs
+### More Tools
 
 Some of the configs are more self contained and have been included as submodules here
 
 - [nvim2k](https://github.com/2kabhishek/nvim2k): Customize neovim for ultimate productivity and efficiency.
-- [awesome2k](https://github.com/2kabhishek/awesome2k): Take control of your Linux desktop with the awesome window manager.
-- [rofi2k](https://github.com/2kabhishek/rofi2k): Streamline your Linux workflow with the fast and efficient rofi app launcher.
+- [awesome2k](https://github.com/2kabhishek/awesome2k): Control of your Linux system with the awesome window manager.
+- [rofi2k](https://github.com/2kabhishek/rofi2k): Streamline your Linux workflow with rofi app launcher.
 
 - [tmux2k](https://github.com/2kabhishek/tmux2k): Pretty and functional theme for tmux.
 - [tmux-tilit](https://github.com/2kabhishek/tmux-tilit): Add window manager-like capabilities to tmux.
@@ -143,7 +146,7 @@ Some of the configs are more self contained and have been included as submodules
 - [refind-dark](https://github.com/2KAbhishek/refind-dark): Pretty boot screen for multi-boot users.
 
 - [starship2k](https://github.com/2KAbhishek/starship2k/): Fast and pretty shell with starship.
-- [BWnB](https://github.com/2KAbhishek/BWnB/): Slightly older theme for KDE and Windows 10
+- [BWnB](https://github.com/2KAbhishek/BWnB/): Slightly older theme for KDE and Windows 10.
 
 ## How it was built
 
