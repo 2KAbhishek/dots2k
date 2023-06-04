@@ -31,13 +31,13 @@ export DISABLE_AUTO_TITLE='true'
 export PATH=/home/linuxbrew/.linuxbrew/bin:$PATH
 export PATH=/home/linuxbrew/.linuxbrew/sbin:$PATH
 export PATH=$HOME/Applications/bin:$PATH
+export PATH=$HOME/.local/bin:$PATH
 export GOPATH=$HOME/.go
 export GOBIN=$GOPATH/bin
 export PATH=$GOBIN:$PATH
 export PATH=$HOME/.cargo/bin:$PATH
 export PATH=$HOME/.local/share/gem/ruby/3.0.0/bin:$PATH
 export PATH=$HOME/.npm/bin:$PATH
-export PATH=$HOME/.local/bin:$PATH
 export PATH=$HOME/.luarocks/bin:$PATH
 export PATH=$HOME/.config/composer/vendor:$PATH
 
