@@ -99,6 +99,7 @@ alias plasmar="kquitapp5 plasmashell && kstart5 plasmashell"
 alias png="pngquant --ext .png --force"
 alias pp="prettyping --nolegend"
 alias q="exit"
+alias rcop="rubocop --autocorrect"
 alias rm="rm -irv"
 alias rmf="rm -rf"
 # alias serv="python -m http.server 1234"
@@ -158,3 +159,4 @@ alias p2k="$EDITOR ~/.config/shell/powerlevel2k.zsh"
 # if [ -f "/usr/bin/kdeconnect-cli" ]; then
 #     alias send="kdeconnect-cli -d "$(kdeconnect-cli -a --id-only)" --share"
 # fi
+#
