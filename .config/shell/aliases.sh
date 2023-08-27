@@ -122,6 +122,7 @@ alias todo='nvim +"Telekasten goto_today"'
 alias trii="trizen -S --noedit"
 alias tris="trizen -Ss --noedit"
 alias triu="trizen -Syu --noedit"
+alias upd="topgrade --no-retry -y"
 alias vi="nvim"
 alias volu="amixer sset 'Master' 10%+"
 alias vold="amixer sset 'Master' 10%-"
@@ -146,7 +147,7 @@ if [ -f "/usr/bin/grc" ]; then
 fi
 
 alias vimrc="vim ~/.vimrc"
-alias nvimrc="nvim ~/.config/nvim/init.lua"
+alias virc="nvim ~/.config/nvim/lua/nvim2k/plugins/installed.lua"
 alias zshrc="$EDITOR ~/.zshrc"
 alias bashrc="$EDITOR ~/.bashrc"
 alias alia="$EDITOR ~/.config/shell/aliases.sh"
