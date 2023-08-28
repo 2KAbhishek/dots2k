@@ -1,0 +1,5 @@
+#!/bin/bash
+
+# Used in Ctrl + Super + n keybinding to open floating notes
+nvim +"Telekasten goto_today"
+
