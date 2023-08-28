@@ -1,0 +1,9 @@
+{
+    "diagnostics.globals": [
+        "vim",
+        "awesome",
+        "root",
+        "client",
+        "mouse"
+    ]
+}
