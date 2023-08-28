@@ -61,13 +61,11 @@ This list is incomplete, package names may vary depending upon your system and y
 
 ```bash
 # Required
-git, zsh, neovim, tmux, git-delta, bat, fd, fzf, fasd,
-ag(silver_surfer), curl, powerline, lsd
+git, zsh, neovim, tmux, git-delta, bat, fd, fzf, fasd, ripgrep, curl, lsd
 
 # Optional
-ranger, cmus, xdotool, libinput, htop, python, vim, broot, xclip,
-bash, i3, i3status, dmenu, ncdu, grc, exa, conky, kitty,
-konsole, autorandr, xplr
+ag(silver_surfer), vim, powerline, ranger, cmus, xdotool, libinput, htop, python, vim, broot, xclip,
+bash, i3, i3status, dmenu, ncdu, grc, exa, conky, kitty, konsole, autorandr, xplr
 ```
 
 Powerline patched fonts are required for glyphs. I'll recommend [Nerd Fonts](https://www.nerdfonts.com/). I'm using FiraCode.
