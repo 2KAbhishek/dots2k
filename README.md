@@ -61,7 +61,7 @@ This list is incomplete, package names may vary depending upon your system and y
 
 ```bash
 # Required
-git, zsh, neovim, tmux, git-delta, bat, fd, fzf, fasd, ripgrep, curl, lsd
+git, zsh, neovim, tmux, lazygit, git-delta, bat, fd, fzf, fasd, ripgrep, curl, lsd
 
 # Optional
 ag(silver_surfer), vim, powerline, ranger, cmus, xdotool, libinput, htop, python, vim, broot, xclip,
