@@ -208,7 +208,7 @@ function setup_symlinks {
 
 function distro_tweaks {
     echo -e "\u001b[7m Distro specific tweaks... \u001b[0m"
-    bash "$PWD"/scripts/local_distro.sh
+    bash "$PWD"/scripts/distro_tweaks.sh
 }
 
 function setup_dotfiles {
