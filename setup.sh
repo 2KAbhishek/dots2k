@@ -5,7 +5,7 @@ git submodule update --init --recursive
 
 system_kind=""
 
-# Setup script for Dotfiles
+# Setup script for dots2k
 function install_arch {
     sudo pacman -S \
         curl git zsh python vim neovim tmux bat fzf fasd fd exa unzip \
@@ -211,7 +211,7 @@ function distro_tweaks {
 }
 
 function setup_dotfiles {
-    echo -e "\u001b[7m Setting up Dotfiles... \u001b[0m"
+    echo -e "\u001b[7m Setting up dots2k... \u001b[0m"
     install_packages
     install_extras
     backup_configs
@@ -237,7 +237,7 @@ if [ "$1" = "--symlinks" ] || [ "$1" = "-s" ]; then
 fi
 
 # Menu TUI
-echo -e "\u001b[32;1m Setting up Dotfiles...\u001b[0m"
+echo -e "\u001b[32;1m Setting up dots2k...\u001b[0m"
 
 echo -e " \u001b[37;1m\u001b[4mSelect an option:\u001b[0m"
 echo -e "  \u001b[34;1m (0) Setup Everything \u001b[0m"
