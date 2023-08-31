@@ -9,16 +9,15 @@ system_kind=""
 function install_arch {
     sudo pacman -S \
         curl git zsh python vim neovim tmux bat fzf fasd fd exa unzip \
-        lsd github-cli git-delta lazygit openssh ranger the_silver_searcher \
-        thefuck xclip broot ncdu htop broot xplr ripgrep powerline \
-        kitty libnotify autorandr cmus ttf-firacode-nerd
+        lsd github-cli git-delta lazygit openssh ranger  \
+        thefuck xclip ncdu ripgrep kitty autorandr ttf-firacode-nerd
 }
 
 function install_debian {
     sudo apt install \
-        curl git zsh vim neovim tmux bat fzf fasd python exa gh ripgrep htop \
-        silversearcher-ag fd-find unzip thefuck xclip ncdu ranger powerline \
-        kitty libnotify-bin autorandr cmus
+        curl git zsh vim neovim tmux bat fzf fasd python exa gh ripgrep \
+        fd-find unzip thefuck xclip ncdu ranger  kitty autorandr
+
     sudo ln -sfnv /usr/bin/fdfind /usr/bin/fd
     sudo ln -sfnv /usr/bin/batcat /usr/bin/bat
 }
