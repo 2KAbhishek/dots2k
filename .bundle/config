@@ -1,4 +1,4 @@
-BUNDLE_GEM__TEST: "minitest"
+BUNDLE_GEM__TEST: "rspec"
 BUNDLE_GEM__CI: "github"
 BUNDLE_GEM__MIT: "false"
 BUNDLE_GEM__COC: "false"
