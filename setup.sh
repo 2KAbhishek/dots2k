@@ -145,6 +145,7 @@ function backup_configs {
     mv -iv ~/.config/xplr ~/.config/xplr.old
     mv -iv ~/.asdfrc ~/.asdfrc.old
     mv -iv ~/.bashrc ~/.bashrc.old
+    mv -iv ~/.bundle ~/.bundle.old
     mv -iv ~/.dircolors ~/.dircolors.old
     mv -iv ~/.dmenurc ~/.dmenurc.old
     mv -iv ~/.gitconfig ~/.gitconfig.old
@@ -167,6 +168,7 @@ function setup_symlinks {
     ln -sfnv "$PWD/.config/awesome/" ~/.config/
     ln -sfnv "$PWD/.config/bat/" ~/.config/
     ln -sfnv "$PWD/.config/broot/" ~/.config/
+    ln -sfnv "$PWD/.config/bundle/" ~/.bundle
     ln -sfnv "$PWD/.config/cmus/" ~/.config/
     ln -sfnv "$PWD/.config/delta/" ~/.config/
     ln -sfnv "$PWD/.config/fish/" ~/.config/
