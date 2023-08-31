@@ -122,9 +122,9 @@ This repo also contains a few scripts in the [scripts](https://github.com/2KAbhi
 
 Dotfiles serves as a core for some of my other useful dev environments targeted for specific platforms
 
-- [Macfiles](https://github.com/2kabhishek/Macfiles): Elevate your terminal game on macOS with Macfiles!
-- [Winfiles](https://github.com/2kabhishek/Winfiles): Say goodbye to bland command lines on Windows!
-- [Oh-My-Termux](https://github.com/2kabhishek/Oh-My-Termux): Supercharge your Android development on the go!
+- [mac2k](https://github.com/2kabhishek/mac2k): Elevate your terminal game on macOS with mac2k!
+- [win2k](https://github.com/2kabhishek/win2k): Say goodbye to bland command lines on Windows!
+- [termux2k](https://github.com/2kabhishek/termux2k): Supercharge your Android development on the go!
 
 ### More Tools
 
@@ -136,7 +136,7 @@ Some of the configs are more self contained and have been included as submodules
 
 - [tmux2k](https://github.com/2kabhishek/tmux2k): Pretty and functional theme for tmux.
 - [tmux-tilit](https://github.com/2kabhishek/tmux-tilit): Add window manager-like capabilities to tmux.
-- [Posh2K](https://github.com/2KAbhishek/Posh2K/): Eye candy and power for your shells.
+- [posh2k](https://github.com/2KAbhishek/posh2k/): Eye candy and power for your shells.
 
 - [committer](https://github.com/2kabhishek/committer): Commit and sync git repos quickly.
 - [mkrepo](https://github.com/2kabhishek/mkrepo): Easy and quick GitHub repos.
