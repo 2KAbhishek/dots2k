@@ -27,7 +27,8 @@ case $distro in
 esac
 
 # sed -i '/searchtext/c\linetochangeitwith' file
-echo "POWERLEVEL9K_OS_ICON_BACKGROUND='$color'" >> ~/.shrc.local
-echo "POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX='%F{238}╰%K{$color}%F{black}  %f%F{$color}%k%f'" >> ~/.shrc.local
+echo "POWERLEVEL9K_OS_ICON_BACKGROUND='$color'" >> ~/.local.sh
+echo "POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX='%F{238}╰%F{$color}%K{$color}%F{black}  %f%F{$color}%k%f'" >> ~/.local.sh
+
 
 
