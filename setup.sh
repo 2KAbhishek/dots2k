@@ -160,6 +160,7 @@ function backup_configs {
     mv -iv ~/.vimrc ~/.vimrc.old
     mv -iv ~/.Xresources ~/.Xresources.old
     mv -iv ~/.zshrc ~/.zshrc.old
+    mv -iv ~/.local/share/konsole/ ~/.local/share/konsole.old
     echo -e "\u001b[36;1m Remove backups with 'rm -ir ~/.*.old && rm -ir ~/.config/*.old'. \u001b[0m"
 }
 
@@ -186,7 +187,6 @@ function setup_symlinks {
     ln -sfnv "$PWD/.config/shell" ~/.config/
     ln -sfnv "$PWD/.config/sysinfo.conkyrc" ~/.config/
     ln -sfnv "$PWD/.config/xplr/" ~/.config/
-    cp -ivr "$PWD/.local/share/konsole/" ~/.local/share/
     ln -sfnv "$PWD/.asdfrc" ~/
     ln -sfnv "$PWD/.bashrc" ~/
     ln -sfnv "$PWD/.dircolors" ~/
@@ -203,6 +203,7 @@ function setup_symlinks {
     ln -sfnv "$PWD/.vimrc" ~/
     ln -sfnv "$PWD/.Xresources" ~/
     ln -sfnv "$PWD/.zshrc" ~/
+    cp -ivr "$PWD/.config/konsole/" ~/.local/share/
 }
 
 function distro_tweaks {
