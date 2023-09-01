@@ -43,7 +43,8 @@ export PATH=$HOME/.config/composer/vendor:$PATH
 
 export CHROME_EXECUTABLE=/usr/bin/google-chrome-stable
 
-export NOTES_ROOT="$HOME/Projects/GitHub/Notes/Worklog/"
+export ENTRY_DIR="$HOME/Projects/GitHub/Notes/journal/"
+export NOTES_DIR="$HOME/Projects/GitHub/Notes/worklog/"
 
 export GPG_TTY=$(tty)
 

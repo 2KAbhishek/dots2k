@@ -128,7 +128,7 @@ fz() {
 }
 
 todos() {
-    cd "$NOTES_ROOT" || return
+    cd "$NOTES_DIR" || return
     $EDITOR "$(rg -le '\[ \]' --sort created | fzf)"
     cd - || return
 }
