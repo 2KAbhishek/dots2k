@@ -1,9 +1,6 @@
 [submodule ".config/nvim"]
     path = .config/nvim
     url = ../nvim2k.git
-[submodule ".config/rofi"]
-    path = .config/rofi
-    url = ../rofi2k.git
 [submodule ".config/awesome"]
     path = .config/awesome
     url = ../awesome2k.git
