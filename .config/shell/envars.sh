@@ -1,6 +1,8 @@
 #!/bin/bash
 # Environment variables
 export EDITOR=nvim
+export CLIPCOPY=wl-copy
+export CLIPPASTE=wl-paste
 
 # Fzf
 export FZF_DEFAULT_COMMAND='fd --hidden --follow --exclude=.git --exclude=node_modules'
