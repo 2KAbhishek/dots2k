@@ -56,13 +56,13 @@ if type thefuck >/dev/null 2>&1; then eval "$(thefuck --alias)"; fi
 if type navi >/dev/null 2>&1; then eval "$(navi widget zsh)"; fi
 
 # Swap caps lock with escape
-if type setxkbmap >/dev/null 2>&1; then
-    setxkbmap -option caps:swapescape
-fi
+# if type setxkbmap >/dev/null 2>&1; then
+#     setxkbmap -option caps:swapescape
+# fi
 # Enable touch to click for trackpad
-if type xinput >/dev/null 2>&1; then
-    xinput set-prop "$(xinput list --name-only | grep -i touch)" "libinput Tapping Enabled" 1
-fi
+# if type xinput >/dev/null 2>&1; then
+#     xinput set-prop "$(xinput list --name-only | grep -i touch)" "libinput Tapping Enabled" 1
+# fi
 
 # broot file explorer
 [ -f ~/.config/broot/launcher/bash/br ] && source ~/.config/broot/launcher/bash/br
