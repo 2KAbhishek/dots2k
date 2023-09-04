@@ -57,7 +57,6 @@ plugins=(adb
     zsh-completions
     zsh-navigation-tools
     auto-notify
-    thefuck
     fzf) # fzf at last for '^R' binding
 
 # Uninstalled, TODO doesn't work with fzf-tab
