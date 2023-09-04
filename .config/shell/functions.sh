@@ -26,6 +26,10 @@ function color() {
         echo
         echo
     done
+# copy authy token
+auth ()
+{
+    mambembe-cli get-token -s "$@" | fzf --reverse -0 -1 | rg -oP 'Token: "\K\d+' | wl-copy
 }
 
 # cd into dir and list contents
