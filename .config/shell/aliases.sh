@@ -76,7 +76,6 @@ alias ldir="ls -d */"
 alias litu="sudo light -A 10"
 alias litd="sudo light -U 10"
 alias ln="ln -sfnv"
-alias loca="$EDITOR ~/.local.sh"
 alias logout="sudo pkill -u \$USER"
 alias ls='ls --color=auto'
 alias lsda="lsd -A --group-dirs first --classify"
@@ -149,13 +148,14 @@ fi
 alias vimrc="vim ~/.vimrc"
 alias virc="nvim ~/.config/nvim/lua/nvim2k/plugins/installed.lua"
 alias zshrc="$EDITOR ~/.zshrc"
-alias bashrc="$EDITOR ~/.bashrc"
+alias bashrc="$EDITOR ~/.bashrc"xclip
 alias alia="$EDITOR ~/.config/shell/aliases.sh"
 alias enva="$EDITOR ~/.config/shell/envars.sh"
 alias func="$EDITOR ~/.config/shell/functions.sh"
-alias meow="$EDITOR ~/.config/kitty/kitty.conf"
+alias loca="$EDITOR ~/.local.sh"
 alias p2k="$EDITOR ~/.config/shell/powerlevel2k.zsh"
 
+alias meow="$EDITOR ~/.config/kitty/kitty.conf"
 # Causes Issues
 # if [ -f "/usr/bin/kdeconnect-cli" ]; then
 #     alias send="kdeconnect-cli -d "$(kdeconnect-cli -a --id-only)" --share"
