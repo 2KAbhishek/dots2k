@@ -131,6 +131,11 @@ fi
 
 source $ZSH/oh-my-zsh.sh
 
+# foot shell integration
+precmd() {
+    print -Pn "\e]133;A\e\\"
+}
+
 # Aliases
 alias reload='source ~/.zshrc'
 
