@@ -20,12 +20,12 @@ alias brl="brew list"
 alias brr="brew uninstall"
 alias bru="brew upgrade"
 alias cat="bat"
-alias ccp="clipcopy"
+alias ccp="$CLIPCOPY"
 alias cdx='cd $(xplr)'
 alias cless='colorize_less -N'
 alias cols='spectrum_ls'
 alias cp="cp -irv"
-alias cpa="clippaste"
+alias cpa="$CLIPPASTE"
 alias diff="diff --color=auto"
 alias e='nvim $(files)'
 alias emd='emacs --daemon &'

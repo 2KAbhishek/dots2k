@@ -29,7 +29,7 @@ function color() {
 # copy authy token
 auth ()
 {
-    mambembe-cli get-token -s "$@" | fzf --reverse -0 -1 | rg -oP 'Token: "\K\d+' | wl-copy
+    mambembe-cli get-token -s "$@" | fzf --reverse -0 -1 | rg -oP 'Token: "\K\d+' | $CLIPCOPY
 }
 
 # cd into dir and list contents
