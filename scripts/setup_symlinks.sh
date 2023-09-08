@@ -1,4 +1,5 @@
 #!/bin/bash
+# config directory
 ln -sfnv "$PWD/config/autorandr/" ~/.config/
 ln -sfnv "$PWD/config/awesome/" ~/.config/
 ln -sfnv "$PWD/config/bat/" ~/.config/
@@ -16,26 +17,29 @@ ln -sfnv "$PWD/config/lazygit" ~/.config/
 ln -sfnv "$PWD/config/libinput-gestures.conf" ~/.config/
 ln -sfnv "$PWD/config/nvim" ~/.config/
 ln -sfnv "$PWD/config/ranger/" ~/.config/
-ln -sfnv "$PWD/config/rofi/" ~/.config/
 ln -sfnv "$PWD/config/shell" ~/.config/
 ln -sfnv "$PWD/config/sysinfo.conkyrc" ~/.config/
 ln -sfnv "$PWD/config/xplr/" ~/.config/
-ln -sfnv "$PWD/.asdfrc" ~/
-ln -sfnv "$PWD/.bashrc" ~/
-ln -sfnv "$PWD/.dircolors" ~/
-ln -sfnv "$PWD/.dmenurc" ~/
-ln -sfnv "$PWD/.gitconfig" ~/
-ln -sfnv "$PWD/config/gitignore.global" ~/
-ln -sfnv "$PWD/.inputrc" ~/
-ln -sfnv "$PWD/.luarc.json" ~/
-ln -sfnv "$PWD/.p10k.zsh" ~/
-ln -sfnv "$PWD/.prettierrc" ~/
-ln -sfnv "$PWD/.pryrc" ~/
-ln -sfnv "$PWD/.pystartup" ~/
-ln -sfnv "$PWD/.stylua.toml" ~/
-ln -sfnv "$PWD/.tmux.conf" ~/
-ln -sfnv "$PWD/.vimrc" ~/
-ln -sfnv "$PWD/.Xresources" ~/
-ln -sfnv "$PWD/.zshrc" ~/
+ln -sfnv "$PWD/config/gitignore.global" ~/.config/
+
+# home directory
+ln -sfnv "$PWD/config/.asdfrc" ~/
+ln -sfnv "$PWD/config/.bashrc" ~/
+ln -sfnv "$PWD/config/.dircolors" ~/
+ln -sfnv "$PWD/config/.dmenurc" ~/
+ln -sfnv "$PWD/config/.gitconfig" ~/
+ln -sfnv "$PWD/config/.inputrc" ~/
+ln -sfnv "$PWD/config/.luarc.json" ~/
+ln -sfnv "$PWD/config/.p10k.zsh" ~/
+ln -sfnv "$PWD/config/.prettierrc" ~/
+ln -sfnv "$PWD/config/.pryrc" ~/
+ln -sfnv "$PWD/config/.pystartup" ~/
+ln -sfnv "$PWD/config/.stylua.toml" ~/
+ln -sfnv "$PWD/config/.tmux.conf" ~/
+ln -sfnv "$PWD/config/.vimrc" ~/
+ln -sfnv "$PWD/config/.Xresources" ~/
+ln -sfnv "$PWD/config/.zshrc" ~/
+
+# local directory
 cp -ivr "$PWD/config/konsole/" ~/.local/share/
 

@@ -12,7 +12,7 @@
 [core]
     editor = nvim
     pager = delta --dark
-    excludesFile = ~/.gitignore.global
+    excludesFile = ~/.config/gitignore.global
 
 [interactive]
     diffFilter = delta --color-only --highlight-removed
