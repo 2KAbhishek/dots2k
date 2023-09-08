@@ -129,45 +129,7 @@ function backup_configs {
 
 function setup_symlinks {
     echo -e "\u001b[7m Setting up symlinks... \u001b[0m"
-    ln -sfnv "$PWD/.config/autorandr/" ~/.config/
-    ln -sfnv "$PWD/.config/awesome/" ~/.config/
-    ln -sfnv "$PWD/.config/bat/" ~/.config/
-    ln -sfnv "$PWD/.config/broot/" ~/.config/
-    ln -sfnv "$PWD/.config/bundle/" ~/.bundle
-    ln -sfnv "$PWD/.config/cmus/" ~/.config/
-    ln -sfnv "$PWD/.config/delta/" ~/.config/
-    ln -sfnv "$PWD/.config/fish/" ~/.config/
-    ln -sfnv "$PWD/.config/fontconfig/" ~/.config/
-    ln -sfnv "$PWD/.config/htop/" ~/.config/
-    ln -sfnv "$PWD/.config/i3" ~/.config/
-    ln -sfnv "$PWD/.config/i3status" ~/.config/
-    ln -sfnv "$PWD/.config/kitty" ~/.config/
-    ln -sfnv "$PWD/.config/lazygit" ~/.config/
-    ln -sfnv "$PWD/.config/libinput-gestures.conf" ~/.config/
-    ln -sfnv "$PWD/.config/nvim" ~/.config/
-    ln -sfnv "$PWD/.config/ranger/" ~/.config/
-    ln -sfnv "$PWD/.config/rofi/" ~/.config/
-    ln -sfnv "$PWD/.config/shell" ~/.config/
-    ln -sfnv "$PWD/.config/sysinfo.conkyrc" ~/.config/
-    ln -sfnv "$PWD/.config/xplr/" ~/.config/
-    ln -sfnv "$PWD/.asdfrc" ~/
-    ln -sfnv "$PWD/.bashrc" ~/
-    ln -sfnv "$PWD/.dircolors" ~/
-    ln -sfnv "$PWD/.dmenurc" ~/
-    ln -sfnv "$PWD/.gitconfig" ~/
-    ln -sfnv "$PWD/.gitignore.global" ~/
-    ln -sfnv "$PWD/.inputrc" ~/
-    ln -sfnv "$PWD/.luarc.json" ~/
-    ln -sfnv "$PWD/.p10k.zsh" ~/
-    ln -sfnv "$PWD/.prettierrc" ~/
-    ln -sfnv "$PWD/.pryrc" ~/
-    ln -sfnv "$PWD/.pystartup" ~/
-    ln -sfnv "$PWD/.stylua.toml" ~/
-    ln -sfnv "$PWD/.tmux.conf" ~/
-    ln -sfnv "$PWD/.vimrc" ~/
-    ln -sfnv "$PWD/.Xresources" ~/
-    ln -sfnv "$PWD/.zshrc" ~/
-    cp -ivr "$PWD/.config/konsole/" ~/.local/share/
+    bash "$PWD"/scripts/setup_symlinks.sh
 }
 
 function distro_tweaks {
