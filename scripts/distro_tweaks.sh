@@ -1,5 +1,4 @@
 #!/bin/bash
-
 distro=$(\grep --color=auto ^ID= /etc/os-release |cut -f 2 -d =)
 color=""
 
@@ -9,14 +8,14 @@ case $distro in
         ;;
     "ubuntu")
         color="202"
-        echo "alias cat=batcat" >> ~/.shrc.local
+        echo "alias cat=batcat" >> ~/.local.sh
         ;;
     "arch")
         color="033"
         ;;
     "debian")
         color="163"
-        echo "alias cat=batcat" >> ~/.shrc.local
+        echo "alias cat=batcat" >> ~/.local.sh
         ;;
     "kali")
         color="white"
