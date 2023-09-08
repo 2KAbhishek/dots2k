@@ -55,7 +55,7 @@ I made a small [recording for setting this up on an Ubuntu system](https://www.y
 
 For installation `git` `curl` & `zsh` are must, other tools are mentioned below.
 
-### Packages
+### Required Packages
 
 This list is incomplete, package names may vary depending upon your system and your requirements.
 
@@ -71,36 +71,9 @@ bash i3 sway awesomewm rofi dmenu morc_menu bmenu conky kitty autorandr
 
 Powerline patched fonts are required for glyphs. I'll recommend [Nerd Fonts](https://www.nerdfonts.com/). I'm using FiraCode.
 
-### Included Configurations
+### Extra Steps
 
 This repo contains configurations for following tools.
-
--   asdf : [~/.asdfrc](https://github.com/2KAbhishek/dots2k/blob/main/.asdfrc)
--   autorandr : [~/.config/autorandr/](https://github.com/2KAbhishek/dots2k/blob/main/.config/autorandr/)
--   bash : [~/.bashrc](https://github.com/2KAbhishek/dots2k/blob/main/.bashrc)
--   bat : [~/.config/bat/](https://github.com/2KAbhishek/dots2k/blob/main/.config/bat/)
--   broot : [~/.config/broot/](https://github.com/2KAbhishek/dots2k/blob/main/.config/broot/)
--   compiz : [~/.config/compiz.profile](https://github.com/2KAbhishek/dots2k/blob/main/.config/compiz.profile)
--   conky : [~/.config/sysinfo.conkyrc](https://github.com/2KAbhishek/dots2k/blob/main/.config/sysinfo.conkyrc)
--   cmus : [~/.config/cmus/](https://github.com/2KAbhishek/dots2k/blob/main/.config/cmus/)
--   dmenu : [~/.dmenurc](https://github.com/2KAbhishek/dots2k/blob/main/.dmenurc)
--   dircolors : [~/.dircolors](https://github.com/2KAbhishek/dots2k/blob/main/.dircolors)
--   fontconfig : [~/.config/fontconfig/fonts.conf/](https://github.com/2KAbhishek/dots2k/blob/main/.config/fontconfig/fonts.conf/)
--   git : [~/.gitconfig](https://github.com/2KAbhishek/dots2k/blob/main/.gitconfig)
--   htop : [~/.config/htop/](https://github.com/2KAbhishek/dots2k/blob/main/.config/htop/)
--   i3 : [~/.config/i3/config](https://github.com/2KAbhishek/dots2k/blob/main/.config/i3/config)
--   i3status : [~/.config/i3status/config](https://github.com/2KAbhishek/dots2k/blob/main/.config/i3status/config)
--   kitty : [~/.config/kitty/kitty.conf](https://github.com/2KAbhishek/dots2k/blob/main/.config/kitty/kitty.conf)
--   konsole : [~/.local/share/konsole/](https://github.com/2KAbhishek/dots2k/blob/main/.local/share/konsole)
--   libinbut : [~/.config/libinput-gestures.conf](https://github.com/2KAbhishek/dots2k/blob/main/.config/libinput-gestures.conf)
--   neovim : [~/.config/nvim/](https://github.com/2KAbhishek/dots2k/blob/main/.config/nvim/)
--   python : [~/.pystartup](https://github.com/2KAbhishek/dots2k/blob/main/.pystartup)
--   ranger : [~/.config/ranger/](https://github.com/2KAbhishek/dots2k/blob/main/.config/ranger/)
--   tmux : [~/.tmux.conf](https://github.com/2KAbhishek/dots2k/blob/main/.tmux.conf)
--   vim : [~/.vimrc](https://github.com/2KAbhishek/dots2k/blob/main/.vimrc)
--   xplr : [~/.config/xplr/](https://github.com/2KAbhishek/dots2k/blob/main/.config/xplr/)
--   xrdb : [~/.Xresources](https://github.com/2KAbhishek/dots2k/blob/main/.Xresources)
--   zsh : [~/.zshrc](https://github.com/2KAbhishek/dots2k/blob/main/.zshrc)
 
 Some configs require special steps in order to use. Check respective tools documentation for more info.
 
@@ -115,8 +88,6 @@ Some configs require special steps in order to use. Check respective tools docum
 
 -   konsole
     Open Konsole, Goto Settings -> Manage Profiles -> Check `Konsole` and click on Set as Default.
-
-This repo also contains a few scripts in the [scripts](https://github.com/2KAbhishek/dots2k/blob/main/scripts) directory.
 
 ## The dots2k Universe
 
