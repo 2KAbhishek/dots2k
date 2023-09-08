@@ -32,7 +32,7 @@ function install_linux {
     # Identify the Linux distribution
     if [[ -f "/etc/os-release" ]]; then
         source /etc/os-release
-        if [[ "$ID" == "arch" ]]; then
+        if [[ "$ID" == "arch" || "$ID" == "manjaro" ]]; then
             system_kind="Linux_Arch"
             install_arch
         elif [[ "$ID" == "debian" || "$ID_LIKE" == *"debian"* ]]; then
