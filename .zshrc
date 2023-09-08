@@ -135,26 +135,6 @@ precmd() {
     print -Pn "\e]133;A\e\\"
 }
 
-# Aliases
-alias reload='source ~/.zshrc'
-
-alias -s md=nvim
-alias -s html=nvim
-
-alias -g C="| $CLIPCOPY"
-alias -g F="| fpp -ko -nfc"
-alias -g G="| grep"
-alias -g L="| wc -l"
-alias -g Z="| fzf"
-alias -g wcc="| wc -m"
-alias -g wcw="| wc -w"
-
-# Key Bindings
-bindkey -s '^H' ' source ~/.zshrc^M ^M'
-bindkey "^F" fzf-file-widget
-bindkey -s "^P" ' nvim $(fzf)^M ^M'
-bindkey -s "^G" ' lazygit^M ^M'
-
 # Commands
 eval "$(fasd --init posix-alias zsh-hook zsh-ccomp-install zsh-wcomp-install zsh-ccomp zsh-wcomp)"
 
@@ -175,6 +155,25 @@ function color_picker() {
 # Common aliases
 [ -f ~/.config/shell/aliases.sh ] && source ~/.config/shell/aliases.sh
 
+# Zhs Aliases
+alias reload='source ~/.zshrc'
+
+alias -s md=nvim
+alias -s html=nvim
+
+alias -g C="| $CLIPCOPY"
+alias -g F="| fpp -ko -nfc"
+alias -g G="| grep"
+alias -g L="| wc -l"
+alias -g Z="| fzf"
+alias -g wcc="| wc -m"
+alias -g wcw="| wc -w"
+
+# Key Bindings
+bindkey -s '^H' ' source ~/.zshrc^M ^M'
+bindkey "^F" fzf-file-widget
+bindkey -s "^P" ' nvim $(fzf)^M ^M'
+bindkey -s "^G" ' lazygit^M ^M'
+
 # Local configurations
 [ -f ~/.local.sh ] && source ~/.local.sh
-
