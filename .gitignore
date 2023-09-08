@@ -7,6 +7,9 @@
 .config/lazygit/state.yml
 .config/lazygit/.tmp
 
+# bundle cache
+.config/bundle/cache/
+
 # cmus
 .config/cmus/*
 !.config/cmus/darkwind.theme
