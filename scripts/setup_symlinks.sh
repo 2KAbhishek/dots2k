@@ -25,7 +25,7 @@ ln -sfnv "$PWD/.bashrc" ~/
 ln -sfnv "$PWD/.dircolors" ~/
 ln -sfnv "$PWD/.dmenurc" ~/
 ln -sfnv "$PWD/.gitconfig" ~/
-ln -sfnv "$PWD/.gitignore.global" ~/
+ln -sfnv "$PWD/config/gitignore.global" ~/
 ln -sfnv "$PWD/.inputrc" ~/
 ln -sfnv "$PWD/.luarc.json" ~/
 ln -sfnv "$PWD/.p10k.zsh" ~/
