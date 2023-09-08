@@ -1,15 +1,16 @@
 # ranger python cache files
-.config/ranger/__pycache__
-.config/ranger/plugins/__init__.py
-.config/ranger/plugins/__pycache__
+config/ranger/__pycache__
+config/ranger/plugins/__init__.py
+config/ranger/plugins/__pycache__
 
 # lazygit state
-.config/lazygit/state.yml
-.config/lazygit/.tmp
+config/lazygit/state.yml
+config/lazygit/.tmp
 
 # bundle cache
-.config/bundle/cache/
+config/bundle/cache/
 
 # cmus
-.config/cmus/*
-!.config/cmus/darkwind.theme
+config/cmus/*
+!config/cmus/darkwind.theme
+
