@@ -73,8 +73,6 @@ Powerline patched fonts are required for glyphs. I'll recommend [Nerd Fonts](htt
 
 ### Extra Steps
 
-This repo contains configurations for following tools.
-
 Some configs require special steps in order to use. Check respective tools documentation for more info.
 
 -   git:
