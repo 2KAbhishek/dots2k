@@ -97,29 +97,42 @@ dots2k serves as a core for some of my other useful dev environments targeted fo
 - [win2k](https://github.com/2kabhishek/win2k): Say goodbye to bland command lines on Windows!
 - [termux2k](https://github.com/2kabhishek/termux2k): Supercharge your Android development on the go!
 
-### More Tools
+### CLI Tools
 
-Some of the configs are more self contained and have been included as submodules/plugins here
+Some of the configs are more self contained repos and can been included as plugins
 
-- [nvim2k](https://github.com/2kabhishek/nvim2k): Customize neovim for ultimate productivity and efficiency.
-- [awesome2k](https://github.com/2kabhishek/awesome2k): Control of your Linux system with the awesome window manager.
-- [rofi2k](https://github.com/2kabhishek/rofi2k): Streamline your Linux workflow with rofi app launcher.
-
+- [nvim2k](https://github.com/2kabhishek/nvim2k): Customize neovim for ultimate productivity and efficiency, comes as a submodule.
 - [tmux2k](https://github.com/2kabhishek/tmux2k): Pretty and functional theme for tmux.
 - [tmux-tilit](https://github.com/2kabhishek/tmux-tilit): Add window manager-like capabilities to tmux.
-- [posh2k](https://github.com/2KAbhishek/posh2k/): Eye candy and power for your shells.
 
-- [committer](https://github.com/2kabhishek/committer): Commit and sync git repos quickly.
-- [mkrepo](https://github.com/2kabhishek/mkrepo): Easy and quick GitHub repos.
+#### Scripts
 
-### Non CLI Tools
+- [cmtr](https://github.com/2kabhishek/cmtr): Commit changes quickly.
+- [mkrepo](https://github.com/2kabhishek/mkrepo): Easy and quick GitHub repo setup.
+- [ghpm](https://github.com/2kabhishek/ghpm): Easily manage all your GitHub repos.
+- [gsync](https://github.com/2kabhishek/gsync): Seamlessly sync your git repos.
+- [gitrim](https://github.com/2kabhishek/gitrim): Trim accidentally pushed or obsolete files from git history.
+- [entry](https://github.com/2kabhishek/entry): Maintain a log of entries.
 
-- [refind2k](https://github.com/2KAbhishek/refind2k): Pretty boot screen for multi-boot users.
+### GUI Tools
+
+##### Window Management
+
+- [sway2k](https://github.com/2kabhishek/sway2k): Powerful and flexible window management with sway and Wayland.
+- [awesome2k](https://github.com/2kabhishek/awesome2k): Manage your windows with awesome and Xorg.
+- [rofi2k](https://github.com/2kabhishek/rofi2k): Streamline your Linux workflow with rofi app launcher.
+
+#### Theming
+
+- [BWnB](https://github.com/2KAbhishek/BWnB/): Slightly older theme for KDE and Windows 10.
 - [nightblue](https://github.com/2kabhishek/nightblue): Theme of choice for Firefox.
+- [refind2k](https://github.com/2KAbhishek/refind2k): Pretty boot screen for multi-boot users.
 - [Nightbow](https://github.com/2kabhishek/nightbow): Pitch black theme for VS Code.
 
+#### Shell Prompts
+
+- [posh2k](https://github.com/2KAbhishek/posh2k/): Eye candy and power for your oh-my-posh based shells.
 - [starship2k](https://github.com/2KAbhishek/starship2k/): Fast and pretty shell with starship.
-- [BWnB](https://github.com/2KAbhishek/BWnB/): Slightly older theme for KDE and Windows 10.
 
 ## How it was built
 
