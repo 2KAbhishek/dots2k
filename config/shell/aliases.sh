@@ -81,7 +81,8 @@ alias logout="sudo pkill -u \$USER"
 alias ls='ls --color=auto'
 alias lsda="lsd -A --group-dirs first --classify"
 alias lsdo="lsd -A --group-dirs first --classify --recursive --depth=2"
-alias me="README.md"
+alias macres="yabai --restart-service && skhd --restart-service"
+alias me="$EDITOR README.md"
 alias mv="mv -iv"
 alias ncdu="ncdu --color=dark -x"
 alias note='nvim +"Telekasten new_note"'
