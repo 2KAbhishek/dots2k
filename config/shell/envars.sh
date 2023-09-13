@@ -23,7 +23,6 @@ export FZF_DEFAULT_OPTS="
 export FZF_CTRL_T_COMMAND='fd -t f -HF -E=.git -E=node_modules'
 export FZF_TMUX_OPTS='-p 90%'
 
-export GREP_COLOR='mt=1;32'
 export ZSH_PLUGINS_ALIAS_TIPS_TEXT="Alias: "
 export ZSH_TMUX_AUTOSTART='false'
 export ZSH_TMUX_AUTOSTART_ONCE='false'
