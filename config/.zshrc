@@ -177,5 +177,9 @@ bindkey -s "^G" ' lazygit^M ^M'
 bindkey "^X^E" edit-command-line
 bindkey "^[." insert-last-word
 
+autoload -Uz copy-earlier-word
+zle -N copy-earlier-word
+bindkey "^[m" copy-earlier-word
+
 # Local configurations
 [ -f ~/.local.sh ] && source ~/.local.sh
