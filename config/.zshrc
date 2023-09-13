@@ -174,6 +174,7 @@ bindkey -s '^H' ' source ~/.zshrc^M ^M'
 bindkey "^F" fzf-file-widget
 bindkey -s "^P" ' nvim $(fzf)^M ^M'
 bindkey -s "^G" ' lazygit^M ^M'
+bindkey "^X^E" edit-command-line
 
 # Local configurations
 [ -f ~/.local.sh ] && source ~/.local.sh
