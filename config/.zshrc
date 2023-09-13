@@ -175,6 +175,7 @@ bindkey "^F" fzf-file-widget
 bindkey -s "^P" ' nvim $(fzf)^M ^M'
 bindkey -s "^G" ' lazygit^M ^M'
 bindkey "^X^E" edit-command-line
+bindkey "^[." insert-last-word
 
 # Local configurations
 [ -f ~/.local.sh ] && source ~/.local.sh
