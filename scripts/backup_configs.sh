@@ -18,6 +18,7 @@ mv -iv ~/.config/ranger ~/.config/ranger.old
 mv -iv ~/.config/rofi ~/.config/rofi.old
 mv -iv ~/.config/shell ~/.config/shell.old
 mv -iv ~/.config/sysinfo.conkyrc ~/.config/sysinfo.conkyrc.old
+mv -iv ~/.config/topgrade.toml ~/.config/topgrade.toml.old
 mv -iv ~/.config/xplr ~/.config/xplr.old
 mv -iv ~/.config/gitignore.global ~/.confi/gitignore.global.old
 

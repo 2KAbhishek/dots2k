@@ -19,6 +19,7 @@ ln -sfnv "$PWD/config/nvim" ~/.config/
 ln -sfnv "$PWD/config/ranger/" ~/.config/
 ln -sfnv "$PWD/config/shell" ~/.config/
 ln -sfnv "$PWD/config/sysinfo.conkyrc" ~/.config/
+ln -sfnv "$PWD/config/topgrade.toml" ~/.config/
 ln -sfnv "$PWD/config/xplr/" ~/.config/
 ln -sfnv "$PWD/config/gitignore.global" ~/.config/
 
