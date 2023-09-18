@@ -9,6 +9,7 @@ ln -sfnv "$PWD/config/cmus/" ~/.config/
 ln -sfnv "$PWD/config/delta/" ~/.config/
 ln -sfnv "$PWD/config/fish/" ~/.config/
 ln -sfnv "$PWD/config/fontconfig/" ~/.config/
+ln -sfnv "$PWD/config/gitignore.global" ~/.config/
 ln -sfnv "$PWD/config/htop/" ~/.config/
 ln -sfnv "$PWD/config/i3" ~/.config/
 ln -sfnv "$PWD/config/i3status" ~/.config/
@@ -21,7 +22,6 @@ ln -sfnv "$PWD/config/shell" ~/.config/
 ln -sfnv "$PWD/config/sysinfo.conkyrc" ~/.config/
 ln -sfnv "$PWD/config/topgrade.toml" ~/.config/
 ln -sfnv "$PWD/config/xplr/" ~/.config/
-ln -sfnv "$PWD/config/gitignore.global" ~/.config/
 
 # home directory
 ln -sfnv "$PWD/config/.asdfrc" ~/
