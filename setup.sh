@@ -8,15 +8,15 @@ system_kind=""
 # Setup script for dots2k
 function install_arch {
     sudo pacman -S \
-        curl git zsh python vim neovim tmux bat fzf fasd fd eza unzip \
-        lsd github-cli git-delta lazygit openssh ranger  \
-        thefuck xclip ncdu ripgrep kitty autorandr ttf-firacode-nerd
+        curl git zsh python vim neovim tmux bat fzf fd eza unzip \
+        lsd github-cli git-delta lazygit openssh ranger vifm zoxide \
+        xclip ncdu ripgrep kitty autorandr ttf-firacode-nerd
 }
 
 function install_debian {
     sudo apt install \
-        curl git zsh vim neovim tmux bat fzf fasd python eza gh ripgrep \
-        fd-find unzip thefuck xclip ncdu ranger  kitty autorandr
+        curl git zsh vim neovim tmux bat fzf python eza gh ripgrep \
+        fd-find unzip xclip ncdu ranger  kitty autorandr vifm zoxide
 
     sudo ln -sfnv /usr/bin/fdfind /usr/bin/fd
     sudo ln -sfnv /usr/bin/batcat /usr/bin/bat
@@ -24,8 +24,8 @@ function install_debian {
 
 function install_mac {
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-    brew install asdf bat eza fasd fd fzf gh gotop lazygit lsd ncdu neofetch \
-        neovim pastel ripgrep skhd tmux wget yabai iterm2 maccy stats
+    brew install asdf bat eza fd fzf gh gotop lazygit lsd ncdu neofetch \
+        neovim pastel ripgrep skhd tmux vifm zoxide wget yabai iterm2 maccy stats
 }
 
 function install_linux {

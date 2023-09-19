@@ -61,11 +61,11 @@ This list is incomplete, package names may vary depending upon your system and y
 
 ```bash
 # Required
-curl git zsh python neovim tmux bat fzf fasd fd exa unzip \
+curl git zsh python neovim tmux bat fzf fd zoxide vifm unzip \
 lsd github-cli git-delta lazygit openssh ripgrep ttf-firacode-nerd
 
 # Optional
-vim ranger cmus libnotify xdotool libinput htop ncdu broot xclip thefuck \
+vim ranger cmus libnotify xdotool libinput eza htop ncdu broot xclip thefuck \
 bash i3 sway awesomewm rofi dmenu morc_menu bmenu conky kitty autorandr
 ```
 
