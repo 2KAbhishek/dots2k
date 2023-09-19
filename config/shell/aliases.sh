@@ -31,7 +31,7 @@ alias e='nvim $(files)'
 alias emd='emacs --daemon &'
 alias emc="emacsclient -c -a 'emacs'"
 alias emt='emacs --no-window-system'
-alias exag="exa -ahlT -L=1  -s=extension --group-directories-first"
+alias exag="eza -ahlT -L=1  -s=extension --group-directories-first"
 alias exdo='exercism download --exercise=hello-world --track=ruby'
 alias exsu='exercism submit'
 alias fd="fd -H"

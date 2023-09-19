@@ -8,14 +8,14 @@ system_kind=""
 # Setup script for dots2k
 function install_arch {
     sudo pacman -S \
-        curl git zsh python vim neovim tmux bat fzf fasd fd exa unzip \
+        curl git zsh python vim neovim tmux bat fzf fasd fd eza unzip \
         lsd github-cli git-delta lazygit openssh ranger  \
         thefuck xclip ncdu ripgrep kitty autorandr ttf-firacode-nerd
 }
 
 function install_debian {
     sudo apt install \
-        curl git zsh vim neovim tmux bat fzf fasd python exa gh ripgrep \
+        curl git zsh vim neovim tmux bat fzf fasd python eza gh ripgrep \
         fd-find unzip thefuck xclip ncdu ranger  kitty autorandr
 
     sudo ln -sfnv /usr/bin/fdfind /usr/bin/fd
@@ -24,7 +24,7 @@ function install_debian {
 
 function install_mac {
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-    brew install asdf bat exa fasd fd fzf gh gotop lazygit lsd ncdu neofetch \
+    brew install asdf bat eza fasd fd fzf gh gotop lazygit lsd ncdu neofetch \
         neovim pastel ripgrep skhd tmux wget yabai iterm2 maccy stats
 }
 
