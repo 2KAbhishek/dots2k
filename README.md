@@ -103,6 +103,7 @@ Some configs are more self contained repos, which can be included as plugins
 <details>
     <summary>Expand for neovim, tmux, window manager + more configs</summary>
 
+### CLI Tools
 
 - [nvim2k](https://github.com/2kabhishek/nvim2k): Customize neovim for ultimate productivity and efficiency, comes as a submodule.
 - [tmux2k](https://github.com/2kabhishek/tmux2k): Pretty and functional theme for tmux.
@@ -114,7 +115,7 @@ Some configs are more self contained repos, which can be included as plugins
 - [awesome2k](https://github.com/2kabhishek/awesome2k): Manage your windows with awesome and Xorg.
 - [rofi2k](https://github.com/2kabhishek/rofi2k): Streamline your Linux workflow with rofi app launcher.
 
-#### Theming
+### Theming
 
 - [BWnB](https://github.com/2KAbhishek/BWnB/): Slightly older theme for KDE and Windows 10.
 - [nightblue](https://github.com/2kabhishek/nightblue): Theme of choice for Firefox.
@@ -130,7 +131,7 @@ Some configs are more self contained repos, which can be included as plugins
 - [gitrim](https://github.com/2kabhishek/gitrim): Trim accidentally pushed or obsolete files from git history.
 - [entry](https://github.com/2kabhishek/entry): Maintain a log of entries.
 
-#### Shell Prompts
+### Shell Prompts
 
 - [posh2k](https://github.com/2KAbhishek/posh2k/): Eye candy and power for your oh-my-posh based shells.
 - [starship2k](https://github.com/2KAbhishek/starship2k/): Fast and pretty shell with starship.
