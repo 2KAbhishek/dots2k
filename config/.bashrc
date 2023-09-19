@@ -29,5 +29,9 @@ alias reload="source ~/.bashrc"
 # Common aliases
 [ -f ~/.config/shell/aliases.sh ] && source ~/.config/shell/aliases.sh
 
+# ZSH envars
+if type navi >/dev/null 2>&1; then eval "$(navi widget bash)"; fi
+if type zoxide >/dev/null 2>&1; then eval "$(zoxide init bash)"; fi
+
 # Local configurations
 [ -f ~/.local.sh ] && source ~/.local.sh

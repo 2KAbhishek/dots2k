@@ -51,7 +51,6 @@ plugins=(adb
     tmux
     vi-mode
     web-search
-    z
     zsh-autopair
     zsh-autosuggestions
     zsh-completions
@@ -179,6 +178,10 @@ bindkey "^[." insert-last-word
 autoload -Uz copy-earlier-word
 zle -N copy-earlier-word
 bindkey "^[m" copy-earlier-word
+
+# ZSH envars
+if type navi >/dev/null 2>&1; then eval "$(navi widget zsh)"; fi
+if type zoxide >/dev/null 2>&1; then eval "$(zoxide init zsh)"; fi
 
 # Local configurations
 [ -f ~/.local.sh ] && source ~/.local.sh
