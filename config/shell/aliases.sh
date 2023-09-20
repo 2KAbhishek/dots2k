@@ -82,7 +82,6 @@ alias ls='ls --color=auto'
 alias lsda="lsd -A --group-dirs first --classify"
 alias lsdo="lsd -A --group-dirs first --classify --recursive --depth=2"
 alias macres="yabai --restart-service && skhd --restart-service"
-alias me="$EDITOR README.md"
 alias mv="mv -iv"
 alias ncdu="ncdu --color=dark -x"
 alias note='nvim +"Telekasten new_note"'
@@ -137,22 +136,9 @@ alias yayl="pacman -Qm"
 alias yayu="yay -Syu"
 alias ytdl="youtube-dl"
 
-if [ -f "/usr/bin/grc" ]; then
-    alias df="grc df"
-    alias gcc="grc gcc"
-    alias iwconfig="grc iwconfig"
-    alias last="grc last"
-    alias make="grc make"
-    alias mount="grc mount"
-    alias mtr="grc mtr"
-    alias ping="grc ping"
-    alias ps="grc ps"
-    alias traceroute="grc traceroute"
-    alias wdiff="grc wdiff"
-fi
-
 alias vimrc="vim ~/.vimrc"
 alias virc="nvim ~/.config/nvim/lua/nvim2k/plugins/installed.lua"
+alias me="$EDITOR README.md"
 alias zshrc="$EDITOR ~/.zshrc"
 alias bashrc="$EDITOR ~/.bashrc"xclip
 alias alia="$EDITOR ~/.config/shell/aliases.sh"
@@ -162,8 +148,4 @@ alias loca="$EDITOR ~/.local.sh"
 alias p2k="$EDITOR ~/.config/shell/powerlevel2k.zsh"
 
 alias meow="$EDITOR ~/.config/kitty/kitty.conf"
-# Causes Issues
-# if [ -f "/usr/bin/kdeconnect-cli" ]; then
-#     alias send="kdeconnect-cli -d "$(kdeconnect-cli -a --id-only)" --share"
-# fi
-#
+
