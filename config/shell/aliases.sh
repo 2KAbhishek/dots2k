@@ -137,7 +137,7 @@ alias yayu="yay -Syu"
 alias ytdl="youtube-dl"
 
 alias vimrc="vim ~/.vimrc"
-alias virc="nvim ~/.config/nvim/lua/nvim2k/plugins/installed.lua"
+alias virc="nvim ~/.config/nvim/lua/installed.lua"
 alias me="$EDITOR README.md"
 alias zshrc="$EDITOR ~/.zshrc"
 alias bashrc="$EDITOR ~/.bashrc"xclip
