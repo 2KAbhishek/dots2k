@@ -171,9 +171,13 @@ alias -g Z="| fzf"
 alias -g wcc="| wc -m"
 alias -g wcw="| wc -w"
 
-# ZSH envars
+# Tool confs for zsh
 if type navi >/dev/null 2>&1; then eval "$(navi widget zsh)"; fi
 if type zoxide >/dev/null 2>&1; then eval "$(zoxide init zsh)"; fi
+if type rtx >/dev/null 2>&1; then
+    eval "$(rtx activate zsh)";
+    eval "$(rtx completion zsh)";
+fi
 
 # Key Bindings
 bindkey -s '^H' ' source ~/.zshrc^M ^M'
