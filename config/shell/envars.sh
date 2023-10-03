@@ -49,9 +49,9 @@ export NOTES_DIR="$HOME/Projects/GitHub/Notes/worklog/"
 
 export GPG_TTY=$(tty)
 
-# Executables
+# Tool configs
 if type dircolors >/dev/null 2>&1; then eval "$(dircolors ~/.dircolors)"; fi
-if type thefuck >/dev/null 2>&1; then eval "$(thefuck --alias)"; fi
+# if type thefuck >/dev/null 2>&1; then eval "$(thefuck --alias)"; fi
 
 # Swap caps lock with escape
 # if type setxkbmap >/dev/null 2>&1; then
@@ -63,7 +63,7 @@ if type thefuck >/dev/null 2>&1; then eval "$(thefuck --alias)"; fi
 # fi
 
 # broot file explorer
-[ -f ~/.config/broot/launcher/bash/br ] && source ~/.config/broot/launcher/bash/br
+# [ -f ~/.config/broot/launcher/bash/br ] && source ~/.config/broot/launcher/bash/br
 
 # Homebrew
 # [ -f /home/linuxbrew/.linuxbrew/bin/brew ] && eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
