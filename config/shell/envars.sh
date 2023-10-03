@@ -70,4 +70,4 @@ if type thefuck >/dev/null 2>&1; then eval "$(thefuck --alias)"; fi
 # [ -f "${HOMEBREW_PREFIX}/etc/bash_completion.d/brew" ] && source "${HOMEBREW_PREFIX}/etc/bash_completion.d/brew"
 
 # asdf
-[ -f /opt/asdf-vm/asdf.sh ] && source /opt/asdf-vm/asdf.sh
+# [ -f /opt/asdf-vm/asdf.sh ] && source /opt/asdf-vm/asdf.sh

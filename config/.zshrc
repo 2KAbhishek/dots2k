@@ -30,7 +30,6 @@ SAVEHIST=99999
 # Plugins
 plugins=(adb
     alias-tips
-    asdf
     catimg
     colorize
     direnv
