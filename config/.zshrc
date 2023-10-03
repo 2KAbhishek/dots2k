@@ -123,6 +123,7 @@ fi
 if [[ $ZSH_THEME == "powerlevel10k/powerlevel10k" ]]; then
     [ -f ~/.config/shell/p10k.zsh ] && source ~/.config/shell/p10k.zsh
     [ -f ~/.config/shell/powerlevel2k.zsh ] && source ~/.config/shell/powerlevel2k.zsh
+    [ -f ~/.config/shell/p10k.rtx.zsh ] && source ~/.config/shell/p10k.rtx.zsh
 fi
 
 source $ZSH/oh-my-zsh.sh
