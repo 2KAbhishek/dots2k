@@ -7,7 +7,6 @@
 # Usage in ~/.zshrc:
 #
 #   # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-#   if type rtx >/dev/null 2>&1; then source ~/.config/shell/rtx.zsh; fi
 #   [[ -f ~/.config/shell/p10k.zsh ]] && source ~/.config/shell/p10k.zsh
 #   [[ -f ~/.config/shell/p10k.rtx.zsh ]] && source ~/.config/shell/p10k.rtx.zsh
 #
