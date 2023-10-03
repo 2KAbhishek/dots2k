@@ -31,7 +31,6 @@ mv -iv ~/.dmenurc ~/.dmenurc.old
 mv -iv ~/.gitconfig ~/.gitconfig.old
 mv -iv ~/.inputrc ~/.inputrc.old
 mv -iv ~/.luarc.json ~/.luarc.json.old
-mv -iv ~/.p10k.zsh ~/.p10k.zsh.old
 mv -iv ~/.prettierrc ~/.prettierrc.old
 mv -iv ~/.pryrc ~/.pryrc.old
 mv -iv ~/.pystartup ~/.pystartup.old

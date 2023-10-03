@@ -31,7 +31,6 @@ ln -sfnv "$PWD/config/.dmenurc" ~/
 ln -sfnv "$PWD/config/.gitconfig" ~/
 ln -sfnv "$PWD/config/.inputrc" ~/
 ln -sfnv "$PWD/config/.luarc.json" ~/
-ln -sfnv "$PWD/config/.p10k.zsh" ~/
 ln -sfnv "$PWD/config/.prettierrc" ~/
 ln -sfnv "$PWD/config/.pryrc" ~/
 ln -sfnv "$PWD/config/.pystartup" ~/
