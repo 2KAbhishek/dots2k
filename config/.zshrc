@@ -182,9 +182,9 @@ fi
 
 # Key Bindings
 bindkey -s '^H' ' source ~/.zshrc^M ^M'
-bindkey "^F" fzf-file-widget
-bindkey -s "^P" ' nvim $(fzf)^M ^M'
+bindkey -s '^T' ' t^M ^M'
 bindkey -s "^G" ' lazygit^M ^M'
+bindkey "^F" fzf-file-widget
 bindkey "^X^E" edit-command-line
 bindkey "^[." insert-last-word
 
