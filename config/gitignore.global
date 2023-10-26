@@ -4,6 +4,9 @@
 # asdf versions
 .tool-versions
 
+# rtx versions
+.rtx.toml
+
 # Worktrees
 .worktrees
 
