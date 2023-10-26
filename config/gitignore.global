@@ -7,3 +7,7 @@
 # Worktrees
 .worktrees
 
+# tmuxinator configs
+.tmuxinator.yml
+.tmuxinator.yaml
+
