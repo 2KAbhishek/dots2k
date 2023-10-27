@@ -18,6 +18,7 @@ mv -iv ~/.config/lazygit/config.yml ~/.config/lazygit/config.yml.old
 mv -iv ~/.config/libinput-gestures.conf ~/.config/libinput-gestures.conf.old
 mv -iv ~/.config/nvim ~/.config/nvim.old
 mv -iv ~/.config/ranger ~/.config/ranger.old
+mv -iv ~/.config/qutebrowser ~/.config/qutebrowser.old
 mv -iv ~/.config/shell ~/.config/shell.old
 mv -iv ~/.config/sysinfo.conkyrc ~/.config/sysinfo.conkyrc.old
 mv -iv ~/.config/topgrade.toml ~/.config/topgrade.toml.old
