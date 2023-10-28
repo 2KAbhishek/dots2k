@@ -45,46 +45,58 @@ config.set("content.javascript.enabled", True, "chrome://*/*")
 config.set("content.javascript.enabled", True, "qute://*/*")
 
 # Colors
-c.colors.completion.fg = ["#9cc4ff", "white", "white"]
+accent = "#1688f0"
+black = "#000000"
+white = "#dddddd"
+red = "#dd2206"
+green = "#4ec00a"
+yellow = "#f1c200"
+purple = "#390d91"
+
 c.colors.completion.category.bg = (
     "qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #000000, stop:1 #111)"
 )
 
-c.colors.completion.odd.bg = "#000"
-c.colors.completion.even.bg = "#0a0a0a"
-c.colors.completion.category.fg = "#1688f0"
-c.colors.completion.category.border.top = "#1a1a1a"
-c.colors.completion.category.border.bottom = "#1a1a1a"
-c.colors.completion.item.selected.fg = "#000"
-c.colors.completion.item.selected.bg = "#1688f0"
-c.colors.completion.item.selected.match.fg = "#fff"
-c.colors.completion.match.fg = "#1688f0"
-c.colors.completion.scrollbar.fg = "white"
-c.colors.downloads.bar.bg = "#000"
-c.colors.downloads.error.bg = "#ff6c6b"
-c.colors.hints.fg = "#282c34"
-c.colors.hints.match.fg = "#98be65"
-c.colors.messages.info.bg = "#000"
-c.colors.statusbar.normal.bg = "#000"
-c.colors.statusbar.insert.fg = "white"
-c.colors.statusbar.insert.bg = "#1688f0"
-c.colors.statusbar.passthrough.bg = "#34426f"
-c.colors.statusbar.command.bg = "#000"
-c.colors.statusbar.url.warn.fg = "yellow"
-c.colors.tabs.bar.bg = "#000"
-c.colors.tabs.odd.bg = "#000"
-c.colors.tabs.even.bg = "#0a0a0a"
-c.colors.tabs.selected.odd.bg = "#1688f0"
-c.colors.tabs.selected.even.bg = "#1688f0"
-c.colors.tabs.pinned.odd.bg = "seagreen"
-c.colors.tabs.pinned.even.bg = "darkseagreen"
-c.colors.tabs.pinned.selected.odd.bg = "#1688f0"
-c.colors.tabs.pinned.selected.even.bg = "#1688f0"
+c.colors.completion.category.border.bottom = accent
+c.colors.completion.category.border.top = accent
+c.colors.completion.category.fg = accent
+c.colors.completion.even.bg = black
+c.colors.completion.fg = white
+c.colors.completion.item.selected.bg = accent
+c.colors.completion.item.selected.fg = black
+c.colors.completion.item.selected.match.fg = white
+c.colors.completion.match.fg = accent
+c.colors.completion.odd.bg = black
+c.colors.completion.scrollbar.fg = white
+c.colors.downloads.bar.bg = black
+c.colors.downloads.error.bg = red
+c.colors.hints.bg = black
+c.colors.hints.fg = white
+c.colors.hints.match.fg = green
+c.colors.messages.info.bg = black
+c.colors.statusbar.command.bg = black
+c.colors.statusbar.insert.bg = accent
+c.colors.statusbar.insert.fg = white
+c.colors.statusbar.normal.bg = black
+c.colors.statusbar.passthrough.bg = purple
+c.colors.statusbar.private.bg = yellow
+c.colors.statusbar.url.fg = accent
+c.colors.statusbar.url.warn.fg = yellow
+c.colors.tabs.bar.bg = black
+c.colors.tabs.even.bg = black
+c.colors.tabs.odd.bg = black
+c.colors.tabs.pinned.even.bg = green
+c.colors.tabs.pinned.odd.bg = green
+c.colors.tabs.pinned.selected.even.bg = accent
+c.colors.tabs.pinned.selected.odd.bg = accent
+c.colors.tabs.selected.even.bg = accent
+c.colors.tabs.selected.odd.bg = accent
 
 # Font
 c.fonts.default_family = '"FiraCode Nerd Font"'
 c.fonts.default_size = "8pt"
 c.fonts.completion.entry = '8pt "FiraCode Nerd Font"'
+c.fonts.hints = '8pt "FiraCode Nerd Font"'
 c.fonts.debug_console = '8pt "FiraCode Nerd Font"'
 c.fonts.prompts = "default_size sans-serif"
 c.fonts.statusbar = '8pt "FiraCode Nerd Font"'
