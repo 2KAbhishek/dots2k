@@ -2,6 +2,7 @@
 #   qute://help/configuring.html
 #   qute://help/settings.html
 
+from time import localtime, strftime
 config.load_autoconfig()
 
 # Cookies
@@ -136,9 +137,8 @@ c.aliases = {"q": "quit", "Q": "close", "w": "session-save", "x": "quit --save"}
 # Keybindings
 # config.bind('o', 'spawn --userscript dmenu-open')
 # config.bind('O', 'spawn --userscript dmenu-open --tab')
-config.bind("xv", "hint links spawn mpv {hint-url}")
-config.bind("xV", "hint links spawn st -e youtube-dl {hint-url}")
 config.bind("t", "cmd-set-text -s :open -t")
+
 config.bind("xs", "config-cycle statusbar.show always never")
 config.bind("xt", "config-cycle tabs.show always never")
 config.bind("K", "back")
@@ -147,11 +147,24 @@ config.bind("H", "tab-prev")
 config.bind("L", "tab-next")
 
 leader = " "
-config.bind(leader + "e", "bookmark-list")
+screenshots_dir = "~/Pictures/Screenshots/"
+time = strftime("-%Y-%m-%d-%H-%M-%S", localtime())
+screenshot_file = screenshots_dir + "qute" + time + ".png"
+
 config.bind(leader + "c", "config-edit")
+config.bind(leader + "C", "cmd-set-text -s :set -t")
+config.bind(leader + "d", "devtools")
+config.bind(leader + "D", "devtools-focus")
+config.bind(leader + "e", "edit-text")
+config.bind(leader + "E", "cmd-edit")
 config.bind(leader + "h", "help")
+config.bind(leader + "m", "bookmark-list")
 config.bind(leader + "q", "tab-close")
 config.bind(leader + "Q", "close")
-config.bind(leader + "x", "quit --save")
-config.bind(leader + "u", "undo")
 config.bind(leader + "r", "config-source")
+config.bind(leader + "s", "screenshot " + screenshot_file)
+config.bind(leader + "S", "view-source --edit")
+config.bind(leader + "u", "undo")
+config.bind(leader + "v", "hint links spawn mpv {hint-url}")
+config.bind(leader + "V", "hint links spawn st -e youtube-dl {hint-url}")
+config.bind(leader + "x", "quit --save")
