@@ -115,7 +115,7 @@ c.url.searchengines = {
 }
 
 # Aliases
-c.aliases = {"q": "quit", "w": "session-save", "x": "quit --save", "o": "open -t"}
+c.aliases = {"q": "quit", "w": "session-save", "x": "quit --save"}
 
 # Keybindings
 # config.bind('o', 'spawn --userscript dmenu-open')
@@ -126,4 +126,3 @@ config.bind("t", "cmd-set-text -s :open -t")
 config.bind("xs", "config-cycle statusbar.show always never")
 config.bind("xt", "config-cycle tabs.show always never")
 config.bind("xx", "tab-close")
-
