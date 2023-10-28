@@ -139,6 +139,7 @@ c.aliases = {"q": "quit", "Q": "close", "w": "session-save", "x": "quit --save"}
 # Keybindings
 config.bind("t", "cmd-set-text -s :open -t")
 config.bind("s", "hint")
+config.bind("a", "mode-enter insert")
 
 config.bind("K", "back")
 config.bind("J", "forward")
