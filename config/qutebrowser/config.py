@@ -3,6 +3,7 @@
 #   qute://help/settings.html
 
 from time import localtime, strftime
+
 config.load_autoconfig()
 
 # Cookies
@@ -114,6 +115,7 @@ c.zoom.default = "80%"
 c.downloads.location.directory = "~/Downloads"
 c.tabs.show = "multiple"
 c.editor.command = [terminal, "-e", editor, "{}"]
+c.auto_save.session = True
 
 # Home page
 c.url.default_page = "https://2kabhishek.github.io/links"
