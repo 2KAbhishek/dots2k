@@ -2,7 +2,7 @@
 #   qute://help/configuring.html
 #   qute://help/settings.html
 
-config.load_autoconfig(False)
+config.load_autoconfig()
 
 # Cookies
 config.set("content.cookies.accept", "all", "chrome-devtools://*")
