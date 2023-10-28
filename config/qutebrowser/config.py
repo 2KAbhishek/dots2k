@@ -106,9 +106,13 @@ config.set("colors.webpage.darkmode.enabled", True)
 config.set("colors.webpage.preferred_color_scheme", "dark")
 
 # General
+terminal = "foot"
+editor = "nvim"
+
 c.zoom.default = "80%"
 c.downloads.location.directory = "~/Downloads"
 c.tabs.show = "multiple"
+c.editor.command = [terminal, "-e", editor, "{}"]
 
 # Home page
 c.url.default_page = "https://2kabhishek.github.io/links"
@@ -127,7 +131,7 @@ c.url.searchengines = {
 }
 
 # Aliases
-c.aliases = {"q": "quit", "w": "session-save", "x": "quit --save"}
+c.aliases = {"q": "quit", "Q": "close", "w": "session-save", "x": "quit --save"}
 
 # Keybindings
 # config.bind('o', 'spawn --userscript dmenu-open')
@@ -137,8 +141,16 @@ config.bind("xV", "hint links spawn st -e youtube-dl {hint-url}")
 config.bind("t", "cmd-set-text -s :open -t")
 config.bind("xs", "config-cycle statusbar.show always never")
 config.bind("xt", "config-cycle tabs.show always never")
-config.bind("xx", "tab-close")
 config.bind("K", "back")
 config.bind("J", "forward")
 config.bind("H", "tab-prev")
 config.bind("L", "tab-next")
+
+config.bind(" e", "bookmark-list")
+config.bind(" c", "config-edit")
+config.bind(" h", "help")
+config.bind(" q", "tab-close")
+config.bind(" Q", "close")
+config.bind(" x", "quit --save")
+config.bind(" u", "undo")
+config.bind(" r", "config-source")
