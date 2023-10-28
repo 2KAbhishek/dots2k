@@ -13,7 +13,7 @@
     file-style = omit
     zero-style = syntax
     syntax-theme = Monokai Extended
-    commit-decoration-style ="#11ce16" box
+    commit-decoration-style ="#1688f0" box
     commit-style = "#ffd21a" bold italic
     hunk-header-decoration-style = "#1688f0" box ul
     hunk-header-file-style = "#c63bee" ul bold
@@ -47,7 +47,7 @@
     file-style = omit
     zero-style = syntax
     syntax-theme = Monokai Extended
-    commit-decoration-style = green box
+    commit-decoration-style = blue box
     commit-style = yellow bold italic
     hunk-header-decoration-style = blue box ul
     hunk-header-file-style = purple ul bold
