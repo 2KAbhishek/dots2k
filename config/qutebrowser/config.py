@@ -169,6 +169,5 @@ config.bind(leader + "s", "screenshot " + screenshot_file)
 config.bind(leader + "S", "view-source --edit")
 config.bind(leader + "u", "undo")
 config.bind(leader + "v", "hint links spawn mpv {hint-url}")
-config.bind(leader + "V", "hint links spawn st -e youtube-dl {hint-url}")
+config.bind(leader + "V", "hint links spawn " + terminal + "-e youtube-dl {hint-url}")
 config.bind(leader + "x", "quit --save")
-
