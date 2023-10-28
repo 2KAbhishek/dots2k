@@ -137,16 +137,16 @@ c.url.searchengines = {
 c.aliases = {"q": "quit", "Q": "close", "w": "session-save", "x": "quit --save"}
 
 # Keybindings
-# config.bind('o', 'spawn --userscript dmenu-open')
-# config.bind('O', 'spawn --userscript dmenu-open --tab')
 config.bind("t", "cmd-set-text -s :open -t")
+config.bind("s", "hint")
 
-config.bind("xs", "config-cycle statusbar.show always never")
-config.bind("xt", "config-cycle tabs.show always never")
 config.bind("K", "back")
 config.bind("J", "forward")
 config.bind("H", "tab-prev")
 config.bind("L", "tab-next")
+
+config.bind("xs", "config-cycle statusbar.show always never")
+config.bind("xt", "config-cycle tabs.show always never")
 
 leader = " "
 screenshots_dir = "~/Pictures/Screenshots/"
@@ -170,3 +170,4 @@ config.bind(leader + "u", "undo")
 config.bind(leader + "v", "hint links spawn mpv {hint-url}")
 config.bind(leader + "V", "hint links spawn st -e youtube-dl {hint-url}")
 config.bind(leader + "x", "quit --save")
+
