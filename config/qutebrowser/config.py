@@ -19,10 +19,11 @@ editor = "nvim"
 
 # Colors
 accent = "#1688f0"
+blue = "#0f1d91"
 black = "#000000"
 white = "#dddddd"
 red = "#dd2206"
-green = "#4ec00a"
+green = "#3ed500"
 yellow = "#f1c200"
 purple = "#390d91"
 
@@ -58,8 +59,8 @@ c.colors.statusbar.url.warn.fg = yellow
 c.colors.tabs.bar.bg = black
 c.colors.tabs.even.bg = black
 c.colors.tabs.odd.bg = black
-c.colors.tabs.pinned.even.bg = green
-c.colors.tabs.pinned.odd.bg = green
+c.colors.tabs.pinned.even.bg = blue
+c.colors.tabs.pinned.odd.bg = blue
 c.colors.tabs.pinned.selected.even.bg = accent
 c.colors.tabs.pinned.selected.odd.bg = accent
 c.colors.tabs.selected.even.bg = accent
