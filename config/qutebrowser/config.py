@@ -10,6 +10,13 @@ c = c  # noqa: F821
 
 config.load_autoconfig()
 
+# Variables
+leader = " "
+screenshots_dir = "~/Pictures/Screenshots/"
+timestamp = strftime("%Y-%m-%d-%H-%M-%S", localtime())  # updates on every config-source
+terminal = "foot"
+editor = "nvim"
+
 # Colors
 accent = "#1688f0"
 black = "#000000"
