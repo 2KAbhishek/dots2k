@@ -4,6 +4,10 @@
 
 from time import localtime, strftime
 
+# Reassign to avoid lsp(ruff_lsp) errors
+config = config  # noqa: F821
+c = c  # noqa: F821
+
 config.load_autoconfig()
 
 # Colors
