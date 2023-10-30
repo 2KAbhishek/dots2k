@@ -94,7 +94,13 @@ c.url.searchengines = {
 }
 
 # Aliases
-c.aliases = {"q": "quit", "Q": "close", "w": "session-save", "x": "quit --save"}
+c.aliases = {
+    "o": "open",
+    "q": "quit",
+    "Q": "close",
+    "w": "session-save",
+    "x": "quit --save",
+}
 
 # Keybindings
 config.bind("t", "cmd-set-text -s :open -t")
@@ -122,6 +128,8 @@ config.bind(leader + "e", "edit-text")
 config.bind(leader + "E", "cmd-edit")
 config.bind(leader + "h", "help")
 config.bind(leader + "m", "bookmark-list")
+config.bind(leader + "p", "tab-pin")
+config.bind(leader + "P", "cmd-set-text -s :tab-move")
 config.bind(leader + "q", "tab-close")
 config.bind(leader + "Q", "close")
 config.bind(leader + "r", "config-source")
