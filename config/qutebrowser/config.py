@@ -17,6 +17,18 @@ timestamp = strftime("%Y-%m-%d-%H-%M-%S", localtime())  # updates on every confi
 terminal = "foot"
 editor = "nvim"
 
+# General
+c.editor.command = [terminal, "-e", editor, "{}"]
+c.downloads.location.directory = "~/Downloads"
+c.zoom.default = "80%"
+c.tabs.show = "multiple"
+c.auto_save.session = True
+c.url.auto_search = "naive"
+
+# Dark mode
+config.set("colors.webpage.darkmode.enabled", True)
+config.set("colors.webpage.preferred_color_scheme", "dark")
+
 # Colors
 accent = "#1688f0"
 blue = "#0f1d91"
@@ -75,32 +87,19 @@ c.fonts.debug_console = '8pt "FiraCode Nerd Font"'
 c.fonts.prompts = "default_size sans-serif"
 c.fonts.statusbar = '8pt "FiraCode Nerd Font"'
 
-# Dark mode
-config.set("colors.webpage.darkmode.enabled", True)
-config.set("colors.webpage.preferred_color_scheme", "dark")
-
-# General
-terminal = "foot"
-editor = "nvim"
-
-c.zoom.default = "80%"
-c.downloads.location.directory = "~/Downloads"
-c.tabs.show = "multiple"
-c.editor.command = [terminal, "-e", editor, "{}"]
-c.auto_save.session = True
-
 # Home page
 c.url.default_page = "https://2kabhishek.github.io/links"
 c.url.start_pages = "https://2kabhishek.github.io/links"
 
 # Search engines
-c.url.auto_search = "naive"
 c.url.searchengines = {
     "DEFAULT": "https://duckduckgo.com/?q={}",
     "am": "https://www.amazon.com/s?k={}",
     "aw": "https://wiki.archlinux.org/?search={}",
     "gg": "https://www.google.com/search?q={}",
     "re": "https://www.reddit.com/r/{}",
+    "rp": "https://www.github.com/2kabhishek/{}",
+    "tx": "https://springhealth.atlassian.net/browse/{}",
     "wk": "https://en.wikipedia.org/wiki/{}",
     "yt": "https://www.youtube.com/results?search_query={}",
 }
@@ -127,11 +126,6 @@ config.bind("L", "tab-next")
 config.bind("xs", "config-cycle statusbar.show always never")
 config.bind("xt", "config-cycle tabs.show always never")
 
-leader = " "
-screenshots_dir = "~/Pictures/Screenshots/"
-time = strftime("-%Y-%m-%d-%H-%M-%S", localtime())
-screenshot_file = screenshots_dir + "qute" + time + ".png"
-
 config.bind(leader + "c", "config-edit")
 config.bind(leader + "C", "cmd-set-text -s :set -t")
 config.bind(leader + "d", "devtools")
@@ -146,7 +140,9 @@ config.bind(leader + "q", "tab-close")
 config.bind(leader + "Q", "close")
 config.bind(leader + "r", "config-source")
 config.bind(leader + "R", "restart")
-config.bind(leader + "s", "screenshot " + screenshot_file)
+config.bind(
+    leader + "s", "screenshot " + screenshots_dir + "qute-" + timestamp + ".png"
+)
 config.bind(leader + "S", "view-source --edit")
 config.bind(leader + "u", "undo")
 config.bind(leader + "v", "hint links spawn mpv {hint-url}")
