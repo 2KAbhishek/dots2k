@@ -123,6 +123,9 @@ config.bind("J", "forward")
 config.bind("H", "tab-prev")
 config.bind("L", "tab-next")
 
+config.bind("<Ctrl-=>", "zoom-in")
+config.bind("<Ctrl-->", "zoom-out")
+
 config.bind("xs", "config-cycle statusbar.show always never")
 config.bind("xt", "config-cycle tabs.show always never")
 
