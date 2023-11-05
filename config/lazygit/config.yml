@@ -10,7 +10,7 @@ gui:
     staging: magenta
   scrollHeight: 2 # how many lines you scroll by
   scrollPastBottom: true # enable scrolling past the bottom
-  sidePanelWidth: 0.3 # number from 0 to 1
+  sidePanelWidth: 0.25 # number from 0 to 1
   expandFocusedSidePanel: true
   mainPanelSplitMode: 'flexible' # one of 'horizontal' | 'flexible' | 'vertical'
   language: 'auto' # one of 'auto' | 'en' | 'zh' | 'pl' | 'nl' | 'ja' | 'ko'
@@ -56,7 +56,7 @@ git:
   paging:
     colorArg: always
     useConfig: false
-    pager: delta --features=mantis-shrimp-lite --paging=never
+    pager: delta --features=mantis-shrimp --paging=never
   commit:
     signOff: false
   merging:
