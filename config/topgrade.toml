@@ -118,9 +118,6 @@ repos = [
 # Don't pull the predefined git repos
 #pull_predefined = false
 
-# Arguments to pass Git when pulling Repositories
-arguments = "--rebase --autostash --recurse-submodules"
-
 [windows]
 # Manually select Windows updates
 #accept_all_updates = false
