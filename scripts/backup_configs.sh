@@ -25,7 +25,6 @@ mv -iv ~/.config/topgrade.toml ~/.config/topgrade.toml.old
 mv -iv ~/.config/xplr ~/.config/xplr.old
 
 # home directory
-mv -iv ~/.asdfrc ~/.asdfrc.old
 mv -iv ~/.bashrc ~/.bashrc.old
 mv -iv ~/.dircolors ~/.dircolors.old
 mv -iv ~/.dmenurc ~/.dmenurc.old

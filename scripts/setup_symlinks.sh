@@ -25,7 +25,6 @@ ln -sfnv "$PWD/config/topgrade.toml" ~/.config/
 ln -sfnv "$PWD/config/xplr/" ~/.config/
 
 # home directory
-ln -sfnv "$PWD/config/.asdfrc" ~/
 ln -sfnv "$PWD/config/.bashrc" ~/
 ln -sfnv "$PWD/config/.dircolors" ~/
 ln -sfnv "$PWD/config/.dmenurc" ~/
