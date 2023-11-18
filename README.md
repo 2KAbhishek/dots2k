@@ -105,15 +105,20 @@ Some configs are more self contained repos, which can be included as plugins
 
 ### CLI Tools
 
-- [nvim2k](https://github.com/2kabhishek/nvim2k): Customize neovim for ultimate productivity and efficiency, comes as a submodule.
+- [nvim2k](https://github.com/2kabhishek/nvim2k): Neovim config for ultimate productivity and efficiency.
 - [tmux2k](https://github.com/2kabhishek/tmux2k): Pretty and functional theme for tmux.
 - [tmux-tilit](https://github.com/2kabhishek/tmux-tilit): Add window manager-like capabilities to tmux.
+- [tmux-tea](https://github.com/2kabhishek/tmux-tea): Powerful tmux session management.
 
 ### Window Management
 
 - [sway2k](https://github.com/2kabhishek/sway2k): Powerful and flexible window management with sway and Wayland.
 - [awesome2k](https://github.com/2kabhishek/awesome2k): Manage your windows with awesome and Xorg.
 - [rofi2k](https://github.com/2kabhishek/rofi2k): Streamline your Linux workflow with rofi app launcher.
+
+### Browser
+
+- [qute2k](https://github.com/2kabhishek/qute2k): Keyboard driven browser for vim lovers.
 
 ### Theming
 
