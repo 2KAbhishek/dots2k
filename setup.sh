@@ -24,7 +24,7 @@ function install_debian {
 
 function install_mac {
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-    brew install asdf bat eza fd fzf gh gotop lazygit lsd ncdu neofetch \
+    brew install bat eza fd fzf gh gotop lazygit lsd ncdu neofetch \
         neovim pastel ripgrep skhd tmux vifm zoxide wget yabai iterm2 maccy stats
 }
 
@@ -98,10 +98,10 @@ function install_vim_plugins {
     curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
         https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
-    echo -e "\u001b[7m Installing plugins for vim and nvim... \u001b[0m"
+    echo -e "\u001b[7m Installing plugins for vim... \u001b[0m"
     vim +PlugUpdate +qall
-    pip install neovim
-    nvim -c UpdateRemotePlugins
+    # pip install neovim
+    # nvim -c UpdateRemotePlugins
 }
 
 function install_tmux_plugins {

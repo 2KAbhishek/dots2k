@@ -51,7 +51,6 @@ export GPG_TTY=$(tty)
 
 # Tool configs
 if type dircolors >/dev/null 2>&1; then eval "$(dircolors ~/.dircolors)"; fi
-# if type thefuck >/dev/null 2>&1; then eval "$(thefuck --alias)"; fi
 
 # Swap caps lock with escape
 # if type setxkbmap >/dev/null 2>&1; then
@@ -62,12 +61,7 @@ if type dircolors >/dev/null 2>&1; then eval "$(dircolors ~/.dircolors)"; fi
 #     xinput set-prop "$(xinput list --name-only | grep -i touch)" "libinput Tapping Enabled" 1
 # fi
 
-# broot file explorer
-# [ -f ~/.config/broot/launcher/bash/br ] && source ~/.config/broot/launcher/bash/br
-
 # Homebrew
 # [ -f /home/linuxbrew/.linuxbrew/bin/brew ] && eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 # [ -f "${HOMEBREW_PREFIX}/etc/bash_completion.d/brew" ] && source "${HOMEBREW_PREFIX}/etc/bash_completion.d/brew"
 
-# asdf
-# [ -f /opt/asdf-vm/asdf.sh ] && source /opt/asdf-vm/asdf.sh
