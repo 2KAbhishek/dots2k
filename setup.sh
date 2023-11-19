@@ -48,12 +48,12 @@ function distro_tweaks {
     color=""
 
     case $system_kind in
-    manjaro|android) color="green" ;;
+    manjaro|android) color="040" ;;
     arch) color="033" ;;
     ubuntu) color="202" && echo "alias cat=batcat" >>~/.local.sh ;;
     debian) color="163" && echo "alias cat=batcat" >>~/.local.sh ;;
-    pop) color="cyan" && echo "alias cat=batcat" >>~/.local.sh ;;
-    kali|mac) color="white" ;;
+    pop) color="045" && echo "alias cat=batcat" >>~/.local.sh ;;
+    kali|mac) color="254" ;;
     *) return ;;
     esac
 
