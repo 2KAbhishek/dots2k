@@ -100,8 +100,6 @@ function install_vim_plugins {
 
     echo -e "\u001b[7m Installing plugins for vim... \u001b[0m"
     vim +PlugUpdate +qall
-    # pip install neovim
-    # nvim -c UpdateRemotePlugins
 }
 
 function install_tmux_plugins {
