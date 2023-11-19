@@ -1,7 +1,6 @@
 #!/bin/bash
 # config directory
 ln -sfnv "$PWD/config/autorandr/" ~/.config/
-ln -sfnv "$PWD/config/awesome/" ~/.config/
 ln -sfnv "$PWD/config/bat/" ~/.config/
 ln -sfnv "$PWD/config/broot/" ~/.config/
 ln -sfnv "$PWD/config/bundle/" ~/.bundle

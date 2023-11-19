@@ -1,7 +1,6 @@
 #!/bin/bash
 # config directory
 mv -iv ~/.config/autorandr ~/.config/autorandr.old
-mv -iv ~/.config/awesome/ ~/.config/awesome.old
 mv -iv ~/.config/bat/config ~/.config/bat/config.old
 mv -iv ~/.config/broot/conf.toml ~/.config/broot/conf.toml.old
 mv -iv ~/.config/bundle/ ~/.config/bundle.old
