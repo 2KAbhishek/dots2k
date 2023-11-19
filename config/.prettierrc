@@ -10,7 +10,7 @@
     "bracketSpacing": false,
     "overrides": [
         {
-            "files": ["*.html", "*.json", "*.yaml", "*.yml"],
+            "files": ["*.html", "*.md", "*.json", "*.yaml", "*.yml"],
             "options": {
                 "tabWidth": 2
             }
