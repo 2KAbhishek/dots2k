@@ -13,48 +13,46 @@ function install_debian {
     sudo apt install "${common_packages[@]}" gh fd-find xclip autorandr
     sudo ln -sfnv /usr/bin/fdfind /usr/bin/fd
     sudo ln -sfnv /usr/bin/batcat /usr/bin/bat
+    echo "alias cat=batcat" >>~/.local.sh
 }
 
 function install_mac {
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
     brew install "${common_packages[@]}" gh fd pastel skhd yabai iterm2 maccy stats
+    ln -sfn "$PWD/config/.yabairc" "$HOME/.yabairc"
+    ln -sfn "$PWD/config/.skhdrc" "$HOME/.skhdrc"
+    ln -sfn "$PWD/config/iterm.sh" "$HOME/.local/bin/iterm"
+    ln -sfn "$PWD/dots2k/config/lazygit/config.yml" "$HOME/Library/Application Support/lazygit/"
 }
 
 function install_termux {
     pkg install "${common_packages[@]}" gh fd git-delta openssh termux-tools
+    ln -sfnv "$PWD/config/bin" ~/bin
+    cp -rv "$PWD/config/.termux" ~/
 }
 
 get_system_info() {
     [ -e /etc/os-release ] && source /etc/os-release && echo "${ID:-Unknown}" && return
     [ -e /etc/lsb-release ] && source /etc/lsb-release && echo "${DISTRIB_ID:-Unknown}" && return
     [ "$(uname)" == "Darwin" ] && echo "mac" && return
-    [ "$(uname -o)" == "Android" ] && echo "android" && return
+    [ "$(uname -o)" == "Android" ] && echo "termux" && return
 }
-
-system_kind=$(get_system_info)
 
 function install_packages {
-    echo "Installing packages for $system_kind"
-    case $system_kind in
-    arch | manjaro) install_arch ;;
-    debiam | ubuntu | pop) install_debian ;;
-    mac) install_mac ;;
-    android) install_termux ;;
-    esac
-}
+    system_kind=$(get_system_info)
+    echo -e "\u001b[7m Installing packages for $system_kind...\u001b[0m"
 
-function distro_tweaks {
-    echo -e "\u001b[7m Distro specific tweaks... \u001b[0m"
     color=""
-
     case $system_kind in
-    manjaro|android) color="040" ;;
-    arch) color="033" ;;
-    ubuntu) color="202" && echo "alias cat=batcat" >>~/.local.sh ;;
-    debian) color="163" && echo "alias cat=batcat" >>~/.local.sh ;;
-    pop) color="045" && echo "alias cat=batcat" >>~/.local.sh ;;
-    kali|mac) color="254" ;;
-    *) return ;;
+    manjaro) color="040" && install_arch ;;
+    arch) color="033" && install_arch ;;
+    ubuntu) color="202" && install_debian ;;
+    debian) color="163" && install_debian ;;
+    pop) color="045" && install_debian ;;
+    kali) color="254" && install_debian ;;
+    mac) color="254" && install_mac ;;
+    termux) color="040" && install_termux ;;
+    *) echo "Unknown system!" && exit 1 ;;
     esac
 
     echo "POWERLEVEL9K_OS_ICON_BACKGROUND='$color'" >>~/.local.sh
@@ -99,6 +97,12 @@ function install_tmux_plugins {
     tmux kill-server
 }
 
+function install_extras {
+    install_oh_my_zsh
+    install_vim_plugins
+    install_tmux_plugins
+}
+
 declare -a config_dirs=(
     "autorandr" "bat" "broot" "bundle" "cmus" "delta" "fish" "fontconfig" "gitignore.global"
     "htop" "i3" "i3status" "kitty" "lazygit" "xplr" "libinput-gestures.conf" "ranger"
@@ -131,19 +135,12 @@ function setup_symlinks {
     done
 }
 
-function install_extras {
-    install_oh_my_zsh
-    install_vim_plugins
-    install_tmux_plugins
-}
-
 function setup_dotfiles {
     echo -e "\u001b[7m Setting up dots2k... \u001b[0m"
     install_packages
     install_extras
     backup_configs
     setup_symlinks
-    distro_tweaks
     echo -e "\u001b[7m Done! \u001b[0m"
 }
 
@@ -164,17 +161,14 @@ if [ "$1" = "--symlinks" ] || [ "$1" = "-s" ]; then
 fi
 
 # Menu TUI
-echo -e "\u001b[32;1m Setting up dots2k...\u001b[0m"
-
+echo -e "\u001b[32;1m Setting up your env with dots2k...\u001b[0m"
 echo -e " \u001b[37;1m\u001b[4mSelect an option:\u001b[0m"
 echo -e "  \u001b[34;1m (0) Setup Everything \u001b[0m"
 echo -e "  \u001b[34;1m (1) Install Packages \u001b[0m"
 echo -e "  \u001b[34;1m (2) Install Extras \u001b[0m"
 echo -e "  \u001b[34;1m (3) Backup Configs \u001b[0m"
 echo -e "  \u001b[34;1m (4) Setup Symlinks \u001b[0m"
-echo -e "  \u001b[34;1m (5) Distro Tweaks \u001b[0m"
 echo -e "  \u001b[31;1m (*) Anything else to exit \u001b[0m"
-
 echo -en "\u001b[32;1m ==> \u001b[0m"
 
 read -r option
@@ -185,8 +179,7 @@ case $option in
 "2") install_extras ;;
 "3") backup_configs ;;
 "4") setup_symlinks ;;
-"5") distro_tweaks ;;
-*) echo -e "\u001b[31;1m Invalid option entered, Bye! \u001b[0m" exit 0 ;;
+*) echo -e "\u001b[31;1m Invalid option entered, Bye! \u001b[0m" exit 1 ;;
 esac
 
 exit 0
