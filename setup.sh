@@ -1,96 +1,82 @@
 #!/bin/bash
 
-# Fetch submodules
-git submodule update --init --recursive
+declare -a common_packages=(
+    curl wget git zsh tmux bat fzf eza unzip neovim
+    lsd ripgrep ncdu ranger vim vifm zoxide
+)
 
-system_kind=""
-
-# Setup script for dots2k
 function install_arch {
-    sudo pacman -S \
-        curl git zsh python vim neovim tmux bat fzf fd eza unzip \
-        lsd github-cli git-delta lazygit openssh ranger vifm zoxide \
-        xclip ncdu ripgrep kitty autorandr ttf-firacode-nerd
+    sudo pacman -S "${common_packages[@]}" \
+        github-cli fd git-delta lazygit ttf-firacode-nerd wl-clipboard
 }
 
 function install_debian {
-    sudo apt install \
-        curl git zsh vim neovim tmux bat fzf python eza gh ripgrep \
-        fd-find unzip xclip ncdu ranger  kitty autorandr vifm zoxide
-
+    sudo apt install "${common_packages[@]}" \
+        gh fd-find xclip autorandr
     sudo ln -sfnv /usr/bin/fdfind /usr/bin/fd
     sudo ln -sfnv /usr/bin/batcat /usr/bin/bat
 }
 
 function install_mac {
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-    brew install bat eza fd fzf gh gotop lazygit lsd ncdu neofetch \
-        neovim pastel ripgrep skhd tmux vifm zoxide wget yabai iterm2 maccy stats
+    brew install "${common_packages[@]}" \
+        gh fd pastel skhd yabai iterm2 maccy stats
 }
 
-function install_linux {
-    # Identify the Linux distribution
-    if [[ -f "/etc/os-release" ]]; then
-        source /etc/os-release
-        if [[ "$ID" == "arch" || "$ID" == "manjaro" || "$ID_LIKE" == *"arch"* ]]; then
-            system_kind="Linux_Arch"
-            install_arch
-        elif [[ "$ID" == "debian" || "$ID_LIKE" == *"debian"* ]]; then
-            system_kind="Linux_Debian"
-            install_debian
-            if [[ "$ID" == "ubuntu" ]]; then
-                system_kind="Linux_Debian_Ubuntu"
-            fi
-            if [[ "$ID" == "linuxmint" ]]; then
-                system_kind="Linux_Debian_Mint"
-            fi
-            if [[ "$ID" == "popos" ]]; then
-                system_kind="Linux_Debian_Pop"
-            fi
-        elif [[ "$ID" == "fedora" ]]; then
-            system_kind="Linux_Fedora"
-        elif [[ "$ID" == "centos" ]]; then
-            system_kind="Linux_CentOS"
-        fi
-    else
-        system_kind="Linux_Unknown"
-    fi
+get_system_info() {
+    [ -e /etc/os-release ] && source /etc/os-release && echo "${ID:-Unknown}" && return
+    [ -e /etc/lsb-release ] && source /etc/lsb-release && echo "${DISTRIB_ID:-Unknown}" && return
+    [ "$(uname)" == "Darwin" ] && echo "mac" && return
 }
+
+system_kind=$(get_system_info)
 
 function install_packages {
-    if [[ "$(uname)" == "Linux" ]]; then
-        system_kind="Linux"
-        install_linux
-    elif [[ "$(uname)" == "Darwin" ]]; then
-        system_kind="Mac"
-        install_mac
-    # Check if the system is running Windows
-    elif [[ "$(uname -s)" =~ "CYGWIN" ]]; then
-        system_kind="Windows_Cygwin"
-    elif [[ "$(uname -r)" =~ "Microsoft" ]]; then
-        system_kind="Windows_WSL"
-    else
-        system_kind="Unknown"
-    fi
     echo "Installing packages for $system_kind"
+    case $system_kind in
+    arch | manjaro) install_arch ;;
+    debiam | ubuntu | pop) install_debian ;;
+    mac) install_mac ;;
+    esac
+}
+
+function distro_tweaks {
+    echo -e "\u001b[7m Distro specific tweaks... \u001b[0m"
+    color=""
+
+    case $system_kind in
+    manjaro) color="green" ;;
+    arch) color="033" ;;
+    ubuntu) color="202" && echo "alias cat=batcat" >>~/.local.sh ;;
+    debian) color="163" && echo "alias cat=batcat" >>~/.local.sh ;;
+    pop) color="cyan" && echo "alias cat=batcat" >>~/.local.sh ;;
+    kali) color="white" ;;
+    mac) color="white" ;;
+    *) return ;;
+    esac
+
+    echo "POWERLEVEL9K_OS_ICON_BACKGROUND='$color'" >>~/.local.sh
+    echo "POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX='%F{238}╰%F{$color}%K{$color}%F{black}  %f%F{$color}%k%f'" >>~/.local.sh
 }
 
 function install_oh_my_zsh {
     echo -e "\u001b[7m Installing oh-my-zsh...\u001b[0m"
     sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
-}
 
-function install_zsh_plugins {
     echo -e "\u001b[7m Installing zsh plugins...\u001b[0m"
-    git clone https://github.com/romkatv/powerlevel10k.git ~/.oh-my-zsh/custom/themes/powerlevel10k
-    git clone https://github.com/marlonrichert/zsh-autocomplete ~/.oh-my-zsh/custom/plugins/zsh-autocomplete
-    git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
-    git clone https://github.com/clarketm/zsh-completions ~/.oh-my-zsh/custom/plugins/zsh-completions
-    git clone https://github.com/z-shell/F-Sy-H.git ~/.oh-my-zsh/custom/plugins/F-Sy-H
-    git clone https://github.com/djui/alias-tips.git ~/.oh-my-zsh/custom/plugins/alias-tips
-    git clone https://github.com/unixorn/git-extra-commands.git ~/.oh-my-zsh/custom/plugins/git-extra-commands
-    git clone https://github.com/Aloxaf/fzf-tab.git ~/.oh-my-zsh/custom/plugins/fzf-tab
-    git clone https://github.com/hlissner/zsh-autopair ~/.oh-my-zsh/custom/plugins/zsh-autopair
+    gh="https://github.com/"
+    omz="$HOME/.oh-my-zsh/custom"
+    omz_plugin="$omz/plugins/"
+
+    git clone "$gh/romkatv/powerlevel10k" "$omz/themes/powerlevel10k"
+    git clone "$gh/marlonrichert/zsh-autocomplete" "$omz_plugin/zsh-autocomplete"
+    git clone "$gh/zsh-users/zsh-autosuggestions" "$omz_plugin/zsh-autosuggestions"
+    git clone "$gh/clarketm/zsh-completions" "$omz_plugin/zsh-completions"
+    git clone "$gh/z-shell/F-Sy-H" "$omz_plugin/F-Sy-H"
+    git clone "$gh/djui/alias-tips" "$omz_plugin/alias-tips"
+    git clone "$gh/unixorn/git-extra-commands" "$omz_plugin/git-extra-commands"
+    git clone "$gh/Aloxaf/fzf-tab" "$omz_plugin/fzf-tab"
+    git clone "$gh/hlissner/zsh-autopair" "$omz_plugin/zsh-autopair"
 }
 
 function install_vim_plugins {
@@ -111,27 +97,42 @@ function install_tmux_plugins {
     tmux kill-server
 }
 
-function install_extras {
-    install_oh_my_zsh
-    install_zsh_plugins
-    install_vim_plugins
-    install_tmux_plugins
-}
+declare -a config_dirs=(
+    "autorandr" "bat/config" "broot/conf.toml" "bundle" "cmus/darkwind.theme" "delta" "fish"
+    "fontconfig" "gitignore.global" "htop" "i3" "i3status" "kitty" "lazygit/config.yml" "xplr"
+    "libinput-gestures.conf" "ranger" "qutebrowser" "shell" "sysinfo.conkyrc" "topgrade.toml"
+)
+
+declare -a home_files=(
+    ".bashrc" ".dircolors" ".dmenurc" ".gitconfig" ".inputrc" ".luarc.json" ".prettierrc"
+    ".pryrc" ".pystartup" ".stylua.toml" ".tmux.conf" ".vimrc" ".Xresources" ".zshrc"
+)
 
 function backup_configs {
     echo -e "\u001b[33;1m Backing up existing files... \u001b[0m"
-    bash "$PWD"/scripts/backup_configs.sh
+    for dir in "${config_dirs[@]}"; do
+        mv -v "$HOME/.config/$dir" "$HOME/.config/$dir.old"
+    done
+    for file in "${home_files[@]}"; do
+        mv -v "$HOME/$file" "$HOME/$file.old"
+    done
     echo -e "\u001b[36;1m Remove backups with 'rm -ir ~/.*.old && rm -ir ~/.config/*.old'. \u001b[0m"
 }
 
 function setup_symlinks {
     echo -e "\u001b[7m Setting up symlinks... \u001b[0m"
-    bash "$PWD"/scripts/setup_symlinks.sh
+    for dir in "${config_dirs[@]}"; do
+        ln -sfnv "$PWD/config/$dir" "$HOME/.config/"
+    done
+    for file in "${home_files[@]}"; do
+        ln -sfnv "$PWD/config/$file" ~/
+    done
 }
 
-function distro_tweaks {
-    echo -e "\u001b[7m Distro specific tweaks... \u001b[0m"
-    bash "$PWD"/scripts/distro_tweaks.sh
+function install_extras {
+    install_oh_my_zsh
+    install_vim_plugins
+    install_tmux_plugins
 }
 
 function setup_dotfiles {
@@ -177,35 +178,13 @@ echo -en "\u001b[32;1m ==> \u001b[0m"
 read -r option
 
 case $option in
-
-"0")
-    setup_dotfiles
-    ;;
-
-"1")
-    install_packages
-    ;;
-
-"2")
-    install_extras
-    ;;
-
-"3")
-    backup_configs
-    ;;
-
-"4")
-    setup_symlinks
-    ;;
-
-"5")
-    distro_tweaks
-    ;;
-
-*)
-    echo -e "\u001b[31;1m Invalid option entered, Bye! \u001b[0m"
-    exit 0
-    ;;
+"0") setup_dotfiles ;;
+"1") install_packages ;;
+"2") install_extras ;;
+"3") backup_configs ;;
+"4") setup_symlinks ;;
+"5") distro_tweaks ;;
+*) echo -e "\u001b[31;1m Invalid option entered, Bye! \u001b[0m" exit 0 ;;
 esac
 
 exit 0
