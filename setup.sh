@@ -100,9 +100,9 @@ function install_tmux_plugins {
 }
 
 declare -a config_dirs=(
-    "autorandr" "bat/config" "broot/conf.toml" "bundle" "cmus/darkwind.theme" "delta" "fish"
-    "fontconfig" "gitignore.global" "htop" "i3" "i3status" "kitty" "lazygit/config.yml" "xplr"
-    "libinput-gestures.conf" "ranger" "qutebrowser" "shell" "sysinfo.conkyrc" "topgrade.toml"
+    "autorandr" "bat" "broot" "bundle" "cmus" "delta" "fish" "fontconfig" "gitignore.global"
+    "htop" "i3" "i3status" "kitty" "lazygit" "xplr" "libinput-gestures.conf" "ranger"
+    "shell" "sysinfo.conkyrc" "topgrade.toml"
 )
 
 declare -a home_files=(
