@@ -19,16 +19,16 @@ function install_debian {
 function install_mac {
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
     brew install "${common_packages[@]}" gh fd pastel skhd yabai iterm2 maccy stats
-    ln -sfn "$PWD/config/.yabairc" "$HOME/.yabairc"
-    ln -sfn "$PWD/config/.skhdrc" "$HOME/.skhdrc"
-    ln -sfn "$PWD/config/iterm.sh" "$HOME/.local/bin/iterm"
-    ln -sfn "$PWD/dots2k/config/lazygit/config.yml" "$HOME/Library/Application Support/lazygit/"
+    ln -sfn "$PWD/../config/.yabairc" "$HOME/.yabairc"
+    ln -sfn "$PWD/../config/.skhdrc" "$HOME/.skhdrc"
+    ln -sfn "$PWD/../config/iterm.sh" "$HOME/.local/bin/iterm"
+    ln -sfn "$PWD/../dots2k/config/lazygit/config.yml" "$HOME/Library/Application Support/lazygit/"
 }
 
 function install_termux {
     pkg install "${common_packages[@]}" gh fd git-delta openssh termux-tools
-    ln -sfnv "$PWD/config/bin" ~/bin
-    cp -rv "$PWD/config/.termux" ~/
+    ln -sfnv "$PWD/../config/bin" ~/bin
+    cp -rv "$PWD/../config/.termux" ~/
 }
 
 get_system_info() {
