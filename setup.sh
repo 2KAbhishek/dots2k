@@ -179,7 +179,7 @@ case $option in
 "2") install_extras ;;
 "3") backup_configs ;;
 "4") setup_symlinks ;;
-*) echo -e "\u001b[31;1m Invalid option entered, Bye! \u001b[0m" exit 1 ;;
+*) echo -e "\u001b[31;1m Invalid option entered, Bye! \u001b[0m" && exit 1 ;;
 esac
 
 exit 0
