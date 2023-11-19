@@ -6,27 +6,29 @@ declare -a common_packages=(
 )
 
 function install_arch {
-    sudo pacman -S "${common_packages[@]}" \
-        github-cli fd git-delta lazygit ttf-firacode-nerd wl-clipboard
+    sudo pacman -S "${common_packages[@]}" github-cli fd git-delta lazygit ttf-firacode-nerd wl-clipboard
 }
 
 function install_debian {
-    sudo apt install "${common_packages[@]}" \
-        gh fd-find xclip autorandr
+    sudo apt install "${common_packages[@]}" gh fd-find xclip autorandr
     sudo ln -sfnv /usr/bin/fdfind /usr/bin/fd
     sudo ln -sfnv /usr/bin/batcat /usr/bin/bat
 }
 
 function install_mac {
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-    brew install "${common_packages[@]}" \
-        gh fd pastel skhd yabai iterm2 maccy stats
+    brew install "${common_packages[@]}" gh fd pastel skhd yabai iterm2 maccy stats
+}
+
+function install_termux {
+    pkg install "${common_packages[@]}" gh fd git-delta openssh termux-tools
 }
 
 get_system_info() {
     [ -e /etc/os-release ] && source /etc/os-release && echo "${ID:-Unknown}" && return
     [ -e /etc/lsb-release ] && source /etc/lsb-release && echo "${DISTRIB_ID:-Unknown}" && return
     [ "$(uname)" == "Darwin" ] && echo "mac" && return
+    [ "$(uname -o)" == "Android" ] && echo "android" && return
 }
 
 system_kind=$(get_system_info)
@@ -37,6 +39,7 @@ function install_packages {
     arch | manjaro) install_arch ;;
     debiam | ubuntu | pop) install_debian ;;
     mac) install_mac ;;
+    android) install_termux ;;
     esac
 }
 
@@ -45,13 +48,12 @@ function distro_tweaks {
     color=""
 
     case $system_kind in
-    manjaro) color="green" ;;
+    manjaro|android) color="green" ;;
     arch) color="033" ;;
     ubuntu) color="202" && echo "alias cat=batcat" >>~/.local.sh ;;
     debian) color="163" && echo "alias cat=batcat" >>~/.local.sh ;;
     pop) color="cyan" && echo "alias cat=batcat" >>~/.local.sh ;;
-    kali) color="white" ;;
-    mac) color="white" ;;
+    kali|mac) color="white" ;;
     *) return ;;
     esac
 
