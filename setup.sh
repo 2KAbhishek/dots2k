@@ -10,10 +10,16 @@ function install_arch {
 }
 
 function install_debian {
-    sudo apt install "${common_packages[@]}" gh fd-find xclip autorandr
+    sudo apt install "${common_packages[@]}" gh fd-find xclip autorandr nala
     sudo ln -sfnv /usr/bin/fdfind /usr/bin/fd
     sudo ln -sfnv /usr/bin/batcat /usr/bin/bat
     echo "alias cat=batcat" >>~/.local.sh
+}
+
+function install_termux {
+    pkg install "${common_packages[@]}" gh fd git-delta openssh termux-tools nala
+    ln -sfnv "$PWD/../config/bin" ~/bin
+    cp -rv "$PWD/../config/.termux" ~/
 }
 
 function install_mac {
@@ -23,12 +29,6 @@ function install_mac {
     ln -sfn "$PWD/../config/.skhdrc" "$HOME/.skhdrc"
     ln -sfn "$PWD/../config/iterm.sh" "$HOME/.local/bin/iterm"
     ln -sfn "$PWD/../dots2k/config/lazygit/config.yml" "$HOME/Library/Application Support/lazygit/"
-}
-
-function install_termux {
-    pkg install "${common_packages[@]}" gh fd git-delta openssh termux-tools
-    ln -sfnv "$PWD/../config/bin" ~/bin
-    cp -rv "$PWD/../config/.termux" ~/
 }
 
 get_system_info() {
