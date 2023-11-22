@@ -144,42 +144,46 @@ function setup_dotfiles {
     echo -e "\u001b[7m Done! \u001b[0m"
 }
 
-if [ "$1" = "--all" ] || [ "$1" = "-a" ]; then
-    setup_dotfiles
+main() {
+    if [ "$1" = "--all" ] || [ "$1" = "-a" ]; then
+        setup_dotfiles
+        exit 0
+    fi
+
+    if [ "$1" = "--install" ] || [ "$1" = "-i" ]; then
+        install_packages
+        install_extras
+        exit 0
+    fi
+
+    if [ "$1" = "--symlinks" ] || [ "$1" = "-s" ]; then
+        setup_symlinks
+        exit 0
+    fi
+
+    # Menu TUI
+    echo -e "\u001b[32;1m Setting up your env with dots2k...\u001b[0m"
+    echo -e " \u001b[37;1m\u001b[4mSelect an option:\u001b[0m"
+    echo -e "  \u001b[34;1m (0) Setup Everything \u001b[0m"
+    echo -e "  \u001b[34;1m (1) Install Packages \u001b[0m"
+    echo -e "  \u001b[34;1m (2) Install Extras \u001b[0m"
+    echo -e "  \u001b[34;1m (3) Backup Configs \u001b[0m"
+    echo -e "  \u001b[34;1m (4) Setup Symlinks \u001b[0m"
+    echo -e "  \u001b[31;1m (*) Anything else to exit \u001b[0m"
+    echo -en "\u001b[32;1m ==> \u001b[0m"
+
+    read -r option
+
+    case $option in
+    "0") setup_dotfiles ;;
+    "1") install_packages ;;
+    "2") install_extras ;;
+    "3") backup_configs ;;
+    "4") setup_symlinks ;;
+    *) echo -e "\u001b[31;1m alvida and adios! \u001b[0m" && exit 0 ;;
+    esac
+
     exit 0
-fi
+}
 
-if [ "$1" = "--install" ] || [ "$1" = "-i" ]; then
-    install_packages
-    install_extras
-    exit 0
-fi
-
-if [ "$1" = "--symlinks" ] || [ "$1" = "-s" ]; then
-    setup_symlinks
-    exit 0
-fi
-
-# Menu TUI
-echo -e "\u001b[32;1m Setting up your env with dots2k...\u001b[0m"
-echo -e " \u001b[37;1m\u001b[4mSelect an option:\u001b[0m"
-echo -e "  \u001b[34;1m (0) Setup Everything \u001b[0m"
-echo -e "  \u001b[34;1m (1) Install Packages \u001b[0m"
-echo -e "  \u001b[34;1m (2) Install Extras \u001b[0m"
-echo -e "  \u001b[34;1m (3) Backup Configs \u001b[0m"
-echo -e "  \u001b[34;1m (4) Setup Symlinks \u001b[0m"
-echo -e "  \u001b[31;1m (*) Anything else to exit \u001b[0m"
-echo -en "\u001b[32;1m ==> \u001b[0m"
-
-read -r option
-
-case $option in
-"0") setup_dotfiles ;;
-"1") install_packages ;;
-"2") install_extras ;;
-"3") backup_configs ;;
-"4") setup_symlinks ;;
-*) echo -e "\u001b[31;1m alvida and adios! \u001b[0m" && exit 0 ;;
-esac
-
-exit 0
+main "$@"
