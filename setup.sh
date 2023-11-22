@@ -2,7 +2,7 @@
 
 declare -a common_packages=(
     curl wget git zsh tmux bat fzf eza unzip neovim
-    lsd ripgrep ncdu ranger vim vifm zoxide
+    lsd ripgrep ncdu ranger vim vifm zoxide topgrade
 )
 
 function install_arch {
