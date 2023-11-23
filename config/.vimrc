@@ -61,7 +61,6 @@ endif
 " Load files using fzf
 function! FZF() abort
     let l:tempname = tempname()
-    " fzf | awk '{ print $1":1:0" }' > file
     execute 'silent !fzf --multi ' . '| awk ''{ print $1":1:0" }'' > ' . fnameescape(l:tempname)
     try
         execute 'cfile ' . l:tempname
@@ -76,18 +75,16 @@ command! -nargs=* Files call FZF()
 " Keybindings
 let mapleader = ' '
 inoremap jj <Esc>
-inoremap <C-W> <C-G>u<C-W>
-inoremap <C-U> <C-G>u<C-U>
 nmap <leader>e :Lexplore<CR>
 nmap <leader>f :Files<cr>
 nmap <leader>q :q<CR>
 nmap <leader>Q :qa!<CR>
 nmap <leader>r :source ~/.vimrc<CR>
 nmap <leader>s :setlocal spell!<CR>
+nmap <leader>S :nohlsearch<CR>
 nmap <leader>t :term<CR>
 nmap <leader>w :w<CR>
 nmap <leader>W :wq<CR>
-nmap <Esc> :nohlsearch<CR>
 nmap H :bprevious<CR>
 nmap L :bnext<CR>
 
@@ -111,4 +108,3 @@ autocmd ColorScheme * highlight! Normal ctermbg=NONE guibg=NONE
 autocmd ColorScheme * highlight! Terminal ctermbg=NONE guibg=NONE
 
 colorscheme slate
-
