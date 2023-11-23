@@ -79,15 +79,6 @@ function install_oh_my_zsh {
     git clone "$gh/hlissner/zsh-autopair" "$omz_plugin/zsh-autopair"
 }
 
-function install_vim_plugins {
-    echo -e "\u001b[7m Installing plugin manager \u001b[0m"
-    curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
-        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-
-    echo -e "\u001b[7m Installing plugins for vim... \u001b[0m"
-    vim +PlugUpdate +qall
-}
-
 function install_tmux_plugins {
     echo -e "\u001b[7m Installing tmux plugins... \u001b[0m"
     git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
@@ -99,7 +90,6 @@ function install_tmux_plugins {
 
 function install_extras {
     install_oh_my_zsh
-    install_vim_plugins
     install_tmux_plugins
 }
 

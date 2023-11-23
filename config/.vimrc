@@ -6,7 +6,6 @@ set ignorecase     " Do case insensitive matching
 set incsearch      " Show partial matches for a search phrase
 set number         " Show numbers
 set relativenumber " Show relative numbers
-set undolevels=999 " Lots of these
 set nohlsearch     " clear highlights after search
 set tabstop=4      " Tab size
 set shiftwidth=4   " Indentation size
@@ -43,6 +42,7 @@ set viewoptions-=option
 set cursorline     " Highlight current line
 set exrc           " Use vimrc from local dir
 set hidden         " Enable switching with modified buffers
+set undolevels=999 " Lots of these
 set undofile       " Enable persistent undos across files
 setlocal spell spelllang=en "Set spell check language to en
 setlocal spell! " Disable spellchecking by default
