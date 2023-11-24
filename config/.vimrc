@@ -1,4 +1,3 @@
-"  Options
 set nocompatible   " Disable vi compatibilty
 set encoding=utf-8 " Use UTF-8
 set showmatch      " Show matching brackets
@@ -69,7 +68,6 @@ function! FZF() abort
         call delete(l:tempname)
     endtry
 endfunction
-
 command! -nargs=* Files call FZF()
 
 " Keybindings
@@ -87,6 +85,10 @@ nmap <leader>w :w<CR>
 nmap <leader>W :wq<CR>
 nmap H :bprevious<CR>
 nmap L :bnext<CR>
+nmap <C-h> <C-w>h
+nmap <C-l> <C-w>l
+nmap <C-j> <C-w>j
+nmap <C-k> <C-w>k
 
 " Copy Paste from X11 Clipboard
 vmap <Leader>yy :!xclip -f -sel clip<CR>
@@ -106,5 +108,4 @@ endif
 " Always use terminal background
 autocmd ColorScheme * highlight! Normal ctermbg=NONE guibg=NONE
 autocmd ColorScheme * highlight! Terminal ctermbg=NONE guibg=NONE
-
 colorscheme slate
