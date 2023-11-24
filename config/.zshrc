@@ -103,8 +103,8 @@ zle -N down-line-or-beginning-search
 autoload -Uz colors && colors
 
 # Plugin options
-MAGIC_ENTER_GIT_COMMAND="git status -s && git diff HEAD"
-MAGIC_ENTER_OTHER_COMMAND="lsda"
+MAGIC_ENTER_GIT_COMMAND="gsd"
+MAGIC_ENTER_OTHER_COMMAND="la"
 ZSH_PYENV_QUIET=true
 ZSH_COLORIZE_TOOL="chroma"
 ZSH_COLORIZE_STYLE="dracula"

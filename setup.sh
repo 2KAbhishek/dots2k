@@ -1,8 +1,7 @@
 #!/bin/bash
 
 declare -a common_packages=(
-    curl wget git zsh tmux bat fzf eza unzip neovim
-    lsd ripgrep ncdu ranger vim vifm zoxide topgrade
+    curl wget git zsh tmux bat fzf eza unzip neovim ripgrep ncdu ranger vim zoxide topgrade
 )
 
 function install_arch {
@@ -163,7 +162,6 @@ main() {
     echo -en "\u001b[32;1m ==> \u001b[0m"
 
     read -r option
-
     case $option in
     "0") setup_dotfiles ;;
     "1") install_packages ;;
@@ -172,7 +170,6 @@ main() {
     "4") setup_symlinks ;;
     *) echo -e "\u001b[31;1m alvida and adios! \u001b[0m" && exit 0 ;;
     esac
-
     exit 0
 }
 
