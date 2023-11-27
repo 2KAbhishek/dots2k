@@ -44,8 +44,9 @@ faz() {
 # find incomplete todos
 todos() {
     cd "$NOTES_DIR" || return
-    $EDITOR "$(rg -le '\[ \]' --sort created | grep -v 'templates' | fzf)"
-    cd - || return
+    rg -l --sort created --glob '!templates/*' '\[ \]' |
+        fzf --bind "enter:execute($EDITOR {})" --preview 'grep -e "\[ \]" {}'
+    cd - >/dev/null || return
 }
 
 # awesome wm accent color
