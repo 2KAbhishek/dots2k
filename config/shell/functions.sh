@@ -44,7 +44,7 @@ faz() {
 # find incomplete todos
 todos() {
     cd "$NOTES_DIR" || return
-    $EDITOR "$(rg -le '\[ \]' --sort created | fzf)"
+    $EDITOR "$(rg -le '\[ \]' --sort created | grep -v 'templates' | fzf)"
     cd - || return
 }
 
