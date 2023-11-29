@@ -1,0 +1,16 @@
+{
+  "keyMappings": "unmap <c-e>\nunmap <c-y>\nunmap p\nunmap P\n\nmap J goForward\nmap K goBack\nmap H previousTab\nmap L nextTab\nmap # visitPreviousTab\n\nmap pp openCopiedUrlInCurrentTab\nmap pP openCopiedUrlInNewTab\nmap P LinkHints.activateModeToOpenIncognito",
+  "scrollStepSize": 120,
+  "searchEngines": "am: https://www.amazon.com/s?k=%s Amazon\naw: https://wiki.archlinux.org/?search=%s Arch Linux\nbn: https://www.bing.com/search?q=%s Bing\ndd: https://duckduckgo.com/?q=%s DuckDuckGo\ngg: https://www.google.com/search?q=%s Google\ngh: https://www.github.com/search?q=%s GitHub\ngho: https://www.github.com/%s GitHub Open\nghr: https://www.github.com/2kabhishek/%s GitHub Repo\nmp: https://www.google.com/maps?q=%s Google maps\nrd: https://www.reddit.com/search/?q=%s Reddit\nrds: https://reddit.com/r/%s Reddit Sub\nrt: https://rottentomatoes.com/search?search=%s Rotten Tomatoes\nso: https://stackoverflow.com/search?q=%s Stack Overflow\nsp: https://open.spotify.com/search/%s Spotify\ntw: https://twitter.com/search?q=%s Twitter\ntx: https://springhealth.atlassian.net/browse/%s JIRA Ticket\nud: https://urbandictionary.com/define.php?term=%s Urban Dictionary\nwk: https://www.wikipedia.org/w/index.php?title=Special:Search&search=%s Wikipedia\nyt: https://www.youtube.com/results?search_query=%s Youtube",
+  "settingsVersion": "2.0.6",
+  "exclusionRules": [
+    {
+      "passKeys": "",
+      "pattern": "https?://mail.google.com/*"
+    },
+    {
+      "passKeys": "t",
+      "pattern": "https?://github.com/*"
+    }
+  ]
+}
