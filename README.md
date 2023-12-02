@@ -53,21 +53,7 @@ cd dots2k
 
 I made a small [recording for setting this up on an Ubuntu system](https://www.youtube.com/watch?v=X8x-gUwucBU&list=PL52YFor3VtLegIRc3uDl9koGP-Fu_YGru)
 
-For installation `git` `curl` & `zsh` are must, other tools are mentioned below.
-
-### Required Packages
-
-This list is incomplete, package names may vary depending upon your system and your requirements.
-
-```bash
-# Required
-curl git zsh python neovim tmux bat fzf fd zoxide vifm unzip \
-lsd github-cli git-delta lazygit openssh ripgrep ttf-firacode-nerd
-
-# Optional
-vim ranger cmus libnotify xdotool libinput eza htop ncdu broot xclip thefuck \
-bash i3 sway awesomewm rofi dmenu morc_menu bmenu conky kitty autorandr
-```
+For installation `git` `curl` & `zsh` are must, other tools are installed by the setup script.
 
 Powerline patched fonts are required for glyphs. I'll recommend [Nerd Fonts](https://www.nerdfonts.com/). I'm using FiraCode.
 
@@ -87,6 +73,26 @@ Powerline patched fonts are required for glyphs. I'll recommend [Nerd Fonts](htt
 
 -   konsole
     Open Konsole, Goto Settings -> Manage Profiles -> Check `Konsole` and click on Set as Default.
+
+### Local Configs
+
+Some configs are intentionally not included as they will vary based on every system.
+
+A `~/.profile` file is required for some functionality, make sure to include the following vars for your setup.
+```bash
+#!/bin/sh
+
+export SHELL=/usr/bin/zsh
+export EDITOR=nvim
+export TERMINAL_COMMAND=foot
+export EDITOR_TERM="$TERMINAL_COMMAND -e $EDITOR"
+export CLIPCOPY=wl-copy
+export CLIPPASTE=wl-paste
+```
+
+To add other local shell configs I recommend using the `~/.local.sh` file, which can be easily accessed using the `loca` alias.
+
+You can put all your local aliases, env vars and functions here.
 
 ## The dots2k Universe
 

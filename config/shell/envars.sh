@@ -1,9 +1,6 @@
 #!/bin/bash
 # Environment variables
 export EDITOR=nvim
-export EDITOR_TERM="$TERMINAL_COMMAND -e $EDITOR"
-export CLIPCOPY=wl-copy
-export CLIPPASTE=wl-paste
 
 # Fzf
 export FZF_DEFAULT_COMMAND='fd --hidden --follow --exclude=.git --exclude=node_modules'
@@ -29,25 +26,15 @@ export ZSH_TMUX_AUTOSTART_ONCE='false'
 export ZSH_TMUX_AUTOCONNECT='false'
 export DISABLE_AUTO_TITLE='true'
 
-export PATH=/home/linuxbrew/.linuxbrew/bin:$PATH
-export PATH=/home/linuxbrew/.linuxbrew/sbin:$PATH
-export PATH=$HOME/Applications/bin:$PATH
 export PATH=$HOME/.local/bin:$PATH
 export GOPATH=$HOME/.go
 export GOBIN=$GOPATH/bin
 export PATH=$GOBIN:$PATH
 export PATH=$HOME/.cargo/bin:$PATH
-export PATH=$HOME/.local/share/gem/ruby/3.0.0/bin:$PATH
 export PATH=$HOME/.npm/bin:$PATH
 export PATH=$HOME/.luarocks/bin:$PATH
-export PATH=$HOME/.config/composer/vendor:$PATH
 
 export CHROME_EXECUTABLE=/usr/bin/google-chrome-stable
-
-export ENTRY_DIR="$HOME/Projects/GitHub/Notes/journal/"
-export NOTES_DIR="$HOME/Projects/GitHub/Notes/worklog/"
-
-export GPG_TTY=$(tty)
 
 # Tool configs
 if type dircolors >/dev/null 2>&1; then eval "$(dircolors ~/.dircolors)"; fi
@@ -60,8 +47,4 @@ if type dircolors >/dev/null 2>&1; then eval "$(dircolors ~/.dircolors)"; fi
 # if type xinput >/dev/null 2>&1; then
 #     xinput set-prop "$(xinput list --name-only | grep -i touch)" "libinput Tapping Enabled" 1
 # fi
-
-# Homebrew
-# [ -f /home/linuxbrew/.linuxbrew/bin/brew ] && eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-# [ -f "${HOMEBREW_PREFIX}/etc/bash_completion.d/brew" ] && source "${HOMEBREW_PREFIX}/etc/bash_completion.d/brew"
 
