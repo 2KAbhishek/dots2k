@@ -41,14 +41,6 @@ faz() {
         $EDITOR $(cut -d':' -f1 <<<"$line") +$(cut -d':' -f2 <<<"$line")
 }
 
-# find incomplete todos
-todos() {
-    cd "$NOTES_DIR" || return
-    rg -l --sort created --glob '!templates/*' '\[ \]' |
-        fzf --bind "enter:execute($EDITOR {})" --preview 'grep -e "\[ \]" {}'
-    cd - >/dev/null || return
-}
-
 # awesome wm accent color
 accent() {
     color="#1688f0"
