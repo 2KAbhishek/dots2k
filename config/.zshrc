@@ -50,6 +50,7 @@ plugins=(adb
     tmux
     vi-mode
     web-search
+    zoxide
     zsh-autopair
     zsh-autosuggestions
     zsh-completions
@@ -174,7 +175,6 @@ alias -g wcw="| wc -w"
 
 # Tool confs for zsh
 if type navi >/dev/null 2>&1; then eval "$(navi widget zsh)"; fi
-if type zoxide >/dev/null 2>&1; then eval "$(zoxide init zsh)"; fi
 if type rtx >/dev/null 2>&1; then
     eval "$(rtx activate zsh)";
     eval "$(rtx completion zsh)";
