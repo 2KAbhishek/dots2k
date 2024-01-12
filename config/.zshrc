@@ -46,6 +46,7 @@ plugins=(adb
     git-extra-commands
     globalias
     magic-enter
+    mise
     timer
     tmux
     vi-mode
@@ -175,10 +176,6 @@ alias -g wcw="| wc -w"
 
 # Tool confs for zsh
 if type navi >/dev/null 2>&1; then eval "$(navi widget zsh)"; fi
-if type rtx >/dev/null 2>&1; then
-    eval "$(rtx activate zsh)";
-    eval "$(rtx completion zsh)";
-fi
 
 # Key Bindings
 bindkey -s '^H' ' source ~/.zshrc^M ^M'
