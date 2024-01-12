@@ -1,15 +1,7 @@
 # Powerlevel10k prompt segments for mise
-#
-# https://github.com/romkatv/powerlevel10k
-# https://github.com/jdxcode/mise
 # [Feature request: add segment for mise](https://github.com/romkatv/powerlevel10k/issues/2212)
-#
 # Usage in ~/.zshrc:
-#
-#   # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-#   [[ -f ~/.config/shell/p10k.zsh ]] && source ~/.config/shell/p10k.zsh
 #   [[ -f ~/.config/shell/p10k.mise.zsh ]] && source ~/.config/shell/p10k.mise.zsh
-#
 
 () {
   function prompt_mise() {
