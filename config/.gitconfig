@@ -3,6 +3,25 @@
     name = Abhishek Keshri
     signingkey = 62BD6AA2E913B3D3
 
+[alias]
+    s = status -s
+    a = add
+    c = commit -m
+    tag = "tag -s"
+    alias = config --get-regexp alias
+    shame = "!f() { git commit --amend --author \"$1 <$2>\" -C HEAD; }; f"
+    lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+    # Interactive rebase with the given number of latest commits.
+    reb = "!r() { git rebase -i HEAD~$1; }; r"
+    # Find commits by source code
+    fc = "!f() { git log --pretty=format:'%C(yellow)%h  %Cblue%ad  %Creset%s%Cgreen  [%cn] %Cred%d' --decorate --date=short -S$1; }; f"
+    # Find commits by commit message
+    fm = "!f() { git log --pretty=format:'%C(yellow)%h  %Cblue%ad  %Creset%s%Cgreen  [%cn] %Cred%d' --decorate --date=short --grep=$1; }; f"
+    # Remove branches that have already been merged with main.
+    bye = "!git branch --merged | grep -v '\\*' | xargs -n 1 git branch -d"
+    # List contributors with number of commits.
+    contributors = shortlog --summary --numbered
+
 [apply]
     whitespace = fix
 
