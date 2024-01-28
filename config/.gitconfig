@@ -3,43 +3,59 @@
     name = Abhishek Keshri
     signingkey = 62BD6AA2E913B3D3
 
+[apply]
+    whitespace = fix
+
+[color]
+    ui = true
+
 [commit]
     gpgSign = true
-
-[credential]
-    helper = cache --timeout 3600
 
 [core]
     editor = nvim
     pager = delta --dark
     excludesFile = ~/.config/gitignore.global
+    ignorecase = false
 
-[interactive]
-    diffFilter = delta --color-only --highlight-removed
+[credential]
+    helper = cache --timeout 3600
 
-[color]
-    ui = true
+[diff]
+    colorMoved = default
 
-[protocol]
-    version = 2
+[fetch]
+    prune = true
+    output = compact
 
-[push]
-    autoSetupRemote = true
-
-[pull]
-    rebase = true
-
-[rebase]
-    autoStash = true
+[help]
+    autocorrect = 1
 
 [init]
     defaultBranch = main
 
+[interactive]
+    diffFilter = delta --color-only --highlight-removed
+
+[log]
+    decorate = short
+
 [merge]
     conflictstyle = diff3
+    log = true
 
-[diff]
-    colorMoved = default
+[protocol]
+    version = 2
+
+[pull]
+    rebase = true
+
+[push]
+    autoSetupRemote = true
+    autoSetupRemove = true
+
+[rebase]
+    autoStash = true
 
 [include]
     path = ~/.config/delta/delta.gitconfig
