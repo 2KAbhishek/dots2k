@@ -14,3 +14,16 @@
 .tmuxinator.yml
 .tmuxinator.yaml
 
+# env
+.env
+env
+
+# build
+/dist
+/build
+*.o
+\#*#
+
+# node
+/node_modules
+
