@@ -4,24 +4,24 @@ declare -a common_packages=(
     curl wget git zsh tmux bat fzf eza unzip neovim ripgrep ncdu ranger vim zoxide topgrade
 )
 
-function install_arch {
+install_arch() {
     sudo pacman -S "${common_packages[@]}" github-cli fd git-delta lazygit ttf-firacode-nerd wl-clipboard
 }
 
-function install_debian {
+install_debian() {
     sudo apt install "${common_packages[@]}" gh fd-find xclip autorandr nala
     sudo ln -sfnv /usr/bin/fdfind /usr/bin/fd
     sudo ln -sfnv /usr/bin/batcat /usr/bin/bat
     echo "alias cat=batcat" >>~/.local.sh
 }
 
-function install_termux {
+install_termux() {
     pkg install "${common_packages[@]}" gh fd git-delta openssh termux-tools nala
     ln -sfnv "$PWD/../config/bin" ~/bin
     cp -rv "$PWD/../config/.termux" ~/
 }
 
-function install_mac {
+install_mac() {
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
     brew install "${common_packages[@]}" gh fd pastel skhd yabai iterm2 maccy stats
     ln -sfn "$PWD/../config/.yabairc" "$HOME/.yabairc"
@@ -37,7 +37,7 @@ get_system_info() {
     [ "$(uname -o)" == "Android" ] && echo "termux" && return
 }
 
-function install_packages {
+install_packages() {
     system_kind=$(get_system_info)
     echo -e "\u001b[7m Installing packages for $system_kind...\u001b[0m"
 
@@ -58,7 +58,7 @@ function install_packages {
     echo "POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX='%F{238}╰%F{$color}%K{$color}%F{black}  %f%F{$color}%k%f'" >>~/.local.sh
 }
 
-function install_oh_my_zsh {
+install_oh_my_zsh() {
     echo -e "\u001b[7m Installing oh-my-zsh...\u001b[0m"
     sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 
@@ -78,7 +78,7 @@ function install_oh_my_zsh {
     git clone "$gh/hlissner/zsh-autopair" "$omz_plugin/zsh-autopair"
 }
 
-function install_tmux_plugins {
+install_tmux_plugins() {
     echo -e "\u001b[7m Installing tmux plugins... \u001b[0m"
     git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
     tmux start-server
@@ -87,7 +87,7 @@ function install_tmux_plugins {
     tmux kill-server
 }
 
-function install_extras {
+install_extras() {
     install_oh_my_zsh
     install_tmux_plugins
 }
@@ -103,7 +103,7 @@ declare -a home_files=(
     ".pryrc" ".pystartup" ".stylua.toml" ".tmux.conf" ".vimrc" ".Xresources" ".zshrc"
 )
 
-function backup_configs {
+backup_configs() {
     echo -e "\u001b[33;1m Backing up existing files... \u001b[0m"
     for dir in "${config_dirs[@]}"; do
         mv -v "$HOME/.config/$dir" "$HOME/.config/$dir.old"
@@ -114,7 +114,7 @@ function backup_configs {
     echo -e "\u001b[36;1m Remove backups with 'rm -ir ~/.*.old && rm -ir ~/.config/*.old'. \u001b[0m"
 }
 
-function setup_symlinks {
+setup_symlinks() {
     echo -e "\u001b[7m Setting up symlinks... \u001b[0m"
     for dir in "${config_dirs[@]}"; do
         ln -sfnv "$PWD/config/$dir" "$HOME/.config/"
@@ -124,7 +124,7 @@ function setup_symlinks {
     done
 }
 
-function setup_dotfiles {
+setup_dotfiles() {
     echo -e "\u001b[7m Setting up dots2k... \u001b[0m"
     install_packages
     install_extras
@@ -133,24 +133,7 @@ function setup_dotfiles {
     echo -e "\u001b[7m Done! \u001b[0m"
 }
 
-main() {
-    if [ "$1" = "--all" ] || [ "$1" = "-a" ]; then
-        setup_dotfiles
-        exit 0
-    fi
-
-    if [ "$1" = "--install" ] || [ "$1" = "-i" ]; then
-        install_packages
-        install_extras
-        exit 0
-    fi
-
-    if [ "$1" = "--symlinks" ] || [ "$1" = "-s" ]; then
-        setup_symlinks
-        exit 0
-    fi
-
-    # Menu TUI
+show_menu() {
     echo -e "\u001b[32;1m Setting up your env with dots2k...\u001b[0m"
     echo -e " \u001b[37;1m\u001b[4mSelect an option:\u001b[0m"
     echo -e "  \u001b[34;1m (0) Setup Everything \u001b[0m"
@@ -169,6 +152,15 @@ main() {
     "3") backup_configs ;;
     "4") setup_symlinks ;;
     *) echo -e "\u001b[31;1m alvida and adios! \u001b[0m" && exit 0 ;;
+    esac
+}
+
+main() {
+    case "$1" in
+    -a | --all | a | all) setup_dotfiles ;;
+    -i | --install | i | install) install_packages && install_extras ;;
+    -s | --symlinks | s | symlinks) setup_symlinks ;;
+    *) show_menu ;;
     esac
     exit 0
 }
