@@ -95,3 +95,5 @@
     features = mantis-shrimp
 [rerere]
 	enabled = true
+[column]
+	ui = auto
