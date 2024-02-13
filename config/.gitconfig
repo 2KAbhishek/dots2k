@@ -93,3 +93,5 @@
 
 [delta]
     features = mantis-shrimp
+[rerere]
+	enabled = true
