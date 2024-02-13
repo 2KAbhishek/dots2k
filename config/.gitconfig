@@ -5,14 +5,26 @@
 
 [alias]
     a = add
+    # Ignores whitespace changes, code movement, and renames
+    bl = blame -w -C -C -C --color-lines --color-by-age
     c = commit -m
+    co = checkout
+    d = diff --word-diff -M -C
     l = pull
+    m = merge
     p = push
-    s = status -s
-    tag = tag -s
-    alias = config --get-regexp alias
-    shame = "!f() { git commit --amend --author \"$1 <$2>\" -C HEAD; }; f"
     lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+    # Takes regex as argument and searches for it in the entire git history
+    pi = log -p -S
+    re = rebase -i
+    s = status -s
+    sw = switch
+    alias = config --get-regexp alias
+    stash = stash -all
+    tag = tag -s
+    unstash = stash pop
+    # List contributors with number of commits.
+    contributors = shortlog --summary --numbered
     # Interactive rebase with the given number of latest commits.
     reb = "!r() { git rebase -i HEAD~$1; }; r"
     # Find commits by source code
@@ -21,8 +33,6 @@
     fm = "!f() { git log --pretty=format:'%C(yellow)%h  %Cblue%ad  %Creset%s%Cgreen  [%cn] %Cred%d' --decorate --date=short --grep=$1; }; f"
     # Remove branches that have already been merged with current branch
     bye = "!git branch --merged | grep -v '\\*' | xargs -n 1 git branch -d"
-    # List contributors with number of commits.
-    contributors = shortlog --summary --numbered
 
 [apply]
     whitespace = fix
