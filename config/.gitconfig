@@ -1,7 +1,7 @@
 [user]
     email = iam2kabhishek@gmail.com
     name = Abhishek Keshri
-    signingkey = 62BD6AA2E913B3D3
+    signingkey = ~/.ssh/id_ed25519.pub
 
 [alias]
     a = add
@@ -94,10 +94,10 @@
 [delta]
     features = mantis-shrimp
 [rerere]
-	enabled = true
+    enabled = true
 [column]
-	ui = auto
+    ui = auto
 [branch]
-	sort = -committerdate
+    sort = -committerdate
 [gpg]
-	format = ssh
+    format = ssh
