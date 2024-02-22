@@ -78,6 +78,8 @@ install_oh_my_zsh() {
     git clone "$gh/unixorn/git-extra-commands" "$omz_plugin/git-extra-commands"
     git clone "$gh/Aloxaf/fzf-tab" "$omz_plugin/fzf-tab"
     git clone "$gh/hlissner/zsh-autopair" "$omz_plugin/zsh-autopair"
+
+    chsh -s $(which zsh)
 }
 
 install_tmux_plugins() {
