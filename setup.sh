@@ -98,8 +98,8 @@ install_extras() {
 
 declare -a config_dirs=(
     "autorandr" "bat" "broot" "bundle" "cmus" "delta" "fish" "fontconfig" "gitignore.global"
-    "htop" "i3" "i3status" "kitty" "lazygit" "xplr" "libinput-gestures.conf" "ranger"
-    "shell" "sysinfo.conkyrc" "topgrade.toml"
+    "htop" "kitty" "lazygit" "xplr" "libinput-gestures.conf" "ranger" "shell"
+    "sysinfo.conkyrc" "topgrade.toml"
 )
 
 declare -a home_files=(
