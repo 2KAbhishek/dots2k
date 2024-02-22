@@ -42,6 +42,7 @@ set cursorline     " Highlight current line
 set exrc           " Use vimrc from local dir
 set hidden         " Enable switching with modified buffers
 set undolevels=999 " Lots of these
+set undodir=$HOME/.local/state/vim/undo " Enable undo dir
 set undofile       " Enable persistent undos across files
 setlocal spell spelllang=en "Set spell check language to en
 setlocal spell! " Disable spellchecking by default
