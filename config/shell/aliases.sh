@@ -28,6 +28,10 @@ alias cols='spectrum_ls'
 alias cp="cp -irv"
 alias cpa="$CLIPPASTE"
 alias diff="diff --color=auto"
+alias dnfi="sudo dnf install"
+alias dnfs="dnf search"
+alias dnfr="sudo dnf remove"
+alias dnfu="sudo dnf update"
 alias e='nvim $(files)'
 alias emd='emacs --daemon &'
 alias emc="emacsclient -c -a 'emacs'"
