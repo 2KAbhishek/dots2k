@@ -1,15 +1,20 @@
 #!/bin/bash
 
 declare -a common_packages=(
-    curl wget git zsh tmux bat fzf eza unzip neovim ripgrep ncdu ranger vim zoxide topgrade
+    curl wget git zsh tmux bat fzf eza unzip neovim ripgrep ncdu ranger vim zoxide
 )
 
 install_arch() {
-    sudo pacman -S "${common_packages[@]}" github-cli fd git-delta lazygit ttf-firacode-nerd wl-clipboard
+    sudo pacman -S "${common_packages[@]}" github-cli fd git-delta lazygit ttf-firacode-nerd wl-clipboard topgrade
+}
+
+install_fedora() {
+    dnf copr enable bytrush/lazygit
+    sudo dnf install "${common_packages[@]}" gh lazygit fd-find wl-clipboard git-delta
 }
 
 install_debian() {
-    sudo apt install "${common_packages[@]}" gh fd-find xclip autorandr nala
+    sudo apt install "${common_packages[@]}" gh fd-find xclip autorandr nala topgrade
     sudo ln -sfnv /usr/bin/fdfind /usr/bin/fd
     sudo ln -sfnv /usr/bin/batcat /usr/bin/bat
     echo "alias cat=batcat" >>~/.local.sh
@@ -47,6 +52,7 @@ install_packages() {
     arch) color="033" && install_arch ;;
     ubuntu) color="202" && install_debian ;;
     debian) color="163" && install_debian ;;
+    fedora | fedora-asahi-remix) color="32" && install_fedora ;;
     pop) color="045" && install_debian ;;
     kali) color="254" && install_debian ;;
     mac) color="254" && install_mac ;;
