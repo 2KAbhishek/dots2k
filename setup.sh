@@ -63,7 +63,7 @@ install_packages() {
     echo "POWERLEVEL9K_OS_ICON_BACKGROUND='$color'" >>~/.local.sh
     echo "POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX='%F{238}╰%F{$color}%K{$color}%F{black}  %f%F{$color}%k%f'" >>~/.local.sh
 
-    mkdir -p $HOME/.local/state/vim/undo
+    mkdir -p "$HOME/.local/state/vim/undo"
 }
 
 install_oh_my_zsh() {
@@ -85,7 +85,7 @@ install_oh_my_zsh() {
     git clone "$gh/Aloxaf/fzf-tab" "$omz_plugin/fzf-tab"
     git clone "$gh/hlissner/zsh-autopair" "$omz_plugin/zsh-autopair"
 
-    chsh -s $(which zsh)
+    chsh -s "$(which zsh)"
 }
 
 install_tmux_plugins() {
@@ -105,7 +105,7 @@ install_extras() {
 declare -a config_dirs=(
     "autorandr" "bat" "broot" "bundle" "cmus" "delta" "fish" "fontconfig" "gitignore.global"
     "htop" "kitty" "lazygit" "xplr" "libinput-gestures.conf" "ranger" "shell"
-    "sysinfo.conkyrc" "topgrade.toml"
+    "sysinfo.conkyrc" "topgrade.toml" "bluetuith"
 )
 
 declare -a home_files=(
