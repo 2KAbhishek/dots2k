@@ -30,7 +30,7 @@
 
 </div>
 
-## What is this
+## What's this
 
 My personal configs, carefully and passionately crafted for setting up an optimal CLI dev experience.
 
@@ -62,23 +62,24 @@ Powerline patched fonts are required for glyphs. I'll recommend [Nerd Fonts](htt
 > [!IMPORTANT]
 > Some configs require special steps to use. Check respective tools documentation for more info.
 
--   git:
-    I am using GPG signing by default for verifying commits, check [this](https://docs.github.com/en/authentication/managing-commit-signature-verification/adding-a-new-gpg-key-to-your-github-account) for details on setting up GPG, or you can use `git config --global commit.gpgSign false` to disable it.
+- git:
+  I am using GPG signing by default for verifying commits, check [this](https://docs.github.com/en/authentication/managing-commit-signature-verification/adding-a-new-gpg-key-to-your-github-account) for details on setting up GPG, or you can use `git config --global commit.gpgSign false` to disable it.
 
--   compiz:
-    Import the compiz profile using `ccsm`.
+- compiz:
+  Import the compiz profile using `ccsm`.
 
--   conky
-    Run conky with `conky -dqc ~/.config/sysinfo.conkyrc`.
+- conky
+  Run conky with `conky -dqc ~/.config/sysinfo.conkyrc`.
 
--   konsole
-    Open Konsole, Goto Settings -> Manage Profiles -> Check `Konsole` and click on Set as Default.
+- konsole
+  Open Konsole, Goto Settings -> Manage Profiles -> Check `Konsole` and click on Set as Default.
 
 ### Local Configs
 
 Some configs are intentionally not included as they will vary based on every system.
 
 A `~/.profile` file is required for some functionality, make sure to include the following vars for your setup.
+
 ```bash
 #!/bin/sh
 
