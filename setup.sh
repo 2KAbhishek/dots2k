@@ -27,8 +27,9 @@ install_termux() {
 }
 
 install_mac() {
-    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-    brew install "${common_packages[@]}" gh fd pastel skhd yabai iterm2 maccy stats
+    brew tap homebrew/cask-fonts
+    brew install "${common_packages[@]}" gh fd pastel iterm2 maccy stats \
+        koekeishiya/formulae/skhd koekeishiya/formulae/yabai font-fira-code-nerd-font
     ln -sfn "$PWD/../config/.yabairc" "$HOME/.yabairc"
     ln -sfn "$PWD/../config/.skhdrc" "$HOME/.skhdrc"
     ln -sfn "$PWD/../config/iterm.sh" "$HOME/.local/bin/iterm"
