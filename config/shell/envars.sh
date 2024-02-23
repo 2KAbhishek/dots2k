@@ -19,7 +19,7 @@ export FZF_DEFAULT_OPTS="
 --bind '?:toggle-preview'
 --bind 'ctrl-a:select-all'
 --bind 'ctrl-y:execute-silent(echo {+} | $CLIPCOPY)'
---bind 'ctrl-e:execute($EDITOR_TERM {+})+reload(fzf)'"
+--bind 'ctrl-e:execute($TERMINAL $EDITOR {+})+reload(fzf)'"
 
 export FZF_CTRL_T_COMMAND='fd -t f -HF -E=.git -E=node_modules'
 export FZF_TMUX_OPTS='-p 90%'
