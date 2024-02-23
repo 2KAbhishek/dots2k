@@ -88,9 +88,9 @@ alias meow='"$EDITOR" ~/.config/kitty/kitty.conf'
 
 # General
 alias asc="asciinema"
-alias cless='colorize_less -N'
-alias cols='spectrum_ls'
-alias exsu='exercism submit'
+alias cless="colorize_less -N"
+alias cols="spectrum_ls"
+alias exsu="exercism submit"
 alias files="fzf --preview 'bat --color=always --style=numbers --line-range=:500 {}'"
 alias fix="fuck"
 alias icat="kitty +kitten icat"
@@ -113,6 +113,10 @@ alias tmuxm="tmux new-session \; split-window -h \; split-window -v \; attach"
 alias wit="wiki-tui"
 alias xp="xplr"
 alias ytdl="youtube-dl"
+alias play="playerctl play-pause"
+alias next="playerctl next"
+alias prev="playerctl previous"
+alias song="playerctl metadata title"
 
 # Package Manger
 alias apti="sudo apt install"
@@ -139,9 +143,6 @@ alias pacs="pacman -Ss"
 alias pacl="pacman -Q"
 alias pacm="sudo pacman-mirrors --fasttrack 5 && sudo pacman -Syu"
 alias pacu="sudo pacman -Syu"
-alias trii="trizen -S --noedit"
-alias tris="trizen -Ss --noedit"
-alias triu="trizen -Syu --noedit"
 alias yayi="yay -S"
 alias yayl="pacman -Qm"
 alias yayu="yay -Syu"
