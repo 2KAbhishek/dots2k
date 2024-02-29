@@ -47,7 +47,7 @@ gui:
   showBottomLine: true # for hiding the bottom information line (unless it has important information to tell you)
   showCommandLog: true
   # showIcons: true
-  nerdFontsVersion: '2' # nerd fonts version to use ("2" or "3"); empty means don't show nerd font icons
+  nerdFontsVersion: '3' # nerd fonts version to use ("2" or "3"); empty means don't show nerd font icons
   commandLogSize: 8
   splitDiff: 'auto' # one of 'auto' | 'always'
 os:
