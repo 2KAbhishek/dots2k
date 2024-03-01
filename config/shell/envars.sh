@@ -40,6 +40,10 @@ export PATH=$HOME/.luarocks/bin:$PATH
 
 export CHROME_EXECUTABLE=/usr/bin/google-chrome-stable
 
+if [ "$(uname)" = "Darwin" ]; then
+    export PATH="/opt/homebrew/opt/coreutils/libexec/gnubin:$PATH"
+fi
+
 # Tool configs
 if type dircolors >/dev/null 2>&1; then eval "$(dircolors ~/.dircolors)"; fi
 
@@ -51,4 +55,3 @@ if type dircolors >/dev/null 2>&1; then eval "$(dircolors ~/.dircolors)"; fi
 # if type xinput >/dev/null 2>&1; then
 #     xinput set-prop "$(xinput list --name-only | grep -i touch)" "libinput Tapping Enabled" 1
 # fi
-
