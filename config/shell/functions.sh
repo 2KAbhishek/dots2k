@@ -34,11 +34,18 @@ mlc() {
     find $1 -name \*.md -exec markdown-link-check -p {} \;
 }
 
-# Only show files which have $1 present in contents
-faz() {
-    local line
-    line=$(rg "$1" | fzf) &&
-        $EDITOR $(cut -d':' -f1 <<<"$line") +$(cut -d':' -f2 <<<"$line")
+# vim open
+vo() {
+    local term="$1"
+    local selected
+    selected=$(rg -l "$term" | fzf)
+    if [ -n "$selected" ]; then
+        if [ -z "$term" ]; then
+            nvim "$selected"
+            return 0
+        fi
+        nvim +"/$term" +"norm! n" "$selected"
+    fi
 }
 
 # awesome wm accent color
