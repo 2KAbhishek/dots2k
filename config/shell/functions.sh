@@ -2,8 +2,7 @@
 # Functions
 
 # copy authy token
-auth ()
-{
+auth() {
     mambembe-cli get-token -s "$@" | fzf --reverse -0 -1 | rg -oP 'Token: "\K\d+' | $CLIPCOPY
 }
 
@@ -46,6 +45,10 @@ vo() {
         fi
         nvim +"/$term" +"norm! n" "$selected"
     fi
+}
+
+lvi() {
+    NVIM_APPNAME=lvim2k nvim "$@"
 }
 
 # awesome wm accent color
@@ -155,4 +158,3 @@ color() {
         echo
     done
 }
-
