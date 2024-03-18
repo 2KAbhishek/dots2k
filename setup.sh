@@ -110,8 +110,8 @@ declare -a config_dirs=(
 )
 
 declare -a home_files=(
-    ".bashrc" ".dircolors" ".dmenurc" ".gitconfig" ".inputrc" ".luarc.json" ".prettierrc"
-    ".pryrc" ".pystartup" ".stylua.toml" ".tmux.conf" ".vimrc" ".Xresources" ".zshrc"
+    ".bashrc" ".dircolors" ".dmenurc" ".gitconfig" ".inputrc" ".luarc.json" ".prettierrc" ".pryrc"
+    ".pystartup" ".reek.yml" ".stylua.toml" ".tmux.conf" ".typos.toml" ".vimrc" ".Xresources" ".zshrc"
 )
 
 backup_configs() {

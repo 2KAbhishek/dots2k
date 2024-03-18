@@ -1,0 +1,19 @@
+detectors:
+  IrresponsibleModule:
+    enabled: false
+
+  # You can use filters to silence Reek warnings.
+  # NestedIterators:
+  #   exclude:
+  #     - 'MyWorker#self.class_method' # should be refactored
+### Directory specific configuration
+# directories:
+#   'web_app/app/controllers':
+#     NestedIterators:
+#       enabled: false
+
+### Excluding directories
+
+# Directories and files below will not be scanned at all
+# exclude_paths:
+#   - foo/bar
