@@ -1,0 +1,8 @@
+[default.extend-words]
+"ehr" = "ehr"
+
+[files]
+# Ignore these files
+extend-exclude = [
+  "localized/*.po",
+]
