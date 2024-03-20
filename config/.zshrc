@@ -32,7 +32,7 @@ plugins=(adb
     alias-tips
     catimg
     colorize
-    direnv
+    dotenv
     dirhistory
     docker
     docker-compose
