@@ -61,8 +61,8 @@ install_packages() {
     *) echo "Unknown system!" && exit 1 ;;
     esac
 
-    echo "POWERLEVEL9K_OS_ICON_BACKGROUND='$color'" >>~/.local.sh
-    echo "POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX='%F{238}╰%F{$color}%K{$color}%F{black}  %f%F{$color}%k%f'" >>~/.local.sh
+    echo "export POWERLEVEL9K_OS_ICON_BACKGROUND='$color'" >>~/.local.sh
+    echo "export POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX='%F{238}╰%F{$color}%K{$color}%F{black}  %f%F{$color}%k%f'" >>~/.local.sh
 
     mkdir -p "$HOME/.local/state/vim/undo"
 }
