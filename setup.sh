@@ -9,7 +9,7 @@ install_arch() {
 }
 
 install_fedora() {
-    dnf copr enable bytrush/lazygit
+    dnf copr enable bytrush/lazygit -y
     sudo dnf install "${common_packages[@]}" gh lazygit fd-find wl-clipboard git-delta
 }
 
