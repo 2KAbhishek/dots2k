@@ -35,16 +35,11 @@ mlc() {
 
 # vim open
 vo() {
-    local term="$1"
-    local selected
-    selected=$(rg -l "$term" | fzf)
-    if [ -n "$selected" ]; then
-        if [ -z "$term" ]; then
-            nvim "$selected"
-            return 0
-        fi
-        nvim +"/$term" +"norm! n" "$selected"
+    local editor="$EDITOR"
+    if [ "$EDITOR" = "vim" ] || [ "$EDITOR" = "nvim" ]; then
+        local editor="$EDITOR +/$1 +'norm! n'"
     fi
+    rg -l "$1" | fzf --bind "enter:execute($editor + {})"
 }
 
 lvi() {
