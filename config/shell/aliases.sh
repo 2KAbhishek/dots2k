@@ -119,6 +119,12 @@ alias next="playerctl next"
 alias prev="playerctl previous"
 alias song="playerctl metadata title"
 
+# Languages
+alias rsc="bundle exec rails c"
+alias rsv="bundle exec rails s"
+alias rsp="bundle exec rspec"
+alias rcp="bundle exec rubocop"
+
 # Package Manger
 alias apti="sudo apt install"
 alias apts="apt search"
