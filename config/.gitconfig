@@ -87,6 +87,7 @@
 
 [rebase]
     autoStash = true
+    updateRefs = true
 
 [include]
     path = ~/.config/delta/delta.gitconfig
