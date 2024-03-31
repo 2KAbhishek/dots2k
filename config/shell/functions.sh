@@ -42,6 +42,17 @@ vo() {
     rg -l "$1" | fzf --bind "enter:execute($editor + {})"
 }
 
+# edit a binary file in path, useful for editing executables/symlinked scripts
+bine() {
+    local bin=""
+    bin=$(which "$1")
+    if [ -z "$bin" ]; then
+        echo "Binary not found in path"
+        return 1
+    fi
+    $EDITOR "$bin"
+}
+
 lvi() {
     NVIM_APPNAME=lvim2k nvim "$@"
 }

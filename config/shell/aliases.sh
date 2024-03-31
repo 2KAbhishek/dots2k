@@ -75,17 +75,20 @@ alias emd='emacs --daemon &'
 alias emc="emacsclient -c -a 'emacs'"
 alias emt='emacs --no-window-system'
 alias vi="nvim"
-alias vimrc="vim ~/.vimrc"
-alias virc="nvim ~/.config/nvim/init.lua"
 alias me='"$EDITOR" README.md'
-alias zshrc='"$EDITOR" ~/.zshrc'
-alias bashrc='"$EDITOR" ~/.bashrc'
+
+# Configs
+alias vimc="vim ~/.vimrc"
+alias vic="nvim ~/.config/nvim/init.lua"
+alias zshc='"$EDITOR" ~/.zshrc'
+alias bashc='"$EDITOR" ~/.bashrc'
+alias tmuxc='"$EDITOR" ~/.tmux.conf'
 alias alia='"$EDITOR" ~/.config/shell/aliases.sh'
 alias enva='"$EDITOR" ~/.config/shell/envars.sh'
 alias func='"$EDITOR" ~/.config/shell/functions.sh'
 alias loca='"$EDITOR" ~/.local.sh'
 alias p2k='"$EDITOR" ~/.config/shell/powerlevel2k.zsh'
-alias meow='"$EDITOR" ~/.config/kitty/kitty.conf'
+alias kitc='"$EDITOR" ~/.config/kitty/kitty.conf'
 
 # General
 alias asc="asciinema"
