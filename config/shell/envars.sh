@@ -12,7 +12,7 @@ export FZF_COMPLETION_TRIGGER=','
 export FZF_DEFAULT_OPTS="
 --layout=reverse --info=inline --height=80% --multi --cycle --margin=1 --border=rounded
 --preview '([[ -f {} ]] && (bat --style=numbers --color=always --line-range=:500 {} || cat {})) || ([[ -d {} ]] \
-&& (exa -TFl --group-directories-first --icons -L 2 --no-user {} | less)) || echo {} 2> /dev/null | head -200'
+&& (eza -ahlT -L=2 -s=extension --group-directories-first --icons --git --git-ignore --no-user {} | less)) || echo {} 2> /dev/null | head -200'
 --prompt=' ' --pointer=' ' --marker=' '
 --color='hl:148,hl+:154,prompt:blue,pointer:032,marker:010,bg+:000,gutter:000'
 --preview-window=right:65%
@@ -42,6 +42,7 @@ export CHROME_EXECUTABLE=/usr/bin/google-chrome-stable
 
 if [ "$(uname)" = "Darwin" ]; then
     export PATH="/opt/homebrew/opt/coreutils/libexec/gnubin:$PATH"
+    export PATH="/opt/homebrew/opt/gnu-sed/libexec/gnubin:$PATH"
 fi
 
 # Tool configs
