@@ -164,6 +164,7 @@ alias blue="bluetuith"
 alias litu="sudo light -A 10"
 alias litd="sudo light -U 10"
 alias macres="yabai --restart-service && skhd --restart-service"
+alias macdis="displayplacer 'id:1 enablded:false'"
 alias plasmar="kquitapp5 plasmashell && kstart5 plasmashell"
 alias shad="ssh-add ~/.ssh/id_rsa"
 alias shag='eval "$(ssh-agent -s)"'
