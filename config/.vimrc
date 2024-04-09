@@ -71,6 +71,8 @@ function! FZF() abort
 endfunction
 command! -nargs=* Files call FZF()
 
+let g:netrw_liststyle = 3
+
 " Keybindings
 let mapleader = ' '
 inoremap jj <Esc>
