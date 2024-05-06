@@ -20,7 +20,7 @@
 <a href="https://github.com/2KAbhishek/dots2k/pulse">
 <img alt="Last Updated" src="https://img.shields.io/github/last-commit/2kabhishek/dots2k?style=flat&color=e06c75&label="> </a>
 
-<h3>Passionately crafted configs for CLI lovers 🐧❤️</h3>
+<h3>Passionately Crafted CLI Setup 🐧❤️</h3>
 
 <figure>
   <img src= "https://raw.githubusercontent.com/2KAbhishek/dots2k/main/images/screenshot.jpg" alt="dots2k Demo" style="width:100%">
