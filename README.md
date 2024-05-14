@@ -55,19 +55,20 @@ cd dots2k
 
 > If you plan to use this without using the setup script, make sure to install the recommended packages in the `setup.sh` script.
 
-### Extra Steps
+### Next Steps
 
+#### Git Setup
 > [!IMPORTANT]
 > Make sure to change the `user.name` and `user.email` in the `~/.gitconfig` file with your own or use `git config --global user.name "Your Name"`
 >
 > GPG signing is enabled for verifying commits, check [this](https://docs.github.com/en/authentication/managing-commit-signature-verification/adding-a-new-gpg-key-to-your-github-account) for setting up GPG, or you can use `git config --global commit.gpgSign false` to disable it.
 
-### Fonts
+#### Fonts
 
 I'll recommend [Nerd Fonts](https://www.nerdfonts.com/).
 I'm using [FiraCode 3.11](https://github.com/ryanoasis/nerd-fonts/releases/tag/v3.1.1).
 
-### Local Configs
+#### Local Configs
 
 Some configs are intentionally not included as they will vary based on every system.
 For these, I recommend using the `~/.local.sh` file, which you can edit using the `loca` alias.
