@@ -32,7 +32,7 @@
 
 ## What's this
 
-My personal configs, carefully and passionately crafted for setting up an optimal CLI dev experience.
+My personal configs, carefully and passionately crafted for setting up an optimal CLI dev experience across multiple platforms.
 
 ## Inspiration
 
@@ -40,58 +40,45 @@ Hours and nights spent on the terminal, willingness to improve.
 
 ## Setup
 
+I made a [recording for setting this up on an Ubuntu system](https://www.youtube.com/watch?v=X8x-gUwucBU&list=PL52YFor3VtLegIRc3uDl9koGP-Fu_YGru)
+
 ```bash
 git clone https://github.com/2kabhishek/dots2k
 cd dots2k
 
-# Menu based interactive setup
+# Menu based interactive setup, recommended for beginners
 ./setup.sh
 
 # Setup everything unattended
 ./setup.sh -a
 ```
 
-I made a small [recording for setting this up on an Ubuntu system](https://www.youtube.com/watch?v=X8x-gUwucBU&list=PL52YFor3VtLegIRc3uDl9koGP-Fu_YGru)
-
-For installation `git` `curl` & `zsh` are must, other tools are installed by the setup script.
-
-Powerline patched fonts are required for glyphs. I'll recommend [Nerd Fonts](https://www.nerdfonts.com/). I'm using FiraCode.
+> If you plan to use this without using the setup script, make sure to install the recommended packages in the `setup.sh` script.
 
 ### Extra Steps
 
 > [!IMPORTANT]
-> Some configs require special steps to use. Check respective tools documentation for more info.
+> Make sure to change the `user.name` and `user.email` in the `~/.gitconfig` file with your own or use `git config --global user.name "Your Name"`
+>
+> GPG signing is enabled for verifying commits, check [this](https://docs.github.com/en/authentication/managing-commit-signature-verification/adding-a-new-gpg-key-to-your-github-account) for setting up GPG, or you can use `git config --global commit.gpgSign false` to disable it.
 
-- git:
-  I am using GPG signing by default for verifying commits, check [this](https://docs.github.com/en/authentication/managing-commit-signature-verification/adding-a-new-gpg-key-to-your-github-account) for details on setting up GPG, or you can use `git config --global commit.gpgSign false` to disable it.
+### Fonts
 
-- compiz:
-  Import the compiz profile using `ccsm`.
-
-- conky
-  Run conky with `conky -dqc ~/.config/sysinfo.conkyrc`.
-
-- konsole
-  Open Konsole, Goto Settings -> Manage Profiles -> Check `Konsole` and click on Set as Default.
+I'll recommend [Nerd Fonts](https://www.nerdfonts.com/).
+I'm using [FiraCode 3.11](https://github.com/ryanoasis/nerd-fonts/releases/tag/v3.1.1).
 
 ### Local Configs
 
 Some configs are intentionally not included as they will vary based on every system.
-
-A `~/.profile` file is required for some functionality, make sure to include the following vars for your setup.
+For these, I recommend using the `~/.local.sh` file, which you can edit using the `loca` alias.
 
 ```bash
 #!/bin/sh
 
-export SHELL=/usr/bin/zsh
 export EDITOR=nvim
-export TERMINAL_COMMAND=foot
-export EDITOR_TERM="$TERMINAL_COMMAND -e $EDITOR"
 export CLIPCOPY=wl-copy
 export CLIPPASTE=wl-paste
 ```
-
-To add other local shell configs I recommend using the `~/.local.sh` file, which can be easily accessed using the `loca` alias.
 
 You can put all your local aliases, env vars and functions here.
 
@@ -105,7 +92,7 @@ dots2k serves as a core for some of my other useful dev environments targeted fo
 
 ### More Tools
 
-Some configs are more self contained repos, which can be included as plugins
+Some configs are more self contained repos:
 
 <details>
     <summary>Expand for neovim, tmux, window manager + more configs</summary>
@@ -136,12 +123,12 @@ Some configs are more self contained repos, which can be included as plugins
 
 ### Scripts
 
-- [cmtr](https://github.com/2kabhishek/cmtr): Commit changes quickly.
+- [tdo](https://github.com/2kabhishek/tdo): Simple and fast note taking.
 - [mkrepo](https://github.com/2kabhishek/mkrepo): Easy and quick GitHub repo setup.
 - [ghpm](https://github.com/2kabhishek/ghpm): Easily manage all your GitHub repos.
 - [gsync](https://github.com/2kabhishek/gsync): Seamlessly sync your git repos.
+- [cmtr](https://github.com/2kabhishek/cmtr): Commit changes quickly.
 - [gitrim](https://github.com/2kabhishek/gitrim): Trim accidentally pushed or obsolete files from git history.
-- [entry](https://github.com/2kabhishek/entry): Maintain a log of entries.
 
 ### Shell Prompts
 
