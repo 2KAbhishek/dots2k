@@ -123,9 +123,6 @@ Here's a list of all the configs included in this setup:
   - [aliases.sh](./config/shell/aliases.sh) - Shell aliases, shared across shells.
   - [envars.sh](./config/shell/envars.sh) - Environment variables, shared across shells.
   - [functions.sh](./config/shell/functions.sh) - Shell functions, shared across.
-  - [p10k.mise.zsh](./config/shell/p10k.mise.zsh) - Mise prompt for zsh.
-  - [p10k.zsh](./config/shell/p10k.zsh) - Powerlevel10k configuration for zsh.
-  - [powerlevel2k.zsh](./config/shell/powerlevel2k.zsh) - Custom Powerlevel2k theme for zsh.
 - [stylua](./config/.stylua.toml) - A Lua formatter.
 - [tmux](./config/.tmux.conf) - A terminal multiplexer.
 - [topgrade](./config/topgrade.toml) - Upgrades all packages.
@@ -135,7 +132,9 @@ Here's a list of all the configs included in this setup:
 - [Xresources](./config/.Xresources) - Configurations for X applications.
 - [xplr](./config/xplr) - A hackable terminal file explorer
 - [vim](./config/.vimrc) - The original text editor, configs without plugins.
-- [zsh](./config/.zshrc) - The zsh shell.
+- [zsh](./config/zsh) - The zsh shell and related configs.
+  - [.zshrc](./config/zsh/.zshrc) - Main zsh config
+  - [powerlevel2k.zsh](./config/zsh/powerlevel2k.zsh) - Custom Powerlevel2k theme for zsh.
 
 ## The dots2k Universe
 

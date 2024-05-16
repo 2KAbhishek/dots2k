@@ -105,13 +105,13 @@ install_extras() {
 
 declare -a config_dirs=(
     "autorandr" "bat" "broot" "bundle" "cmus" "delta" "fish" "fontconfig" "gitignore.global"
-    "htop" "kitty" "lazygit" "xplr" "libinput-gestures.conf" "ranger" "shell"
+    "htop" "kitty" "lazygit" "xplr" "libinput-gestures.conf" "ranger" "shell" "zsh"
     "sysinfo.conkyrc" "topgrade.toml" "bluetuith"
 )
 
 declare -a home_files=(
-    ".bashrc" ".dircolors" ".dmenurc" ".gitconfig" ".inputrc" ".luarc.json" ".prettierrc" ".pryrc"
-    ".pystartup" ".reek.yml" ".stylua.toml" ".tmux.conf" ".typos.toml" ".vimrc" ".Xresources" ".zshrc"
+    "zsh/.zshenv" ".bashrc" ".dircolors" ".dmenurc" ".gitconfig" ".inputrc" ".luarc.json" ".prettierrc"
+    ".pryrc" ".pystartup" ".reek.yml" ".stylua.toml" ".tmux.conf" ".typos.toml" ".vimrc" ".Xresources"
 )
 
 backup_configs() {
