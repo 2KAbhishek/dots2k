@@ -111,6 +111,7 @@ You can put all your local aliases, env vars and functions here.
 - [pystartup](./config/.pystartup) - Python startup configurations.
 - [reek](./config/.reek.yml) - A code smell detector for Ruby.
 - [stylua](./config/.stylua.toml) - A Lua formatter.
+- [tmux](./config/.tmux.conf) - A terminal multiplexer.
 - [typos](./config/.typos.toml) - A spell checker for code.
 - [vim](./config/.vimrc) - The original text editor.
 
@@ -123,7 +124,6 @@ You can put all your local aliases, env vars and functions here.
 - [htop](./config/htop/htoprc) - An interactive process viewer.
 - [inputrc](./config/.inputrc) - Configs for readline, used by bash and other CLI programs.
 - [ranger](./config/ranger) - A console file manager.
-- [tmux](./config/.tmux.conf) - A terminal multiplexer.
 - [topgrade](./config/topgrade.toml) - Upgrades all packages.
 
 ### Terminal Emulators
@@ -160,29 +160,17 @@ dots2k serves as a core for some of my other useful dev environments targeted fo
 
 ### Development Tools
 
+#### Editor Supreme
+
 - [nvim2k](https://github.com/2kabhishek/nvim2k): Neovim config for ultimate productivity and efficiency.
+
+#### Tmux and Friends
+
 - [tmux2k](https://github.com/2kabhishek/tmux2k): Pretty and functional theme for tmux.
 - [tmux-tilit](https://github.com/2kabhishek/tmux-tilit): Add window manager-like capabilities to tmux.
 - [tmux-tea](https://github.com/2kabhishek/tmux-tea): Powerful tmux session management.
 
-### Window Management
-
-- [sway2k](https://github.com/2kabhishek/sway2k): Powerful and flexible window management with sway and Wayland.
-- [awesome2k](https://github.com/2kabhishek/awesome2k): Manage your windows with awesome and Xorg.
-- [rofi2k](https://github.com/2kabhishek/rofi2k): Streamline your Linux workflow with rofi app launcher.
-
-### Browser
-
-- [qute2k](https://github.com/2kabhishek/qute2k): Keyboard driven browser for vim lovers.
-
-### Themes
-
-- [BWnB](https://github.com/2KAbhishek/BWnB/): Slightly older theme for KDE and Windows 10.
-- [nightblue](https://github.com/2kabhishek/nightblue): Theme of choice for Firefox.
-- [refind2k](https://github.com/2KAbhishek/refind2k): Pretty boot screen for multi-boot users.
-- [Nightbow](https://github.com/2kabhishek/nightbow): Pitch black theme for VS Code.
-
-### Scripts
+#### Made for Speed
 
 - [tdo](https://github.com/2kabhishek/tdo): Simple and fast note taking.
 - [mkrepo](https://github.com/2kabhishek/mkrepo): Easy and quick GitHub repo setup.
@@ -195,6 +183,23 @@ dots2k serves as a core for some of my other useful dev environments targeted fo
 
 - [posh2k](https://github.com/2KAbhishek/posh2k/): Eye candy and power for your oh-my-posh based shells.
 - [starship2k](https://github.com/2KAbhishek/starship2k/): Fast and pretty shell with starship.
+
+### Browser
+
+- [qute2k](https://github.com/2kabhishek/qute2k): Keyboard driven browser for vim lovers.
+- [nightblue](https://github.com/2kabhishek/nightblue): Theme of choice for Firefox.
+
+### Window Management
+
+- [sway2k](https://github.com/2kabhishek/sway2k): Powerful and flexible window management with sway and Wayland.
+- [awesome2k](https://github.com/2kabhishek/awesome2k): Manage your windows with awesome and Xorg.
+- [rofi2k](https://github.com/2kabhishek/rofi2k): Streamline your Linux workflow with rofi app launcher.
+
+### Themes
+
+- [BWnB](https://github.com/2KAbhishek/BWnB/): Slightly older theme for KDE and Windows 10.
+- [Nightbow](https://github.com/2kabhishek/nightbow): Pitch black theme for VS Code.
+- [refind2k](https://github.com/2KAbhishek/refind2k): Pretty boot screen for multi-boot users.
 
 ## How it was built
 
