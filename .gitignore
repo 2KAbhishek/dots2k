@@ -14,3 +14,6 @@ config/bundle/cache/
 config/cmus/*
 !config/cmus/darkwind.theme
 
+# zsh
+.zsh_history
+.zcompdump*
