@@ -110,8 +110,9 @@ declare -a config_dirs=(
 )
 
 declare -a home_files=(
-    "zsh/.zshenv" ".bashrc" ".dircolors" ".dmenurc" ".gitconfig" ".inputrc" ".luarc.json" ".prettierrc"
-    ".pryrc" ".pystartup" ".reek.yml" ".stylua.toml" ".tmux.conf" ".typos.toml" ".vimrc" ".Xresources"
+    "zsh/.zshenv" ".bashrc" ".dircolors" ".dmenurc" ".gitconfig" ".inputrc" ".luarc.json"
+    ".prettierrc" ".pryrc" ".pystartup" ".reek.yml" ".stylua.toml" ".tmux.conf"
+    ".typos.toml" ".vimrc" ".Xresources"
 )
 
 backup_configs() {
@@ -122,7 +123,7 @@ backup_configs() {
     for file in "${home_files[@]}"; do
         mv -v "$HOME/$file" "$HOME/$file.old"
     done
-    echo -e "\u001b[36;1m Remove backups with 'rm -ir ~/.*.old && rm -ir ~/.config/*.old'. \u001b[0m"
+    echo -e "\u001b[36;1m Done backing up files as '.old'! . \u001b[0m"
 }
 
 setup_symlinks() {
