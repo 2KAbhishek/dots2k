@@ -123,9 +123,9 @@ fi
 
 # powerlevel2k
 if [[ $ZSH_THEME == "powerlevel10k/powerlevel10k" ]]; then
-    [ -f ~/.config/shell/p10k.zsh ] && source ~/.config/shell/p10k.zsh
-    [ -f ~/.config/shell/powerlevel2k.zsh ] && source ~/.config/shell/powerlevel2k.zsh
-    [ -f ~/.config/shell/p10k.mise.zsh ] && source ~/.config/shell/p10k.mise.zsh
+    [ -f $ZDOTDIR/p10k.zsh ] && source $ZDOTDIR/p10k.zsh
+    [ -f $ZDOTDIR/powerlevel2k.zsh ] && source $ZDOTDIR/powerlevel2k.zsh
+    [ -f $ZDOTDIR/p10k.mise.zsh ] && source $ZDOTDIR/p10k.mise.zsh
 fi
 
 source $ZSH/oh-my-zsh.sh
@@ -160,7 +160,7 @@ function color_picker() {
 [ -f ~/.config/shell/aliases.sh ] && source ~/.config/shell/aliases.sh
 
 # Zhs Aliases
-alias reload='source ~/.zshrc'
+alias reload="source $ZDOTDIR/.zshrc"
 
 alias -s md=nvim
 alias -s html=nvim
@@ -178,7 +178,7 @@ alias -g wcw="| wc -w"
 if type navi >/dev/null 2>&1; then eval "$(navi widget zsh)"; fi
 
 # Key Bindings
-bindkey -s '^H' ' source ~/.zshrc^M ^M'
+bindkey -s '^H' ' reload^M ^M'
 bindkey -s '^T' ' t^M ^M'
 bindkey -s "^G" ' lazygit^M ^M'
 bindkey "^F" fzf-file-widget
