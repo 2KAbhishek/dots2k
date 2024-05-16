@@ -58,6 +58,7 @@ cd dots2k
 ### Next Steps
 
 #### Git Setup
+
 > [!IMPORTANT]
 > Make sure to change the `user.name` and `user.email` in the `~/.gitconfig` file with your own or use `git config --global user.name "Your Name"`
 >
@@ -82,6 +83,59 @@ export CLIPPASTE=wl-paste
 ```
 
 You can put all your local aliases, env vars and functions here.
+
+## Included Configs
+
+Here's a list of all the configs included in this setup:
+
+- [autorandr](./config/autorandr) - Manages display configurations on Xorg.
+- [bash](./config/.bashrc) - The bash shell.
+- [bat](./config/bat/config) - A cat clone with syntax highlighting and Git integration.
+- [bluetuith](./config/bluetuith/bluetuith.conf) - A Bluetooth TUI.
+- [broot](./config/broot/conf.toml) - A tree explorer and launcher.
+- [bundle](./config/bundle/config) - A Ruby gem dependency manager.
+- [chrome](./config/chrome/userChrome.css) - User styles for Chrome, used with firefox.
+- [cmus](./config/cmus/darkwind.theme) - A music player, with a custom theme.
+- [compiz](./config/compiz.profile) - A compositing window manager, configs for xfce.
+- [conky](./config/sysinfo.conkyrc) - A system widget.
+- [delta](./config/delta/delta.gitconfig) - A syntax-highlighting pager for git and diff output.
+- [dircolors](./config/.dircolors) - Sets up color definitions for GNU ls.
+- [dmenu](./config/.dmenurc) - A dynamic menu for X.
+- [fish](./config/fish/) - The fish shell and related configs.
+- [fontconfig](./config/fontconfig/fonts.conf) - Configures and customizes font access.
+- [git](./config/.gitconfig) - Global git configurations
+  - [gitignore.global](./config/gitignore.global) - Global gitignore settings, used in gitconfig.
+- [greetd](./config/greetd/config.toml) - A minimal login manager.
+- [htop](./config/htop/htoprc) - An interactive process viewer.
+- [i3](./config/i3/config) - A tiling window manager, comes with i3status.
+- [inputrc](./config/.inputrc) - Configs for readline, used by bash and other CLI programs.
+- [kitty](./config/kitty/kitty.conf) - A GPU-based terminal emulator.
+- [konsole](./config/konsole) - The KDE terminal emulator and a nice color scheme.
+- [lazygit](./config/lazygit/config.yml) - A simple terminal UI for git commands.
+- [libinput-gestures](./config/libinput-gestures.conf) - Binds gestures to commands.
+- [luarc](./config/.luarc.json) - Configs for the Lua language.
+- [prettier](./config/.prettierrc) - A code formatter.
+- [pry](./config/.pryrc) - A Ruby REPL.
+- [pystartup](./config/.pystartup) - Python startup configurations.
+- [ranger](./config/ranger) - A console file manager
+- [reek](./config/.reek.yml) - A code smell detector for Ruby.
+- [shell](./config/shell) - Shell configuration scripts
+  - [aliases.sh](./config/shell/aliases.sh) - Shell aliases, shared across shells.
+  - [envars.sh](./config/shell/envars.sh) - Environment variables, shared across shells.
+  - [functions.sh](./config/shell/functions.sh) - Shell functions, shared across.
+  - [p10k.mise.zsh](./config/shell/p10k.mise.zsh) - Mise prompt for zsh.
+  - [p10k.zsh](./config/shell/p10k.zsh) - Powerlevel10k configuration for zsh.
+  - [powerlevel2k.zsh](./config/shell/powerlevel2k.zsh) - Custom Powerlevel2k theme for zsh.
+- [stylua](./config/.stylua.toml) - A Lua formatter.
+- [tmux](./config/.tmux.conf) - A terminal multiplexer.
+- [topgrade](./config/topgrade.toml) - Upgrades all packages.
+- [typos](./config/.typos.toml) - A spell checker for code.
+- [vim](./config/.vimrc) - The original text editor.
+- [vimium](./config/vimium.json) - A browser extension for keyboard navigation.
+- [Xresources](./config/.Xresources) - Configurations for X applications.
+- [xplr](./config/xplr) - A hackable terminal file explorer
+- [vim](./config/.vimrc) - The original text editor, configs without plugins.
+- [zsh](./config/.zshrc) - The zsh shell.
 
 ## The dots2k Universe
 
