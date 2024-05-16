@@ -104,8 +104,8 @@ install_extras() {
 }
 
 declare -a config_dirs=(
-    "autorandr" "bat" "broot" "bundle" "cmus" "delta" "fish" "fontconfig" "gitignore.global"
-    "htop" "kitty" "lazygit" "xplr" "libinput-gestures.conf" "ranger" "shell" "zsh"
+    "autorandr" "bat" "bundle" "cmus" "delta" "fish" "fontconfig" "gitignore.global"
+    "htop" "kitty" "lazygit" "libinput-gestures.conf" "ranger" "shell" "zsh"
     "sysinfo.conkyrc" "topgrade.toml" "bluetuith"
 )
 
