@@ -42,6 +42,9 @@ export PATH=$HOME/.luarocks/bin:$PATH
 export CHROME_EXECUTABLE=/usr/bin/google-chrome-stable
 
 if [ "$(uname)" = "Darwin" ]; then
+    eval "$(/opt/homebrew/bin/brew shellenv)"
+    export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
+    export MANPATH="/opt/local/share/man:$MANPATH"
     export PATH="/opt/homebrew/opt/coreutils/libexec/gnubin:$PATH"
     export PATH="/opt/homebrew/opt/gnu-sed/libexec/gnubin:$PATH"
 fi

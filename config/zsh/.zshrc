@@ -5,6 +5,9 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
+# Envirnnment setup
+[ -f ~/.config/shell/envars.sh ] && source ~/.config/shell/envars.sh
+
 # Path to oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 # export TERM="xterm-256color"
@@ -149,9 +152,6 @@ function color_picker() {
 
 # For fzf keybindings
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-# Common environment variables
-[ -f ~/.config/shell/envars.sh ] && source ~/.config/shell/envars.sh
 
 # Common functions
 [ -f ~/.config/shell/functions.sh ] && source ~/.config/shell/functions.sh

@@ -80,14 +80,14 @@ alias me='"$EDITOR" README.md'
 # Configs
 alias vimc="vim ~/.vimrc"
 alias vic="nvim ~/.config/nvim/init.lua"
-alias zshc='"$EDITOR" ~/.zshrc'
+alias zshc='"$EDITOR" "$ZDOTDIR"/.zshrc'
 alias bashc='"$EDITOR" ~/.bashrc'
 alias tmuxc='"$EDITOR" ~/.tmux.conf'
 alias alia='"$EDITOR" ~/.config/shell/aliases.sh'
 alias enva='"$EDITOR" ~/.config/shell/envars.sh'
 alias func='"$EDITOR" ~/.config/shell/functions.sh'
 alias loca='"$EDITOR" ~/.local.sh'
-alias p2k='"$EDITOR" ~/.config/shell/powerlevel2k.zsh'
+alias p2k='"$EDITOR" "$ZDOTDIR"/powerlevel2k.zsh'
 alias kitc='"$EDITOR" ~/.config/kitty/kitty.conf'
 
 # General
