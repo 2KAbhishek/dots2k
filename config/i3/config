@@ -300,7 +300,7 @@ set_from_resource $term_color15    color15
 # Start i3bar
 bar {
 	i3bar_command i3bar
-	status_command i3status
+	status_command i3status ~/.config/i3/i3status.conf
 	position top
 
 ## Set your primary output first. Example: 'xrandr --output eDP1 --primary'
