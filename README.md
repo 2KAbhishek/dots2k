@@ -86,72 +86,79 @@ You can put all your local aliases, env vars and functions here.
 
 ## Included Configs
 
-Here's a list of all the configs included in this setup:
+### Shells
 
-- [autorandr](./config/autorandr) - Manages display configurations on Xorg.
 - [bash](./config/.bashrc) - The bash shell.
-- [bat](./config/bat/config) - A cat clone with syntax highlighting and Git integration.
-- [bluetuith](./config/bluetuith/bluetuith.conf) - A Bluetooth TUI.
-- [broot](./config/broot/conf.toml) - A tree explorer and launcher.
-- [bundle](./config/bundle/config) - A Ruby gem dependency manager.
-- [chrome](./config/chrome/userChrome.css) - User styles for Chrome, used with firefox.
-- [cmus](./config/cmus/darkwind.theme) - A music player, with a custom theme.
-- [compiz](./config/compiz.profile) - A compositing window manager, configs for xfce.
-- [conky](./config/sysinfo.conkyrc) - A system widget.
-- [delta](./config/delta/delta.gitconfig) - A syntax-highlighting pager for git and diff output.
-- [dircolors](./config/.dircolors) - Sets up color definitions for GNU ls.
-- [dmenu](./config/.dmenurc) - A dynamic menu for X.
 - [fish](./config/fish/) - The fish shell and related configs.
-- [fontconfig](./config/fontconfig/fonts.conf) - Configures and customizes font access.
-- [git](./config/.gitconfig) - Global git configurations
+- [shell](./config/shell) - Shell configuration scripts.
+  - [aliases.sh](./config/shell/aliases.sh) - Aliases, shared across shells.
+  - [envars.sh](./config/shell/envars.sh) - Environment variables, shared across shells.
+  - [functions.sh](./config/shell/functions.sh) - Functions, shared across.
+- [zsh](./config/zsh) - The zsh shell and related configs.
+  - [.zshrc](./config/zsh/.zshrc) - Main zsh config.
+  - [powerlevel2k.zsh](./config/zsh/powerlevel2k.zsh) - Custom Powerlevel2k theme for zsh.
+
+### Development Tools
+
+- [bundle](./config/bundle/config) - A Ruby gem dependency manager.
+- [delta](./config/delta/delta.gitconfig) - A syntax-highlighting pager for git and diff output.
+- [git](./config/.gitconfig) - Global git configurations.
   - [gitignore.global](./config/gitignore.global) - Global gitignore settings, used in gitconfig.
-- [greetd](./config/greetd/config.toml) - A minimal login manager.
-- [htop](./config/htop/htoprc) - An interactive process viewer.
-- [i3](./config/i3/config) - A tiling window manager, comes with i3status.
-- [inputrc](./config/.inputrc) - Configs for readline, used by bash and other CLI programs.
-- [kitty](./config/kitty/kitty.conf) - A GPU-based terminal emulator.
-- [konsole](./config/konsole) - The KDE terminal emulator and a nice color scheme.
 - [lazygit](./config/lazygit/config.yml) - A simple terminal UI for git commands.
-- [libinput-gestures](./config/libinput-gestures.conf) - Binds gestures to commands.
 - [luarc](./config/.luarc.json) - Configs for the Lua language.
 - [prettier](./config/.prettierrc) - A code formatter.
 - [pry](./config/.pryrc) - A Ruby REPL.
 - [pystartup](./config/.pystartup) - Python startup configurations.
-- [ranger](./config/ranger) - A console file manager
 - [reek](./config/.reek.yml) - A code smell detector for Ruby.
-- [shell](./config/shell) - Shell configuration scripts
-  - [aliases.sh](./config/shell/aliases.sh) - Shell aliases, shared across shells.
-  - [envars.sh](./config/shell/envars.sh) - Environment variables, shared across shells.
-  - [functions.sh](./config/shell/functions.sh) - Shell functions, shared across.
 - [stylua](./config/.stylua.toml) - A Lua formatter.
-- [tmux](./config/.tmux.conf) - A terminal multiplexer.
-- [topgrade](./config/topgrade.toml) - Upgrades all packages.
 - [typos](./config/.typos.toml) - A spell checker for code.
 - [vim](./config/.vimrc) - The original text editor.
+
+### System Tools
+
+- [bat](./config/bat/config) - A cat clone with syntax highlighting and Git integration.
+- [cmus](./config/cmus/darkwind.theme) - A music player, with a custom theme.
+- [bluetuith](./config/bluetuith/bluetuith.conf) - A Bluetooth TUI.
+- [dircolors](./config/.dircolors) - Sets up color definitions for GNU ls.
+- [htop](./config/htop/htoprc) - An interactive process viewer.
+- [inputrc](./config/.inputrc) - Configs for readline, used by bash and other CLI programs.
+- [ranger](./config/ranger) - A console file manager.
+- [tmux](./config/.tmux.conf) - A terminal multiplexer.
+- [topgrade](./config/topgrade.toml) - Upgrades all packages.
+
+### Terminal Emulators
+
+- [kitty](./config/kitty/kitty.conf) - A GPU-based terminal emulator.
+- [konsole](./config/konsole) - The KDE terminal emulator and a nice color scheme.
+
+### Browser
+
 - [vimium](./config/vimium.json) - A browser extension for keyboard navigation.
+- [chrome](./config/chrome/userChrome.css) - User styles for Chrome, used with Firefox.
+
+### Window Management
+
+- [autorandr](./config/autorandr) - Manages display configurations on Xorg.
+- [compiz](./config/compiz.profile) - A compositing window manager, configs for xfce.
+- [conky](./config/sysinfo.conkyrc) - A system widget.
+- [dmenu](./config/.dmenurc) - A dynamic menu for X.
+- [fontconfig](./config/fontconfig/fonts.conf) - Configures and customizes font access.
+- [greetd](./config/greetd/config.toml) - A minimal login manager.
+- [i3](./config/i3/config) - A tiling window manager, comes with i3status.
+- [libinput-gestures](./config/libinput-gestures.conf) - Binds gestures to commands.
 - [Xresources](./config/.Xresources) - Configurations for X applications.
-- [xplr](./config/xplr) - A hackable terminal file explorer
-- [vim](./config/.vimrc) - The original text editor, configs without plugins.
-- [zsh](./config/zsh) - The zsh shell and related configs.
-  - [.zshrc](./config/zsh/.zshrc) - Main zsh config
-  - [powerlevel2k.zsh](./config/zsh/powerlevel2k.zsh) - Custom Powerlevel2k theme for zsh.
 
 ## The dots2k Universe
 
-dots2k serves as a core for some of my other useful dev environments targeted for specific platforms
+dots2k serves as a core for some of my other useful dev environments targeted for specific platforms, some tool configs are shared as self contained repos:
+
+### Platform Specific
 
 - [mac2k](https://github.com/2kabhishek/mac2k): Elevate your terminal game on macOS with mac2k!
 - [win2k](https://github.com/2kabhishek/win2k): Say goodbye to bland command lines on Windows!
 - [termux2k](https://github.com/2kabhishek/termux2k): Supercharge your Android development on the go!
 
-### More Tools
-
-Some configs are more self contained repos:
-
-<details>
-    <summary>Expand for neovim, tmux, window manager + more configs</summary>
-
-### CLI Tools
+### Development Tools
 
 - [nvim2k](https://github.com/2kabhishek/nvim2k): Neovim config for ultimate productivity and efficiency.
 - [tmux2k](https://github.com/2kabhishek/tmux2k): Pretty and functional theme for tmux.
@@ -168,7 +175,7 @@ Some configs are more self contained repos:
 
 - [qute2k](https://github.com/2kabhishek/qute2k): Keyboard driven browser for vim lovers.
 
-### Theming
+### Themes
 
 - [BWnB](https://github.com/2KAbhishek/BWnB/): Slightly older theme for KDE and Windows 10.
 - [nightblue](https://github.com/2kabhishek/nightblue): Theme of choice for Firefox.
@@ -188,8 +195,6 @@ Some configs are more self contained repos:
 
 - [posh2k](https://github.com/2KAbhishek/posh2k/): Eye candy and power for your oh-my-posh based shells.
 - [starship2k](https://github.com/2KAbhishek/starship2k/): Fast and pretty shell with starship.
-
-</details>
 
 ## How it was built
 
