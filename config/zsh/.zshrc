@@ -9,7 +9,7 @@ fi
 [ -f ~/.config/shell/envars.sh ] && source ~/.config/shell/envars.sh
 
 # Path to oh-my-zsh installation.
-export ZSH="$HOME/.oh-my-zsh"
+export ZSH="$ZDOTDIR/.oh-my-zsh"
 # export TERM="xterm-256color"
 
 # Options

@@ -69,6 +69,8 @@ install_packages() {
 
 install_oh_my_zsh() {
     echo -e "\u001b[7m Installing oh-my-zsh...\u001b[0m"
+    mkdir "$HOME"/.config/zsh
+    export ZDOTDIR=$HOME/.config/zsh
     sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 
     echo -e "\u001b[7m Installing zsh plugins...\u001b[0m"

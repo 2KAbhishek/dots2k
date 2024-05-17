@@ -16,4 +16,5 @@ config/cmus/*
 
 # zsh
 .zsh_history
+.oh-my-zsh
 .zcompdump*
