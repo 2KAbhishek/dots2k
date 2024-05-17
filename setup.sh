@@ -1,5 +1,7 @@
 #!/bin/bash
 
+LOCAL_CONFIG="$HOME/.config/shell/local.sh"
+
 declare -a common_packages=(
     curl wget git zsh tmux bat fzf eza unzip neovim ripgrep ncdu ranger vim zoxide
 )
@@ -17,7 +19,7 @@ install_debian() {
     sudo apt install "${common_packages[@]}" gh fd-find xclip autorandr nala topgrade
     sudo ln -sfnv /usr/bin/fdfind /usr/bin/fd
     sudo ln -sfnv /usr/bin/batcat /usr/bin/bat
-    echo "alias cat=batcat" >> "$HOME"/.local.sh
+    echo "alias cat=batcat" >> "$LOCAL_CONFIG"
 }
 
 install_termux() {
@@ -61,8 +63,8 @@ install_packages() {
     *) echo "Unknown system!" && exit 1 ;;
     esac
 
-    echo "export POWERLEVEL9K_OS_ICON_BACKGROUND='$color'" >> "$HOME"/.local.sh
-    echo "export POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX='%F{238}╰%F{$color}%K{$color}%F{black}  %f%F{$color}%k%f'" >> "$HOME"/.local.sh
+    echo "export POWERLEVEL9K_OS_ICON_BACKGROUND='$color'" >> "$LOCAL_CONFIG"
+    echo "export POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX='%F{238}╰%F{$color}%K{$color}%F{black}  %f%F{$color}%k%f'" >> "$LOCAL_CONFIG"
 
     mkdir -p "$HOME/.local/state/vim/undo"
 }

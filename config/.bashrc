@@ -38,4 +38,4 @@ if type rtx >/dev/null 2>&1; then
 fi
 
 # Local configurations
-[ -f ~/.local.sh ] && source ~/.local.sh
+[ -f ~/.config/shell/local.sh ] && source ~/.config/shell/local.sh

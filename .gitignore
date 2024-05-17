@@ -14,6 +14,9 @@ config/bundle/cache/
 config/cmus/*
 !config/cmus/darkwind.theme
 
+# local shell configs
+config/shell/local.sh
+
 # zsh
 .zsh_history
 .oh-my-zsh

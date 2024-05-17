@@ -190,4 +190,4 @@ zle -N copy-earlier-word
 bindkey "^[m" copy-earlier-word
 
 # Local configurations
-[ -f ~/.local.sh ] && source ~/.local.sh
+[ -f ~/.config/shell/local.sh ] && source ~/.config/shell/local.sh

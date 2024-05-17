@@ -72,7 +72,7 @@ I'm using [FiraCode 3.11](https://github.com/ryanoasis/nerd-fonts/releases/tag/v
 #### Local Configs
 
 Some configs are intentionally not included as they will vary based on every system.
-For these, I recommend using the `~/.local.sh` file, which you can edit using the `loca` alias.
+For these, I recommend creating the `~/config/shell/local.sh` file, which you can edit using the `loca` alias.
 
 ```bash
 #!/bin/sh
