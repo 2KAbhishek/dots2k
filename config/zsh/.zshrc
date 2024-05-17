@@ -31,9 +31,7 @@ COMPLETION_WAITING_DOTS="false"
 SAVEHIST=99999
 
 # Plugins
-plugins=(adb
-    alias-tips
-    catimg
+plugins=(alias-tips
     colorize
     dotenv
     dirhistory
