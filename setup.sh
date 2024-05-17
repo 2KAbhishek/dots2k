@@ -19,7 +19,7 @@ install_debian() {
     sudo apt install "${common_packages[@]}" gh fd-find xclip autorandr nala topgrade
     sudo ln -sfnv /usr/bin/fdfind /usr/bin/fd
     sudo ln -sfnv /usr/bin/batcat /usr/bin/bat
-    echo "alias cat=batcat" >> "$LOCAL_CONFIG"
+    echo "alias cat=batcat" >>"$LOCAL_CONFIG"
 }
 
 install_termux() {
@@ -63,8 +63,8 @@ install_packages() {
     *) echo "Unknown system!" && exit 1 ;;
     esac
 
-    echo "export POWERLEVEL9K_OS_ICON_BACKGROUND='$color'" >> "$LOCAL_CONFIG"
-    echo "export POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX='%F{238}╰%F{$color}%K{$color}%F{black}  %f%F{$color}%k%f'" >> "$LOCAL_CONFIG"
+    echo "export POWERLEVEL9K_OS_ICON_BACKGROUND='$color'" >>"$LOCAL_CONFIG"
+    echo "export POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX='%F{238}╰%F{$color}%K{$color}%F{black}  %f%F{$color}%k%f'" >>"$LOCAL_CONFIG"
 
     mkdir -p "$HOME/.local/state/vim/undo"
 }
@@ -93,30 +93,20 @@ install_oh_my_zsh() {
     chsh -s "$(which zsh)"
 }
 
-install_tmux_plugins() {
-    echo -e "\u001b[7m Installing tmux plugins... \u001b[0m"
-    git clone https://github.com/tmux-plugins/tpm "$HOME"/.tmux/plugins/tpm
-    tmux start-server
-    tmux new-session -d
-    "$HOME"/.tmux/plugins/tpm/scripts/install_plugins.sh
-    tmux kill-server
-}
-
 install_extras() {
     install_oh_my_zsh
-    install_tmux_plugins
 }
 
 declare -a config_dirs=(
     "autorandr" "bat" "bundle" "cmus" "delta" "fish" "fontconfig" "gitignore.global"
-    "htop" "kitty" "lazygit" "libinput-gestures.conf" "ranger" "shell" "zsh"
+    "htop" "kitty" "lazygit" "libinput-gestures.conf" "ranger" "shell" "tmux" "zsh"
     "sysinfo.conkyrc" "topgrade.toml" "bluetuith"
 )
 
 declare -a home_files=(
     "zsh/.zshenv" ".bashrc" ".dircolors" ".dmenurc" ".gitconfig" ".inputrc" ".luarc.json"
-    ".prettierrc" ".pryrc" ".pystartup" ".reek.yml" ".stylua.toml" ".tmux.conf"
-    ".typos.toml" ".vimrc" ".Xresources"
+    ".prettierrc" ".pryrc" ".pystartup" ".reek.yml" ".stylua.toml" ".typos.toml"
+    ".vimrc" ".Xresources"
 )
 
 backup_configs() {

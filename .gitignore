@@ -17,6 +17,9 @@ config/cmus/*
 # local shell configs
 config/shell/local.sh
 
+# tmux plugins
+config/tmux/plugins/
+
 # zsh
 .zsh_history
 .oh-my-zsh
