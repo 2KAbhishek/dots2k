@@ -111,7 +111,7 @@ You can put all your local aliases, env vars and functions here.
 - [pystartup](./config/.pystartup) - Python startup configurations.
 - [reek](./config/.reek.yml) - A code smell detector for Ruby.
 - [stylua](./config/.stylua.toml) - A Lua formatter.
-- [tmux](./config/.tmux.conf) - A terminal multiplexer.
+- [tmux](./config/tmux/tmux.conf) - A terminal multiplexer.
 - [typos](./config/.typos.toml) - A spell checker for code.
 - [vim](./config/.vimrc) - The original text editor.
 
