@@ -17,13 +17,13 @@ install_debian() {
     sudo apt install "${common_packages[@]}" gh fd-find xclip autorandr nala topgrade
     sudo ln -sfnv /usr/bin/fdfind /usr/bin/fd
     sudo ln -sfnv /usr/bin/batcat /usr/bin/bat
-    echo "alias cat=batcat" >>~/.local.sh
+    echo "alias cat=batcat" >> "$HOME"/.local.sh
 }
 
 install_termux() {
     pkg install "${common_packages[@]}" gh fd git-delta openssh termux-tools nala
-    ln -sfnv "$PWD/../config/bin" ~/bin
-    cp -rv "$PWD/../config/.termux" ~/
+    ln -sfnv "$PWD/../config/bin" "$HOME"/bin
+    cp -rv "$PWD/../config/.termux" "$HOME"/
 }
 
 install_mac() {
@@ -61,8 +61,8 @@ install_packages() {
     *) echo "Unknown system!" && exit 1 ;;
     esac
 
-    echo "export POWERLEVEL9K_OS_ICON_BACKGROUND='$color'" >>~/.local.sh
-    echo "export POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX='%F{238}╰%F{$color}%K{$color}%F{black}  %f%F{$color}%k%f'" >>~/.local.sh
+    echo "export POWERLEVEL9K_OS_ICON_BACKGROUND='$color'" >> "$HOME"/.local.sh
+    echo "export POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX='%F{238}╰%F{$color}%K{$color}%F{black}  %f%F{$color}%k%f'" >> "$HOME"/.local.sh
 
     mkdir -p "$HOME/.local/state/vim/undo"
 }
@@ -93,10 +93,10 @@ install_oh_my_zsh() {
 
 install_tmux_plugins() {
     echo -e "\u001b[7m Installing tmux plugins... \u001b[0m"
-    git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+    git clone https://github.com/tmux-plugins/tpm "$HOME"/.tmux/plugins/tpm
     tmux start-server
     tmux new-session -d
-    ~/.tmux/plugins/tpm/scripts/install_plugins.sh
+    "$HOME"/.tmux/plugins/tpm/scripts/install_plugins.sh
     tmux kill-server
 }
 
@@ -134,7 +134,7 @@ setup_symlinks() {
         ln -sfnv "$PWD/config/$dir" "$HOME/.config/"
     done
     for file in "${home_files[@]}"; do
-        ln -sfnv "$PWD/config/$file" ~/
+        ln -sfnv "$PWD/config/$file" "$HOME"/
     done
 }
 
