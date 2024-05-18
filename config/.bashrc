@@ -1,7 +1,7 @@
 #!/bin/bash
 PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME%%.*}:${PWD/#$HOME/\~}\007"'
 
-if [[ ${EUID} == 0 ]] ; then
+if [[ ${EUID} == 0 ]]; then
     PS1='\[\033[01;31m\][\h\[\033[01;36m\] \W\[\033[01;31m\]]\$\[\033[00m\] '
 else
     PS1='\[\033[01;32m\][\u@\h\[\033[01;37m\] \W\[\033[01;32m\]]\$\[\033[00m\] '
@@ -32,9 +32,9 @@ alias reload="source ~/.bashrc"
 # Tool confs for bash
 if type navi >/dev/null 2>&1; then eval "$(navi widget bash)"; fi
 if type zoxide >/dev/null 2>&1; then eval "$(zoxide init bash)"; fi
-if type rtx >/dev/null 2>&1; then
-    eval "$(rtx activate bash)";
-    eval "$(rtx completion bash)";
+if type mise >/dev/null 2>&1; then
+    eval "$(mise activate bash)"
+    eval "$(mise completion bash)"
 fi
 
 # Local configurations
