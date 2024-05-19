@@ -1,5 +1,5 @@
-# navi, interactive cheatsheet
 if type navi >/dev/null 2>&1; then eval "$(navi widget zsh)"; fi
+if type fzf >/dev/null 2>&1; then eval "$(fzf --zsh)"; fi
 
 # foot terminal emulator shell integration
 # Called before prompt(?)

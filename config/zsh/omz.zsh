@@ -27,8 +27,7 @@ plugins=(alias-tips
     zsh-autopair
     zsh-autosuggestions
     zsh-completions
-    zsh-navigation-tools
-    fzf) # fzf at last for '^R' binding
+    zsh-navigation-tools)
 
 # Uninstalled, TODO doesn't work with fzf-tab
 # zsh-autocomplete
