@@ -77,7 +77,7 @@ install_oh_my_zsh() {
 
     echo -e "\u001b[7m Installing zsh plugins...\u001b[0m"
     gh="https://github.com/"
-    omz="$HOME/.oh-my-zsh/custom"
+    omz="$ZDOTDIR/.oh-my-zsh/custom"
     omz_plugin="$omz/plugins/"
 
     git clone "$gh/romkatv/powerlevel10k" "$omz/themes/powerlevel10k"
