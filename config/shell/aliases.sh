@@ -82,12 +82,12 @@ alias vimc="vim ~/.vimrc"
 alias vic="nvim ~/.config/nvim/init.lua"
 alias nvimc="nvim ~/.config/nvim/init.lua"
 alias zshc='"$EDITOR" "$ZDOTDIR"/.zshrc'
+alias p2k='"$EDITOR" "$ZDOTDIR/prompt/powerlevel2k.zsh"'
 alias bashc='"$EDITOR" ~/.bashrc'
 alias alia='"$EDITOR" ~/.config/shell/aliases.sh'
 alias enva='"$EDITOR" ~/.config/shell/environment.sh'
 alias func='"$EDITOR" ~/.config/shell/functions.sh'
 alias loca='"$EDITOR" ~/.config/shell/local.sh'
-alias p2k='"$EDITOR" "$ZDOTDIR"/powerlevel2k.zsh'
 alias tmuxc='"$EDITOR" ~/.config/tmux/tmux.conf'
 alias kitc='"$EDITOR" ~/.config/kitty/kitty.conf'
 
