@@ -89,14 +89,13 @@ You can put all your local aliases, env vars and functions here.
 ### Shells
 
 - [bash](./config/.bashrc) - The bash shell.
-- [fish](./config/fish/) - The fish shell and related configs.
+- [fish](./config/fish/) - fish shell configs.
 - [shell](./config/shell) - Shell configuration scripts.
   - [aliases.sh](./config/shell/aliases.sh) - Aliases, shared across shells.
-  - [envars.sh](./config/shell/envars.sh) - Environment variables, shared across shells.
+  - [environment.sh](./config/shell/environment.sh) - Environment variables, shared across shells.
   - [functions.sh](./config/shell/functions.sh) - Functions, shared across.
-- [zsh](./config/zsh) - The zsh shell and related configs.
-  - [.zshrc](./config/zsh/.zshrc) - Main zsh config.
-  - [powerlevel2k.zsh](./config/zsh/powerlevel2k.zsh) - Custom Powerlevel2k theme for zsh.
+- [zsh](./config/zsh) - zsh shell configs.
+  - [.zshrc](./config/zsh/.zshrc) - Main zsh config, that loads required modules.
 
 ### Development Tools
 
