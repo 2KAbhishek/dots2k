@@ -136,8 +136,15 @@ man() {
         man "$@"
 }
 
+# show colored text
+color_text() {
+    for code in {000..255}; do
+        printf "%s: \033[38;5;%smThis is how your text would look like\033[0m\n" "$code" "$code"
+    done
+}
+
 # show colors and codes
-color() {
+color_escape() {
     local fgc bgc vals seq0
 
     printf "Color escapes are %s\n" '\e[${value};...;${value}m'
