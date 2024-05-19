@@ -20,14 +20,9 @@ alias reload="source ~/.bashrc"
 # fzf keybindings
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
-# Common environment variables
-[ -f ~/.config/shell/envars.sh ] && source ~/.config/shell/envars.sh
-
-# Common functions
-[ -f ~/.config/shell/functions.sh ] && source ~/.config/shell/functions.sh
-
-# Common aliases
-[ -f ~/.config/shell/aliases.sh ] && source ~/.config/shell/aliases.sh
+source ~/.config/shell/environment.sh
+source ~/.config/shell/functions.sh
+source ~/.config/shell/aliases.sh
 
 # Tool confs for bash
 if type navi >/dev/null 2>&1; then eval "$(navi widget bash)"; fi
