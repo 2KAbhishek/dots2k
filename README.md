@@ -32,7 +32,7 @@
 
 ## What's this
 
-My personal configs, carefully and passionately crafted for setting up an optimal CLI dev experience across multiple platforms.
+My personal configs, passionately crafted for setting up an optimal CLI dev experience across platforms.
 
 ## Inspiration
 
@@ -62,7 +62,7 @@ cd dots2k
 > [!IMPORTANT]
 > Make sure to change the `user.name` and `user.email` in the `~/.gitconfig` file with your own or use `git config --global user.name "Your Name"`
 >
-> GPG signing is enabled for verifying commits, check [this](https://docs.github.com/en/authentication/managing-commit-signature-verification/adding-a-new-gpg-key-to-your-github-account) for setting up GPG, or you can use `git config --global commit.gpgSign false` to disable it.
+> I use GPG signing for commits, check [this](https://docs.github.com/en/authentication/managing-commit-signature-verification/adding-a-new-gpg-key-to-your-github-account) for setting it up, or use `git config --global commit.gpgSign false` to disable it.
 
 #### Fonts
 
@@ -149,13 +149,13 @@ You can put all your local aliases, env vars and functions here.
 
 ## The dots2k Universe
 
-dots2k serves as a core for some of my other useful dev environments targeted for specific platforms, some tool configs are shared as self contained repos:
+dots2k serves as a core for some of my other dev environments targeted for specific platforms, other tools have their own repos:
 
 ### Platform Specific
 
-- [mac2k](https://github.com/2kabhishek/mac2k): Elevate your terminal game on macOS with mac2k!
-- [win2k](https://github.com/2kabhishek/win2k): Say goodbye to bland command lines on Windows!
-- [termux2k](https://github.com/2kabhishek/termux2k): Supercharge your Android development on the go!
+- [mac2k](https://github.com/2kabhishek/mac2k): Elevate your terminal game on macOS with mac2k
+- [win2k](https://github.com/2kabhishek/win2k): Say goodbye to bland command lines on Windows
+- [termux2k](https://github.com/2kabhishek/termux2k): Supercharge your Android development on the go
 
 ### Development Tools
 
@@ -173,10 +173,10 @@ dots2k serves as a core for some of my other useful dev environments targeted fo
 
 - [tdo](https://github.com/2kabhishek/tdo): Simple and fast note taking.
 - [mkrepo](https://github.com/2kabhishek/mkrepo): Easy and quick GitHub repo setup.
-- [ghpm](https://github.com/2kabhishek/ghpm): Easily manage all your GitHub repos.
+- [ghpm](https://github.com/2kabhishek/ghpm): Manage all your GitHub repos.
 - [gsync](https://github.com/2kabhishek/gsync): Seamlessly sync your git repos.
-- [cmtr](https://github.com/2kabhishek/cmtr): Commit changes quickly.
-- [gitrim](https://github.com/2kabhishek/gitrim): Trim accidentally pushed or obsolete files from git history.
+- [cmtr](https://github.com/2kabhishek/cmtr): Commit changes quick.
+- [gitrim](https://github.com/2kabhishek/gitrim): Trim unnecessary files from git history.
 
 ### Shell Prompts
 
@@ -200,13 +200,14 @@ dots2k serves as a core for some of my other useful dev environments targeted fo
 - [Nightbow](https://github.com/2kabhishek/nightbow): Pitch black theme for VS Code.
 - [refind2k](https://github.com/2KAbhishek/refind2k): Pretty boot screen for multi-boot users.
 
-## How it was built
+## How I built it
 
-dots2k was built using the internet and sleepless nights.
+I built dots2k with a lot of love and passion, a lot of sleepless nights.
+It's an ongoing project, and I'm always looking for ways to improve it.
 
 ## Challenges faced
 
-Just getting over the initial learning curve on the command line, failing and trying again :)
+Getting over the initial learning curve on the command line, failing and trying again :)
 
 ## What I learned
 
