@@ -80,8 +80,8 @@ install_oh_my_zsh() {
     omz="$ZDOTDIR/.oh-my-zsh/custom"
     omz_plugin="$omz/plugins/"
 
-    git clone "$gh/romkatv/powerlevel10k" "$omz/themes/powerlevel10k"
-    git clone "$gh/marlonrichert/zsh-autocomplete" "$omz_plugin/zsh-autocomplete"
+    git clone "$gh/romkatv/powerlevel10k" "$omz/themes/powerlevel10k" --depth 1
+
     git clone "$gh/zsh-users/zsh-autosuggestions" "$omz_plugin/zsh-autosuggestions"
     git clone "$gh/clarketm/zsh-completions" "$omz_plugin/zsh-completions"
     git clone "$gh/z-shell/F-Sy-H" "$omz_plugin/F-Sy-H"
@@ -89,6 +89,7 @@ install_oh_my_zsh() {
     git clone "$gh/unixorn/git-extra-commands" "$omz_plugin/git-extra-commands"
     git clone "$gh/Aloxaf/fzf-tab" "$omz_plugin/fzf-tab"
     git clone "$gh/hlissner/zsh-autopair" "$omz_plugin/zsh-autopair"
+    # git clone "$gh/marlonrichert/zsh-autocomplete" "$omz_plugin/zsh-autocomplete"
 
     chsh -s "$(which zsh)"
 }
