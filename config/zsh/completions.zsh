@@ -33,4 +33,7 @@ zstyle ':fzf-tab:complete:git-checkout:*' fzf-preview \
     *) git log --color=always $word ;;
     esac'
 
+if type navi >/dev/null 2>&1; then eval "$(navi widget zsh)"; fi
+if type fzf >/dev/null 2>&1; then eval "$(fzf --zsh)"; fi
+
 compinit

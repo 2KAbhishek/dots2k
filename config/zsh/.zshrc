@@ -6,7 +6,6 @@ source "$ZDOTDIR/options.zsh"
 source "$ZDOTDIR/completions.zsh"
 source ~/.config/shell/functions.sh
 source ~/.config/shell/aliases.sh
-source "$ZDOTDIR/tools.zsh"
 source "$ZDOTDIR/aliases.zsh"
 source "$ZDOTDIR/keys.zsh"
 
