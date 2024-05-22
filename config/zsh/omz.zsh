@@ -11,19 +11,16 @@ plugins=(alias-tips
     extract
     F-Sy-H
     fancy-ctrl-z
-    fasd
     fzf-tab
     gh
     git
     git-extra-commands
     globalias
     magic-enter
-    mise
     timer
     tmux
     vi-mode
     web-search
-    zoxide
     zsh-autopair
     zsh-autosuggestions
     zsh-completions
