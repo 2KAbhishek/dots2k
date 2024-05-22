@@ -101,7 +101,7 @@ install_extras() {
 declare -a config_dirs=(
     "autorandr" "bat" "bundle" "cmus" "delta" "fish" "fontconfig" "gitignore.global"
     "htop" "kitty" "lazygit" "libinput-gestures.conf" "ranger" "shell" "tmux" "zsh"
-    "sysinfo.conkyrc" "topgrade.toml" "bluetuith"
+    "sysinfo.conkyrc" "topgrade.toml" "bluetuith" "alacritty"
 )
 
 declare -a home_files=(
