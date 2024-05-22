@@ -90,6 +90,7 @@ alias func='"$EDITOR" ~/.config/shell/functions.sh'
 alias loca='"$EDITOR" ~/.config/shell/local.sh'
 alias tmuxc='"$EDITOR" ~/.config/tmux/tmux.conf'
 alias kitc='"$EDITOR" ~/.config/kitty/kitty.conf'
+alias alac='"$EDITOR" ~/.config/alacritty/alacritty.toml'
 
 # General
 alias asc="asciinema"
