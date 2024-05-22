@@ -127,6 +127,7 @@ You can put all your local aliases, env vars and functions here.
 
 ### Terminal Emulators
 
+- [alacritty](./config/alacritty/) - A cross-platform, OpenGL terminal emulator.
 - [kitty](./config/kitty/kitty.conf) - A GPU-based terminal emulator.
 - [konsole](./config/konsole) - The KDE terminal emulator and a nice color scheme.
 
