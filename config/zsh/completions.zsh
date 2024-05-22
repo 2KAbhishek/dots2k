@@ -33,7 +33,9 @@ zstyle ':fzf-tab:complete:git-checkout:*' fzf-preview \
     *) git log --color=always $word ;;
     esac'
 
+if type mise >/dev/null 2>&1; then eval "$(mise activate zsh)"; fi
 if type navi >/dev/null 2>&1; then eval "$(navi widget zsh)"; fi
 if type fzf >/dev/null 2>&1; then eval "$(fzf --zsh)"; fi
+if type zoxide >/dev/null 2>&1; then eval "$(zoxide init zsh)"; fi
 
 compinit

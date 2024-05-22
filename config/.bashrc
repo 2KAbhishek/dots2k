@@ -25,10 +25,7 @@ alias reload="source ~/.bashrc"
 if type navi >/dev/null 2>&1; then eval "$(navi widget bash)"; fi
 if type zoxide >/dev/null 2>&1; then eval "$(zoxide init bash)"; fi
 if type fzf >/dev/null 2>&1; then eval "$(fzf --bash)"; fi
-if type mise >/dev/null 2>&1; then
-    eval "$(mise activate bash)"
-    eval "$(mise completion bash)"
-fi
+if type mise >/dev/null 2>&1; then eval "$(mise activate bash)"; fi
 
 # Local configurations
 [ -f ~/.config/shell/local.sh ] && source ~/.config/shell/local.sh
