@@ -1,6 +1,6 @@
 live_config_reload = true
 
-import = ["~/.config/alacritty/mild.toml",]
+import = ["~/.config/alacritty/mild.toml"]
 
 [env]
 TERM = "xterm-256color"
@@ -21,4 +21,3 @@ size = 12.0
 [font.normal]
 family = "FiraCode Nerd Font"
 style = "Regular"
-
