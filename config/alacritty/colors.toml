@@ -5,16 +5,16 @@ dim_foreground = "#e1e1e2"
 bright_foreground = "#ffffff"
 
 [colors.cursor]
-text = "#000000"
-cursor = "#f4f4f4"
+text = "#ffffff"
+cursor = "#1688f0"
 
 [colors.vi_mode_cursor]
 text = "#000000"
-cursor = "#1587ff"
+cursor = "#66ee22"
 
 [colors.search.matches]
 foreground = "#000000"
-background = "#737387"
+background = "#ffd21a"
 
 [colors.search.focused_match]
 foreground = "#000000"
@@ -22,7 +22,7 @@ background = "#21d26f"
 
 [colors.footer_bar]
 foreground = "#000000"
-background = "#737387"
+background = "#f4f4f4"
 
 [colors.hints.start]
 foreground = "#000000"
