@@ -1,6 +1,6 @@
 live_config_reload = true
 
-import = ["~/.config/alacritty/mild.toml"]
+import = ["~/.config/alacritty/colors.toml", "~/.config/alacritty/keys.toml"]
 
 [env]
 TERM = "xterm-256color"

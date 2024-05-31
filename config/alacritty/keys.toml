@@ -1,0 +1,11 @@
+# Fullscreen toggle with F11
+[[keyboard.bindings]]
+key = "F11"
+action = "ToggleFullscreen"
+
+# Fullscreen toggle with Super + Enter
+[[keyboard.bindings]]
+key = "Return"
+mods = "Super"
+action = "ToggleFullscreen"
+
