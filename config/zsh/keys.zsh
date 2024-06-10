@@ -7,7 +7,7 @@ zle -N down-line-or-beginning-search
 zle -N copy-earlier-word
 
 bindkey -s '^H' ' reload^M ^M'
-bindkey -s '^T' ' t^M ^M'
+bindkey -s '^T' ' tea^M ^M'
 bindkey -s "^G" ' lazygit^M ^M'
 bindkey '^K' autosuggest-accept
 bindkey "^F" fzf-file-widget
