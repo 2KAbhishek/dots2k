@@ -78,6 +78,7 @@ alias vi="nvim"
 alias me='"$EDITOR" README.md'
 
 # Configs
+alias gitc='"$EDITOR" ~/.gitconfig'
 alias vimc="vim ~/.vimrc"
 alias vic="nvim ~/.config/nvim/init.lua"
 alias nvimc="nvim ~/.config/nvim/init.lua"
