@@ -78,20 +78,26 @@ alias vi="nvim"
 alias me='"$EDITOR" README.md'
 
 # Configs
-alias gitc='"$EDITOR" ~/.gitconfig'
-alias vimc="vim ~/.vimrc"
-alias vic="nvim ~/.config/nvim/init.lua"
-alias nvimc="nvim ~/.config/nvim/init.lua"
-alias zshc='"$EDITOR" "$ZDOTDIR"/.zshrc'
-alias p2k='"$EDITOR" "$ZDOTDIR/prompt/init.zsh"'
-alias bashc='"$EDITOR" ~/.bashrc'
+alias alac='"$EDITOR" ~/.config/alacritty/alacritty.toml'
 alias alia='"$EDITOR" ~/.config/shell/aliases.sh'
+alias bashc='"$EDITOR" ~/.bashrc'
 alias enva='"$EDITOR" ~/.config/shell/environment.sh'
 alias func='"$EDITOR" ~/.config/shell/functions.sh'
-alias loca='"$EDITOR" ~/.config/shell/local.sh'
-alias tmuxc='"$EDITOR" ~/.config/tmux/tmux.conf'
+alias gitc='"$EDITOR" ~/.gitconfig'
 alias kitc='"$EDITOR" ~/.config/kitty/kitty.conf'
-alias alac='"$EDITOR" ~/.config/alacritty/alacritty.toml'
+alias loca='"$EDITOR" ~/.config/shell/local.sh'
+alias nvimc="nvim ~/.config/nvim/init.lua"
+alias p2k='"$EDITOR" "$ZDOTDIR/prompt/init.zsh"'
+alias tmuxc='"$EDITOR" ~/.config/tmux/tmux.conf'
+alias vic="nvim ~/.config/nvim/init.lua"
+alias vimc="vim ~/.vimrc"
+alias zshc='"$EDITOR" "$ZDOTDIR"/.zshrc'
+
+if [[ "$OSTYPE" == "darwin"* ]]; then
+    alias qutc='"$EDITOR" ~/.qutebrowser/config.py'
+else
+    alias qutc='"$EDITOR" ~/.config/qutebrowser/config.py'
+fi
 
 # General
 alias asc="asciinema"
@@ -183,4 +189,3 @@ alias vol="pulsemixer"
 alias volu="amixer sset 'Master' 10%+"
 alias vold="amixer sset 'Master' 10%-"
 alias wifi="nmtui"
-
