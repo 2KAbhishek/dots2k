@@ -179,16 +179,17 @@ alias wifi="nmtui"
 
 # Mac only
 if [[ "$OSTYPE" == "darwin"* ]]; then
-    alias macdis="displayplacer 'id:1 enablded:false'"
-    alias qutc='"$EDITOR" ~/.qutebrowser/config.py'
+    alias aerc='"$EDITOR" "$HOME"/.config/aerospace/aerospace.toml'
+    alias aerr="aerospace reload-config"
+    alias aert="aerospace enable toggle"
+    alias brI="brew bundle install --global --verbose --no-upgrade"
     alias brc="brew cleanup"
     alias brd="brew bundle dump --no-restart --global --force"
     alias bri="brew install"
-    alias brI="brew bundle install --global --verbose --no-upgrade"
     alias brl="brew list"
     alias brr="brew uninstall"
     alias brs="brew search"
     alias bru="brew upgrade"
-    alias aerr="aerospace reload-config"
-    alias aert="aerospace enable toggle"
+    alias macdis="displayplacer 'id:1 enablded:false'"
+    alias qutc='"$EDITOR" ~/.qutebrowser/config.py'
 fi
