@@ -29,13 +29,15 @@ install_termux() {
 }
 
 install_mac() {
-    brew tap homebrew/cask-fonts
-    brew install "${common_packages[@]}" gh fd pastel iterm2 maccy stats \
-        koekeishiya/formulae/skhd koekeishiya/formulae/yabai font-fira-code-nerd-font
+    ln -sfn "$PWD/../config/.Brewfile" "$HOME/"
+    brew bundle install --global --verbose --no-upgrade
+    brew bundle check --global --verbose
+    brew bundle cleanup --global --force
+
+    ln -sfn "$PWD/../config/.yabairc" "$HOME/"
+    ln -sfn "$PWD/../config/.skhdrc" "$HOME/"
     ln -sfn "$PWD/../config/aerospace" "$HOME/.config/"
-    ln -sfn "$PWD/../config/.yabairc" "$HOME/.yabairc"
-    ln -sfn "$PWD/../config/.skhdrc" "$HOME/.skhdrc"
-    ln -sfn "$PWD/../config/iterm.sh" "$HOME/.local/bin/iterm"
+    ln -sfn "$PWD/../config/iterm.sh" "$HOME/.local/bin/"
     ln -sfn "$PWD/../dots2k/config/lazygit/config.yml" "$HOME/Library/Application Support/lazygit/"
 }
 
