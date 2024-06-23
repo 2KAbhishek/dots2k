@@ -88,16 +88,11 @@ alias kitc='"$EDITOR" ~/.config/kitty/kitty.conf'
 alias loca='"$EDITOR" ~/.config/shell/local.sh'
 alias nvimc="nvim ~/.config/nvim/init.lua"
 alias p2k='"$EDITOR" "$ZDOTDIR/prompt/init.zsh"'
+alias qutc='"$EDITOR" ~/.config/qutebrowser/config.py'
 alias tmuxc='"$EDITOR" ~/.config/tmux/tmux.conf'
 alias vic="nvim ~/.config/nvim/init.lua"
 alias vimc="vim ~/.vimrc"
 alias zshc='"$EDITOR" "$ZDOTDIR"/.zshrc'
-
-if [[ "$OSTYPE" == "darwin"* ]]; then
-    alias qutc='"$EDITOR" ~/.qutebrowser/config.py'
-else
-    alias qutc='"$EDITOR" ~/.config/qutebrowser/config.py'
-fi
 
 # General
 alias asc="asciinema"
@@ -143,14 +138,6 @@ alias apts="apt search"
 alias aptr="sudo apt remove"
 alias aptq="apt show"
 alias aptu="sudo apt update && sudo apt upgrade"
-alias brc="brew cleanup"
-alias brd="brew bundle dump --no-restart --global --force"
-alias bri="brew install"
-alias brI="brew bundle install --global --verbose --no-upgrade"
-alias brl="brew list"
-alias brr="brew uninstall"
-alias brs="brew search"
-alias bru="brew upgrade"
 alias dnfi="sudo dnf install"
 alias dnfs="dnf search"
 alias dnfr="sudo dnf remove"
@@ -174,8 +161,6 @@ alias aran="autorandr -l"
 alias blue="bluetuith"
 alias litu="sudo light -A 10"
 alias litd="sudo light -U 10"
-alias macres="yabai --restart-service && skhd --restart-service"
-alias macdis="displayplacer 'id:1 enablded:false'"
 alias plasmar="kquitapp5 plasmashell && kstart5 plasmashell"
 alias shad="ssh-add ~/.ssh/id_rsa"
 alias shag='eval "$(ssh-agent -s)"'
@@ -191,3 +176,19 @@ alias vol="pulsemixer"
 alias volu="amixer sset 'Master' 10%+"
 alias vold="amixer sset 'Master' 10%-"
 alias wifi="nmtui"
+
+# Mac only
+if [[ "$OSTYPE" == "darwin"* ]]; then
+    alias macdis="displayplacer 'id:1 enablded:false'"
+    alias qutc='"$EDITOR" ~/.qutebrowser/config.py'
+    alias brc="brew cleanup"
+    alias brd="brew bundle dump --no-restart --global --force"
+    alias bri="brew install"
+    alias brI="brew bundle install --global --verbose --no-upgrade"
+    alias brl="brew list"
+    alias brr="brew uninstall"
+    alias brs="brew search"
+    alias bru="brew upgrade"
+    alias aerr="aerospace reload-config"
+    alias aert="aerospace enable toggle"
+fi
