@@ -28,19 +28,6 @@ install_termux() {
     cp -rv "$PWD/../config/.termux" "$HOME"/
 }
 
-install_mac() {
-    ln -sfn "$PWD/../config/.Brewfile" "$HOME/"
-    brew bundle install --global --verbose --no-upgrade
-    brew bundle check --global --verbose
-    brew bundle cleanup --global --force
-
-    ln -sfn "$PWD/../config/.yabairc" "$HOME/"
-    ln -sfn "$PWD/../config/.skhdrc" "$HOME/"
-    ln -sfn "$PWD/../config/aerospace" "$HOME/.config/"
-    ln -sfn "$PWD/../config/iterm.sh" "$HOME/.local/bin/"
-    ln -sfn "$PWD/../dots2k/config/lazygit/config.yml" "$HOME/Library/Application Support/lazygit/"
-}
-
 get_system_info() {
     [ -e /etc/os-release ] && source /etc/os-release && echo "${ID:-Unknown}" && return
     [ -e /etc/lsb-release ] && source /etc/lsb-release && echo "${DISTRIB_ID:-Unknown}" && return
@@ -61,8 +48,8 @@ install_packages() {
     fedora | fedora-asahi-remix) color="32" && install_fedora ;;
     pop) color="045" && install_debian ;;
     kali) color="254" && install_debian ;;
-    mac) color="254" && install_mac ;;
     termux) color="040" && install_termux ;;
+    mac) color="254" ;;
     *) echo "Unknown system!" && exit 1 ;;
     esac
 
