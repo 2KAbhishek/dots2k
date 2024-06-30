@@ -76,16 +76,16 @@ let g:netrw_liststyle = 3
 " Keybindings
 let mapleader = ' '
 inoremap jj <Esc>
+nmap Q :qa!<CR>
 nmap <leader>e :Lexplore<CR>
 nmap <leader>f :Files<cr>
-nmap <leader>q :q<CR>
-nmap <leader>Q :qa!<CR>
+nmap <leader>qq :q<CR>
 nmap <leader>r :source ~/.vimrc<CR>
 nmap <leader>s :setlocal spell!<CR>
 nmap <leader>S :nohlsearch<CR>
 nmap <leader>t :term<CR>
-nmap <leader>w :w<CR>
-nmap <leader>W :wq<CR>
+nmap <leader>ww :w<CR>
+nmap <leader>x :wq<CR>
 nmap H :bprevious<CR>
 nmap L :bnext<CR>
 nmap <C-h> <C-w>h
