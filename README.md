@@ -155,6 +155,7 @@ You can put all your local aliases, env vars and functions here.
 dots2k comes with a lot of keybindings, here are some of them:
 
 - [Alacritty](./docs/alacritty.md)
+- [Vimium](./docs/vimium.md)
 
 ## The dots2k Universe
 
