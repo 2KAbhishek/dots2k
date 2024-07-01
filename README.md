@@ -148,6 +148,14 @@ You can put all your local aliases, env vars and functions here.
 - [libinput-gestures](./config/libinput-gestures.conf) - Binds gestures to commands.
 - [Xresources](./config/.Xresources) - Configurations for X applications.
 
+## Usage
+
+### Keybindings
+
+dots2k comes with a lot of keybindings, here are some of them:
+
+- [Alacritty](./docs/alacritty.md)
+
 ## The dots2k Universe
 
 dots2k serves as a core for some of my other dev environments targeted for specific platforms, other tools have their own repos:
