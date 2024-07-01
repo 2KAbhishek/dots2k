@@ -1,11 +1,104 @@
-# Fullscreen toggle with F11
 [[keyboard.bindings]]
 key = "F11"
 action = "ToggleFullscreen"
 
-# Fullscreen toggle with Super + Enter
 [[keyboard.bindings]]
 key = "Return"
 mods = "Super"
 action = "ToggleFullscreen"
+
+[[keyboard.bindings]]
+key = "="
+mods = "Control"
+action = "IncreaseFontSize"
+
+[[keyboard.bindings]]
+key = "-"
+mods = "Control"
+action = "DecreaseFontSize"
+
+[[keyboard.bindings]]
+key = "N"
+mods = "Control|Shift"
+action = "CreateNewWindow"
+
+[[keyboard.bindings]]
+key = "T"
+mods = "Control|Shift"
+action = "CreateNewTab"
+
+[[keyboard.bindings]]
+key = "F"
+mods = "Control|Shift"
+action = "SearchForward"
+
+[[keyboard.bindings]]
+key = "B"
+mods = "Control|Shift"
+action = "SearchBackward"
+
+[[keyboard.bindings]]
+key = "Tab"
+mods = "Control"
+action = "SelectNextTab"
+
+[[keyboard.bindings]]
+key = "]"
+mods = "Control|Shift"
+action = "SelectNextTab"
+
+[[keyboard.bindings]]
+key = "Tab"
+mods = "Control|Shift"
+action = "SelectPreviousTab"
+
+[[keyboard.bindings]]
+key = "["
+mods = "Control|Shift"
+action = "SelectPreviousTab"
+
+[[keyboard.bindings]]
+key = "1"
+mods = "Control|Shift"
+action = "SelectTab1"
+
+[[keyboard.bindings]]
+key = "2"
+mods = "Control|Shift"
+action = "SelectTab2"
+
+[[keyboard.bindings]]
+key = "3"
+mods = "Control|Shift"
+action = "SelectTab3"
+
+[[keyboard.bindings]]
+key = "4"
+mods = "Control|Shift"
+action = "SelectTab4"
+
+[[keyboard.bindings]]
+key = "5"
+mods = "Control|Shift"
+action = "SelectTab5"
+
+[[keyboard.bindings]]
+key = "6"
+mods = "Control|Shift"
+action = "SelectTab6"
+
+[[keyboard.bindings]]
+key = "7"
+mods = "Control|Shift"
+action = "SelectTab7"
+
+[[keyboard.bindings]]
+key = "8"
+mods = "Control|Shift"
+action = "SelectTab8"
+
+[[keyboard.bindings]]
+key = "9"
+mods = "Control|Shift"
+action = "SelectLastTab"
 
