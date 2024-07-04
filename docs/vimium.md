@@ -86,7 +86,7 @@
 | <key>qH</key>      | Close tabs on the left       |
 | <key>qL</key>      | Close tabs on the right      |
 | <key>qo</key>      | Close all other tabs         |
-| <key>qq / x</key>  | Close current tab            |
+| <key>qd / x</key>  | Close current tab            |
 | <key>W</key>       | Move tab to new window       |
 | <key>u / X</key>   | Restore closed tab           |
 | <key>yt</key>      | Duplicate current tab        |

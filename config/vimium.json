@@ -1,5 +1,5 @@
 {
-  "keyMappings": "unmap <c-e>\nunmap <c-y>\nunmap p\nunmap P\nunmap t\n\nmap ~ visitPreviousTab\nmap D scrollPageUp\nmap gd LinkHints.activateModeToDownloadLink\nmap gh createTab\nmap gJ scrollFullPageDown\nmap gK scrollFullPageUp\nmap go LinkHints.activateModeToOpenInNewForegroundTab\nmap H previousTab\nmap J goForward\nmap K goBack\nmap L nextTab\nmap P LinkHints.activateModeToOpenIncognito\nmap pp openCopiedUrlInCurrentTab\nmap pP openCopiedUrlInNewTab\nmap qH closeTabsOnLeft\nmap qL closeTabsOnRight\nmap qo closeOtherTabs\nmap qq removeTab\nmap t Vomnibar.activateInNewTab\nmap u restoreTab",
+  "keyMappings": "unmap <c-e>\nunmap <c-y>\nunmap p\nunmap P\nunmap t\n\nmap ~ visitPreviousTab\nmap D scrollPageUp\nmap gd LinkHints.activateModeToDownloadLink\nmap gh createTab\nmap gJ scrollFullPageDown\nmap gK scrollFullPageUp\nmap go LinkHints.activateModeToOpenInNewForegroundTab\nmap H previousTab\nmap J goForward\nmap K goBack\nmap L nextTab\nmap P LinkHints.activateModeToOpenIncognito\nmap pp openCopiedUrlInCurrentTab\nmap pP openCopiedUrlInNewTab\nmap qH closeTabsOnLeft\nmap qL closeTabsOnRight\nmap qo closeOtherTabs\nmap qd removeTab\nmap t Vomnibar.activateInNewTab\nmap u restoreTab",
   "newTabUrl": "https://2kabhishek.github.io/links",
   "scrollStepSize": 120,
   "grabBackFocus": true,
