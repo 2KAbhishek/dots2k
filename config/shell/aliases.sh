@@ -111,7 +111,6 @@ alias ncdu="ncdu --color=dark -x"
 alias pick="pastel pick | pastel format hex | ccp"
 alias png="pngquant --ext .png --force"
 alias pp="prettyping --nolegend"
-alias rcop="rubocop --autocorrect"
 alias scr="scrot -s -l width=3,color='#1688f0',mode=edge,opacity=75 -F ~/Pictures/Screenshots/snap-%Y-%m-%d-%H-%M-%S.png -e 'xclip -selection clipboard -t image/png -i ~/Pictures/Screenshots/snap-%Y-%m-%d-%H-%M-%S.png'"
 alias scrf="scrot -cd 3 -F ~/Pictures/Screenshots/snap-%Y-%m-%d-%H-%M-%S.png -e 'xclip -selection clipboard -t image/png -i ~/Pictures/Screenshots/snap-%Y-%m-%d-%H-%M-%S.png'"
 alias scrw="scrot -ubcd 3 -F ~/Pictures/Screenshots/snap-%Y-%m-%d-%H-%M-%S.png -e 'xclip -selection clipboard -t image/png -i ~/Pictures/Screenshots/snap-%Y-%m-%d-%H-%M-%S.png'"
@@ -128,10 +127,10 @@ alias prev="playerctl previous"
 alias song="playerctl metadata title"
 
 # Languages
-alias rsc="bundle exec rails c"
-alias rsv="bundle exec rails s"
+alias rsc="bundle exec rails console"
+alias rsv="bundle exec rails server"
 alias rsp="bundle exec rspec"
-alias rcp="bundle exec rubocop"
+alias rcp="bundle exec rubocop -A"
 
 # Package Manger
 alias apti="sudo apt install"
@@ -183,10 +182,10 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
     alias aerc='"$EDITOR" "$HOME"/.config/aerospace/aerospace.toml'
     alias aerr="aerospace reload-config"
     alias aert="aerospace enable toggle"
-    alias brI="brew bundle install --global --verbose --no-upgrade"
     alias brc="brew cleanup"
     alias brd="brew bundle dump --no-restart --global --force"
     alias bri="brew install"
+    alias brI="brew bundle install --global --verbose --no-upgrade"
     alias brl="brew list"
     alias brr="brew uninstall"
     alias brs="brew search"
