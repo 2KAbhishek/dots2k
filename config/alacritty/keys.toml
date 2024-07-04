@@ -18,6 +18,16 @@ mods = "Control"
 action = "DecreaseFontSize"
 
 [[keyboard.bindings]]
+key = "C"
+mods = "Control|Shift"
+action = "Copy"
+
+[[keyboard.bindings]]
+key = "V"
+mods = "Control|Shift"
+action = "Paste"
+
+[[keyboard.bindings]]
 key = "N"
 mods = "Control|Shift"
 action = "CreateNewWindow"
@@ -101,4 +111,3 @@ action = "SelectTab8"
 key = "9"
 mods = "Control|Shift"
 action = "SelectLastTab"
-
