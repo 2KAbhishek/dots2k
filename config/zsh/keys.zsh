@@ -30,6 +30,7 @@ bindkey "^[b" backward-word
 bindkey "^b" backward-word
 bindkey "^f" fzf-file-widget
 bindkey -s "^g" ' lazygit^M ^M'
+bindkey -s "^h" ' reload^M ^M'
 bindkey "^k" autosuggest-accept
 bindkey "^o" edit-command-line
 bindkey "^q" quote-word
@@ -37,7 +38,6 @@ bindkey "^s" forward-word
 bindkey -s "^t" ' tea^M ^M'
 bindkey "^u" undo
 bindkey "^x^e" edit-command-line
-bindkey -s "^x^r" ' reload^M ^M'
 bindkey "^x^v" vi-cmd-mode
 bindkey "^x^x" exchange-point-and-mark
 bindkey "^y" copy-command
