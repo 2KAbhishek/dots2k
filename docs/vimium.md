@@ -1,5 +1,10 @@
 # Vimium
 
+Vimiun is a Chrome extension that provides keyboard shortcuts for navigation and control in the spirit of Vim.
+
+- [My configs](https://github.com/2KAbhishek/dots2k/tree/main/config/vimium.json)
+- [Live keybindings](https://github.com/2KAbhishek/dots2k/blob/main/docs/vimium.md)
+
 ## Keybindings
 
 ### Navigating the Page
@@ -123,4 +128,3 @@
 | <kbd>wk</kbd>  | [Wikipedia](https://wikipedia.org/w/index.php?title=Special:Search&search=%s) |
 | <kbd>yt</kbd>  | [YouTube](https://youtube.com/results?search_query=%s)                        |
 | <kbd>ytm</kbd> | [YouTube Music](https://music.youtube.com/search?q=%s)                        |
-

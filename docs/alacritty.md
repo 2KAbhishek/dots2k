@@ -1,5 +1,10 @@
 # Alacritty Keybindings
 
+Alacritty is a cross-platform, GPU-accelerated terminal emulator. [find out more](https://github.com/alacritty/alacritty)
+
+- [My configs](https://github.com/2KAbhishek/dots2k/tree/main/config/alacritty)
+- [Live keybindings](https://github.com/2KAbhishek/dots2k/tree/main/docs/alacritty.md)
+
 | Keybinding                                 | Action          |
 | ------------------------------------------ | --------------- |
 | <kbd>Ctrl</kbd> + <kbd>-</kbd>             | Zoom Out        |
