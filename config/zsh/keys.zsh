@@ -18,8 +18,8 @@ quote-word() {
   local word="${BUFFER[start_pos,end_pos]}"
   local quoted_word="\"$word\""
 
-  BUFFER="${BUFFER[1,start_pos]}${quoted_word}${BUFFER[end_pos+1,-1]}"
-  CURSOR=$((start_pos + ${#quoted_word}))
+  BUFFER="${BUFFER[1,start_pos]}${quoted_word}${BUFFER[end_pos+1,#BUFFER]}"
+  (( CURSOR = start_pos + #quoted_word ))
 }
 zle -N quote-word
 
@@ -28,10 +28,12 @@ bindkey "^[m" copy-earlier-word
 bindkey "^[f" forward-word
 bindkey "^[b" backward-word
 bindkey "^b" backward-word
+bindkey -s "^d" ' dexe^M ^M'
 bindkey "^f" fzf-file-widget
 bindkey -s "^g" ' lazygit^M ^M'
 bindkey -s "^h" ' reload^M ^M'
 bindkey "^k" autosuggest-accept
+bindkey -s "^n" ' tdo -f^M ^M'
 bindkey "^o" edit-command-line
 bindkey "^q" quote-word
 bindkey "^s" forward-word

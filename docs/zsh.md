@@ -5,10 +5,12 @@
 | Keybinding                     | Action                     |
 | ------------------------------ | -------------------------- |
 | <kbd>Alt<kbd> + <kbd>m<kbd>    | Copy last word             |
+| <kbd>Ctrl<kbd> + <kbd>d<kbd>   | Run [dexe][2] launcher     |
 | <kbd>Ctrl<kbd> + <kbd>f<kbd>   | fzf search toggle          |
 | <kbd>Ctrl<kbd> + <kbd>g<kbd>   | Lazygit                    |
 | <kbd>Ctrl<kbd> + <kbd>h<kbd>   | Reload config              |
 | <kbd>Ctrl<kbd> + <kbd>k<kbd>   | Accept suggestion          |
+| <kbd>Ctrl<kbd> + <kbd>n<kbd>   | Show all [tdo][3] notes    |
 | <kbd>Ctrl<kbd> + <kbd>o<kbd>   | Open command in editor     |
 | <kbd>Ctrl<kbd> + <kbd>q<kbd>   | Quote word under cursor    |
 | <kbd>Ctrl<kbd> + <kbd>s/b<kbd> | Forward / Backward in line |
@@ -18,3 +20,5 @@
 | <kbd>Esc<kbd>                  | Vi mode                    |
 
 [1]: https://github.com/2KAbhishek/tmux-tea
+[2]: https://github.com/2KAbhishek/dexe
+[3]: https://github.com/2KAbhishek/tdo
