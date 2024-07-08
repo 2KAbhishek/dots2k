@@ -84,6 +84,17 @@ export CLIPPASTE=wl-paste
 
 You can put all your local aliases, env vars and functions here.
 
+## Usage
+
+### Keybindings
+
+dots2k comes with a lot of keybindings, here are some of them:
+
+- [Alacritty](./docs/alacritty.md)
+- [Shell](./docs/shell.md)
+- [Vimium](./docs/vimium.md)
+- [Zsh](./docs/zsh.md)
+
 ## Included Configs
 
 ### Shells
@@ -147,15 +158,6 @@ You can put all your local aliases, env vars and functions here.
 - [i3](./config/i3/config) - A tiling window manager, comes with i3status.
 - [libinput-gestures](./config/libinput-gestures.conf) - Binds gestures to commands.
 - [Xresources](./config/.Xresources) - Configurations for X applications.
-
-## Usage
-
-### Keybindings
-
-dots2k comes with a lot of keybindings, here are some of them:
-
-- [Alacritty](./docs/alacritty.md)
-- [Vimium](./docs/vimium.md)
 
 ## The dots2k Universe
 
