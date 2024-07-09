@@ -28,11 +28,6 @@ xin() {
     (cd "${1}" && shift && ${@})
 }
 
-# markdown link check
-mlc() {
-    find $1 -name \*.md -exec markdown-link-check -p {} \;
-}
-
 # vim open
 vo() {
     local editor="$EDITOR"

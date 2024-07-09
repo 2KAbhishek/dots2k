@@ -1,6 +1,6 @@
 <div align = "center">
 
-<h1><a href="https://2kabhishek.github.io/dots2k">dots2k</a></h1>
+<h1><a href="https://github.co/2kabhishek/dots2k">dots2k</a></h1>
 
 <a href="https://github.com/2KAbhishek/dots2k/blob/main/LICENSE">
 <img alt="License" src="https://img.shields.io/github/license/2kabhishek/dots2k?style=flat&color=eee&label="> </a>
@@ -238,6 +238,6 @@ Find more cool configs and setups at [GitHub does dotfiles](https://dotfiles.git
 <div align="center">
 
 <a href="https://github.com/2KAbhishek/dots2k">Source</a> |
-<a href="https://2kabhishek.github.io/dots2k">Website</a>
+<a href="https://github.com/2kabhishek/dots2k">Website</a>
 
 </div>

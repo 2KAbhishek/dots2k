@@ -107,6 +107,7 @@ alias java8="export JAVA_HOME=/usr/lib/jvm/java-8-openjdk/jre"
 alias java11="export JAVA_HOME=/usr/lib/jvm/java-11-openjdk/"
 alias jupn="jupyter notebook"
 alias kpa='keepassxc-cli clip "$KEEPASS_DB"'
+alias mlc="npx markdown-link-check -pvq"
 alias ncdu="ncdu --color=dark -x"
 alias pick="pastel pick | pastel format hex | ccp"
 alias png="pngquant --ext .png --force"
