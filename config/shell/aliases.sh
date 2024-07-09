@@ -191,5 +191,8 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
     alias brs="brew search"
     alias bru="brew upgrade"
     alias macdis="displayplacer 'id:1 enablded:false'"
+    alias play="nowplaying-cli togglePlayPause"
+    alias next="nowplaying-cli next"
+    alias prev="nowplaying-cli previous"
     alias qutc='"$EDITOR" ~/.qutebrowser/config.py'
 fi
