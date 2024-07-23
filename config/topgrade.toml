@@ -9,7 +9,7 @@
 #assume_yes = true
 
 # Disable specific steps - same options as the command line flag
-disable = ["containers"]
+disable = ["containers", "gem", "ruby_gems"]
 
 # Ignore failures for these steps
 ignore_failures = ["tmux"]
