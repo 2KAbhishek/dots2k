@@ -188,6 +188,7 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
     alias bri="brew install"
     alias brI="brew bundle install --global --verbose --no-upgrade"
     alias brl="brew list"
+    alias brq="brew info"
     alias brr="brew uninstall"
     alias brs="brew search"
     alias bru="brew upgrade"
