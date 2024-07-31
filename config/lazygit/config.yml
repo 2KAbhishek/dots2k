@@ -1,6 +1,6 @@
 gui:
   authorColors:
-    'Abhishek Keshri': green
+    'Abhishek Keshri': blue
     # stuff relating to the UI
   branchColors:
     main: green
@@ -27,9 +27,9 @@ gui:
     optionsTextColor:
       - blue
     selectedLineBgColor:
-      - blue # set to `default` to have no background colour
+      - '#103070'
     selectedRangeBgColor:
-      - blue
+      - '#103070'
     cherryPickedCommitBgColor:
       - cyan
     cherryPickedCommitFgColor:
