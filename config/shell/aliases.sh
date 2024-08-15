@@ -192,6 +192,7 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
     alias brr="brew uninstall"
     alias brs="brew search"
     alias bru="brew upgrade"
+    alias ip="ipconfig getifaddr en0"
     alias macdis="displayplacer 'id:1 enablded:false'"
     alias play="nowplaying-cli togglePlayPause"
     alias next="nowplaying-cli next"
