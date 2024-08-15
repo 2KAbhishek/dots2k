@@ -82,8 +82,6 @@ export CLIPPASTE=wl-paste
 
 You can put all your local aliases, env vars and functions here.
 
-## Usage
-
 ### Keybindings
 
 dots2k comes with a lot of keybindings, here are some of them:
@@ -167,19 +165,17 @@ dots2k serves as a core for some of my other dev environments targeted for speci
 - [win2k](https://github.com/2kabhishek/win2k): Say goodbye to bland command lines on Windows
 - [termux2k](https://github.com/2kabhishek/termux2k): Supercharge your Android development on the go
 
-### Development Tools
-
-#### Editor Supreme
+### Editor
 
 - [nvim2k](https://github.com/2kabhishek/nvim2k): Neovim config for ultimate productivity and efficiency.
 
-#### Tmux and Friends
+### Tmux
 
 - [tmux2k](https://github.com/2kabhishek/tmux2k): Pretty and functional theme for tmux.
 - [tmux-tilit](https://github.com/2kabhishek/tmux-tilit): Add window manager-like capabilities to tmux.
 - [tmux-tea](https://github.com/2kabhishek/tmux-tea): Powerful tmux session management.
 
-#### Made for Speed
+### CLI Tools
 
 - [tdo](https://github.com/2kabhishek/tdo): Simple and fast note taking.
 - [mkrepo](https://github.com/2kabhishek/mkrepo): Easy and quick GitHub repo setup.
