@@ -55,21 +55,19 @@ cd dots2k
 
 > If you plan to use this without using the setup script, make sure to install the recommended packages in the `setup.sh` script.
 
-### Next Steps
-
-#### Git Setup
+### Git Setup
 
 > [!IMPORTANT]
 > Make sure to change the `user.name` and `user.email` in the `~/.gitconfig` file with your own or use `git config --global user.name "Your Name"`
 >
 > I use GPG signing for commits, check [this](https://docs.github.com/en/authentication/managing-commit-signature-verification/adding-a-new-gpg-key-to-your-github-account) for setting it up, or use `git config --global commit.gpgSign false` to disable it.
 
-#### Fonts
+### Fonts
 
 I'll recommend [Nerd Fonts](https://www.nerdfonts.com/).
 I'm using [FiraCode 3.11](https://github.com/ryanoasis/nerd-fonts/releases/tag/v3.1.1).
 
-#### Local Configs
+### Local Configs
 
 Some configs are intentionally not included as they will vary based on every system.
 For these, I recommend creating the `~/config/shell/local.sh` file, which you can edit using the `loca` alias.
@@ -97,7 +95,7 @@ dots2k comes with a lot of keybindings, here are some of them:
 
 ## Included Configs
 
-### Shells
+### Shell
 
 - [bash](./config/.bashrc) - The bash shell.
 - [fish](./config/fish/) - fish shell configs.
