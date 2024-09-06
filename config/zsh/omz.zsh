@@ -1,5 +1,5 @@
 # Path to oh-my-zsh installation.
-export ZSH="$ZDOTDIR/.oh-my-zsh"
+export ZSH="$ZDOTDIR/ohmyzsh"
 
 # Plugins
 plugins=(alias-tips

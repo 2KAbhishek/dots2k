@@ -24,4 +24,5 @@ config/tmux/plugins/
 .zsh_history
 .zsh_sessions/
 .oh-my-zsh
+ohmyzsh
 .zcompdump*
