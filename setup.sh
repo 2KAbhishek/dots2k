@@ -11,7 +11,7 @@ install_arch() {
 }
 
 install_fedora() {
-    dnf copr enable atim/lazygit -y
+    sudo dnf copr enable atim/lazygit -y
     sudo dnf install "${common_packages[@]}" gh lazygit fd-find wl-clipboard git-delta
 }
 
@@ -60,15 +60,17 @@ install_packages() {
 }
 
 install_oh_my_zsh() {
-    echo -e "\u001b[7m Installing oh-my-zsh...\u001b[0m"
-    mkdir "$HOME"/.config/zsh
-    export ZDOTDIR=$HOME/.config/zsh
-    sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
+    echo -e "\u001b[7m Installing oh-my-zsh and plugins...\u001b[0m"
+    
+    zsh_dir="$HOME/.config/zsh"
+    export ZDOTDIR="$zsh_dir"
+    
+    sh -c "$(curl -fsSL https://install.ohmyz.sh)" "" --unattended --keep-zshrc
 
-    echo -e "\u001b[7m Installing zsh plugins...\u001b[0m"
     gh="https://github.com/"
-    omz="$ZDOTDIR/.oh-my-zsh/custom"
+    omz="$zsh_dir/ohmyzsh/custom"
     omz_plugin="$omz/plugins/"
+    mkdir -p $omz_plugin
 
     git clone "$gh/romkatv/powerlevel10k" "$omz/themes/powerlevel10k" --depth 1
 
@@ -125,10 +127,10 @@ setup_symlinks() {
 
 setup_dotfiles() {
     echo -e "\u001b[7m Setting up dots2k... \u001b[0m"
-    install_packages
-    install_extras
     backup_configs
     setup_symlinks
+    install_packages
+    install_extras
     echo -e "\u001b[7m Done! \u001b[0m"
 }
 
@@ -136,20 +138,20 @@ show_menu() {
     echo -e "\u001b[32;1m Setting up your env with dots2k...\u001b[0m"
     echo -e " \u001b[37;1m\u001b[4mSelect an option:\u001b[0m"
     echo -e "  \u001b[34;1m (0) Setup Everything \u001b[0m"
-    echo -e "  \u001b[34;1m (1) Install Packages \u001b[0m"
-    echo -e "  \u001b[34;1m (2) Install Extras \u001b[0m"
-    echo -e "  \u001b[34;1m (3) Backup Configs \u001b[0m"
-    echo -e "  \u001b[34;1m (4) Setup Symlinks \u001b[0m"
+    echo -e "  \u001b[34;1m (1) Backup Current Configs \u001b[0m"
+    echo -e "  \u001b[34;1m (2) Setup Symlinks \u001b[0m"
+    echo -e "  \u001b[34;1m (3) Install Packages \u001b[0m"
+    echo -e "  \u001b[34;1m (4) Install Extras \u001b[0m"
     echo -e "  \u001b[31;1m (*) Anything else to exit \u001b[0m"
     echo -en "\u001b[32;1m ==> \u001b[0m"
 
     read -r option
     case $option in
     "0") setup_dotfiles ;;
-    "1") install_packages ;;
-    "2") install_extras ;;
-    "3") backup_configs ;;
-    "4") setup_symlinks ;;
+    "1") backup_configs ;;
+    "2") setup_symlinks ;;
+    "3") install_packages ;;
+    "4") install_extras ;;
     *) echo -e "\u001b[31;1m alvida and adios! \u001b[0m" && exit 0 ;;
     esac
 }
@@ -157,7 +159,7 @@ show_menu() {
 main() {
     case "$1" in
     -a | --all | a | all) setup_dotfiles ;;
-    -i | --install | i | install) install_packages && install_extras ;;
+    -i | --install | i | install) setup_symlinks && install_packages && install_extras ;;
     -s | --symlinks | s | symlinks) setup_symlinks ;;
     *) show_menu ;;
     esac
