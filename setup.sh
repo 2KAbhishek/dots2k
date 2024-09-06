@@ -125,12 +125,17 @@ setup_symlinks() {
     done
 }
 
+install_tools() {
+    dots2k mac2k ghpm mkrepo nvim2k qute2k sway2k tdo
+}
+
 setup_dotfiles() {
     echo -e "\u001b[7m Setting up dots2k... \u001b[0m"
     backup_configs
     setup_symlinks
     install_packages
     install_extras
+    install_tools
     echo -e "\u001b[7m Done! \u001b[0m"
 }
 
@@ -142,6 +147,7 @@ show_menu() {
     echo -e "  \u001b[34;1m (2) Setup Symlinks \u001b[0m"
     echo -e "  \u001b[34;1m (3) Install Packages \u001b[0m"
     echo -e "  \u001b[34;1m (4) Install Extras \u001b[0m"
+    echo -e "  \u001b[34;1m (5) Install Tools \u001b[0m"
     echo -e "  \u001b[31;1m (*) Anything else to exit \u001b[0m"
     echo -en "\u001b[32;1m ==> \u001b[0m"
 
@@ -152,6 +158,7 @@ show_menu() {
     "2") setup_symlinks ;;
     "3") install_packages ;;
     "4") install_extras ;;
+    "5") install_tools ;;
     *) echo -e "\u001b[31;1m alvida and adios! \u001b[0m" && exit 0 ;;
     esac
 }
