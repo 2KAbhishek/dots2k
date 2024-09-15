@@ -16,10 +16,28 @@ install_fedora() {
 }
 
 install_debian() {
-    sudo apt install "${common_packages[@]}" gh fd-find xclip autorandr nala topgrade
+    sudo apt install "${common_packages[@]}" gh fd-find xclip autorandr nala
     sudo ln -sfnv /usr/bin/fdfind /usr/bin/fd
     sudo ln -sfnv /usr/bin/batcat /usr/bin/bat
     echo "alias cat=batcat" >>"$LOCAL_CONFIG"
+    
+    if ! command -v eza &> /dev/null; then
+        echo "Installing 'eza' via Cargo..."
+        if ! command -v cargo &> /dev/null; then
+            echo "Installing Rust (needed for Cargo)..."
+            curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+        fi
+        cargo install eza
+    fi
+
+    if ! command -v topgrade &> /dev/null; then
+        echo "Installing 'topgrade' via Cargo..."
+        if ! command -v cargo &> /dev/null; then
+            echo "Installing Rust (needed for Cargo)..."
+            curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+        fi
+        cargo install topgrade
+    fi
 }
 
 install_termux() {
