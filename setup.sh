@@ -16,7 +16,7 @@ install_fedora() {
 }
 
 install_debian() {
-    sudo apt install "${common_packages[@]}" gh fd-find xclip autorandr nala topgrade
+    sudo apt install "${common_packages[@]}" gh fd-find xclip autorandr nala
     sudo ln -sfnv /usr/bin/fdfind /usr/bin/fd
     sudo ln -sfnv /usr/bin/batcat /usr/bin/bat
     echo "alias cat=batcat" >>"$LOCAL_CONFIG"
@@ -61,10 +61,10 @@ install_packages() {
 
 install_oh_my_zsh() {
     echo -e "\u001b[7m Installing oh-my-zsh and plugins...\u001b[0m"
-    
+
     zsh_dir="$HOME/.config/zsh"
     export ZDOTDIR="$zsh_dir"
-    
+
     sh -c "$(curl -fsSL https://install.ohmyz.sh)" "" --unattended --keep-zshrc
 
     gh="https://github.com/"
