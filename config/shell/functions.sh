@@ -49,6 +49,11 @@ review_changes() {
     git diff --name-only "$base_branch"...HEAD | fzf --preview "git diff $base_branch...HEAD -- {} | delta --width \$FZF_PREVIEW_COLUMNS" --bind "enter:execute($EDITOR {})"
 }
 
+# show staged and unstaged file changes
+changed_files() {
+    git status --short | awk '{print $2}' | fzf --preview "git diff --cached -- {} | delta --width \$FZF_PREVIEW_COLUMNS && git diff -- {} | delta --width \$FZF_PREVIEW_COLUMNS" --bind "enter:execute($EDITOR {})"
+}
+
 # edit a binary file in path, useful for editing executables/symlinked scripts
 binary_edit() {
     local bin=""
