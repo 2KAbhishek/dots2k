@@ -76,6 +76,9 @@ alias emd='emacs --daemon &'
 alias emc="emacsclient -c -a 'emacs'"
 alias emt='emacs --no-window-system'
 alias vi="nvim"
+alias vg="grep_open"
+alias vr="review_changes"
+alias vb="binary_edit"
 alias me='"$EDITOR" README.md'
 
 # Configs

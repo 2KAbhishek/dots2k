@@ -29,7 +29,7 @@ xin() {
 }
 
 # show files which contain a term
-vo() {
+grep_open() {
     local editor="$EDITOR"
     if [ "$EDITOR" = "vim" ] || [ "$EDITOR" = "nvim" ]; then
         local editor="$EDITOR +/$1 +'norm! n'"
@@ -38,7 +38,7 @@ vo() {
 }
 
 # review changed files on this branch
-vc() {
+review_changes() {
     local base_branch="${1:-}"
 
     if [ -z "$base_branch" ]; then
@@ -50,7 +50,7 @@ vc() {
 }
 
 # edit a binary file in path, useful for editing executables/symlinked scripts
-bine() {
+binary_edit() {
     local bin=""
     bin=$(which "$1")
     if [ -z "$bin" ]; then
