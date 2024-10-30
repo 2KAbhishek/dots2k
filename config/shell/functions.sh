@@ -28,13 +28,25 @@ xin() {
     (cd "${1}" && shift && ${@})
 }
 
-# vim open
+# show files which contain a term
 vo() {
     local editor="$EDITOR"
     if [ "$EDITOR" = "vim" ] || [ "$EDITOR" = "nvim" ]; then
         local editor="$EDITOR +/$1 +'norm! n'"
     fi
     rg -l "$1" | fzf --bind "enter:execute($editor + {})"
+}
+
+# review changed files on this branch
+vc() {
+    local base_branch="${1:-}"
+
+    if [ -z "$base_branch" ]; then
+        base_branch=$(git symbolic-ref refs/remotes/origin/HEAD 2>/dev/null | sed 's@^refs/remotes/origin/@@')
+        [ -z "$base_branch" ] && base_branch="main"
+    fi
+
+    git diff --name-only "$base_branch"...HEAD | fzf --preview "git diff $base_branch...HEAD -- {} | delta --width \$FZF_PREVIEW_COLUMNS" --bind "enter:execute($EDITOR {})"
 }
 
 # edit a binary file in path, useful for editing executables/symlinked scripts
