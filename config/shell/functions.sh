@@ -58,6 +58,17 @@ changed_files() {
         --bind "enter:execute($EDITOR {})"
 }
 
+# Show diff for argument PR number for current repo
+pr_diff() {
+    gh pr diff "$1" | delta
+}
+
+# Show PR files for argument PR number for current repo
+pr_files() {
+    gh pr diff "$1" --name-only | fzf \
+        --bind "enter:execute($EDITOR {})"
+}
+
 # edit a binary file in path, useful for editing executables/symlinked scripts
 binary_edit() {
     local bin=""
