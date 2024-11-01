@@ -84,23 +84,6 @@ lvi() {
     NVIM_APPNAME=lvim2k nvim "$@"
 }
 
-# awesome wm accent color
-accent() {
-    color="#1688f0"
-
-    if [[ $1 == '#'* ]]; then
-        color=$1
-    elif [ -z "$1" ]; then
-        color="#1688f0"
-    else
-        color="#$1"
-    fi
-
-    sed -i "s/local accent.*/local accent = '$color'/" ~/.config/awesome/awesome2k.lua
-    sed -i "s/selected.*/selected:       $color;/" ~/.config/rofi/themes/shared/colors.rasi
-    echo 'awesome.restart()' | awesome-client
-}
-
 # ex - archive extractor
 ex() {
     if [ -f "$1" ]; then
@@ -134,17 +117,6 @@ _fzf_comprun() {
     vim) fzf --preview 'bat --color=always --style=numbers --line-range=:500 {}' ;;
     *) fzf "$@" ;;
     esac
-}
-
-# lazygit
-lg() {
-    export LAZYGIT_NEW_DIR_FILE=~/.config/lazygit/.tmp
-    lazygit "$@"
-
-    if [ -f $LAZYGIT_NEW_DIR_FILE ]; then
-        cd "$(cat $LAZYGIT_NEW_DIR_FILE)"
-        rm -f $LAZYGIT_NEW_DIR_FILE >/dev/null
-    fi
 }
 
 # colorized man output
