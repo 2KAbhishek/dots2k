@@ -54,7 +54,8 @@ review_changes() {
 # show staged and unstaged file changes
 changed_files() {
     git status --short | awk '{print $2}' | fzf \
-        --preview "git diff --cached -- {} | delta --width \$FZF_PREVIEW_COLUMNS && git diff -- {} | delta --width \$FZF_PREVIEW_COLUMNS" \
+        --preview "git diff --cached -- {} | delta --width \$FZF_PREVIEW_COLUMNS && git diff -- {} | \
+        delta --width \$FZF_PREVIEW_COLUMNS && git diff --no-index -- /dev/null {} | delta --width \$FZF_PREVIEW_COLUMNS" \
         --bind "enter:execute($EDITOR {})"
 }
 
