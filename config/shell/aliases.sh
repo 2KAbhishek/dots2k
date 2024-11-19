@@ -73,7 +73,7 @@ alias gsv="git status -v"
 alias gtop='cd "$(git rev-parse --show-toplevel)"'
 
 # Editor
-alias e='nvim $(files)'
+alias e='nvim $(fzf)'
 alias emd='emacs --daemon &'
 alias emc="emacsclient -c -a 'emacs'"
 alias emt='emacs --no-window-system'
