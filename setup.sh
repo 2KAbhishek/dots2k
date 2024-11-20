@@ -54,7 +54,7 @@ install_packages() {
     esac
 
     echo "export POWERLEVEL9K_OS_ICON_BACKGROUND='$color'" >>"$LOCAL_CONFIG"
-    echo "export POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX='%F{238}╰%F{$color}%K{$color}%F{black}  %f%F{$color}%k%f'" >>"$LOCAL_CONFIG"
+    echo "export POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX='%F{238}╰%F{$color}%K{$color}%F{black} 󰅂%f%F{$color}%k%f'" >>"$LOCAL_CONFIG"
 
     mkdir -p "$HOME/.local/state/vim/undo"
 }

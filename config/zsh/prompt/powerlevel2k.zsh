@@ -9,7 +9,7 @@ POWERLEVEL9K_PROMPT_ADD_NEWLINE=true
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon context dir vcs direnv time)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status command_execution_time_joined vi_mode asdf background_jobs ram_joined battery)
 POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX="%F{238}╭"
-POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX="%F{238}╰%F{044}\uE0B2%K{044}%F{black}  %f%F{044}%k%f"
+POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX="%F{238}╰%F{044}\uE0B2%K{044}%F{black} 󰅂%f%F{044}%k%f"
 
 # Segment
 DEFAULT_USER=`whoami`
