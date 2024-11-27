@@ -8,7 +8,7 @@ TERM = "xterm-256color"
 [window]
 decorations = "buttonless"
 dynamic_padding = false
-opacity = 0.7
+opacity = 1
 blur = true
 option_as_alt = "Both"
 
