@@ -98,6 +98,7 @@ alias p2k='"$EDITOR" "$ZDOTDIR/prompt/init.zsh"'
 alias qutc='"$EDITOR" ~/.config/qutebrowser/config.py'
 alias tmuxc='"$EDITOR" ~/.config/tmux/tmux.conf'
 alias vic="nvim ~/.config/nvim/init.lua"
+alias vil="nvim ~/.config/nvim/lua/plugins/list.lua"
 alias vimc="vim ~/.vimrc"
 alias zshc='"$EDITOR" "$ZDOTDIR"/.zshrc'
 
@@ -108,6 +109,7 @@ alias cols="spectrum_ls"
 alias exsu="exercism submit"
 alias files="fzf --preview 'bat --color=always --style=numbers --line-range=:500 {}'"
 alias fix="fuck"
+alias heic_to_jpg="magick mogrify -format jpg *.HEIC"
 alias icat="kitty +kitten icat"
 alias java8="export JAVA_HOME=/usr/lib/jvm/java-8-openjdk/jre"
 alias java11="export JAVA_HOME=/usr/lib/jvm/java-11-openjdk/"
