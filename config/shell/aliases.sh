@@ -135,6 +135,7 @@ alias play="playerctl play-pause"
 alias next="playerctl next"
 alias prev="playerctl previous"
 alias song="playerctl metadata title"
+alias logshare="curl -F 'file=@-' 0x0.st"
 
 # Languages
 alias rsc="bundle exec rails console"
