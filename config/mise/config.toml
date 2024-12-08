@@ -1,5 +1,4 @@
 [tools]
 usage = "latest"
 node = "21"
-python = "latest"
-rust = "1.80.1"
+python = "3.13"
