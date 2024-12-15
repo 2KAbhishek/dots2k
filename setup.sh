@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 LOCAL_CONFIG="$HOME/.config/shell/local.sh"
 
