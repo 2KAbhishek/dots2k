@@ -43,6 +43,7 @@ install_packages() {
     case $system_kind in
     manjaro) color="040" && install_arch ;;
     arch) color="033" && install_arch ;;
+    archarm) color="033" && install_arch ;;
     ubuntu) color="202" && install_debian ;;
     debian) color="163" && install_debian ;;
     fedora | fedora-asahi-remix) color="32" && install_fedora ;;
