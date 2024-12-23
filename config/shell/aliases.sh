@@ -99,7 +99,7 @@ alias p2k='"$EDITOR" "$ZDOTDIR/prompt/init.zsh"'
 alias qutc='"$EDITOR" ~/.config/qutebrowser/config.py'
 alias tmuxc='"$EDITOR" ~/.config/tmux/tmux.conf'
 alias vic="nvim ~/.config/nvim/init.lua"
-alias vil="nvim ~/.config/nvim/lua/plugins/list.lua"
+alias vip="nvim ~/.config/nvim/lua/plugins/list.lua"
 alias vimc="vim ~/.vimrc"
 alias zshc='"$EDITOR" "$ZDOTDIR"/.zshrc'
 
