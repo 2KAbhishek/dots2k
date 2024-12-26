@@ -64,8 +64,7 @@ cd dots2k
 
 ### Fonts
 
-I'll recommend [Nerd Fonts](https://www.nerdfonts.com/).
-I'm using [FiraCode 3.11](https://github.com/ryanoasis/nerd-fonts/releases/tag/v3.1.1).
+I'll recommend [Nerd Fonts](https://www.nerdfonts.com/), I'm using FiraCode.
 
 ### Local Configs
 
