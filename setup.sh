@@ -3,27 +3,27 @@
 LOCAL_CONFIG="$HOME/.config/shell/local.sh"
 
 declare -a common_packages=(
-    curl wget git zsh tmux bat fzf eza unzip neovim ripgrep ncdu ranger vim zoxide
+    curl wget git zsh tmux bat fzf unzip neovim ripgrep ncdu ranger vim zoxide
 )
 
 install_arch() {
-    sudo pacman -S "${common_packages[@]}" github-cli fd git-delta lazygit ttf-firacode-nerd wl-clipboard topgrade
+    sudo pacman -S "${common_packages[@]}" eza github-cli fd git-delta lazygit ttf-firacode-nerd wl-clipboard topgrade
 }
 
 install_fedora() {
     sudo dnf copr enable atim/lazygit -y
-    sudo dnf install "${common_packages[@]}" gh lazygit fd-find wl-clipboard git-delta
+    sudo dnf install "${common_packages[@]}" eza gh lazygit fd-find wl-clipboard git-delta
 }
 
 install_debian() {
-    sudo apt install "${common_packages[@]}" gh fd-find xclip autorandr nala
+    sudo apt install "${common_packages[@]}" exa gh fd-find xclip autorandr nala
     sudo ln -sfnv /usr/bin/fdfind /usr/bin/fd
     sudo ln -sfnv /usr/bin/batcat /usr/bin/bat
     echo "alias cat=batcat" >>"$LOCAL_CONFIG"
 }
 
 install_termux() {
-    pkg install "${common_packages[@]}" gh fd git-delta openssh termux-tools nala
+    pkg install "${common_packages[@]}" eza gh fd git-delta openssh termux-tools nala
     ln -sfnv "$PWD/../config/bin" "$HOME"/bin
     cp -rv "$PWD/../config/.termux" "$HOME"/
 }
