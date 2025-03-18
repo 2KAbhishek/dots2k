@@ -7,7 +7,7 @@ declare -a common_packages=(
 )
 
 install_arch() {
-    sudo pacman -S "${common_packages[@]}" eza github-cli fd git-delta lazygit ttf-firacode-nerd wl-clipboard topgrade
+    sudo pacman -S "${common_packages[@]}" eza github-cli fd git-delta lazygit ttf-firacode-nerd wl-clipboard topgrade mise
 }
 
 install_fedora() {
