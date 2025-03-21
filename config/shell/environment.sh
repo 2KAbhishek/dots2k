@@ -1,7 +1,7 @@
 #!/bin/bash
 # Environment variables
-# export TERMINAL=kitty
-# export BROWSER=qutebrowser
+export TERMINAL=kitty
+export BROWSER=qutebrowser
 export EDITOR=nvim
 export CLIPCOPY=wl-copy
 export CLIPPASTE=wl-paste
