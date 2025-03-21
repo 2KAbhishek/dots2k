@@ -28,6 +28,25 @@ install_termux() {
     cp -rv "$PWD/../config/.termux" "$HOME"/
 }
 
+install_unknown() {
+    echo "Unknown system detected: $system_kind"
+    echo "Please select a system type to use for package installation:"
+    echo "1) Arch Linux (arch, archarm, manjaro)"
+    echo "2) Debian/Ubuntu (ubuntu, debian, pop, kali)"
+    echo "3) Fedora (fedora, fedora-asahi-remix)"
+    echo "4) Termux"
+    echo -en "\u001b[32;1m ==> \u001b[0m"
+
+    read -r selection
+    case $selection in
+    1) color="033" && install_arch ;;
+    2) color="163" && install_debian ;;
+    3) color="32" && install_fedora ;;
+    4) color="040" && install_termux ;;
+    *) echo "Invalid selection, exiting." && exit 1 ;;
+    esac
+}
+
 get_system_info() {
     [ -e /etc/os-release ] && source /etc/os-release && echo "${ID:-Unknown}" && return
     [ -e /etc/lsb-release ] && source /etc/lsb-release && echo "${DISTRIB_ID:-Unknown}" && return
@@ -41,17 +60,17 @@ install_packages() {
 
     color=""
     case $system_kind in
-    manjaro) color="040" && install_arch ;;
     arch) color="033" && install_arch ;;
     archarm) color="033" && install_arch ;;
-    ubuntu) color="202" && install_debian ;;
+    manjaro) color="040" && install_arch ;;
     debian) color="163" && install_debian ;;
-    fedora | fedora-asahi-remix) color="32" && install_fedora ;;
-    pop) color="045" && install_debian ;;
     kali) color="254" && install_debian ;;
+    pop) color="045" && install_debian ;;
+    ubuntu) color="202" && install_debian ;;
+    fedora | fedora-asahi-remix) color="32" && install_fedora ;;
     termux) color="040" && install_termux ;;
     mac) color="254" ;;
-    *) echo "Unknown system!" && exit 1 ;;
+    *) install_unknown ;;
     esac
 
     echo "export POWERLEVEL9K_OS_ICON_BACKGROUND='$color'" >>"$LOCAL_CONFIG"
@@ -71,7 +90,7 @@ install_oh_my_zsh() {
     gh="https://github.com/"
     omz="$zsh_dir/ohmyzsh/custom"
     omz_plugin="$omz/plugins/"
-    mkdir -p $omz_plugin
+    mkdir -p "$omz_plugin"
 
     git clone "$gh/romkatv/powerlevel10k" "$omz/themes/powerlevel10k" --depth 1
 
