@@ -39,8 +39,6 @@ export PATH=$HOME/.cargo/bin:$PATH
 export PATH=$HOME/.npm/bin:$PATH
 export PATH=$HOME/.luarocks/bin:$PATH
 
-export CHROME_EXECUTABLE=/usr/bin/google-chrome-stable
-
 if [ "$(uname)" = "Darwin" ]; then
     eval "$(/opt/homebrew/bin/brew shellenv)"
     export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
@@ -51,12 +49,3 @@ fi
 
 # Tool configs
 if type dircolors >/dev/null 2>&1; then eval "$(dircolors ~/.dircolors)"; fi
-
-# Swap caps lock with escape
-# if type setxkbmap >/dev/null 2>&1; then
-#     setxkbmap -option caps:swapescape
-# fi
-# Enable touch to click for trackpad
-# if type xinput >/dev/null 2>&1; then
-#     xinput set-prop "$(xinput list --name-only | grep -i touch)" "libinput Tapping Enabled" 1
-# fi
