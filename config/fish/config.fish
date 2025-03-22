@@ -1,34 +1,33 @@
 if status is-interactive
-    if type -q fzf
-        fzf --fish | source
-    end
-
-    if type -q zoxide
-        zoxide init fish | source
-    end
-
-    if type -q mise
-        mise activate fish | source
-    end
-
-    if type -q navi
-        navi widget fish | source
-    end
-
-    for file in aliases.sh local.sh
-        set -l filepath $HOME/.config/shell/$file
-        if test -f $filepath
-            source $filepath
+    function source_if_exists
+        if test -f $argv[1]
+            source $argv[1]
         end
     end
 
+    function init_tool
+        if type -q $argv[1]
+            eval "$argv[2]"
+        end
+    end
+
+    # Initialize tools with Fish integration
+    init_tool fzf "fzf --fish | source"
+    init_tool zoxide "zoxide init fish | source"
+    init_tool mise "mise activate fish | source"
+    init_tool navi "navi widget fish | source"
+
+    # Source shell config files
+    for file in aliases.sh local.sh
+        source_if_exists $HOME/.config/shell/$file
+    end
+
+    # Mac-specific configuration
     if string match -q "darwin*" (uname -s)
         set -l mac_config_dir ~/.config/mac
-        for file in aliases.sh environment.sh
-            set -l filepath $mac_config_dir/$file
-            if test -f $filepath
-                source $filepath
-            end
+        for file in environment.sh aliases.sh
+            source_if_exists $mac_config_dir/$file
         end
     end
 end
+
