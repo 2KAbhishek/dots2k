@@ -150,7 +150,6 @@ dots2k comes with a lot of keybindings, here are some of them:
 - [dmenu](./config/.dmenurc) - A dynamic menu for X.
 - [fontconfig](./config/fontconfig/fonts.conf) - Configures and customizes font access.
 - [greetd](./config/greetd/config.toml) - A minimal login manager.
-- [i3](./config/i3/config) - A tiling window manager, comes with i3status.
 - [libinput-gestures](./config/libinput-gestures.conf) - Binds gestures to commands.
 - [Xresources](./config/.Xresources) - Configurations for X applications.
 
