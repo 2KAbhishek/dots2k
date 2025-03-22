@@ -21,4 +21,14 @@ if status is-interactive
             source $filepath
         end
     end
+
+    if string match -q "darwin*" (uname -s)
+        set -l mac_config_dir ~/.config/mac
+        for file in aliases.sh environment.sh
+            set -l filepath $mac_config_dir/$file
+            if test -f $filepath
+                source $filepath
+            end
+        end
+    end
 end

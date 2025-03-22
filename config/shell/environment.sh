@@ -39,13 +39,5 @@ export PATH=$HOME/.cargo/bin:$PATH
 export PATH=$HOME/.npm/bin:$PATH
 export PATH=$HOME/.luarocks/bin:$PATH
 
-if [ "$(uname)" = "Darwin" ]; then
-    eval "$(/opt/homebrew/bin/brew shellenv)"
-    export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
-    export MANPATH="/opt/local/share/man:$MANPATH"
-    export PATH="/opt/homebrew/opt/coreutils/libexec/gnubin:$PATH"
-    export PATH="/opt/homebrew/opt/gnu-sed/libexec/gnubin:$PATH"
-fi
-
 # Tool configs
 if type dircolors >/dev/null 2>&1; then eval "$(dircolors ~/.dircolors)"; fi

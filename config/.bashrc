@@ -27,5 +27,11 @@ if type zoxide >/dev/null 2>&1; then eval "$(zoxide init bash)"; fi
 if type fzf >/dev/null 2>&1; then eval "$(fzf --bash)"; fi
 if type mise >/dev/null 2>&1; then eval "$(mise activate bash)"; fi
 
+# Mac configs from mac2k
+if [[ "$OSTYPE" == "darwin"* ]]; then
+    [ -f ~/.config/mac/aliases.sh ] && source ~/.config/mac/aliases.sh
+    [ -f ~/.config/mac/environment.sh ] && source ~/.config/mac/environment.sh
+fi
+
 # Local configurations
 [ -f ~/.config/shell/local.sh ] && source ~/.config/shell/local.sh

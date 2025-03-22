@@ -9,5 +9,11 @@ source ~/.config/shell/aliases.sh
 source "$ZDOTDIR/aliases.zsh"
 source "$ZDOTDIR/keys.zsh"
 
+# Mac configs from mac2k
+if [[ "$OSTYPE" == "darwin"* ]]; then
+    [ -f ~/.config/mac/aliases.sh ] && source ~/.config/mac/aliases.sh
+    [ -f ~/.config/mac/environment.sh ] && source ~/.config/mac/environment.sh
+fi
+
 # Load Local configuration if exists
 [ -f ~/.config/shell/local.sh ] && source ~/.config/shell/local.sh

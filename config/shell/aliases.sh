@@ -90,6 +90,7 @@ alias alac='"$EDITOR" ~/.config/alacritty/alacritty.toml'
 alias alia='"$EDITOR" ~/.config/shell/aliases.sh'
 alias bashc='"$EDITOR" ~/.bashrc'
 alias enva='"$EDITOR" ~/.config/shell/environment.sh'
+alias malia='"$EDITOR" ~/.config/mac/aliases.sh'
 alias func='"$EDITOR" ~/.config/shell/functions.sh'
 alias gitc='"$EDITOR" ~/.gitconfig'
 alias kitc='"$EDITOR" ~/.config/kitty/kitty.conf'
@@ -188,25 +189,3 @@ alias vol="pulsemixer"
 alias volu="amixer sset 'Master' 10%+"
 alias vold="amixer sset 'Master' 10%-"
 alias wifi="nmtui"
-
-# Mac only
-if [[ "$OSTYPE" == "darwin"* ]]; then
-    alias aerc='"$EDITOR" "$HOME"/.config/aerospace/aerospace.toml'
-    alias aerr="aerospace reload-config"
-    alias aert="aerospace enable toggle"
-    alias brc="brew cleanup"
-    alias brd="brew bundle dump --no-restart --global --force"
-    alias bri="brew install"
-    alias brI="brew bundle install --global --verbose --no-upgrade"
-    alias brl="brew list"
-    alias brq="brew info"
-    alias brr="brew uninstall"
-    alias brs="brew search"
-    alias bru="brew upgrade"
-    alias ip="ipconfig getifaddr en0"
-    alias macdis="displayplacer 'id:1 enablded:false'"
-    alias play="nowplaying-cli togglePlayPause"
-    alias next="nowplaying-cli next"
-    alias prev="nowplaying-cli previous"
-    alias qutc='"$EDITOR" ~/.qutebrowser/config.py'
-fi
