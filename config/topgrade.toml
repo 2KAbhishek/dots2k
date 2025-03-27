@@ -111,9 +111,7 @@ skip_notify = false
 [git]
 max_concurrency = 8
 # Additional git repositories to pull
-repos = [
-   "~/Projects/GitHub/**",
-]
+repos = ["~/Projects/2KAbhishek/**"]
 
 # Don't pull the predefined git repos
 #pull_predefined = false
