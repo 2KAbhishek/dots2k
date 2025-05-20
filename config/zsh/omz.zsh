@@ -31,6 +31,16 @@ plugins=(
 # Uninstalled, TODO doesn't work with fzf-tab
 # zsh-autocomplete
 
+# Plugin options
+MAGIC_ENTER_GIT_COMMAND="gsd"
+MAGIC_ENTER_OTHER_COMMAND="la"
+ZSH_PYENV_QUIET=true
+ZSH_COLORIZE_TOOL="chroma"
+ZSH_COLORIZE_STYLE="dracula"
+ZSH_COLORIZE_CHROMA_FORMATTER="terminal16m"
+TIMER_THRESHOLD=1
+AUTO_NOTIFY_IGNORE+=("docker" "make")
+
 # Theme
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
