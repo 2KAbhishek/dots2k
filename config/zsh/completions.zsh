@@ -25,13 +25,14 @@ zstyle ':fzf-tab:complete:git-show:*' fzf-preview \
     'case "$group" in
     "commit tag") git show --color=always $word ;;
     *) git show --color=always $word | delta ;;
-    esac'
+esac'
+
 zstyle ':fzf-tab:complete:git-checkout:*' fzf-preview \
     'case "$group" in
     "modified file") git diff $word | delta ;;
     "recent commit object name") git show --color=always $word | delta ;;
     *) git log --color=always $word ;;
-    esac'
+esac'
 
 if type mise >/dev/null 2>&1; then eval "$(mise activate zsh)"; fi
 if type navi >/dev/null 2>&1; then eval "$(navi widget zsh)"; fi

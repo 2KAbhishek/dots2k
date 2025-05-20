@@ -2,7 +2,8 @@
 export ZSH="$ZDOTDIR/ohmyzsh"
 
 # Plugins
-plugins=(alias-tips
+plugins=(
+    alias-tips
     colorize
     dotenv
     dirhistory
@@ -24,7 +25,8 @@ plugins=(alias-tips
     zsh-autopair
     zsh-autosuggestions
     zsh-completions
-    zsh-navigation-tools)
+    zsh-navigation-tools
+)
 
 # Uninstalled, TODO doesn't work with fzf-tab
 # zsh-autocomplete
