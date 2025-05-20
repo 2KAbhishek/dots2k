@@ -128,7 +128,7 @@ declare -a config_dirs=(
 declare -a home_files=(
     "zsh/.zshenv" ".bashrc" ".dircolors" ".dmenurc" ".gitconfig" ".inputrc" ".luarc.json"
     ".prettierrc" ".pryrc" ".pystartup" ".reek.yml" ".stylua.toml" ".typos.toml"
-    ".vimrc" ".Xresources"
+    ".vimrc" ".Xresources" ".editorconfig"
 )
 
 backup_configs() {
