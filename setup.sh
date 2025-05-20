@@ -1,6 +1,9 @@
 #!/usr/bin/env bash
 
-LOCAL_CONFIG="$HOME/.config/shell/local.sh"
+LOCAL_CONFIG_DIR="$HOME/.config/shell"
+LOCAL_CONFIG="$LOCAL_CONFIG_DIR"/local.sh
+
+mkdir -p "$LOCAL_CONFIG_DIR"
 
 declare -a common_packages=(
     curl wget git zsh tmux bat fzf unzip neovim ripgrep ncdu ranger vim zoxide
