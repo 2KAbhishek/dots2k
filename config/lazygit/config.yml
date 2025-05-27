@@ -1,3 +1,9 @@
+customCommands:
+  - key: 'C'
+    context: 'global'
+    command: 'git commit'
+    output: terminal
+
 gui:
   authorColors:
     'Abhishek Keshri': blue
@@ -28,8 +34,6 @@ gui:
       - blue
     selectedLineBgColor:
       - '#103070'
-    selectedRangeBgColor:
-      - '#103070'
     cherryPickedCommitBgColor:
       - cyan
     cherryPickedCommitFgColor:
@@ -50,8 +54,11 @@ gui:
   nerdFontsVersion: '3' # nerd fonts version to use ("2" or "3"); empty means don't show nerd font icons
   commandLogSize: 8
   splitDiff: 'auto' # one of 'auto' | 'always'
+
 os:
   editPreset: nvim
+  shellFunctionsFile: ~/.config/shell/aliases.sh
+
 git:
   paging:
     colorArg: always
@@ -76,21 +83,26 @@ git:
     showWholeGraph: false
   skipHookPrefix: WIP
   autoFetch: true
+  autoForwardBranches: none # automatically update main / feature branches when they are updated upstream
   autoRefresh: true
   branchLogCmd: 'git log --graph --color=always --abbrev-commit --decorate --date=relative --pretty=medium {{branchName}} --'
-  allBranchesLogCmd: 'git log --graph --all --color=always --abbrev-commit --decorate --date=relative  --pretty=medium'
-  overrideGpg: false # prevents lazygit from spawning a separate process when using GPG
+  overrideGpg: true # prevents lazygit from spawning a separate process when using GPG
   disableForcePushing: false
   parseEmoji: true
+  allBranchesLogCmds:
+    - git log --graph --all --color=always --abbrev-commit --decorate --date=relative  --pretty=medium
+
 refresher:
   refreshInterval: 10 # File/submodule refresh interval in seconds. Auto-refresh can be disabled via option 'git.autoRefresh'.
   fetchInterval: 600 # Re-fetch interval in seconds. Auto-fetch can be disabled via option 'git.autoFetch'.
+
 update:
   method: prompt # can be: prompt | background | never
   days: 14 # how often an update is checked for
+
 confirmOnQuit: false
 # determines whether hitting 'esc' will quit the application when there is nothing to cancel/close
-quitOnTopLevelReturn: false
+quitOnTopLevelReturn: true
 disableStartupPopups: false
 notARepository: 'prompt' # one of: 'prompt' | 'create' | 'skip'
 promptToReturnFromSubprocess: true # display confirmation when subprocess terminates
