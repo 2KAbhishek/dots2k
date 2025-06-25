@@ -29,3 +29,6 @@ env
 
 # Aider
 .aider*
+
+# claude settings
+.claude/settings.local.json
