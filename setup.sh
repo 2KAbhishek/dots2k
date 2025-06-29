@@ -19,7 +19,8 @@ install_arch() {
 
 install_fedora() {
     sudo dnf copr enable atim/lazygit -y
-    sudo dnf install "${common_packages[@]}" eza gh lazygit fd-find wl-clipboard git-delta
+    sudo dnf copr enable alternateved/eza -y
+    sudo dnf install "${common_packages[@]}" eza gh lazygit fd-find wl-clipboard git-delta --skip-unavailable
 }
 
 install_debian() {
