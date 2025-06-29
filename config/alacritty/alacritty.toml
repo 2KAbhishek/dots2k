@@ -17,7 +17,7 @@ x = 0
 y = 0
 
 [font]
-size = 12.0
+size = 13.0
 
 [font.normal]
 family = "FiraCode Nerd Font"
