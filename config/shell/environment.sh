@@ -1,10 +1,10 @@
 #!/bin/bash
 # Environment variables
 export TERMINAL=kitty
-export BROWSER=qutebrowser
 export EDITOR=nvim
 export CLIPCOPY=wl-copy
 export CLIPPASTE=wl-paste
+# export BROWSER=qutebrowser
 
 # Fzf
 export FZF_DEFAULT_COMMAND='fd --hidden --follow --exclude=.git --exclude=node_modules'
