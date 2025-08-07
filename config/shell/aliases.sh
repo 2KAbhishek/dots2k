@@ -145,6 +145,9 @@ alias rsc="bundle exec rails console"
 alias rsv="bundle exec rails server"
 alias rsp="bundle exec rspec"
 alias rcp="bundle exec rubocop -A"
+alias rspc='git diff --name-only main | grep "_spec\.rb$" | xargs bundle exec rspec'
+alias rcpc='git diff --name-only main | grep -E "\.(rb|rake)$" | grep -v "schema.rb" | xargs bundle exec rubocop -A'
+alias jstx='git diff --name-only main | grep "\.test\.jsx$" | xargs yarn jest'
 
 # Package Manger
 alias apti="sudo apt install"
