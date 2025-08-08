@@ -149,6 +149,10 @@ alias rspc='git diff --name-only main | grep "_spec\.rb$" | xargs bundle exec rs
 alias rcpc='git diff --name-only main | grep -E "\.(rb|rake)$" | grep -v "schema.rb" | xargs bundle exec rubocop -A'
 alias jstx='git diff --name-only main | grep "\.test\.jsx$" | xargs yarn jest'
 
+alias jirv='acli jira workitem view'
+alias jirp='acli jira workitem search --jql "assignee = currentUser() and resolution = Unresolved order by updated desc" --fields "issuetype,key,priority,status,summary"'
+alias jirc='acli jira workitem search --jql "assignee = currentUser() and resolution = Unresolved AND sprint in openSprints() order by updated desc" --fields "issuetype,key,priority,status,summary"'
+
 # Package Manger
 alias apti="sudo apt install"
 alias apts="apt search"
