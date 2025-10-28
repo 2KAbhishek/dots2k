@@ -141,13 +141,25 @@ alias syslog="sudo journalctl -b"
 alias logshare="curl -F 'file=@-' 0x0.st"
 
 # Languages
+
+alias esl="yarn eslint --fix"
+alias eslx='git diff --name-only main | grep -E "\.(js|jsx|ts|tsx)$" | xargs yarn eslint --fix'
+alias eslc='git ls-files --modified --others --exclude-standard | grep -E "\.(js|jsx|ts|tsx)$" | xargs yarn eslint --fix'
+
+alias jst="yarn jest --silent"
+alias jstx='git diff --name-only main | grep -E "\.test\.(js|jsx|ts|tsx)$" | xargs yarn jest --silent'
+alias jstc='git ls-files --modified --others --exclude-standard | grep -E "\.test\.(js|jsx|ts|tsx)$" | xargs yarn jest --silent'
+
+alias rcp="bundle exec rubocop -A"
+alias rcpx='git diff --name-only main | grep -E "\.(rb|rake)$" | grep -v "schema.rb" | xargs bundle exec rubocop -A'
+alias rcpc='git ls-files --modified --others --exclude-standard | grep -E "\.(rb|rake)$" | grep -v "schema.rb" | xargs bundle exec rubocop -A'
+
+alias rsp="bundle exec rspec"
+alias rspx='git diff --name-only main | grep "_spec\.rb$" | xargs bundle exec rspec'
+alias rspc='git ls-files --modified --others --exclude-standard | grep "_spec\.rb$" | xargs bundle exec rspec'
+
 alias rsc="bundle exec rails console"
 alias rsv="bundle exec rails server"
-alias rsp="bundle exec rspec"
-alias rcp="bundle exec rubocop -A"
-alias rspc='git diff --name-only main | grep "_spec\.rb$" | xargs bundle exec rspec'
-alias rcpc='git diff --name-only main | grep -E "\.(rb|rake)$" | grep -v "schema.rb" | xargs bundle exec rubocop -A'
-alias jstx='git diff --name-only main | grep "\.test\.jsx$" | xargs yarn jest'
 
 alias jirv='acli jira workitem view'
 alias jirp='acli jira workitem search --jql "assignee = currentUser() and resolution = Unresolved order by updated desc" --fields "issuetype,key,priority,status,summary"'
