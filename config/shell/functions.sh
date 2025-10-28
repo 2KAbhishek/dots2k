@@ -32,7 +32,7 @@ xin() {
 grep_open() {
     local editor="$EDITOR"
     if [ "$EDITOR" = "vim" ] || [ "$EDITOR" = "nvim" ]; then
-        local editor="$EDITOR +/$1 +'norm! n'"
+        local editor="$EDITOR +/\"$1\" +'norm! n'"
     fi
     rg -l "$1" | fzf --bind "enter:execute($editor + {})"
 }
