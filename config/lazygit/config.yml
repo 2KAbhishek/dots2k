@@ -3,7 +3,6 @@ customCommands:
     context: 'global'
     command: 'git commit'
     output: terminal
-
 gui:
   authorColors:
     'Abhishek Keshri': blue
@@ -54,16 +53,14 @@ gui:
   nerdFontsVersion: '3' # nerd fonts version to use ("2" or "3"); empty means don't show nerd font icons
   commandLogSize: 8
   splitDiff: 'auto' # one of 'auto' | 'always'
-
 os:
   editPreset: nvim
   shellFunctionsFile: ~/.config/shell/aliases.sh
-
 git:
-  paging:
-    colorArg: always
-    useConfig: false
-    pager: delta --features=mantis-shrimp --paging=never
+  pagers:
+    - colorArg: always
+      useConfig: false
+      pager: delta --features=mantis-shrimp --paging=never
   commit:
     signOff: false
   merging:
@@ -91,15 +88,12 @@ git:
   parseEmoji: true
   allBranchesLogCmds:
     - git log --graph --all --color=always --abbrev-commit --decorate --date=relative  --pretty=medium
-
 refresher:
   refreshInterval: 10 # File/submodule refresh interval in seconds. Auto-refresh can be disabled via option 'git.autoRefresh'.
   fetchInterval: 600 # Re-fetch interval in seconds. Auto-fetch can be disabled via option 'git.autoFetch'.
-
 update:
   method: prompt # can be: prompt | background | never
   days: 14 # how often an update is checked for
-
 confirmOnQuit: false
 # determines whether hitting 'esc' will quit the application when there is nothing to cancel/close
 quitOnTopLevelReturn: true
