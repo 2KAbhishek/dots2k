@@ -20,6 +20,4 @@ DISABLE_AUTO_TITLE="false"
 ENABLE_CORRECTION="false"
 COMPLETION_WAITING_DOTS="false"
 SAVEHIST=99999
-
-# Rename module
-autoload -U zmv
+HISTDUP=erase
