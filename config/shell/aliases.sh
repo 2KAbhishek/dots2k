@@ -41,7 +41,6 @@ alias q="exit"
 
 # Git
 alias g="git"
-alias gcL='git config --list'
 
 alias ga="git add"
 alias gaa='git add --all'
@@ -55,7 +54,7 @@ alias gcma="git commit --amend -m"
 alias gcman="git commit --amend --no-edit"
 alias gcmn="git add . && git commit --amend --no-edit"
 
-alias gcl='git clone --recurse-submodules'
+alias gcl='git config --list'
 
 alias gcp='git cherry-pick'
 alias gcpa='git cherry-pick --abort'
@@ -131,6 +130,12 @@ alias gstc='git stash clear'
 alias gstd='git stash drop'
 alias gstl='git stash list'
 alias gstp='git stash pop'
+
+alias gsui='git submodule update --init --recursive'
+alias gsu='git submodule update --remote --merge'
+alias gsuc='git clone --recurse-submodules'
+alias gsus='git submodule foreach "git status"'
+alias gsup='git push --recurse-submodules=on-demand'
 
 alias gsm='git switch main'
 alias gssm='git stash push && git switch main'
