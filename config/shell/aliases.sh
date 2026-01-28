@@ -133,6 +133,7 @@ alias gstl='git stash list'
 alias gstp='git stash pop'
 
 alias gsm='git switch main'
+alias gssm='git stash push && git switch main'
 alias gsp='git switch -'
 alias gsw='git switch'
 alias gswc='git switch --create'
