@@ -4,6 +4,7 @@ autoload -Uz copy-earlier-word
 zle -N up-line-or-beginning-search
 zle -N down-line-or-beginning-search
 zle -N copy-earlier-word
+zle -N fancy-ctrl-z
 
 copy-command () { $CLIPCOPY -n <<< $BUFFER }
 zle -N copy-command
@@ -44,3 +45,4 @@ bindkey "^x^v" vi-cmd-mode
 bindkey "^x^x" exchange-point-and-mark
 bindkey "^y" copy-command
 
+bindkey '^Z' fancy-ctrl-z
