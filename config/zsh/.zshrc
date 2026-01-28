@@ -6,7 +6,7 @@ source ~/.config/shell/environment.sh
 $IS_MAC && [ -f ~/.config/mac/environment.sh ] && source ~/.config/mac/environment.sh
 source "$ZDOTDIR/prompt/init.zsh"
 source "$ZDOTDIR/options.zsh"
-source "$ZDOTDIR/omz.zsh"
+source "$ZDOTDIR/zinit.zsh"
 source "$ZDOTDIR/completions.zsh"
 source ~/.config/shell/functions.sh
 source ~/.config/shell/aliases.sh
