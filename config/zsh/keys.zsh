@@ -1,9 +1,11 @@
 autoload -U up-line-or-beginning-search
 autoload -U down-line-or-beginning-search
 autoload -Uz copy-earlier-word
+autoload -Uz edit-command-line
 zle -N up-line-or-beginning-search
 zle -N down-line-or-beginning-search
 zle -N copy-earlier-word
+zle -N edit-command-line
 zle -N fancy-ctrl-z
 
 copy-command () { $CLIPCOPY -n <<< $BUFFER }
@@ -44,5 +46,6 @@ bindkey "^x^e" edit-command-line
 bindkey "^x^v" vi-cmd-mode
 bindkey "^x^x" exchange-point-and-mark
 bindkey "^y" copy-command
-
+bindkey '^[[A' up-line-or-beginning-search
+bindkey '^[[B' down-line-or-beginning-search
 bindkey '^Z' fancy-ctrl-z
