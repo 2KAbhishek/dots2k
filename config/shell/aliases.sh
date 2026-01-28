@@ -41,24 +41,37 @@ alias q="exit"
 
 # Git
 alias g="git"
+alias gcL='git config --list'
+
 alias ga="git add"
+alias gaa='git add --all'
+
+alias gbrr="git for-each-ref --count=30 --sort=-committerdate refs/heads/ --format='%(refname:short)'"
+
 alias gc="git commit -m"
 alias gca="git commit --all -m"
-alias gl="git pull --rebase --autostash"
-alias gp="git push"
-alias gss="git status -s"
-alias gsd="git status -s && git diff HEAD"
-alias gbrr="git for-each-ref --count=30 --sort=-committerdate refs/heads/ --format='%(refname:short)'"
-alias gcm='git checkout $(git_main_branch)'
+alias gcam='git commit --all --message'
 alias gcma="git commit --amend -m"
 alias gcman="git commit --amend --no-edit"
 alias gcmn="git add . && git commit --amend --no-edit"
+
+alias gcl='git clone --recurse-submodules'
+
+alias gcp='git cherry-pick'
+alias gcpa='git cherry-pick --abort'
+alias gcpc='git cherry-pick --continue'
+
+alias gd='git diff'
 alias gdh="git diff HEAD"
+alias gds='git diff --staged'
+alias gdw='git diff --word-diff'
+
 alias gg="lazygit"
+
 alias ghkey='gh ssh-key add ~/.ssh/id_ed25519.pub --title "$(hostname)" --type signing'
-alias ghpr="gh pr create"
 alias ghpd="pr_diff"
 alias ghpf="pr_files"
+alias ghpr="gh pr create"
 alias ghrc="gh repo clone"
 alias ghrd="gh repo edit -d"
 alias ghrh="gh repo edit -h"
@@ -67,11 +80,66 @@ alias ghrr="gh repo rename"
 alias ghrs="gh release create"
 alias ghrt="gh repo edit --add-topic "
 alias ghrv="gh repo edit --accept-visibility-change-consequences --visibility "
+
+alias gl="git pull --rebase --autostash"
+
+alias glog='git log --graph --pretty="%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%ad) %C(bold blue)<%an>%Creset" --date=short'
+alias glogf='git log --graph --pretty="%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%ar) %C(bold blue)<%an>%Creset" --stat'
+
 alias gmv="git mv"
 alias gmx="git merge -X ours"
+
+alias gp="git push"
+alias gpF='git push --force'
+alias gpf='git push --force-with-lease --force-if-includes'
+
+alias grb='git rebase'
+alias grba='git rebase --abort'
+alias grbc='git rebase --continue'
+alias grbi='git rebase --interactive'
+alias grbo='git rebase --onto'
+alias grbq='git rebase --quit'
 alias greb="git rebase --interactive --autostash --keep-empty --no-autosquash --rebase-merges main"
+
+alias grev='git revert'
+alias greva='git revert --abort'
+alias grevc='git revert --continue'
+
+alias grH='git reset --hard origin/main'
+alias grhh='git reset --hard'
+alias grhk='git reset --keep'
+alias grhs='git reset --soft'
+
+alias grm='git rm'
+alias grmc='git rm --cached'
+
+alias gra='git remote add'
+alias grrm='git remote remove'
+alias grset='git remote set-url'
+
+alias gsb='git status --short --branch'
+alias gsd="git status -s && git diff HEAD"
 alias gsv="git status -v"
+alias gss="git status -s"
+alias gss='git status --short'
+alias gst='git status'
+
+alias gsta='git stash push'
+alias gstaa='git stash apply'
+alias gstall='git stash --all'
+alias gstc='git stash clear'
+alias gstd='git stash drop'
+alias gstl='git stash list'
+alias gstp='git stash pop'
+
+alias gsm='git switch main'
+alias gsp='git switch -'
+alias gsw='git switch'
+alias gswc='git switch --create'
+
 alias gtop='cd "$(git rev-parse --show-toplevel)"'
+alias gwip='git add -A; git rm $(git ls-files --deleted) 2> /dev/null; git commit --no-verify --no-gpg-sign --message "--wip-- [skip ci]"'
+alias gwipe='git reset --hard && git clean --force -df'
 
 # Editor
 alias e='nvim $(fzf)'
