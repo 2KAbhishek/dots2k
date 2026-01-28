@@ -38,6 +38,7 @@ export PATH=$GOBIN:$PATH
 export PATH=$HOME/.cargo/bin:$PATH
 export PATH=$HOME/.npm/bin:$PATH
 export PATH=$HOME/.luarocks/bin:$PATH
+export PATH=$HOME/.bun/bin:$PATH
 
 # Tool configs
 if type dircolors >/dev/null 2>&1; then eval "$(dircolors ~/.dircolors)"; fi
