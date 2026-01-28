@@ -28,11 +28,11 @@ zstyle ':completion:*:*:docker:*' option-stacking yes
 zstyle ':completion:*:*:docker-*:*' option-stacking yes
 
 # Configure fzf previews for different commands
-zstyle ':fzf-tab:complete:cd:*' fzf-preview 'exa -TFl --group-directories-first --icons --git -L 2 --no-user $realpath'
-zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'exa -TFl --group-directories-first --icons --git -L 2 --no-user $realpath'
-zstyle ':fzf-tab:complete:z:*' fzf-preview 'exa -TFl --group-directories-first --icons --git -L 2 --no-user $realpath'
-zstyle ':fzf-tab:complete:nvim:*' fzf-preview 'bat --color=always --style=numbers --line-range=:500 $realpath'
-zstyle ':fzf-tab:complete:vim:*' fzf-preview 'bat --color=always --style=numbers --line-range=:500 $realpath'
+zstyle ':fzf-tab:complete:cd:*' fzf-preview 'eza -Tl --group-directories-first --icons --git -L 2 --no-user $realpath'
+zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'eza -Tl --group-directories-first --icons --git -L 2 --no-user $realpath'
+zstyle ':fzf-tab:complete:z:*' fzf-preview 'eza -Tl --group-directories-first --icons --git -L 2 --no-user $realpath'
+zstyle ':fzf-tab:complete:nvim:*' fzf-preview 'bat --color=always --style=numbers --line-range=:500 $realpath || eza -Tl --group-directories-first --icons --git -L 2 --no-user $realpath'
+zstyle ':fzf-tab:complete:vim:*' fzf-preview 'bat --color=always --style=numbers --line-range=:500 $realpath || eza -Tl --group-directories-first --icons --git -L 2 --no-user $realpath'
 
 zstyle ':fzf-tab:complete:git-(add|diff|restore):*' fzf-preview 'git diff $word | delta'
 zstyle ':fzf-tab:complete:git-log:*' fzf-preview 'git show --color=always $word'

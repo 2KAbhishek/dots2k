@@ -27,6 +27,7 @@ install_debian() {
     sudo apt install "${common_packages[@]}" exa gh fd-find xclip autorandr nala
     sudo ln -sfnv /usr/bin/fdfind /usr/bin/fd
     sudo ln -sfnv /usr/bin/batcat /usr/bin/bat
+    sudo ln -sfnv /usr/bin/exa /usr/bin/eza
     echo "alias cat=batcat" >>"$LOCAL_CONFIG"
 }
 
