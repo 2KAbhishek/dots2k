@@ -87,39 +87,6 @@ install_packages() {
     mkdir -p "$HOME/.local/state/vim/undo"
 }
 
-install_oh_my_zsh() {
-    echo -e "\u001b[7m Installing oh-my-zsh and plugins...\u001b[0m"
-
-    zsh_dir="$HOME/.config/zsh"
-    export ZDOTDIR="$zsh_dir"
-
-    sh -c "$(curl -fsSL https://install.ohmyz.sh)" "" --unattended --keep-zshrc
-
-    gh="https://github.com/"
-    omz="$zsh_dir/ohmyzsh/custom"
-    omz_plugin="$omz/plugins/"
-    mkdir -p "$omz_plugin"
-
-    git clone "$gh/romkatv/powerlevel10k" "$omz/themes/powerlevel10k" --depth 1
-
-    cd "$omz_plugin" || exit
-    git clone "$gh/zsh-users/zsh-autosuggestions"
-    git clone "$gh/clarketm/zsh-completions"
-    git clone "$gh/z-shell/F-Sy-H"
-    git clone "$gh/djui/alias-tips"
-    git clone "$gh/unixorn/git-extra-commands"
-    git clone "$gh/Aloxaf/fzf-tab"
-    git clone "$gh/hlissner/zsh-autopair"
-    # git clone "$gh/marlonrichert/zsh-autocomplete"
-    cd - || exit
-
-    chsh -s "$(which zsh)"
-}
-
-install_extras() {
-    install_oh_my_zsh
-}
-
 declare -a config_dirs=(
     "autorandr" "bat" "bundle" "cmus" "delta" "fish" "fontconfig" "gitignore.global"
     "htop" "kitty" "lazygit" "libinput-gestures.conf" "mise" "ranger" "shell" "tmux"
@@ -158,7 +125,6 @@ setup_dotfiles() {
     backup_configs
     setup_symlinks
     install_packages
-    install_extras
     echo -e "\u001b[7m Done! \u001b[0m"
 }
 
@@ -169,7 +135,6 @@ show_menu() {
     echo -e "  \u001b[34;1m (1) Backup Current Configs \u001b[0m"
     echo -e "  \u001b[34;1m (2) Setup Symlinks \u001b[0m"
     echo -e "  \u001b[34;1m (3) Install Packages \u001b[0m"
-    echo -e "  \u001b[34;1m (4) Install Extras \u001b[0m"
     echo -e "  \u001b[31;1m (*) Anything else to exit \u001b[0m"
     echo -en "\u001b[32;1m ==> \u001b[0m"
 
@@ -179,7 +144,6 @@ show_menu() {
     "1") backup_configs ;;
     "2") setup_symlinks ;;
     "3") install_packages ;;
-    "4") install_extras ;;
     *) echo -e "\u001b[31;1m alvida and adios! \u001b[0m" && exit 0 ;;
     esac
 }
@@ -187,7 +151,7 @@ show_menu() {
 main() {
     case "$1" in
     -a | --all | a | all) setup_dotfiles ;;
-    -i | --install | i | install) setup_symlinks && install_packages && install_extras ;;
+    -i | --install | i | install) setup_symlinks && install_packages ;;
     -s | --symlinks | s | symlinks) setup_symlinks ;;
     *) show_menu ;;
     esac
