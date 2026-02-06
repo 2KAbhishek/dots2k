@@ -33,6 +33,7 @@ alias ls='ls --color=auto'
 alias lsa="lsd -A --group-dirs first --classify"
 alias lso="lsd -A --group-dirs first --classify --recursive --depth=2"
 alias lsl="lsd -A --group-dirs first --classify -l"
+alias md="mkdir -p"
 alias mv="mv -iv"
 alias open="open_command"
 alias rm="rm -irv"
@@ -122,6 +123,8 @@ alias gsv="git status -v"
 alias gss="git status -s"
 alias gss='git status --short'
 alias gst='git status'
+
+alias gsh='git show'
 
 alias gsta='git stash push'
 alias gstaa='git stash apply'
