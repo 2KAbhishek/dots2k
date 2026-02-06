@@ -17,6 +17,12 @@ unset _comp_files
     fi
 } &!
 
+# case insensitive matchers
+zstyle ':completion:*' matcher-list \
+  'm:{a-z}={A-Za-z}' \
+  'r:|[._-]=* r:|=*' \
+  'l:|=* r:|=*'
+
 # Completion styling
 zstyle ':completion:*' menu select
 zmodload zsh/complist
