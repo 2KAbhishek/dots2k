@@ -1,4 +1,11 @@
 # Completions configuration
+
+# Prioritize natively installed completions over zinit plugins
+zinit_completions=($HOME/.cache/zinit/completions $HOME/.local/share/zinit/completions)
+for zinit_completion in $zinit_completions; do
+  fpath=(${fpath:#$zinit_completion} $zinit_completion)
+done
+unset zinit_completions zinit_completion
 autoload -Uz compinit
 
 # Regenerate completion cache only once per day
