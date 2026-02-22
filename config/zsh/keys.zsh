@@ -30,8 +30,10 @@ bindkey "^[." insert-last-word
 bindkey "^[m" copy-earlier-word
 bindkey "^[f" forward-word
 bindkey "^[b" backward-word
+bindkey "^a" beginning-of-line
 bindkey "^b" backward-word
 bindkey -s "^d" ' dexe^M ^M'
+bindkey "^e" end-of-line
 bindkey "^f" fzf-file-widget
 bindkey -s "^g" ' lazygit^M ^M'
 bindkey -s "^h" ' reload^M ^M'
