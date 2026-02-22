@@ -95,8 +95,8 @@ declare -a config_dirs=(
 )
 
 declare -a home_files=(
-    "zsh/.zshenv" ".bashrc" ".dircolors" ".dmenurc" ".gitconfig" ".inputrc" ".luarc.json"
-    ".prettierrc" ".pryrc" ".pystartup" ".reek.yml" ".stylua.toml" ".typos.toml"
+    "zsh/.zshenv" ".bashrc" ".dircolors" ".dmenurc" ".gitconfig" ".inputrc"
+    ".prettierrc" ".pryrc" ".pystartup" ".reek.yml" ".typos.toml"
     ".vimrc" ".Xresources" ".editorconfig"
 )
 
