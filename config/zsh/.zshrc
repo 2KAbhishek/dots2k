@@ -8,10 +8,10 @@ source "$ZDOTDIR/prompt/init.zsh"
 source "$ZDOTDIR/options.zsh"
 source "$ZDOTDIR/zinit.zsh"
 source "$ZDOTDIR/completions.zsh"
-source ~/.config/shell/functions.sh
 source ~/.config/shell/aliases.sh
 source "$ZDOTDIR/aliases.zsh"
 $IS_MAC && [ -f ~/.config/mac/aliases.sh ] && source ~/.config/mac/aliases.sh
+source ~/.config/shell/functions.sh
 source "$ZDOTDIR/keys.zsh"
 
 # Load Local configuration if exists
