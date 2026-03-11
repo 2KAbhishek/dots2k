@@ -8,7 +8,7 @@ auth() {
 
 # cd into dir and list contents
 lc() {
-    cd "$1" && la "$2"
+    cd "$1" && la
 }
 
 # Make directory and cd into it
@@ -174,4 +174,3 @@ fancy-ctrl-z() {
         zle clear-screen -w
     fi
 }
-
