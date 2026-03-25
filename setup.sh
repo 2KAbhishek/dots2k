@@ -6,7 +6,7 @@ LOCAL_CONFIG="$LOCAL_CONFIG_DIR"/local.sh
 mkdir -p "$LOCAL_CONFIG_DIR"
 
 declare -a common_packages=(
-    curl wget git zsh tmux bat fzf unzip neovim ripgrep ncdu ranger vim zoxide
+    curl wget git zsh tmux bat fzf unzip neovim ripgrep ncdu ranger vim zoxide gcc
 )
 
 install_arch() {
