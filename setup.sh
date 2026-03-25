@@ -10,7 +10,7 @@ declare -a common_packages=(
 )
 
 install_arch() {
-    sudo pacman -S "${common_packages[@]}" eza github-cli fd git-delta lazygit ttf-firacode-nerd wl-clipboard mise
+    sudo pacman -S "${common_packages[@]}" eza github-cli fd git-delta lazygit ttf-firacode-nerd wl-clipboard mise debugedit fakeroot openssh
     git clone https://aur.archlinux.org/paru-bin.git /tmp/paru-bin
     cd /tmp/paru-bin || exit
     makepkg -si --noconfirm
