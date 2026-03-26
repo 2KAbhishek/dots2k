@@ -10,11 +10,20 @@ declare -a common_packages=(
 )
 
 install_arch() {
-    sudo pacman -S "${common_packages[@]}" eza github-cli fd git-delta lazygit ttf-firacode-nerd wl-clipboard mise debugedit fakeroot openssh
+    sudo pacman -S "${common_packages[@]}" eza github-cli fd git-delta lazygit ttf-firacode-nerd wl-clipboard mise debugedit fakeroot openssh base-devel
     git clone https://aur.archlinux.org/paru-bin.git /tmp/paru-bin
     cd /tmp/paru-bin || exit
     makepkg -si --noconfirm
     paru -S topgrade-bin --noconfirm
+}
+
+install_steamos() {
+    sudo steamos-readonly disable
+    sudo pacman-key --init
+    sudo pacman-key --populate archlinux
+    sudo pacman-key --populate holo
+    sudo pacman -S "${common_packages[@]}" eza github-cli fd git-delta lazygit ttf-firacode-nerd wl-clipboard base-devel glibc openssh
+    sudo steamos-readonly enable
 }
 
 install_fedora() {
@@ -72,6 +81,7 @@ install_packages() {
     arch) color="033" && install_arch ;;
     archarm) color="033" && install_arch ;;
     manjaro) color="040" && install_arch ;;
+    steamos) color="033" && install_steamos ;;
     debian) color="163" && install_debian ;;
     kali) color="254" && install_debian ;;
     pop) color="045" && install_debian ;;
