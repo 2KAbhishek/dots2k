@@ -26,7 +26,7 @@ unset _comp_files
 
 # case insensitive matchers
 zstyle ':completion:*' matcher-list \
-  'm:{a-z}={A-Za-z}' \
+  'm:{a-zA-Z}={A-Za-z}' \
   'r:|[._-]=* r:|=*' \
   'l:|=* r:|=*'
 
