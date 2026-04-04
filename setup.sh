@@ -11,10 +11,10 @@ declare -a common_packages=(
 
 install_arch() {
     sudo pacman -S "${common_packages[@]}" eza github-cli fd git-delta lazygit ttf-firacode-nerd wl-clipboard mise debugedit fakeroot openssh base-devel
-    git clone https://aur.archlinux.org/paru-bin.git /tmp/paru-bin
-    cd /tmp/paru-bin || exit
+    git clone https://aur.archlinux.org/yay-bin.git /tmp/yay-bin
+    cd /tmp/yay-bin || exit
     makepkg -si --noconfirm
-    paru -S topgrade-bin --noconfirm
+    yay -S topgrade-bin --noconfirm
 }
 
 install_steamos() {
