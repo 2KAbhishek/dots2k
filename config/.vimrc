@@ -111,4 +111,4 @@ endif
 " Always use terminal background
 autocmd ColorScheme * highlight! Normal ctermbg=NONE guibg=NONE
 autocmd ColorScheme * highlight! Terminal ctermbg=NONE guibg=NONE
-colorscheme slate
+colorscheme catppuccin
