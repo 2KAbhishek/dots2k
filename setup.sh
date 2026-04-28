@@ -11,11 +11,11 @@ CONFIG_DIR="$SCRIPT_DIR/config"
 mkdir -p "$LOCAL_CONFIG_DIR"
 
 declare -a common_packages=(
-    curl wget git zsh tmux bat fzf unzip neovim ripgrep ncdu ranger vim zoxide gcc
+    curl wget git zsh tmux bat fzf unzip neovim ripgrep ncdu ranger vim zoxide
 )
 
 declare -a pacman_desktop_packages=(
-    eza github-cli fd git-delta lazygit ttf-firacode-nerd wl-clipboard openssh base-devel
+    eza github-cli fd git-delta lazygit ttf-firacode-nerd wl-clipboard openssh base-devel gcc
 )
 
 declare -a arch_extra_packages=(
@@ -27,15 +27,15 @@ declare -a steamos_extra_packages=(
 )
 
 declare -a fedora_extra_packages=(
-    eza gh lazygit fd-find wl-clipboard git-delta
+    eza gh lazygit fd-find wl-clipboard git-delta gcc
 )
 
 declare -a debian_extra_packages=(
-    exa gh fd-find xclip autorandr nala
+    exa gh fd-find xclip autorandr nala gcc
 )
 
 declare -a termux_extra_packages=(
-    eza gh fd git-delta openssh termux-tools nala
+    eza gh fd git-delta openssh termux-tools nala gcc
 )
 
 declare -a config_dirs=(
