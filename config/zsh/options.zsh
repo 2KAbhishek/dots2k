@@ -12,7 +12,7 @@ setopt nomatch
 # History behavior
 setopt append_history
 setopt inc_append_history
-setopt sharehistory
+setopt share_history
 setopt extended_history
 setopt hist_ignore_all_dups
 setopt hist_ignore_space
@@ -39,6 +39,9 @@ DISABLE_AUTO_TITLE="false"
 ENABLE_CORRECTION="false"
 COMPLETION_WAITING_DOTS="false"
 
+HISTFILE="${XDG_STATE_HOME:-$HOME/.local/state}/zsh/history"
+[[ -d "${HISTFILE:h}" ]] || mkdir -p "${HISTFILE:h}"
+HISTSIZE=100000
 SAVEHIST=99999
 HISTDUP=erase
 
