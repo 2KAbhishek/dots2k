@@ -55,7 +55,6 @@ gui:
   splitDiff: 'auto' # one of 'auto' | 'always'
 os:
   editPreset: nvim
-  shellFunctionsFile: ~/.config/shell/aliases.sh
 git:
   pagers:
     - colorArg: always
