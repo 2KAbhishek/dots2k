@@ -218,6 +218,8 @@ alias play="playerctl play-pause"
 alias next="playerctl next"
 alias prev="playerctl previous"
 alias song="playerctl metadata title"
+alias record="ffmpeg -f v4l2 -framerate 30 -video_size 1280x720 -i /dev/video0 -f pulse -i default -c:v libx264 -preset veryfast -c:a aac -b:a 192k recording.mp4"
+alias webcam="mpv av://v4l2:/dev/video0"
 alias syslog="sudo journalctl -b"
 alias logshare="curl -F 'file=@-' 0x0.st"
 
