@@ -135,7 +135,7 @@ install_termux() {
 install_unknown() {
     echo "Unknown system detected: $system_kind"
     echo "Please select a system type to use for package installation:"
-    echo "1) Arch Linux (arch, archarm, manjaro)"
+    echo "1) Arch Linux (arch, cachyos, archarm, manjaro)"
     echo "2) Debian/Ubuntu (ubuntu, debian, pop, kali)"
     echo "3) Fedora (fedora, fedora-asahi-remix)"
     echo "4) Termux"
@@ -157,7 +157,7 @@ install_packages() {
 
     color=""
     case $system_kind in
-    arch) color="033" && install_arch ;;
+    arch | cachyos) color="033" && install_arch ;;
     archarm) color="033" && install_arch ;;
     manjaro) color="040" && install_arch ;;
     steamos | holo) color="033" && install_steamos ;;
