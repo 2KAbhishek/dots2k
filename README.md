@@ -23,7 +23,7 @@
 <h3>Passionately Crafted CLI Setup 🐧❤️</h3>
 
 <figure>
-  <img src="images/screenshot.png" alt="dots2k in action">
+  <img src="docs/images/screenshot.png" alt="dots2k in action">
   <br/>
   <figcaption>Terminal screenshot</figcaption>
 </figure>
