@@ -117,7 +117,7 @@ alias grmc='git rm --cached'
 
 alias gra='git remote add'
 alias grrm='git remote remove'
-alias grset='git remote set-url origin git@github.com:user/repo.git'
+alias grset='git remote set-url origin git@github.com:2kabhishek/repo.git'
 
 alias gsb='git status --short --branch'
 alias gsd="git status -s && git diff HEAD"
