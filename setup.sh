@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-set -euo pipefail
 IFS=$' \n\t'
 
 LOCAL_CONFIG_DIR="$HOME/.config/shell"
