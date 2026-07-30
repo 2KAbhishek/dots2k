@@ -85,6 +85,9 @@ alias gl="git pull --rebase --autostash"
 
 alias glog='git log --graph --pretty="%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%ad) %C(bold blue)<%an>%Creset" --date=short'
 alias glogf='git log --graph --pretty="%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%ar) %C(bold blue)<%an>%Creset" --stat'
+alias gfile='git log --oneline --follow file'
+alias gline='git log --oneline -s -L 10,15:file'
+alias gfilei='git log --oneline --follow file | fzf --preview "git show --color=always {1}"'
 
 alias gmv="git mv"
 alias gmx="git merge -X ours"

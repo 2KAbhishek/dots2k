@@ -8,14 +8,14 @@ alias -s html=nvim
 
 # Global aliases
 alias -g C="| $CLIPCOPY"
-alias -g F="| fpp -ko -nfc"
+alias -g F="| fzf"
 alias -g G="| grep"
 alias -g H="| head -30"
 alias -g L="| wc -l"
 alias -g Q="&& exit"
 alias -g T="| tail -30"
-alias -g Y="| curl -F 'file=@-' 0x0.st"
-alias -g Z="| fzf"
+
+alias -g fgs="| fzf --preview 'git show --color=always {1}'"
 alias -g wcc="| wc -m"
 alias -g wcw="| wc -w"
-
+alias -g share="| curl -F 'file=@-' 0x0.st"
