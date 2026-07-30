@@ -205,3 +205,8 @@ rspc() { _git_run_on_files modified "_spec\.rb$" bundle exec rspec "$@"; }
 plz() {
     sudo $(fc -ln -1)
 }
+
+search() {
+    fzf --disabled --ansi --query "$1" \
+        --bind "change:reload(rg --color=always --line-number --no-heading --smart-case {q} || true)" </dev/null
+}
