@@ -56,10 +56,10 @@ gui:
 os:
   editPreset: nvim
 git:
-  pagers:
+  diffRenderers:
     - colorArg: always
       useConfig: false
-      pager: delta --features=mantis-shrimp --paging=never
+      command: delta --features=mantis-shrimp --paging=never
   commit:
     signOff: false
   merging:
