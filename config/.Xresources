@@ -36,6 +36,34 @@ Xcursor.size: 0
 *color14: #21ffcb
 *color15: #ffffff
 
+! XTerm Configuration Fonts & Text Rendering
+XTerm*faceName: xft:FiraCode Nerd Font:size=9,xft:DejaVu Sans Mono:size=9
+XTerm*faceNameDoublesize: xft:FiraCode Nerd Font:size=9
+XTerm*renderFont: true
+XTerm*scaleHeight: 1.05
+XTerm*forceBoxChars: true
+XTerm*utf8: 2
+XTerm*locale: true
+XTerm*termName: xterm-256color
+XTerm*dynamicColors: true
+
+! Window & Aesthetics
+XTerm*scrollBar: false
+XTerm*saveLines: 10000
+XTerm*internalBorder: 8
+XTerm*cursorBlink: true
+XTerm*pointerShape: left_ptr
+XTerm*bellIsUrgent: true
+
+! Clipboard Integration & Modern Shortcuts (Ctrl+Shift+C / Ctrl+Shift+V)
+XTerm*selectToClipboard: true
+XTerm*VT100.translations: #override \
+    Ctrl Shift <Key>C: copy-selection(CLIPBOARD) \n\
+    Ctrl Shift <Key>V: insert-selection(CLIPBOARD)
+
+! Smart URL / Path Word Selection on Double Click
+XTerm*charClass: 33:48,36-47:48,58-59:48,61:48,63-64:48,126:48
+
 ! URxvt Configuration
 URxvt.font: xft:FiraCode Nerd Font Mono:size=9,xft:DejaVu Sans Mono:size=9
 URxvt.boldFont: xft:FiraCode Nerd Font Mono:bold:size=9
