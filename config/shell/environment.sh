@@ -53,7 +53,7 @@ export FZF_TMUX_OPTS='-p 90%'
 export GOPATH="$HOME/.go"
 export GOBIN="$GOPATH/bin"
 
-# Fast PATH export
-export PATH="$HOME/.local/bin:$GOBIN:$HOME/.cargo/bin:$HOME/.npm/bin:$HOME/.luarocks/bin:$HOME/.bun/bin:$PATH"
+# Fast PATH export (including Mise shims)
+export PATH="$HOME/.local/share/mise/shims:$HOME/.local/bin:$GOBIN:$HOME/.cargo/bin:$HOME/.npm/bin:$HOME/.luarocks/bin:$HOME/.bun/bin:$PATH"
 
 export RIPGREP_CONFIG_PATH="$HOME/.config/.ripgreprc"

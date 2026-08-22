@@ -77,6 +77,6 @@ cache_zsh_init "dircolors" "dircolors -b ~/.dircolors"
 cache_zsh_init "zoxide" "zoxide init zsh"
 cache_zsh_init "fzf" "fzf --zsh"
 cache_zsh_init "navi" "navi widget zsh"
-cache_zsh_init "mise" "mise activate zsh"
+cache_zsh_init "mise" "mise activate zsh --shims"
 
 unfunction cache_zsh_init
