@@ -4,13 +4,57 @@
 #   [[ -f ~/.config/shell/p10k.mise.zsh ]] && source ~/.config/shell/p10k.mise.zsh
 
 () {
-    # Cache global configurations at shell startup
+    # Cache global configurations at shell startup with pure Zsh (zero subprocess forks)
     typeset -gA POWERLEVEL9K_MISE_GLOBAL_VERSIONS
-    if (( $+commands[mise] )); then
-        local tool version
-        while read -r tool version; do
-            [[ -n "$tool" ]] && POWERLEVEL9K_MISE_GLOBAL_VERSIONS[$tool]="$version"
-        done < <(mise ls --offline 2>/dev/null | awk '{for (i=1; i<=NF; i++) {if ($i ~ /^~\/\.config\/mise\/config\.toml$/ || $i ~ /^~\/\.tool-versions$/ || $i ~ /^~\/\.mise\.toml$/) {print $1, $2; break}}}')
+    local cfg line tool ver in_tools target real_path mise_installs="${XDG_DATA_HOME:-$HOME/.local/share}/mise/installs"
+
+    # 1. Parse global TOML configs (~/.config/mise/config.toml & ~/.mise.toml)
+    for cfg in "${XDG_CONFIG_HOME:-$HOME/.config}/mise/config.toml" "$HOME/.mise.toml"; do
+        if [[ -r "$cfg" ]]; then
+            in_tools=0
+            while IFS= read -r line || [[ -n "$line" ]]; do
+                line="${line%%\#*}"
+                line="${line##[[:space:]]*}"
+                [[ -z "$line" ]] && continue
+                if [[ "$line" =~ '^\[tools\]' ]]; then
+                    in_tools=1
+                    continue
+                elif [[ "$line" =~ '^\[' ]]; then
+                    in_tools=0
+                    continue
+                fi
+                if (( in_tools )) && [[ "$line" =~ '^([a-zA-Z0-9_-]+)[[:space:]]*=[[:space:]]*["'\'']?([^"'\'']+)["'\'']?' ]]; then
+                    tool="${match[1]}"
+                    ver="${match[2]}"
+                    # Resolve aliases & symlinks (e.g. "latest" -> "5.1.0")
+                    local target="$mise_installs/$tool/$ver"
+                    if [[ -e "$target" ]]; then
+                        local real_path="${target:A}"
+                        ver="${real_path:t}"
+                    fi
+                    POWERLEVEL9K_MISE_GLOBAL_VERSIONS[$tool]="$ver"
+                fi
+            done < "$cfg"
+        fi
+    done
+
+    # 2. Parse legacy ~/.tool-versions if present
+    if [[ -r "$HOME/.tool-versions" ]]; then
+        while IFS= read -r line || [[ -n "$line" ]]; do
+            line="${line%%\#*}"
+            line="${line##[[:space:]]*}"
+            [[ -z "$line" ]] && continue
+            if [[ "$line" =~ '^([a-zA-Z0-9_-]+)[[:space:]]+([^[:space:]]+)' ]]; then
+                tool="${match[1]}"
+                ver="${match[2]}"
+                local target="$mise_installs/$tool/$ver"
+                if [[ -e "$target" ]]; then
+                    local real_path="${target:A}"
+                    ver="${real_path:t}"
+                fi
+                POWERLEVEL9K_MISE_GLOBAL_VERSIONS[$tool]="$ver"
+            fi
+        done < "$HOME/.tool-versions"
     fi
 
     # User configurations (can be overridden in ~/.zshrc or prompt config)
