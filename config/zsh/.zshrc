@@ -22,3 +22,14 @@ source "$ZDOTDIR/keys.zsh"
 
 # Load Local configuration if exists
 [ -f ~/.config/shell/local.sh ] && source ~/.config/shell/local.sh
+
+# Asynchronously compile zsh configuration files for instant startup
+{
+    local f zdir="${ZDOTDIR:-$HOME/.config/zsh}"
+    for f in "$zdir"/*.zsh(N) "$zdir"/prompt/*.zsh(N) "$zdir"/.zshrc(N) ~/.config/shell/*.sh(N) ~/.config/mac/*.sh(N) ~/.zshenv(N); do
+        if [[ -s "$f" && (! -s "${f}.zwc" || "$f" -nt "${f}.zwc") ]]; then
+            zcompile -R -- "$f" 2>/dev/null
+        fi
+    done
+} &!
+

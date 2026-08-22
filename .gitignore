@@ -29,4 +29,5 @@ config/tmux/plugins/
 .oh-my-zsh
 ohmyzsh
 .zcompdump*
+*.zwc
 config/zsh/.zcompcache/*
