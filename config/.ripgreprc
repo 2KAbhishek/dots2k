@@ -1,4 +1,4 @@
- # Smart case matching
+# Smart case matching
 --smart-case
 
 # Prevent terminal freeze on long minified lines
@@ -8,15 +8,58 @@
 # Search hidden files (.env, .github, etc.) by default
 --hidden
 
-# Skip searching inside the .git and node_modules directory
+# Skip VCS and package managers
 --glob=!.git/*
 --glob=!node_modules/*
+--glob=!.DS_Store
 
-# Ignore lock and build files
+# Web & JavaScript / TypeScript
+--glob=!.turbo/*
+--glob=!.next/*
+--glob=!.nuxt/*
+--glob=!.cache/*
+--glob=!.svelte-kit/*
+--glob=!.output/*
+
+# Rust
+--glob=!target/*
+
+# Android / Kotlin / Gradle / Java
+--glob=!.gradle/*
+--glob=!.cxx/*
+--glob=!build/*
+--glob=!.idea/*
+--glob=!*.apk
+--glob=!*.aab
+--glob=!*.dex
+--glob=!*.class
+
+# Xcode / Apple / Swift
+--glob=!DerivedData/*
+--glob=!.build/*
+--glob=!Pods/*
+--glob=!*.xcuserstate
+--glob=!*.xcuserdatad
+
+# Visual Studio / .NET / C# / C++
+--glob=!.vs/*
+--glob=!bin/*
+--glob=!obj/*
+--glob=!*.suo
+--glob=!*.user
+
+# Python
+--glob=!__pycache__/*
+--glob=!.pytest_cache/*
+--glob=!.mypy_cache/*
+--glob=!.ruff_cache/*
+--glob=!.venv/*
+
+# Lockfiles
 --glob=!package-lock.json
 --glob=!yarn.lock
 --glob=!pnpm-lock.yaml
 --glob=!Gemfile.lock
 --glob=!Cargo.lock
+--glob=!bun.lock
 --glob=!bun.lockb
---glob=!.DS_Store
