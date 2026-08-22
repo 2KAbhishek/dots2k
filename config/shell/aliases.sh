@@ -10,8 +10,8 @@ alias acp="advcp -gv"
 alias amv="advmv -gv"
 alias cat="bat"
 alias cdx='cd $(xplr)'
-alias cpa='"$CLIPPASTE"'
-alias ccp='"$CLIPCOPY"'
+alias cpa='eval "$CLIPPASTE"'
+alias ccp='eval "$CLIPCOPY"'
 alias cp="cp -irv"
 alias diff="diff --color=auto"
 alias ez="eza -Ah -s=extension --group-directories-first --icons"
