@@ -45,7 +45,7 @@ declare -a config_dirs=(
 
 declare -a home_files=(
     ".bashrc" ".dircolors" ".dmenurc" ".editorconfig"
-    ".inputrc" ".prettierrc" ".pryrc" ".pystartup" ".reek.yml" ".typos.toml"
+    ".inputrc" ".prettierrc" ".profile" ".pryrc" ".pystartup" ".reek.yml" ".typos.toml"
     ".vimrc" ".zshenv" ".Xresources"
 )
 
