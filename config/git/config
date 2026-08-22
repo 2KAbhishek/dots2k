@@ -106,7 +106,3 @@
     sort = -committerdate
 [gpg]
     format = ssh
-[feature]
-    manyFiles = true
-[index]
-    version = 4
