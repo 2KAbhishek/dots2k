@@ -9,39 +9,42 @@ Xft.lcdfilter: lcddefault
 Xcursor.theme: xcursor-breeze
 Xcursor.size: 0
 
-! Colors (BWnB Dark Theme matching Alacritty / Kitty)
+! Colors (Synced with Kitty theme)
 *background: #000000
-*foreground: #f4f4f4
+*foreground: #dddddd
 *cursorColor: #1688f0
 *pointerColorBackground: #000000
 *pointerColorForeground: #1688f0
 
 !! Normal Colors
-*color0: #101015
-*color1: #ed001f
-*color2: #11d116
-*color3: #ffd21a
-*color4: #1688f0
-*color5: #fa66ff
-*color6: #11dddd
-*color7: #f0f0f0
+*color0: #000000
+*color1: #e00606
+*color2: #3ed50a
+*color3: #f1c200
+*color4: #0d73cc
+*color5: #cb1ed1
+*color6: #0dcdcd
+*color7: #dddddd
 
 !! Bright Colors
-*color8: #646487
-*color9: #ff0230
-*color10: #21ff3e
-*color11: #fff826
-*color12: #1793ff
-*color13: #e115ff
-*color14: #21ffcb
+*color8: #767676
+*color9: #ff0043
+*color10: #00f955
+*color11: #fffd00
+*color12: #1a8fff
+*color13: #fd28ff
+*color14: #14ffff
 *color15: #ffffff
 
-! XTerm Configuration Fonts & Text Rendering
+! ==========================================
+! Modern XTerm Configuration
+! ==========================================
+! Fonts & Text Rendering
 XTerm*faceName: xft:FiraCode Nerd Font:size=9,xft:DejaVu Sans Mono:size=9
 XTerm*faceNameDoublesize: xft:FiraCode Nerd Font:size=9
 XTerm*renderFont: true
 XTerm*scaleHeight: 1.05
-XTerm*forceBoxChars: true
+XTerm*forceBoxChars: false
 XTerm*utf8: 2
 XTerm*locale: true
 XTerm*termName: xterm-256color
@@ -64,7 +67,9 @@ XTerm*VT100.translations: #override \
 ! Smart URL / Path Word Selection on Double Click
 XTerm*charClass: 33:48,36-47:48,58-59:48,61:48,63-64:48,126:48
 
+! ==========================================
 ! URxvt Configuration
+! ==========================================
 URxvt.font: xft:FiraCode Nerd Font Mono:size=9,xft:DejaVu Sans Mono:size=9
 URxvt.boldFont: xft:FiraCode Nerd Font Mono:bold:size=9
 URxvt.letterSpace: -1
@@ -74,7 +79,7 @@ URxvt.scrollBar: false
 URxvt.mouseWheelScrollPage: false
 URxvt.cursorBlink: true
 URxvt.background: #000000
-URxvt.foreground: #f4f4f4
+URxvt.foreground: #dddddd
 URxvt.saveLines: 5000
 
 ! Normal copy-paste keybindings without perls
