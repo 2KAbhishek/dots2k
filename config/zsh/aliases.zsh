@@ -10,7 +10,7 @@ alias -s html=nvim
 alias -g A1='| awk "{print \$1}"'
 alias -g A2='| awk "{print \$2}"'
 alias -g COL="| column -t"
-alias -g C='| $CLIPCOPY'
+alias -g C='| eval "$CLIPCOPY"'
 alias -g DN=">/dev/null 2>&1"
 alias -g F="| fzf"
 alias -g FP="| fzf --preview 'bat --color=always --style=numbers --line-range :300 {}'"
@@ -28,5 +28,5 @@ alias -g X="| xargs"
 alias -g fgs="| fzf --preview 'git show --color=always {1}'"
 alias -g wcc="| wc -m"
 alias -g wcw="| wc -w"
-alias -g shareit='| curl -L -F "file=@-" https://0x0.st | $CLIPCOPY'
+alias -g shareit='| curl -L -F "file=@-" https://0x0.st | eval "$CLIPCOPY"'
 

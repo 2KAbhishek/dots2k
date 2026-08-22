@@ -8,7 +8,7 @@ zle -N copy-earlier-word
 zle -N edit-command-line
 zle -N fancy-ctrl-z
 
-copy-command () { $CLIPCOPY -n <<< $BUFFER }
+copy-command () { eval "$CLIPCOPY" <<< $BUFFER }
 zle -N copy-command
 
 quote-word() {
