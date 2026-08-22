@@ -58,6 +58,10 @@
 [fetch]
     prune = true
     output = compact
+    parallel = 0
+
+[submodule]
+    fetchJobs = 0
 
 [help]
     autocorrect = 1
@@ -102,3 +106,7 @@
     sort = -committerdate
 [gpg]
     format = ssh
+[feature]
+    manyFiles = true
+[index]
+    version = 4
