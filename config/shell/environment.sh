@@ -1,9 +1,34 @@
 #!/bin/bash
 # Environment variables
-export TERMINAL=kitty
+
+# Display server & OS detection for clipboard and terminal
+if [ -n "$WAYLAND_DISPLAY" ]; then
+    # Wayland (Sway, Hyprland, etc.)
+    export TERMINAL="${TERMINAL:-footclient}"
+    export CLIPCOPY="wl-copy"
+    export CLIPPASTE="wl-paste"
+elif [[ "${OSTYPE:-}" == darwin* ]]; then
+    # macOS
+    export TERMINAL="${TERMINAL:-kitty}"
+    export CLIPCOPY="pbcopy"
+    export CLIPPASTE="pbpaste"
+elif [ -n "$WSL_DISTRO_NAME" ] || [ -n "$WSL_INTEROP" ]; then
+    # Windows / WSL (Windows Terminal + win32yank)
+    export TERMINAL="${TERMINAL:-wt.exe}"
+    export CLIPCOPY="win32yank.exe -i --crlf"
+    export CLIPPASTE="win32yank.exe -o --lf"
+elif [ -n "$TERMUX_VERSION" ]; then
+    # Android (Termux)
+    export CLIPCOPY="termux-clipboard-set"
+    export CLIPPASTE="termux-clipboard-get"
+else
+    # Linux X11 (i3, bspwm, dwm, etc.)
+    export TERMINAL="${TERMINAL:-kitty}"
+    export CLIPCOPY="xclip -selection clipboard"
+    export CLIPPASTE="xclip -selection clipboard -o"
+fi
+
 export EDITOR=nvim
-export CLIPCOPY=wl-copy
-export CLIPPASTE=wl-paste
 # export BROWSER=qutebrowser
 
 # Fzf
@@ -18,19 +43,17 @@ export FZF_DEFAULT_OPTS="
 --preview-window=right:65%
 --bind '?:toggle-preview'
 --bind 'ctrl-a:select-all'
---bind 'ctrl-y:execute-silent(echo {+} | $CLIPCOPY)'
+--bind 'ctrl-y:execute-silent(echo {+} | eval "$CLIPCOPY")'
 --bind 'ctrl-e:execute($TERMINAL $EDITOR {+})+reload(fzf)'"
 
 export FZF_CTRL_T_COMMAND='fd -t f -HF -E=.git -E=node_modules'
 export FZF_TMUX_OPTS='-p 90%'
 
-export PATH=$HOME/.local/bin:$PATH
-export GOPATH=$HOME/.go
-export GOBIN=$GOPATH/bin
-export PATH=$GOBIN:$PATH
-export PATH=$HOME/.cargo/bin:$PATH
-export PATH=$HOME/.npm/bin:$PATH
-export PATH=$HOME/.luarocks/bin:$PATH
-export PATH=$HOME/.bun/bin:$PATH
+# Go environment
+export GOPATH="$HOME/.go"
+export GOBIN="$GOPATH/bin"
+
+# Fast PATH export
+export PATH="$HOME/.local/bin:$GOBIN:$HOME/.cargo/bin:$HOME/.npm/bin:$HOME/.luarocks/bin:$HOME/.bun/bin:$PATH"
 
 export RIPGREP_CONFIG_PATH="$HOME/.config/.ripgreprc"
