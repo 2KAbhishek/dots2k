@@ -46,7 +46,11 @@ zle -N open-reload
 open-tdo() { _run_foreground_widget "tdo -f" }
 zle -N open-tdo
 
-open-tea() { _run_foreground_widget "tea" }
+open-tea() {
+  zle push-line
+  BUFFER="tea"
+  zle accept-line
+}
 zle -N open-tea
 
 bindkey "^[." insert-last-word
