@@ -4,8 +4,10 @@ IFS=$' \n\t'
 LOCAL_CONFIG_DIR="$HOME/.config/shell"
 LOCAL_CONFIG="$LOCAL_CONFIG_DIR/local.sh"
 
-SCRIPT_DIR="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)"
-CONFIG_DIR="$SCRIPT_DIR/config"
+current_dir="${BASH_SOURCE[0]%/*}"
+[[ "$current_dir" == "${BASH_SOURCE[0]}" || "$current_dir" == "." ]] && current_dir="$PWD"
+readonly current_dir
+CONFIG_DIR="$current_dir/config"
 
 mkdir -p "$LOCAL_CONFIG_DIR"
 
@@ -87,10 +89,15 @@ symlink_into() {
 }
 
 get_system_info() {
+    case "$OSTYPE" in
+        darwin*) echo "mac" && return ;;
+        *android*) echo "termux" && return ;;
+    esac
     [ -e /etc/os-release ] && source /etc/os-release && echo "${ID:-Unknown}" && return
     [ -e /etc/lsb-release ] && source /etc/lsb-release && echo "${DISTRIB_ID:-Unknown}" && return
     [ "$(uname)" == "Darwin" ] && echo "mac" && return
-    [ "$(uname -o)" == "Android" ] && echo "termux" && return
+    [ "$(uname -o 2>/dev/null)" == "Android" ] && echo "termux" && return
+    echo "unknown"
 }
 
 install_arch() {
