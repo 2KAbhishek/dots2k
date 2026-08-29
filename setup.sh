@@ -68,7 +68,15 @@ append_powerlevel9k_local() {
 
 backup_if_exists() {
     local path="$1"
+    if [[ -L "$path" ]]; then
+        local target
+        target="$(readlink -f "$path" 2>/dev/null || true)"
+        if [[ "$target" == "$CONFIG_DIR"* ]]; then
+            return 0
+        fi
+    fi
     if [[ -e "$path" || -L "$path" ]]; then
+        rm -rf "${path}.old" 2>/dev/null || true
         mv -v "$path" "${path}.old"
     fi
 }
