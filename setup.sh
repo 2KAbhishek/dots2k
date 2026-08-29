@@ -101,11 +101,16 @@ get_system_info() {
 }
 
 install_arch() {
-    sudo pacman -S "${common_packages[@]}" "${arch_extra_packages[@]}"
-    rm -rf /tmp/yay-bin
-    git clone https://aur.archlinux.org/yay-bin.git /tmp/yay-bin
-    (cd /tmp/yay-bin && makepkg -si --noconfirm)
-    yay -S topgrade-bin --noconfirm
+    sudo pacman -S --needed --noconfirm "${common_packages[@]}" "${arch_extra_packages[@]}"
+    if ! command -v yay &>/dev/null; then
+        rm -rf /tmp/yay-bin
+        git clone https://aur.archlinux.org/yay-bin.git /tmp/yay-bin
+        (cd /tmp/yay-bin && makepkg -si --noconfirm)
+        rm -rf /tmp/yay-bin
+    fi
+    if command -v yay &>/dev/null; then
+        yay -S --needed --noconfirm topgrade-bin 2>/dev/null || true
+    fi
 }
 
 install_steamos() {
