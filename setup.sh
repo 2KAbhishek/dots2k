@@ -39,6 +39,10 @@ declare -a termux_extra_packages=(
     eza fd gcc gh git-delta nala openssh termux-tools
 )
 
+declare -a gh_extensions=(
+    "dlvhdr/gh-dash" "2kabhishek/gh-repo-man" "2kabhishek/gh-sec-man"
+)
+
 declare -a config_dirs=(
     "alacritty" "autorandr" "bat" "bluetuith" "bundle" "cmus" "fish"
     "fontconfig" "git" "htop" "kitty" "lazygit" "libinput-gestures.conf"
@@ -193,6 +197,20 @@ install_packages() {
     append_powerlevel9k_local
 
     mkdir -p "$HOME/.local/state/vim/undo"
+    install_gh_extensions
+}
+
+install_gh_extensions() {
+    if ! command -v gh &>/dev/null; then
+        echo -e "\u001b[33;1m gh CLI not found, skipping extension installation. \u001b[0m"
+        return 0
+    fi
+
+    echo -e "\u001b[7m Installing GitHub CLI extensions... \u001b[0m"
+    for ext in "${gh_extensions[@]}"; do
+        echo -e "\u001b[34;1m Installing gh extension: $ext... \u001b[0m"
+        gh extension install "$ext" || true
+    done
 }
 
 backup_configs() {
