@@ -1,15 +1,11 @@
 #!/usr/bin/env bash
 IFS=$' \n\t'
 
-LOCAL_CONFIG_DIR="$HOME/.config/shell"
-LOCAL_CONFIG="$LOCAL_CONFIG_DIR/local.sh"
-
 current_dir="${BASH_SOURCE[0]%/*}"
 [[ "$current_dir" == "${BASH_SOURCE[0]}" || "$current_dir" == "." ]] && current_dir="$PWD"
 readonly current_dir
 CONFIG_DIR="$current_dir/config"
-
-mkdir -p "$LOCAL_CONFIG_DIR"
+LOCAL_SH_CONFIG="$CONFIG_DIR/shell/local.sh"
 
 declare -a common_packages=(
     bat curl fzf git ncdu neovim nodejs npm python python-pip ranger ripgrep tmux unzip vim wget zoxide zsh
@@ -61,11 +57,12 @@ append_once() {
     if [[ -f "$file" ]] && grep -Fq "$marker" "$file"; then
         return
     fi
-    printf '%s\n' "$@" >>"$file"
+    mkdir -p "$(dirname "$file")"
+    printf '%s\n' "$marker" "$@" >>"$file"
 }
 
 append_powerlevel9k_local() {
-    append_once "$LOCAL_CONFIG" "# dots2k: powerlevel9k" \
+    append_once "$LOCAL_SH_CONFIG" "# dots2k: powerlevel9k" \
         "export POWERLEVEL9K_OS_ICON_BACKGROUND='$color'" \
         "export POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX='%F{238}╰%F{$color}%K{$color}%F{black} 󰅂%f%F{$color}%k%f'"
 }
@@ -146,7 +143,7 @@ install_debian() {
     sudo ln -sfnv /usr/bin/fdfind /usr/bin/fd
     sudo ln -sfnv /usr/bin/batcat /usr/bin/bat
     sudo ln -sfnv /usr/bin/exa /usr/bin/eza
-    append_once "$LOCAL_CONFIG" "# dots2k: debian batcat" "alias cat=batcat"
+    append_once "$LOCAL_SH_CONFIG" "# dots2k: debian batcat" "alias cat=batcat"
 }
 
 install_termux() {
