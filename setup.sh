@@ -190,11 +190,11 @@ install_packages() {
     mac) color="254" ;;
     *) install_unknown ;;
     esac
-
-    append_powerlevel9k_local
+    install_gh_extensions
 
     mkdir -p "$HOME/.local/state/vim/undo"
-    install_gh_extensions
+    append_powerlevel9k_local
+    set_default_shell
 }
 
 install_gh_extensions() {
@@ -208,6 +208,13 @@ install_gh_extensions() {
         echo -e "\u001b[34;1m Installing gh extension: $ext... \u001b[0m"
         gh extension install "$ext" || true
     done
+}
+
+set_default_shell() {
+    if [[ "$SHELL" != *"zsh"* ]] && command -v zsh &>/dev/null; then
+        echo -e "\u001b[7m Setting zsh as default shell... \u001b[0m"
+        chsh -s "$(which zsh)"
+    fi
 }
 
 backup_configs() {
