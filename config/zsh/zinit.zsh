@@ -29,6 +29,9 @@ zinit light hlissner/zsh-autopair
 zinit ice lucid wait'0a'
 zinit light z-shell/F-Sy-H
 
+zinit ice lucid
+zinit light zsh-users/zsh-history-substring-search
+
 # Completions
 zinit ice lucid wait'0b' blockf
 zinit light clarketm/zsh-completions
