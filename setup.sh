@@ -12,7 +12,7 @@ CONFIG_DIR="$current_dir/config"
 mkdir -p "$LOCAL_CONFIG_DIR"
 
 declare -a common_packages=(
-    bat curl fzf git ncdu neovim ranger ripgrep tmux unzip vim wget zoxide zsh
+    bat curl fzf git ncdu neovim nodejs npm python python-pip ranger ripgrep tmux unzip vim wget zoxide zsh
 )
 
 declare -a pacman_desktop_packages=(
