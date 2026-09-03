@@ -195,6 +195,7 @@ install_packages() {
     mkdir -p "$HOME/.local/state/vim/undo"
     append_powerlevel9k_local
     set_default_shell
+    setup_tmux_plugins
 }
 
 install_gh_extensions() {
@@ -217,6 +218,33 @@ set_default_shell() {
     fi
 }
 
+setup_tmux_plugins() {
+    if ! command -v tmux &>/dev/null; then
+        echo -e "\u001b[33;1m tmux not found, skipping tmux plugins setup. \u001b[0m"
+        return 0
+    fi
+
+    local tpm_dir="$HOME/.config/tmux/plugins/tpm"
+    echo -e "\u001b[7m Setting up Tmux Plugin Manager and plugins... \u001b[0m"
+
+    if [[ ! -d "$tpm_dir" ]]; then
+        echo -e "\u001b[34;1m Cloning TPM... \u001b[0m"
+        git clone https://github.com/tmux-plugins/tpm "$tpm_dir"
+    fi
+
+    if [[ -x "$tpm_dir/bin/install_plugins" ]]; then
+        echo -e "\u001b[34;1m Installing tmux plugins... \u001b[0m"
+        "$tpm_dir/bin/install_plugins" || true
+    fi
+
+    local tea_bin="$HOME/.config/tmux/plugins/tmux-tea/bin/tea.sh"
+    if [[ -f "$tea_bin" ]]; then
+        echo -e "\u001b[34;1m Symlinking tmux-tea to ~/.local/bin/tea... \u001b[0m"
+        mkdir -p "$HOME/.local/bin"
+        ln -sfnv "$tea_bin" "$HOME/.local/bin/tea"
+    fi
+}
+
 backup_configs() {
     echo -e "\u001b[33;1m Backing up existing files... \u001b[0m"
     for dir in "${config_dirs[@]}"; do
@@ -230,6 +258,7 @@ backup_configs() {
 
 setup_symlinks() {
     echo -e "\u001b[7m Setting up symlinks... \u001b[0m"
+    mkdir -p "$HOME/.config"
     symlink_into "$CONFIG_DIR" "$HOME/.config/" "${config_dirs[@]}"
     symlink_into "$CONFIG_DIR" "$HOME/" "${home_files[@]}"
 }
