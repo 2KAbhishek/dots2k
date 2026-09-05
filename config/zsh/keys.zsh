@@ -36,9 +36,6 @@ zle -N open-dexe
 open-lazygit() { _run_foreground_widget "lazygit" }
 zle -N open-lazygit
 
-open-reload() { _run_foreground_widget "source \$ZDOTDIR/.zshrc" }
-zle -N open-reload
-
 open-tdo() { _run_foreground_widget "tdo -f" }
 zle -N open-tdo
 
@@ -49,30 +46,33 @@ open-tea() {
 }
 zle -N open-tea
 
+reload-shell() { _run_foreground_widget "source \$ZDOTDIR/.zshrc" }
+zle -N reload-shell
+
 bindkey "^[." insert-last-word
-bindkey "^[m" copy-earlier-word
-bindkey "^[f" forward-word
 bindkey "^[b" backward-word
+bindkey "^[d" open-dexe
+bindkey "^[e" fzf-file-widget
+bindkey "^[f" forward-word
+bindkey "^[g" open-lazygit
+bindkey "^[m" copy-earlier-word
+bindkey "^[n" open-tdo
+bindkey "^[r" reload-shell
+bindkey "^[t" open-tea
 bindkey "^a" beginning-of-line
 bindkey "^b" backward-word
-bindkey "^d" open-dexe
 bindkey "^e" end-of-line
 bindkey "^f" fzf-file-widget
-bindkey "^g" open-lazygit
-bindkey "^h" open-reload
-bindkey "^k" autosuggest-accept
-bindkey "^n" open-tdo
 bindkey "^o" edit-command-line
 bindkey "^q" quote-word
 bindkey "^s" forward-word
-bindkey "^t" open-tea
 bindkey "^u" undo
 bindkey "^x^e" edit-command-line
 bindkey "^x^v" vi-cmd-mode
 bindkey "^x^x" exchange-point-and-mark
 bindkey "^y" copy-command
-bindkey '^[[A' history-substring-search-up
-bindkey '^[[B' history-substring-search-down
+bindkey '^Z' fancy-ctrl-z
 bindkey '^[OA' history-substring-search-up
 bindkey '^[OB' history-substring-search-down
-bindkey '^Z' fancy-ctrl-z
+bindkey '^[[A' history-substring-search-up
+bindkey '^[[B' history-substring-search-down
