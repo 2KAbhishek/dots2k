@@ -149,10 +149,13 @@ alias gssm='git stash push && git switch main'
 alias gsp='git switch -'
 alias gsw='git switch'
 alias gswc='git switch --create'
+alias gsy='git sync'
 
 alias gtop='cd "$(git rev-parse --show-toplevel)"'
 alias gwip='git add -A; git rm $(git ls-files --deleted) 2> /dev/null; git commit --no-verify --no-gpg-sign --message "--wip-- [skip ci]"'
 alias gwipe='git reset --hard && git clean --force -df'
+
+alias rw='repowatch'
 
 # Editor
 alias e='nvim $(fzf)'
