@@ -2,6 +2,9 @@
 IS_MAC=false
 [[ "$OSTYPE" == "darwin"* ]] && IS_MAC=true
 
+[[ -d ~/.local/state ]] || mkdir -p ~/.local/state
+export HISTFILE=~/.local/state/bash_history
+
 source ~/.config/shell/prompt.sh
 
 complete -cf sudo
@@ -27,7 +30,7 @@ cache_dir="${XDG_CACHE_HOME:-$HOME/.cache}/shell_init"
 cache_bash_init() {
     local tool="$1" init_cmd="$2"
     if [[ ! -f "$cache_dir/${tool}.bash" ]] && type "$tool" >/dev/null 2>&1; then
-        eval "$init_cmd" > "$cache_dir/${tool}.bash"
+        eval "$init_cmd" >"$cache_dir/${tool}.bash"
     fi
     [[ -f "$cache_dir/${tool}.bash" ]] && source "$cache_dir/${tool}.bash"
 }
