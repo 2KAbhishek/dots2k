@@ -42,13 +42,13 @@ declare -a gh_extensions=(
 declare -a config_dirs=(
     "alacritty" "autorandr" "bat" "bluetuith" "bundle" "cmus" "fish"
     "fontconfig" "git" "htop" "kitty" "lazygit" "libinput-gestures.conf"
-    "mise" "ranger" ".ripgreprc" "shell" "sysinfo.conkyrc" "tmux" "topgrade.toml" "zsh"
+    "mise" "python" "ranger" "readline" ".ripgreprc" "shell" "sysinfo.conkyrc" "tmux" "topgrade.toml" "vim" "zsh"
 )
 
 declare -a home_files=(
     ".bashrc" ".dircolors" ".dmenurc" ".editorconfig"
-    ".inputrc" ".prettierrc" ".profile" ".pryrc" ".pystartup" ".reek.yml" ".typos.toml"
-    ".vimrc" ".zshenv" ".Xresources"
+    ".prettierrc" ".profile" ".pryrc" ".reek.yml" ".typos.toml"
+    ".zshenv" ".Xresources"
 )
 
 append_once() {
@@ -192,7 +192,7 @@ install_packages() {
     esac
     install_gh_extensions
 
-    mkdir -p "$HOME/.local/state/vim/undo"
+    mkdir -p "$HOME/.local/state/vim/undo" "$HOME/.local/state/python" "$HOME/.local/state/irb"
     append_powerlevel9k_local
     set_default_shell
     setup_tmux_plugins
