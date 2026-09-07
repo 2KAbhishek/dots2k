@@ -57,3 +57,10 @@ export GOBIN="$GOPATH/bin"
 export PATH="$HOME/.local/share/mise/shims:$HOME/.local/bin:$GOBIN:$HOME/.cargo/bin:$HOME/.npm/bin:$HOME/.luarocks/bin:$HOME/.bun/bin:$PATH"
 
 export RIPGREP_CONFIG_PATH="$HOME/.config/.ripgreprc"
+
+# XDG Base Directory overrides
+export INPUTRC="${XDG_CONFIG_HOME:-$HOME/.config}/readline/inputrc"
+export PYTHONSTARTUP="${XDG_CONFIG_HOME:-$HOME/.config}/python/startup.py"
+export NODE_REPL_HISTORY="${XDG_STATE_HOME:-$HOME/.local/state}/node_repl_history"
+export PYTHON_HISTORY="${XDG_STATE_HOME:-$HOME/.local/state}/python_history"
+export IRB_HISTFILE="${XDG_STATE_HOME:-$HOME/.local/state}/irb_history"
