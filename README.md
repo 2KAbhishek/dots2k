@@ -116,12 +116,12 @@ dots2k comes with a lot of keybindings, here are some of them:
 - [luarc](./config/.luarc.json) - Configs for the Lua language.
 - [prettier](./config/.prettierrc) - A code formatter.
 - [pry](./config/.pryrc) - A Ruby REPL.
-- [pystartup](./config/.pystartup) - Python startup configurations.
+- [pystartup](./config/python/startup.py) - Python startup configurations.
 - [reek](./config/.reek.yml) - A code smell detector for Ruby.
 - [stylua](./config/.stylua.toml) - A Lua formatter.
 - [tmux](./config/tmux/tmux.conf) - A terminal multiplexer.
 - [typos](./config/.typos.toml) - A spell checker for code.
-- [vim](./config/.vimrc) - The original text editor.
+- [vim](./config/vim/vimrc) - The original text editor.
 
 ### System Tools
 
@@ -130,7 +130,7 @@ dots2k comes with a lot of keybindings, here are some of them:
 - [bluetuith](./config/bluetuith/bluetuith.conf) - A Bluetooth TUI.
 - [dircolors](./config/.dircolors) - Sets up color definitions for GNU ls.
 - [htop](./config/htop/htoprc) - An interactive process viewer.
-- [inputrc](./config/.inputrc) - Configs for readline, used by bash and other CLI programs.
+- [inputrc](./config/readline/inputrc) - Configs for readline, used by bash and other CLI programs.
 - [ranger](./config/ranger) - A console file manager.
 - [topgrade](./config/topgrade.toml) - Upgrades all packages.
 
