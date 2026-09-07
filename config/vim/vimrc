@@ -36,6 +36,7 @@ set iskeyword+=-   " Treat dash-separated words as a single word
 set tabpagemax=50  " More tabs
 set history=1000   " More history
 set viminfo^=!     " Better viminfo
+set viminfofile=$HOME/.local/state/vim/viminfo " XDG viminfo location
 set formatoptions+=j " Delete comment character when joining
 set listchars=tab:,nbsp:_,trail:,extends:>,precedes:<
 set list           " Highlight non whitespace characters

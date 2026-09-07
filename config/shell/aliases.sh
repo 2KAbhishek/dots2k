@@ -187,7 +187,7 @@ alias qutc='"$EDITOR" ~/.config/qutebrowser/config.py'
 alias tmuxc='"$EDITOR" ~/.config/tmux/tmux.conf'
 alias vic="nvim ~/.config/nvim/init.lua"
 alias vip="nvim ~/.config/nvim/lua/plugins/list.lua"
-alias vimc="vim ~/.vimrc"
+alias vimc="vim ~/.config/vim/vimrc"
 alias zshc='"$EDITOR" "$ZDOTDIR"/.zshrc'
 
 # General
