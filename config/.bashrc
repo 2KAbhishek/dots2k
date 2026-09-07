@@ -2,7 +2,6 @@
 IS_MAC=false
 [[ "$OSTYPE" == "darwin"* ]] && IS_MAC=true
 
-[[ -d ~/.local/state ]] || mkdir -p ~/.local/state
 export HISTFILE=~/.local/state/bash_history
 
 source ~/.config/shell/prompt.sh
