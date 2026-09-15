@@ -1,0 +1,35 @@
+# --- Appearance & Theme ---
+appearance.theme=blue on default
+appearance.layout=1
+appearance.sidebarwidth=0
+appearance.compactpanels=no
+appearance.defaultpanel=calendar
+appearance.calendarview=monthly
+appearance.notifybar=yes
+appearance.todoview=show-completed
+appearance.dayseparator=yes
+appearance.emptyday=---
+appearance.eventseparator=yes
+appearance.headerline=yes
+
+# --- Date & Time Formats ---
+format.outputdate=%F
+format.inputdate=1
+format.dayheading=%A, %d %B, %Y
+format.appointmenttime=%H:%M
+format.notifydate=%a %F
+format.notifytime=%T
+
+# --- General Workflow & Usability ---
+general.firstdayofweek=monday
+general.confirmquit=no
+general.confirmdelete=yes
+general.autosave=yes
+general.periodicsave=5
+general.progressbar=yes
+general.systemdialogs=no
+
+# --- Desktop Notifications ---
+notification.warning=300
+notification.notifyall=yes
+notification.command=notify-send -u normal "Calcurse Event" "%m"
