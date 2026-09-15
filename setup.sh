@@ -8,11 +8,13 @@ CONFIG_DIR="$current_dir/config"
 LOCAL_SH_CONFIG="$CONFIG_DIR/shell/local.sh"
 
 declare -a common_packages=(
-    bat curl fzf git ncdu neovim nodejs npm python python-pip ranger ripgrep tmux unzip vim wget zoxide zsh
+    bat calcurse curl fzf git ncdu neovim nodejs npm python python-pip ranger
+    ripgrep tmux unzip vim wget zoxide zsh
 )
 
 declare -a pacman_desktop_packages=(
-    base-devel eza fd gcc git-delta github-cli lazygit openssh tree-sitter-cli ttf-firacode-nerd wl-clipboard
+    base-devel eza fd gcc git-delta github-cli lazygit openssh tree-sitter-cli
+    ttf-firacode-nerd wl-clipboard
 )
 
 declare -a arch_extra_packages=(
@@ -40,9 +42,10 @@ declare -a gh_extensions=(
 )
 
 declare -a config_dirs=(
-    "alacritty" "autorandr" "bat" "bluetuith" "bundle" "cmus" "fish"
-    "fontconfig" "git" "htop" "kitty" "lazygit" "libinput-gestures.conf"
-    "mise" "python" "ranger" "readline" ".ripgreprc" "shell" "sysinfo.conkyrc" "tmux" "topgrade.toml" "vim" "zsh"
+    "alacritty" "autorandr" "bat" "bluetuith" "bundle" "calcurse" "cmus" "fish"
+    "fontconfig" "git" "htop" "kitty" "lazygit" "libinput-gestures.conf" "mise"
+    "python" "ranger" "readline" ".ripgreprc" "shell" "sysinfo.conkyrc" "tmux"
+    "topgrade.toml" "vim" "zsh"
 )
 
 declare -a home_files=(
@@ -99,8 +102,8 @@ symlink_into() {
 
 get_system_info() {
     case "$OSTYPE" in
-        darwin*) echo "mac" && return ;;
-        *android*) echo "termux" && return ;;
+    darwin*) echo "mac" && return ;;
+    *android*) echo "termux" && return ;;
     esac
     [ -e /etc/os-release ] && source /etc/os-release && echo "${ID:-Unknown}" && return
     [ -e /etc/lsb-release ] && source /etc/lsb-release && echo "${DISTRIB_ID:-Unknown}" && return
