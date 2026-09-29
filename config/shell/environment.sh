@@ -7,11 +7,6 @@ if [ -n "$WAYLAND_DISPLAY" ]; then
     export TERMINAL="${TERMINAL:-footclient}"
     export CLIPCOPY="wl-copy"
     export CLIPPASTE="wl-paste"
-elif [[ "${OSTYPE:-}" == darwin* ]]; then
-    # macOS
-    export TERMINAL="${TERMINAL:-kitty}"
-    export CLIPCOPY="pbcopy"
-    export CLIPPASTE="pbpaste"
 elif [ -n "$WSL_DISTRO_NAME" ] || [ -n "$WSL_INTEROP" ]; then
     # Windows / WSL (Windows Terminal + win32yank)
     export TERMINAL="${TERMINAL:-wt.exe}"
