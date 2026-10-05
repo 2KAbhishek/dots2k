@@ -34,7 +34,7 @@ declare -a debian_extra_packages=(
 )
 
 declare -a termux_extra_packages=(
-    eza fd gcc gh git-delta nala openssh termux-tools
+    eza fd gh git-delta nala openssh termux-tools
 )
 
 declare -a gh_extensions=(
