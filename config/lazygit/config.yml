@@ -4,15 +4,6 @@ customCommands:
     command: 'git commit'
     output: terminal
 gui:
-  authorColors:
-    'Abhishek Keshri': blue
-    # stuff relating to the UI
-  branchColors:
-    main: green
-    master: green
-    docs: cyan
-    feature: yellow
-    staging: magenta
   scrollHeight: 2 # how many lines you scroll by
   scrollPastBottom: true # enable scrolling past the bottom
   sidePanelWidth: 0.25 # number from 0 to 1
@@ -39,6 +30,15 @@ gui:
       - blue
     defaultFgColor:
       - white
+    authorColors:
+      'Abhishek Keshri': blue
+      # stuff relating to the UI
+    branchColorPatterns:
+      ^main(/|$): green
+      ^master(/|$): green
+      ^docs(/|$): cyan
+      ^feature(/|$): yellow
+      ^staging(/|$): magenta
   commitLength:
     show: true
   mouseEvents: true
